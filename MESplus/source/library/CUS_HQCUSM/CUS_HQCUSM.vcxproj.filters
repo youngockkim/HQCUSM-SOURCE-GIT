@@ -7,6 +7,7 @@
     <ClInclude Include="CUS_HQCUSM_service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -1025,5 +1026,6 @@
     <ClCompile Include="CWIP_view_tb_cleaning_schedule_list.c">
       <Filter>Source Files\WIP</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
 </Project>
