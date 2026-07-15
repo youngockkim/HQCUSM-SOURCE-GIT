@@ -28,12 +28,12 @@
     ---------------------------------------------------------------------------
     1     2025/06/24             Create by Generator
 
-    Copyright(C) 1998-2025 Miracom,Inc.
+    Copyright(C) 1998-2025 Miracom,Inc.asdasdasds
     All rights reserved.
 
 ******************************************************************************/
 
-#include "CUS_common.h"sss
+#include "CUS_common.h"
 #include <WIPCore_common.h>
 
 int CWIP_Update_PeelTestResult_Validation(char *s_msg_code, TRSNode *in_node, TRSNode *out_node);
@@ -56,7 +56,7 @@ int CWIP_Update_PeelTestResult(TRSNode *in_node, TRSNode *out_node)
 
     i_ret = CWIP_UPDATE_PEELTESTRESULT(s_msg_code, in_node, out_node);
 
-    COM_out_msg_log_write(s_msg_code, "CWIP_UPDATE_PEELTESTRESULT", out_node);
+    COM_out_msg_log_write(s_msg_code, "CWIP_UPDATE_PasdasdsEELTESTRESsssULT", out_node);
 
     if(i_ret == MP_TRUE)
     {
