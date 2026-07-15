@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF2260C6-27F5-4523-AB9F-4CFCC3ECE105}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOI.OIFrx</RootNamespace>
+    <AssemblyName>SOI.OIFrx</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SOI.OIFrx.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SOI.OIFrx.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Excel, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.PDF, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListBar.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListView.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Excel.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics3.Excel.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Win.UltraWinGrid.ExcelExport.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics3.Win.UltraWinGrid.ExcelExport.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>..\..\Components\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Miracom.CliFrx, Version=5.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet">
+      <HintPath>..\..\Components\transceiverxnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsControlNameSort.cs" />
+    <Compile Include="clsExcelComponent.cs" />
+    <Compile Include="clsFlexibleScreenInputValue.cs" />
+    <Compile Include="clsMESPlusCommonFunction.cs" />
+    <Compile Include="clsMESPlusGlobalConstant.cs" />
+    <Compile Include="clsMESPlusGlobalEnum.cs" />
+    <Compile Include="clsMESPlusGlobalOption.cs" />
+    <Compile Include="clsMESPlusGlobalStruct.cs" />
+    <Compile Include="clsMESPlusGlobalVariable.cs" />
+    <Compile Include="clsMESPlusSoundFunction.cs" />
+    <Compile Include="clsMSChart.cs" />
+    <Compile Include="clsPrinter.cs" />
+    <Compile Include="clsReturnMessageString.cs" />
+    <Compile Include="DirectView\DirectViewCaster.cs" />
+    <Compile Include="DirectView\DirectViewCommon.cs" />
+    <Compile Include="DirectView\DirectViewType.cs" />
+    <Compile Include="frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iFormEventFunction.cs" />
+    <Compile Include="intHmMdiFormFunction.cs" />
+    <Compile Include="miracomTuner.cs" />
+    <Compile Include="miracomTunerImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOIBaseForm\SOIBaseForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm01.designer.cs">
+      <DependentUpon>SOIBaseForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm02.designer.cs">
+      <DependentUpon>SOIBaseForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm03.designer.cs">
+      <DependentUpon>SOIBaseForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm04.designer.cs">
+      <DependentUpon>SOIBaseForm04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm05.designer.cs">
+      <DependentUpon>SOIBaseForm05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm06.designer.cs">
+      <DependentUpon>SOIBaseForm06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm07.designer.cs">
+      <DependentUpon>SOIBaseForm07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm08.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm08.Designer.cs">
+      <DependentUpon>SOIBaseForm08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm09.Designer.cs">
+      <DependentUpon>SOIBaseForm09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm10.Designer.cs">
+      <DependentUpon>SOIBaseForm10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIDefaultBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIDefaultBackgroundForm.Designer.cs">
+      <DependentUpon>SOIDefaultBackgroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButton.designer.cs">
+      <DependentUpon>SOIButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonExportExcel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonExportExcel.designer.cs">
+      <DependentUpon>SOIButtonExportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImage.designer.cs">
+      <DependentUpon>SOIButtonImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImageViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImageViewer.designer.cs">
+      <DependentUpon>SOIButtonImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImportExcel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImportExcel.designer.cs">
+      <DependentUpon>SOIButtonImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPDFView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPDFView.designer.cs">
+      <DependentUpon>SOIButtonPDFView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPrintOption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPrintOption.designer.cs">
+      <DependentUpon>SOIButtonPrintOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIChart.Designer.cs">
+      <DependentUpon>SOIChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBox.Designer.cs">
+      <DependentUpon>SOICheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBoxOnOff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBoxOnOff.Designer.cs">
+      <DependentUpon>SOICheckBoxOnOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeView.Designer.cs">
+      <DependentUpon>SOICodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewDescription.Designer.cs">
+      <DependentUpon>SOICodeViewDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewMultiSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewMultiSelect.Designer.cs">
+      <DependentUpon>SOICodeViewMultiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICollectInspData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICollectInspData.Designer.cs">
+      <DependentUpon>SOICollectInspData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIComboBox.Designer.cs">
+      <DependentUpon>SOIComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIContextMenu.Designer.cs">
+      <DependentUpon>SOIContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTime.Designer.cs">
+      <DependentUpon>SOIDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIFlexibleScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIFlexibleScreen.Designer.cs">
+      <DependentUpon>SOIFlexibleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIGrid.Designer.cs">
+      <DependentUpon>SOIGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIGroupBox.Designer.cs">
+      <DependentUpon>SOIGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOILabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOILabel.Designer.cs">
+      <DependentUpon>SOILabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIListBox.Designer.cs">
+      <DependentUpon>SOIListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPanel.Designer.cs">
+      <DependentUpon>SOIPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPasswordBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPasswordBox.Designer.cs">
+      <DependentUpon>SOIPasswordBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPictureBox.Designer.cs">
+      <DependentUpon>SOIPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIRadioButton.Designer.cs">
+      <DependentUpon>SOIRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOISplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOISplitContainer.Designer.cs">
+      <DependentUpon>SOISplitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOISpread.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOISpread.Designer.cs">
+      <DependentUpon>SOISpread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITabControl.Designer.cs">
+      <DependentUpon>SOITabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITableLayoutPanel.Designer.cs">
+      <DependentUpon>SOITableLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBox.Designer.cs">
+      <DependentUpon>SOITextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxBCWhite.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxBCWhite.Designer.cs">
+      <DependentUpon>SOITextBoxBCWhite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxNumber.Designer.cs">
+      <DependentUpon>SOITextBoxNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxValue.Designer.cs">
+      <DependentUpon>SOITextBoxValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITreeView.Designer.cs">
+      <DependentUpon>SOITreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIUnderline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIUnderline.Designer.cs">
+      <DependentUpon>SOIUnderline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIModel\ErrorModel.cs" />
+    <Compile Include="SOIModel\PrintOptionModel.cs" />
+    <Compile Include="SOIModuleAPI.cs" />
+    <Compile Include="SOIPopup\frmCodeViewMultiSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewMultiSelectPopup.designer.cs">
+      <DependentUpon>frmCodeViewMultiSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewPopup.designer.cs">
+      <DependentUpon>frmCodeViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmImageViewerPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmImageViewerPopup.designer.cs">
+      <DependentUpon>frmImageViewerPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmKeyPad.designer.cs">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmModalessPopupBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmModalessPopupBase.designer.cs">
+      <DependentUpon>frmModalessPopupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmPopupBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmPopupBase.designer.cs">
+      <DependentUpon>frmPopupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmPrintOptionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmPrintOptionPopup.designer.cs">
+      <DependentUpon>frmPrintOptionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmStandardOperationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmStandardOperationView.Designer.cs" />
+    <Compile Include="SOIPopup\frmStdOperSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmStdOperSelectPopup.Designer.cs" />
+    <Compile Include="SOIThemes\clsDarkColors.cs" />
+    <Compile Include="SOIThemes\clsLightColors.cs" />
+    <Compile Include="SOIThemes\clsThemeColors.cs" />
+    <Compile Include="SPCBaseForm\SPCBaseForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCBaseForm01.designer.cs">
+      <DependentUpon>SPCBaseForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCBaseForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCBaseForm02.designer.cs">
+      <DependentUpon>SPCBaseForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCBaseForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCBaseForm03.designer.cs">
+      <DependentUpon>SPCBaseForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCCondition1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCCondition1.designer.cs">
+      <DependentUpon>SPCCondition1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCDateTime.designer.cs">
+      <DependentUpon>SPCDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCPopupCondition1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCPopupCondition1.designer.cs">
+      <DependentUpon>SPCPopupCondition1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCPopupCondition2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCBaseForm\SPCPopupCondition2.designer.cs">
+      <DependentUpon>SPCPopupCondition2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\classSpread.cs" />
+    <Compile Include="UIBaseForm\Controls\classVirtualKB.cs" />
+    <Compile Include="UIBaseForm\Controls\CmnLabelPrint.cs" />
+    <Compile Include="UIBaseForm\Controls\CmnUtil.cs" />
+    <Compile Include="UIBaseForm\Controls\Custom_MCCodeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\Custom_MCCodeViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\DateTimePickerCellType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\ddd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\DNMSpread.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\DNMSpread.designer.cs">
+      <DependentUpon>DNMSpread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\dtpControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\frmFileDownPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\frmFileDownPopup.designer.cs">
+      <DependentUpon>frmFileDownPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\frmInspResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\frmInspResultForm.designer.cs">
+      <DependentUpon>frmInspResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\Spread.cs" />
+    <Compile Include="UIBaseForm\Controls\StatusMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\StatusMessageBox.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\StatusMessageBoxOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\StatusMessageBoxOI.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\TranMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\TranMessageBox.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\UCButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\UCButton1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\UCclassSpread.cs" />
+    <Compile Include="UIBaseForm\Controls\UCDatetimePicker1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\UCDirectSpread.cs" />
+    <Compile Include="UIBaseForm\Controls\UCSpread1.cs" />
+    <Compile Include="UIBaseForm\Controls\udcAttachFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcAttachFile.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcCustomCodeViewGCM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcCustomCodeViewGCM.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcCustomCodeViewGCMCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcCustomCodeViewGCMCode.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcCustomCollectData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcCustomCollectData.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcCustomCollectDataQc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcCustomCollectDataQc.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcCustomPatrolCollectData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcCustomPatrolCollectData.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcDateConditionType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcDateConditionType.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcDirectViewSpred.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcDirectViewSpred.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcFarpoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcFromToDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcFromToDate.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcGCMCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcGCMCode.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcGroupTypeOper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcGroupTypeOper.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcLine.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcMat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcMat.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcMatGrouping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcMatGrouping.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcMSChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcOper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcOper.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcPlanShopLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcPlanShopLine.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcShop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcShop.designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcSpread.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcSpread.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcSpread1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcSpread1.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\udcSpread2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcViewCustomCollectData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\udcViewCustomCollectData.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\ViewCmnCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\ViewCmnCode.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\ViewControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\ViewControl.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\ViewMatCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\ViewMatCode.Designer.cs" />
+    <Compile Include="UIBaseForm\Controls\ViewSetColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\Controls\ViewSetColumns.Designer.cs" />
+    <Compile Include="UIBaseForm\UCSpread.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm01.designer.cs">
+      <DependentUpon>UIBaseForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm02.designer.cs">
+      <DependentUpon>UIBaseForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm03.designer.cs">
+      <DependentUpon>UIBaseForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm04.designer.cs">
+      <DependentUpon>UIBaseForm04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm05.designer.cs">
+      <DependentUpon>UIBaseForm05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm06.designer.cs">
+      <DependentUpon>UIBaseForm06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm07.designer.cs">
+      <DependentUpon>UIBaseForm07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm08.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm08.Designer.cs">
+      <DependentUpon>UIBaseForm08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm09.designer.cs">
+      <DependentUpon>UIBaseForm09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm10.Designer.cs">
+      <DependentUpon>UIBaseForm10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBaseForm\UIBaseForm11.Designer.cs">
+      <DependentUpon>UIBaseForm11.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOption.resx">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm01.resx">
+      <DependentUpon>SOIBaseForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm02.resx">
+      <DependentUpon>SOIBaseForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm03.resx">
+      <DependentUpon>SOIBaseForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm04.resx">
+      <DependentUpon>SOIBaseForm04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm05.resx">
+      <DependentUpon>SOIBaseForm05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm06.resx">
+      <DependentUpon>SOIBaseForm06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm07.resx">
+      <DependentUpon>SOIBaseForm07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm08.resx">
+      <DependentUpon>SOIBaseForm08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm09.resx">
+      <DependentUpon>SOIBaseForm09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm10.resx">
+      <DependentUpon>SOIBaseForm10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIDefaultBackgroundForm.resx">
+      <DependentUpon>SOIDefaultBackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButton.resx">
+      <DependentUpon>SOIButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonExportExcel.resx">
+      <DependentUpon>SOIButtonExportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImage.resx">
+      <DependentUpon>SOIButtonImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImageViewer.resx">
+      <DependentUpon>SOIButtonImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImportExcel.resx">
+      <DependentUpon>SOIButtonImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonPDFView.resx">
+      <DependentUpon>SOIButtonPDFView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonPrintOption.resx">
+      <DependentUpon>SOIButtonPrintOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIChart.resx">
+      <DependentUpon>SOIChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICheckBox.resx">
+      <DependentUpon>SOICheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICheckBoxOnOff.resx">
+      <DependentUpon>SOICheckBoxOnOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeView.resx">
+      <DependentUpon>SOICodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeViewDescription.resx">
+      <DependentUpon>SOICodeViewDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeViewMultiSelect.resx">
+      <DependentUpon>SOICodeViewMultiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICollectInspData.resx">
+      <DependentUpon>SOICollectInspData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIComboBox.resx">
+      <DependentUpon>SOIComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIContextMenu.resx">
+      <DependentUpon>SOIContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIDateTime.resx">
+      <DependentUpon>SOIDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIFlexibleScreen.resx">
+      <DependentUpon>SOIFlexibleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIGrid.resx">
+      <DependentUpon>SOIGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIGroupBox.resx">
+      <DependentUpon>SOIGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOILabel.resx">
+      <DependentUpon>SOILabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIListBox.resx">
+      <DependentUpon>SOIListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPanel.resx">
+      <DependentUpon>SOIPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPasswordBox.resx">
+      <DependentUpon>SOIPasswordBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPictureBox.resx">
+      <DependentUpon>SOIPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIRadioButton.resx">
+      <DependentUpon>SOIRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOISplitContainer.resx">
+      <DependentUpon>SOISplitContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOISpread.resx">
+      <DependentUpon>SOISpread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITabControl.resx">
+      <DependentUpon>SOITabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITableLayoutPanel.resx">
+      <DependentUpon>SOITableLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBox.resx">
+      <DependentUpon>SOITextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBoxBCWhite.resx">
+      <DependentUpon>SOITextBoxBCWhite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBoxNumber.resx">
+      <DependentUpon>SOITextBoxNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBoxValue.resx">
+      <DependentUpon>SOITextBoxValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITreeView.resx">
+      <DependentUpon>SOITreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIUnderline.resx">
+      <DependentUpon>SOIUnderline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmCodeViewMultiSelectPopup.resx">
+      <DependentUpon>frmCodeViewMultiSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmCodeViewPopup.resx">
+      <DependentUpon>frmCodeViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmImageViewerPopup.resx">
+      <DependentUpon>frmImageViewerPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmKeyPad.resx">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmModalessPopupBase.resx">
+      <DependentUpon>frmModalessPopupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmPopupBase.resx">
+      <DependentUpon>frmPopupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmPrintOptionPopup.resx">
+      <DependentUpon>frmPrintOptionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmStandardOperationView.resx" />
+    <EmbeddedResource Include="SOIPopup\frmStdOperSelectPopup.resx" />
+    <EmbeddedResource Include="SPCBaseForm\SPCBaseForm01.resx">
+      <DependentUpon>SPCBaseForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCBaseForm02.resx">
+      <DependentUpon>SPCBaseForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCBaseForm03.resx">
+      <DependentUpon>SPCBaseForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCCondition1.resx">
+      <DependentUpon>SPCCondition1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCDateTime.resx">
+      <DependentUpon>SPCDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCPopupCondition1.resx">
+      <DependentUpon>SPCPopupCondition1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCBaseForm\SPCPopupCondition2.resx">
+      <DependentUpon>SPCPopupCondition2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\Custom_MCCodeView.resx">
+      <DependentUpon>Custom_MCCodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\Custom_MCCodeViewPopup.resx">
+      <DependentUpon>Custom_MCCodeViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\DNMSpread.resx">
+      <DependentUpon>DNMSpread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\frmFileDownPopup.resx">
+      <DependentUpon>frmFileDownPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\frmInspResultForm.resx">
+      <DependentUpon>frmInspResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\Controls\StatusMessageBoxOI.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcAttachFile.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcCustomCodeViewGCM.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcCustomCodeViewGCMCode.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcCustomCollectData.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcCustomCollectDataQc.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcCustomPatrolCollectData.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcDateConditionType.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcDirectViewSpred.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcFromToDate.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcGCMCode.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcGroupTypeOper.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcLine.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcMat.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcMatGrouping.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcOper.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcPlanShopLine.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcShop.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcSpread.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcSpread1.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcSpread2.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\udcViewCustomCollectData.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\ViewCmnCode.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\ViewMatCode.resx" />
+    <EmbeddedResource Include="UIBaseForm\Controls\ViewSetColumns.resx" />
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm01.resx">
+      <DependentUpon>UIBaseForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm02.resx">
+      <DependentUpon>UIBaseForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm03.resx">
+      <DependentUpon>UIBaseForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm04.resx">
+      <DependentUpon>UIBaseForm04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm05.resx">
+      <DependentUpon>UIBaseForm05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm06.resx">
+      <DependentUpon>UIBaseForm06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm07.resx">
+      <DependentUpon>UIBaseForm07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm08.resx">
+      <DependentUpon>UIBaseForm08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm09.resx">
+      <DependentUpon>UIBaseForm09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm10.resx">
+      <DependentUpon>UIBaseForm10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBaseForm\UIBaseForm11.resx">
+      <DependentUpon>UIBaseForm11.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DirectView\Inquiry\" />
+    <Folder Include="DirectView\Setup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\030print.gif" />
+    <Content Include="Resources\076dataasc.gif" />
+    <Content Include="Resources\077datadesc.gif" />
+    <Content Include="Resources\084excel.gif" />
+    <Content Include="Resources\312coldel.gif" />
+    <Content Include="Resources\434493-refresh.jpg" />
+    <Content Include="Resources\alarmmsgbox_RED1920.jpg" />
+    <Content Include="Resources\alarmmsgbox_YELLOW1920.jpg" />
+    <Content Include="Resources\Alarm_1920x300_red.jpg" />
+    <Content Include="Resources\Alarm_1920x300_yellow.jpg" />
+    <Content Include="Resources\arrow_left.png" />
+    <Content Include="Resources\arrow_right.png" />
+    <Content Include="Resources\BackSpaceKey.png" />
+    <Content Include="Resources\boomp.wav" />
+    <Content Include="Resources\btn_back.gif" />
+    <Content Include="Resources\btn_back2.gif" />
+    <Content Include="Resources\btn_back3.gif" />
+    <Content Include="Resources\btn_click.png" />
+    <Content Include="Resources\btn_disable.png" />
+    <Content Include="Resources\btn_normal.png" />
+    <Content Include="Resources\btn_red_click.png" />
+    <Content Include="Resources\btn_red_normal.png" />
+    <Content Include="Resources\CodeViewButtonImage.png" />
+    <Content Include="Resources\combeep0.wav" />
+    <Content Include="Resources\Cylen1.wav" />
+    <Content Include="Resources\Dark_Main_Image.png" />
+    <Content Include="Resources\docking02.gif" />
+    <Content Include="Resources\ERROR.wav" />
+    <Content Include="Resources\Exorcism.wav" />
+    <Content Include="Resources\favoriteOff.png" />
+    <Content Include="Resources\favoriteOn.png" />
+    <Content Include="Resources\FINISH.wav" />
+    <Content Include="Resources\Ham.wav" />
+    <Content Include="Resources\HelpImage.png" />
+    <Content Include="Resources\HelpImage_DarkGray.png" />
+    <Content Include="Resources\Hold.png" />
+    <Content Include="Resources\icon_down1.GIF" />
+    <Content Include="Resources\icon_left1.gif" />
+    <Content Include="Resources\icon_middle1.gif" />
+    <Content Include="Resources\icon_right1.gif" />
+    <Content Include="Resources\icon_up1.gif" />
+    <Content Include="Resources\icon_Vmiddle1.GIF" />
+    <Content Include="Resources\InfoImage.png" />
+    <Content Include="Resources\InfoImage_DarkGray.png" />
+    <Content Include="Resources\Inventory.png" />
+    <Content Include="Resources\ITEM.wav" />
+    <Content Include="Resources\keyboard-number-pad.png" />
+    <Content Include="Resources\keypad.png" />
+    <Content Include="Resources\keypad_0.png" />
+    <Content Include="Resources\keypad_1.png" />
+    <Content Include="Resources\keypad_2.png" />
+    <Content Include="Resources\keypad_3.png" />
+    <Content Include="Resources\keypad_4.png" />
+    <Content Include="Resources\keypad_5.png" />
+    <Content Include="Resources\keypad_6.png" />
+    <Content Include="Resources\keypad_7.png" />
+    <Content Include="Resources\keypad_8.png" />
+    <Content Include="Resources\keypad_9.png" />
+    <Content Include="Resources\keypad_bg.png" />
+    <Content Include="Resources\keypad_bg1.png" />
+    <Content Include="Resources\keypad_del.png" />
+    <Content Include="Resources\keypad_ent.png" />
+    <Content Include="Resources\Keypad_Enter.png" />
+    <Content Include="Resources\Keypad_Enter1.png" />
+    <Content Include="Resources\keypad_sample.png" />
+    <Content Include="Resources\Light_Main_Image.png" />
+    <Content Include="Resources\MainImage.png" />
+    <Content Include="Resources\Main_Msg_Error.png" />
+    <Content Include="Resources\Main_Msg_Info.png" />
+    <Content Include="Resources\Main_Msg_None.png" />
+    <Content Include="Resources\Main_Msg_Warn.png" />
+    <Content Include="Resources\message.png" />
+    <Content Include="Resources\message_center_bg.png" />
+    <Content Include="Resources\message_right_bg.png" />
+    <Content Include="Resources\m_search.gif" />
+    <Content Include="Resources\NotHold.png" />
+    <Content Include="Resources\NotInventory.png" />
+    <Content Include="Resources\NotRepair.png" />
+    <Content Include="Resources\NotRework.png" />
+    <Content Include="Resources\NotTransit.png" />
+    <Content Include="Resources\Repair.png" />
+    <Content Include="Resources\Rework.png" />
+    <Content Include="Resources\SNP 8.wav" />
+    <Content Include="Resources\StatusProc.png" />
+    <Content Include="Resources\StatusWait.png" />
+    <Content Include="Resources\success.wav" />
+    <Content Include="Resources\toblog.gif" />
+    <Content Include="Resources\toggle_off.png" />
+    <Content Include="Resources\toggle_on_blue.png" />
+    <Content Include="Resources\toggle_on_dark.png" />
+    <Content Include="Resources\toggle_on_green.png" />
+    <Content Include="Resources\toggle_on_red.png" />
+    <Content Include="Resources\toggle_on_yellow.png" />
+    <Content Include="Resources\Transit.png" />
+    <Content Include="Resources\warning.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

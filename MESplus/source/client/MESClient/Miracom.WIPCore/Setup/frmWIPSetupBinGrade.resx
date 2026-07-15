@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="spdFunctions_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>11, 16</value>
+  </metadata>
+  <metadata name="spdCond_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>899, 19</value>
+  </metadata>
+  <metadata name="spdTGFunctions_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 16</value>
+  </metadata>
+  <metadata name="spdTGCond_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1044, 18</value>
+  </metadata>
+  <data name="txtHelp.Text" xml:space="preserve">
+    <value>###########################
+[ BIN X ]
+Quantity of specific Bin Grade (X : Bin Sequence)
+    ex) $_BIN_1
+---------------------------------------
+[ Total ]
+Total quantity of source Lot
+    ex) $_TOTAL
+---------------------------------------
+[ Oper In ]
+Current Operation in quantity of source Lot
+    ex) $_OPERIN
+---------------------------------------
+[ BOper In ]
+Passed Operation in quantity of source Lot
+    ex) $_BOPER_3030_$
+---------------------------------------
+[ CASE WHEN ~ THEN ~ END ]
+select value by conditions
+    ex) CASE WHEN $_BIN_1 &gt; 1000
+                       THEN 20
+                    WHEN $_BIN_2 &gt;= 2
+                       THEN 14
+                    WHEN $_BIN_1 &lt; 300
+                      THEN 2
+          END
+###########################
+[ ABS(n) ]
+Returns the absolute value of N.
+---------------------------------------
+[ EXP(n) ]
+Returns e raised to the Nth power, where e = 2.71828183...
+---------------------------------------
+[ MOD(n,m) ]
+Returns remainder of M divided by N.  Returns M if N is 0.
+---------------------------------------
+[ POWER(n,m) ]
+Returns M raised to the Nth power. The base M and the exponent N can by any numbers, but if M is negative, N must be an integer.
+---------------------------------------
+[ ROUND(n,m) ]
+Returns N rounded to M places right of the decimal point.  M defaults to 0. M can be negative to round off digits left of the decimal point.  M must be an integer.
+---------------------------------------
+[ SQRT(n) ]
+Returns square root of N;  if N &lt; 0 then NULL
+---------------------------------------
+[ SIGN(n) ]
+if N &lt; 0 then -1;  if N = 0 then 0;  if N &gt; 0 then 1
+---------------------------------------
+[ LN(n) ]
+Returns the natural logarithm of N where N &gt; 0
+---------------------------------------
+[ LOG(n,m) ]
+Returns the logarithm, base M, of N. The base M can be any positive number other than 0 or 1 and N can be any positive number.
+---------------------------------------
+[ TRUNC(n,m) ]
+Returns N truncated to M decimal places;  M defaults to 0. M can be negative to truncate (make zero) M digits left of the decimal point.
+###########################
+[ SIN(n) ]
+Returns the sine of N (an angle expressed in radians).
+---------------------------------------
+[ COS(n) ]
+Returns the cosine of N (an angle expressed in radians).
+---------------------------------------
+[ TAN(n) ]
+Returns the tangent of N (an angle expressed in radians).
+---------------------------------------
+[ SINH(n) ]
+Returns the hyperbolic sine of N.
+---------------------------------------
+[ COSH(n) ]
+Returns the hyperbolic cosine of N.
+---------------------------------------
+[ TANH(n) ]
+Returns the hyperbolic tangent of N.
+---------------------------------------
+[ ASIN(n) ]
+Returns the arc sine of N. Inputs are in the range of -1 to 1, and outputs are in the range of -pi/2 to pi/2 and are expressed in radians.
+---------------------------------------
+[ ACOS(n) ]
+Returns the arc cosine of N. Inputs are in the range of -1 to 1, and outputs are in the range of 0 to pi and are expressed in radians.
+---------------------------------------
+[ ATAN(n) ]
+Returns the arc tangent of N. Inputs are in an unbounded range, and outputs are in the range of -pi/2 to pi/2 and are expressed in radians.
+---------------------------------------
+[ ATAN2(n) ]
+Returns the arc tangent of N and M. Inputs are in an unbounded range, and outputs are in the range of -pi to pi, depending on the signs of x and y, and are expressed in radians.  Atan2(x,y) is the same as Atan2(x/y).
+###########################</value>
+  </data>
+  <metadata name="cdvSPDOper.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>357, 17</value>
+  </metadata>
+  <metadata name="cdvSPDBinSeq.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>477, 17</value>
+  </metadata>
+  <metadata name="cdvTGSPDOper.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>609, 18</value>
+  </metadata>
+  <metadata name="cdvTGSPDBinSeq.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>751, 18</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>65</value>
+  </metadata>
+</root>

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\View">
+      <UniqueIdentifier>{8ea6b571-7a3d-4a2a-8b3e-dc0ada35eb0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Setup">
+      <UniqueIdentifier>{2ea27e1c-161a-4e37-929e-1675aaacacdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transaction">
+      <UniqueIdentifier>{0f85584f-6804-4915-869f-e29ff5ca998c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="INVCoreAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_common_function.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_adapt_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_assy_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_change_cmf.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_consume.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_conv_to_inv.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_conv_to_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_defect_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_delete_inventory_history.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_disassy_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_hold_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_in_inventory.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_in_inventory_serial.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_inspection_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_IQC_confirm.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_IQC_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_IQC_request.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_loss_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_merge_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_multi_hold_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_multi_release_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_out_inventory.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_out_inventory_serial.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_release_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_scrap.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_scrap_serial.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_inventory.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_inventory_serial.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_erp_order.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_serial_list.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_location.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_material.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_operation.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_workorder_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_erp_order_detail_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_erp_order_master.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_erp_order_master_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inspection.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inspection_detail.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inspection_detail_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inspection_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inventory_history.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inventory_info.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inventory_info_serial.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot_data.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot_history.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_material.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_material_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_oper.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_oper_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_spare_part_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_transfer.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_transfer_detail.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_transfer_detail_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_transfer_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_workorder.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_workorder_detail.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_workorder_detail_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_split_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_out_Lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_cv_Lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_request.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_transfer_confirm.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_create_material_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_inv_material.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_update_inv_operation.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inv_material.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inv_material_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inv_operation.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_inv_operation_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot_history_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_lot_list_detail.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_material_list_by_bomset.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_material_version_list.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_view_transfer_history.c">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="INVCore_multi_split_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="INVCore_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INVCore_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INVCore_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+  </ItemGroup>
+</Project>

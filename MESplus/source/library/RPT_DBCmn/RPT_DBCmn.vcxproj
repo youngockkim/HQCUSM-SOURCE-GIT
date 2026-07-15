@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DF5C7684-23A8-4DCD-8968-650CD6C9D8CC}</ProjectGuid>
+    <RootNamespace>RPT_DBCmn</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>OldSyntax</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>OldSyntax</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="PC_File_Compile.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b*.c%3b$(TargetPath)%3b$(TargetDir)*.c%3b$(TargetDir)*.obj</ExtensionsToDeleteOnClean>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b*.c%3b$(TargetPath)%3b$(TargetDir)*.c%3b$(TargetDir)*.obj</ExtensionsToDeleteOnClean>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</RunCodeAnalysis>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="AddLib.bat" />
+    <None Include="makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RPT_common.h" />
+    <ClInclude Include="rpt_common_n.h" />
+    <ClInclude Include="RPT_mbasglbdef_n.h" />
+    <ClInclude Include="RPT_medclotdat_n.h" />
+    <ClInclude Include="RPT_medcresdat_n.h" />
+    <ClInclude Include="RPT_mgcmtbldat_n.h" />
+    <ClInclude Include="RPT_mmsgmsgdef_n.h" />
+    <ClInclude Include="RPT_mrasresdef_n.h" />
+    <ClInclude Include="RPT_mrasreshis_n.h" />
+    <ClInclude Include="RPT_mrasreslth_n.h" />
+    <ClInclude Include="RPT_mrassrslot_n.h" />
+    <ClInclude Include="RPT_mrassrslth_n.h" />
+    <ClInclude Include="RPT_mtmpatrhis_bak.h" />
+    <ClInclude Include="RPT_mtmpatrhis_bak_n.h" />
+    <ClInclude Include="RPT_mtmpatrhis_n.h" />
+    <ClInclude Include="RPT_mtmpcrrhis_bak.h" />
+    <ClInclude Include="RPT_mtmpcrrhis_bak_n.h" />
+    <ClInclude Include="RPT_mtmpcrrhis_n.h" />
+    <ClInclude Include="RPT_mtmplothis_bak.h" />
+    <ClInclude Include="RPT_mtmplothis_bak_n.h" />
+    <ClInclude Include="RPT_mtmplothis_n.h" />
+    <ClInclude Include="RPT_mtmppotdef.h" />
+    <ClInclude Include="RPT_mtmppotdef_n.h" />
+    <ClInclude Include="RPT_mtmppothis.h" />
+    <ClInclude Include="RPT_mtmppothis_bak.h" />
+    <ClInclude Include="RPT_mtmppothis_bak_n.h" />
+    <ClInclude Include="RPT_mtmppothis_n.h" />
+    <ClInclude Include="RPT_mtmpreshis_bak.h" />
+    <ClInclude Include="RPT_mtmpreshis_bak_n.h" />
+    <ClInclude Include="RPT_mtmpreshis_n.h" />
+    <ClInclude Include="RPT_mwipcaldef_n.h" />
+    <ClInclude Include="RPT_mwipcytdef_n.h" />
+    <ClInclude Include="RPT_mwipfacdef_n.h" />
+    <ClInclude Include="RPT_mwipflwdef_n.h" />
+    <ClInclude Include="RPT_mwipflwopr_n.h" />
+    <ClInclude Include="RPT_mwiplotcvm_n.h" />
+    <ClInclude Include="RPT_mwiplotdel_n.h" />
+    <ClInclude Include="RPT_mwiplothis_n.h" />
+    <ClInclude Include="RPT_mwiplothld_n.h" />
+    <ClInclude Include="RPT_mwiplotsts_n.h" />
+    <ClInclude Include="RPT_mwipmatdef_n.h" />
+    <ClInclude Include="RPT_mwipmatflw_n.h" />
+    <ClInclude Include="RPT_mwipoprdef_n.h" />
+    <ClInclude Include="RPT_mwipslthis_n.h" />
+    <ClInclude Include="RPT_mwipsltlos_n.h" />
+    <ClInclude Include="RPT_mwipsltsts_n.h" />
+    <ClInclude Include="RPT_ratrnamhis.h" />
+    <ClInclude Include="RPT_ratrnamhis_n.h" />
+    <ClInclude Include="RPT_ratrnamsts.h" />
+    <ClInclude Include="RPT_ratrnamsts_n.h" />
+    <ClInclude Include="RPT_redclotdat.h" />
+    <ClInclude Include="RPT_redclotdat_n.h" />
+    <ClInclude Include="RPT_redcresdat.h" />
+    <ClInclude Include="RPT_redcresdat_n.h" />
+    <ClInclude Include="RPT_rprcprcstp.h" />
+    <ClInclude Include="RPT_rprcprcstp_n.h" />
+    <ClInclude Include="RPT_rrascrrdef.h" />
+    <ClInclude Include="RPT_rrascrrdef_n.h" />
+    <ClInclude Include="RPT_rrascrrhis.h" />
+    <ClInclude Include="RPT_rrascrrhis_n.h" />
+    <ClInclude Include="RPT_rraspotdef.h" />
+    <ClInclude Include="RPT_rraspotdef_n.h" />
+    <ClInclude Include="RPT_rraspothis.h" />
+    <ClInclude Include="RPT_rraspothis_n.h" />
+    <ClInclude Include="RPT_rrasresdef.h" />
+    <ClInclude Include="RPT_rrasresdef_n.h" />
+    <ClInclude Include="RPT_rrasreshis.h" />
+    <ClInclude Include="RPT_rrasreshis_n.h" />
+    <ClInclude Include="RPT_rrasreslth.h" />
+    <ClInclude Include="RPT_rrasreslth_n.h" />
+    <ClInclude Include="RPT_rrassrsdef.h" />
+    <ClInclude Include="RPT_rrassrsdef_n.h" />
+    <ClInclude Include="RPT_rrassrshis.h" />
+    <ClInclude Include="RPT_rrassrshis_n.h" />
+    <ClInclude Include="RPT_rrassrslot.h" />
+    <ClInclude Include="RPT_rrassrslot_n.h" />
+    <ClInclude Include="RPT_rrassrslth.h" />
+    <ClInclude Include="RPT_rrassrslth_n.h" />
+    <ClInclude Include="RPT_rrwkclshis.h" />
+    <ClInclude Include="RPT_rrwkclshis_n.h" />
+    <ClInclude Include="RPT_rrwklotsts.h" />
+    <ClInclude Include="RPT_rrwklotsts_n.h" />
+    <ClInclude Include="RPT_rsumfacmov.h" />
+    <ClInclude Include="RPT_rsumfacmov_n.h" />
+    <ClInclude Include="RPT_rsumlincyc.h" />
+    <ClInclude Include="RPT_rsumlincyc_n.h" />
+    <ClInclude Include="RPT_rsumlinmov.h" />
+    <ClInclude Include="RPT_rsumlinmov_n.h" />
+    <ClInclude Include="RPT_rsumprclog.h" />
+    <ClInclude Include="RPT_rsumprclog_n.h" />
+    <ClInclude Include="RPT_rsumresmov.h" />
+    <ClInclude Include="RPT_rsumresmov_n.h" />
+    <ClInclude Include="RPT_rsumrestmh.h" />
+    <ClInclude Include="RPT_rsumrestmh_n.h" />
+    <ClInclude Include="RPT_rsumseccyc.h" />
+    <ClInclude Include="RPT_rsumseccyc_n.h" />
+    <ClInclude Include="RPT_rsumsecmov.h" />
+    <ClInclude Include="RPT_rsumsecmov_n.h" />
+    <ClInclude Include="RPT_rsumtmplyd.h" />
+    <ClInclude Include="RPT_rsumtmplyd_n.h" />
+    <ClInclude Include="RPT_rsumtmpwct.h" />
+    <ClInclude Include="RPT_rsumtmpwct_n.h" />
+    <ClInclude Include="RPT_rsumtmpwyd.h" />
+    <ClInclude Include="RPT_rsumtmpwyd_n.h" />
+    <ClInclude Include="RPT_rsumwipeoh.h" />
+    <ClInclude Include="RPT_rsumwipeoh_n.h" />
+    <ClInclude Include="RPT_rsumwipldr.h" />
+    <ClInclude Include="RPT_rsumwipldr_n.h" />
+    <ClInclude Include="RPT_rsumwiplth.h" />
+    <ClInclude Include="RPT_rsumwiplth_n.h" />
+    <ClInclude Include="RPT_rsumwipmov.h" />
+    <ClInclude Include="RPT_rsumwipmov_n.h" />
+    <ClInclude Include="RPT_rsumwrkcyc.h" />
+    <ClInclude Include="RPT_rsumwrkcyc_n.h" />
+    <ClInclude Include="RPT_rsumwrkmov.h" />
+    <ClInclude Include="RPT_rsumwrkmov_n.h" />
+    <ClInclude Include="RPT_rtmpdsmhis.h" />
+    <ClInclude Include="RPT_rtmpdsmhis_n.h" />
+    <ClInclude Include="RPT_rwiplotbns.h" />
+    <ClInclude Include="RPT_rwiplotbns_n.h" />
+    <ClInclude Include="RPT_rwiplotcmb.h" />
+    <ClInclude Include="RPT_rwiplotcmb_n.h" />
+    <ClInclude Include="RPT_rwiplotcvr.h" />
+    <ClInclude Include="RPT_rwiplotcvr_n.h" />
+    <ClInclude Include="RPT_rwiplotdel.h" />
+    <ClInclude Include="RPT_rwiplotdel_n.h" />
+    <ClInclude Include="RPT_rwiplotdue.h" />
+    <ClInclude Include="RPT_rwiplotdue_n.h" />
+    <ClInclude Include="RPT_rwiplothis.h" />
+    <ClInclude Include="RPT_rwiplothis_n.h" />
+    <ClInclude Include="RPT_rwiplothld.h" />
+    <ClInclude Include="RPT_rwiplothld_n.h" />
+    <ClInclude Include="RPT_rwiplotlos.h" />
+    <ClInclude Include="RPT_rwiplotlos_n.h" />
+    <ClInclude Include="RPT_rwiplotlsm.h" />
+    <ClInclude Include="RPT_rwiplotlsm_n.h" />
+    <ClInclude Include="RPT_rwiplotmrg.h" />
+    <ClInclude Include="RPT_rwiplotmrg_n.h" />
+    <ClInclude Include="RPT_rwiplotrwk.h" />
+    <ClInclude Include="RPT_rwiplotrwk_n.h" />
+    <ClInclude Include="RPT_rwiplotshp.h" />
+    <ClInclude Include="RPT_rwiplotshp_n.h" />
+    <ClInclude Include="RPT_rwiplotspl.h" />
+    <ClInclude Include="RPT_rwiplotspl_n.h" />
+    <ClInclude Include="RPT_rwiplotspm.h" />
+    <ClInclude Include="RPT_rwiplotspm_n.h" />
+    <ClInclude Include="RPT_rwiplotsts.h" />
+    <ClInclude Include="RPT_rwiplotsts_n.h" />
+    <ClInclude Include="RPT_rwiplottxt.h" />
+    <ClInclude Include="RPT_rwiplottxt_n.h" />
+    <ClInclude Include="RPT_rwippltsts.h" />
+    <ClInclude Include="RPT_rwippltsts_n.h" />
+    <ClInclude Include="RPT_rwipslthis.h" />
+    <ClInclude Include="RPT_rwipslthis_n.h" />
+    <ClInclude Include="RPT_rwipsltlos.h" />
+    <ClInclude Include="RPT_rwipsltlos_n.h" />
+    <ClInclude Include="RPT_rwipsltsts.h" />
+    <ClInclude Include="RPT_mbasglbdef.h" />
+    <ClInclude Include="RPT_medclotdat.h" />
+    <ClInclude Include="RPT_medcresdat.h" />
+    <ClInclude Include="RPT_mgcmtbldat.h" />
+    <ClInclude Include="RPT_mmsgmsgdef.h" />
+    <ClInclude Include="RPT_mrasresdef.h" />
+    <ClInclude Include="RPT_mrasreshis.h" />
+    <ClInclude Include="RPT_mrasreslth.h" />
+    <ClInclude Include="RPT_mrassrslot.h" />
+    <ClInclude Include="RPT_mrassrslth.h" />
+    <ClInclude Include="RPT_mtmpatrhis.h" />
+    <ClInclude Include="RPT_mtmpcrrhis.h" />
+    <ClInclude Include="RPT_mtmplothis.h" />
+    <ClInclude Include="RPT_mtmpreshis.h" />
+    <ClInclude Include="RPT_mwipcaldef.h" />
+    <ClInclude Include="RPT_mwipcytdef.h" />
+    <ClInclude Include="RPT_mwipfacdef.h" />
+    <ClInclude Include="RPT_mwipflwdef.h" />
+    <ClInclude Include="RPT_mwipflwopr.h" />
+    <ClInclude Include="RPT_mwiplotcvm.h" />
+    <ClInclude Include="RPT_mwiplotdel.h" />
+    <ClInclude Include="RPT_mwiplothis.h" />
+    <ClInclude Include="RPT_mwiplothld.h" />
+    <ClInclude Include="RPT_mwiplotsts.h" />
+    <ClInclude Include="RPT_mwipmatdef.h" />
+    <ClInclude Include="RPT_mwipmatflw.h" />
+    <ClInclude Include="RPT_mwipoprdef.h" />
+    <ClInclude Include="RPT_mwipslthis.h" />
+    <ClInclude Include="RPT_mwipsltlos.h" />
+    <ClInclude Include="RPT_mwipsltsts.h" />
+    <ClInclude Include="RPT_rwipsltsts_n.h" />
+    <ClInclude Include="RPT_rwipcrrlot.h" />
+    <ClInclude Include="RPT_rwipcrrlot_n.h" />
+    <ClInclude Include="RPT_rwipcrrlth.h" />
+    <ClInclude Include="RPT_rwipcrrlth_n.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="RPT_common.pc" />
+    <PC_File_Compile Include="RPT_mtmpatrhis_bak.pc" />
+    <PC_File_Compile Include="RPT_mtmpcrrhis_bak.pc" />
+    <PC_File_Compile Include="RPT_mtmplothis_bak.pc" />
+    <PC_File_Compile Include="RPT_mtmppotdef.pc" />
+    <PC_File_Compile Include="RPT_mtmppothis.pc" />
+    <PC_File_Compile Include="RPT_mtmppothis_bak.pc" />
+    <PC_File_Compile Include="RPT_mtmpreshis_bak.pc" />
+    <PC_File_Compile Include="RPT_ratrnamhis.pc" />
+    <PC_File_Compile Include="RPT_ratrnamsts.pc" />
+    <PC_File_Compile Include="RPT_redclotdat.pc" />
+    <PC_File_Compile Include="RPT_redcresdat.pc" />
+    <PC_File_Compile Include="RPT_rprcprcstp.pc" />
+    <PC_File_Compile Include="RPT_rrascrrdef.pc" />
+    <PC_File_Compile Include="RPT_rrascrrhis.pc" />
+    <PC_File_Compile Include="RPT_rraspotdef.pc" />
+    <PC_File_Compile Include="RPT_rraspothis.pc" />
+    <PC_File_Compile Include="RPT_rrasresdef.pc" />
+    <PC_File_Compile Include="RPT_rrasreshis.pc" />
+    <PC_File_Compile Include="RPT_rrasreslth.pc" />
+    <PC_File_Compile Include="RPT_rrassrsdef.pc" />
+    <PC_File_Compile Include="RPT_rrassrshis.pc" />
+    <PC_File_Compile Include="RPT_rrassrslot.pc" />
+    <PC_File_Compile Include="RPT_rrassrslth.pc" />
+    <PC_File_Compile Include="RPT_rrwkclshis.pc" />
+    <PC_File_Compile Include="RPT_rrwklotsts.pc" />
+    <PC_File_Compile Include="RPT_rsumfacmov.pc" />
+    <PC_File_Compile Include="RPT_rsumlincyc.pc" />
+    <PC_File_Compile Include="RPT_rsumlinmov.pc" />
+    <PC_File_Compile Include="RPT_rsumprclog.pc" />
+    <PC_File_Compile Include="RPT_rsumresmov.pc" />
+    <PC_File_Compile Include="RPT_rsumrestmh.pc" />
+    <PC_File_Compile Include="RPT_rsumseccyc.pc" />
+    <PC_File_Compile Include="RPT_rsumsecmov.pc" />
+    <PC_File_Compile Include="RPT_rsumtmplyd.pc" />
+    <PC_File_Compile Include="RPT_rsumtmpwct.pc" />
+    <PC_File_Compile Include="RPT_rsumtmpwyd.pc" />
+    <PC_File_Compile Include="RPT_rsumwipeoh.pc" />
+    <PC_File_Compile Include="RPT_rsumwipldr.pc" />
+    <PC_File_Compile Include="RPT_rsumwiplth.pc" />
+    <PC_File_Compile Include="RPT_rsumwipmov.pc" />
+    <PC_File_Compile Include="RPT_rsumwrkcyc.pc" />
+    <PC_File_Compile Include="RPT_rsumwrkmov.pc" />
+    <PC_File_Compile Include="RPT_rtmpdsmhis.pc" />
+    <PC_File_Compile Include="RPT_rwiplotbns.pc" />
+    <PC_File_Compile Include="RPT_rwiplotcmb.pc" />
+    <PC_File_Compile Include="RPT_rwiplotcvr.pc" />
+    <PC_File_Compile Include="RPT_rwiplotdel.pc" />
+    <PC_File_Compile Include="RPT_rwiplotdue.pc" />
+    <PC_File_Compile Include="RPT_rwiplothis.pc" />
+    <PC_File_Compile Include="RPT_rwiplothld.pc" />
+    <PC_File_Compile Include="RPT_rwiplotlos.pc" />
+    <PC_File_Compile Include="RPT_rwiplotlsm.pc" />
+    <PC_File_Compile Include="RPT_rwiplotmrg.pc" />
+    <PC_File_Compile Include="RPT_rwiplotrwk.pc" />
+    <PC_File_Compile Include="RPT_rwiplotshp.pc" />
+    <PC_File_Compile Include="RPT_rwiplotspl.pc" />
+    <PC_File_Compile Include="RPT_rwiplotspm.pc" />
+    <PC_File_Compile Include="RPT_rwiplotsts.pc" />
+    <PC_File_Compile Include="RPT_rwiplottxt.pc" />
+    <PC_File_Compile Include="RPT_rwippltsts.pc" />
+    <PC_File_Compile Include="RPT_rwipslthis.pc" />
+    <PC_File_Compile Include="RPT_rwipsltlos.pc" />
+    <PC_File_Compile Include="RPT_rwipsltsts.pc" />
+    <PC_File_Compile Include="RPT_mbasglbdef.pc" />
+    <PC_File_Compile Include="RPT_medclotdat.pc" />
+    <PC_File_Compile Include="RPT_medcresdat.pc" />
+    <PC_File_Compile Include="RPT_mgcmtbldat.pc" />
+    <PC_File_Compile Include="RPT_mmsgmsgdef.pc" />
+    <PC_File_Compile Include="RPT_mrasresdef.pc" />
+    <PC_File_Compile Include="RPT_mrasreshis.pc" />
+    <PC_File_Compile Include="RPT_mrasreslth.pc" />
+    <PC_File_Compile Include="RPT_mrassrslot.pc" />
+    <PC_File_Compile Include="RPT_mrassrslth.pc" />
+    <PC_File_Compile Include="RPT_mtmpatrhis.pc" />
+    <PC_File_Compile Include="RPT_mtmpcrrhis.pc" />
+    <PC_File_Compile Include="RPT_mtmplothis.pc" />
+    <PC_File_Compile Include="RPT_mtmpreshis.pc" />
+    <PC_File_Compile Include="RPT_mwipcaldef.pc" />
+    <PC_File_Compile Include="RPT_mwipcytdef.pc" />
+    <PC_File_Compile Include="RPT_mwipfacdef.pc" />
+    <PC_File_Compile Include="RPT_mwipflwdef.pc" />
+    <PC_File_Compile Include="RPT_mwipflwopr.pc" />
+    <PC_File_Compile Include="RPT_mwiplotcvm.pc" />
+    <PC_File_Compile Include="RPT_mwiplotdel.pc" />
+    <PC_File_Compile Include="RPT_mwiplothis.pc" />
+    <PC_File_Compile Include="RPT_mwiplothld.pc" />
+    <PC_File_Compile Include="RPT_mwiplotsts.pc" />
+    <PC_File_Compile Include="RPT_mwipmatdef.pc" />
+    <PC_File_Compile Include="RPT_mwipmatflw.pc" />
+    <PC_File_Compile Include="RPT_mwipoprdef.pc" />
+    <PC_File_Compile Include="RPT_mwipslthis.pc" />
+    <PC_File_Compile Include="RPT_mwipsltlos.pc" />
+    <PC_File_Compile Include="RPT_mwipsltsts.pc" />
+    <PC_File_Compile Include="RPT_rwipcrrlot.pc" />
+    <PC_File_Compile Include="RPT_rwipcrrlth.pc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="PC_File_Compile.targets" />
+  </ImportGroup>
+</Project>

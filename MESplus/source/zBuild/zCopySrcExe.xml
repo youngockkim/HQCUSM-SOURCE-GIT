@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<project name="MESplusV5" default="Copy" basedir="../">
+
+    <!-- ===== Move and Copy Server Exe File ===== -->
+    <target name="Copy_Server">
+        <copy file="../bin/MESServer.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/MESServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESStopProc.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/MESStopProc.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/ADMServer.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/ADMServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESArchive.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/MESArchive.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESServer.exe" tofile="${MESplus_HOME}/bin/RTDServer.exe" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/RTDServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/BATServer.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/BATServer.exe" perm="755" failonerror="false"/>
+    </target>
+
+    <!-- ===== Delete Include, Library, Source Files ===== -->
+    <target name="Delete_Files">
+        <delete dir="${MESplus_HOME}/inc" failonerror="false"/>
+        <!-- For shared library <delete dir="${MESplus_HOME}/lib"/> -->
+        <delete dir="${MESplus_HOME}/source" failonerror="false"/>
+    </target>
+
+    <!-- ===== Copy Include, Library, Source Files ===== -->
+    <target name="Copy_Files">
+        <copy todir="${MESplus_HOME}/cmd" overwrite="true">
+            <fileset dir="../cmd" includes="**/Sample_*.ini" casesensitive="yes"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/inc">
+            <fileset dir="../inc"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/lib">
+            <fileset dir="../lib" excludes="**/*.so"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/source">
+            <fileset dir="../source"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/unit_test">
+            <fileset dir="../unit_test" includes="**/_CSS, **/*.sh"/>
+        </copy>
+    </target>
+
+    <!-- ===== Symbolic Linking ===== -->
+    <target name="Symbolic_Links">
+      <exec executable="dos2unix" dir="../source/zBuild" failonerror="false">
+        <arg line="symbolic_link.bat" />
+      </exec>
+	    <chmod file="../source/zBuild/symbolic_link.bat" perm="755" failonerror="false"/>
+	    <exec executable="symbolic_link.bat" dir="../source/zBuild" failonerror="false"/>
+    </target>
+
+    <!-- ===== Exchange buildversion file ===== -->
+    <target name="Exchange_Buildversion">
+        <delete>
+            <fileset dir="${MESplus_HOME}" includes="*.ver"/>
+        </delete>
+        <copy file="./version.txt" tofile="${MESplus_HOME}/z${buildVersion}.ver" failonerror="false"/>
+    </target>
+
+    <!-- ===== Stop Server ===== -->
+    <target name="Stop_Server">
+        <exec executable="stopMESServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopRTDServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopADMServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopBATServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+		<sleep seconds="5"/>
+        <exec executable="stopMESServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopRTDServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopADMServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="stopBATServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+		<sleep seconds="5"/>
+    </target>
+
+    <!-- ===== Start Server ===== -->
+    <target name="Start_Server">
+        <exec executable="startMESServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="startRTDServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="startADMServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+        <exec executable="startBATServer" dir="${MESplus_HOME}/cmd" failonerror="false"/>
+    </target>
+
+    <!-- <target name="Copy" depends="Stop_Server, Copy_Server, Delete_Files, Copy_Files, Symbolic_Links, Exchange_Buildversion, Start_Server"> -->
+    <target name="Copy" depends="Copy_Server, Delete_Files, Copy_Files, Symbolic_Links, Exchange_Buildversion">
+        <tstamp>
+            <format property="bld.end.date" pattern="yyyy/MM/dd"/>
+            <format property="bld.end.time" pattern="HH:mm:ss"/>
+        </tstamp>
+        <echo message="=========================================================="/>
+        <echo message="Copy source and execution files finished at ${bld.end.date} ${bld.end.time}"/>
+        <echo message="=========================================================="/>
+    </target>
+
+</project>
+

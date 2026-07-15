@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="CUS_HQCUSM_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_HQCUSM_service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d7073b67-6a2b-4d0a-8ec3-96a60a5c8df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2f8c8721-94eb-47aa-ab19-6ed55f25ac32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BAS">
+      <UniqueIdentifier>{19aabcea-0350-4cf5-8711-efad5d2f269d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EIS">
+      <UniqueIdentifier>{aa4b41fd-7327-44b8-a630-a20f6167d317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WIP">
+      <UniqueIdentifier>{4485ff7b-6e9c-441b-bc34-a93811ac47dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RAS">
+      <UniqueIdentifier>{c78e6717-6f1e-453c-98b2-defff7554342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ORD">
+      <UniqueIdentifier>{d26aff91-daea-46a5-ae76-b90732259ac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RPT">
+      <UniqueIdentifier>{4f6d1989-db48-4b1c-b759-80e3a2a6943c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MDM">
+      <UniqueIdentifier>{bacc5272-fa23-4933-b676-21b90c3ec7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RCP">
+      <UniqueIdentifier>{560d2905-5e9a-4a69-b9bc-012ed25a5633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RCP">
+      <UniqueIdentifier>{d37a11f7-9c80-4d1d-af2a-1b997e84bb97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RCP\Source Files">
+      <UniqueIdentifier>{fda15204-ae6e-47ee-96a4-d6fa73e89ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RCP\Header Files">
+      <UniqueIdentifier>{a397a814-3e5f-4337-adc8-7fd87e17198e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MMS">
+      <UniqueIdentifier>{f22c6f81-17f1-4ae3-97bd-0d1db5887f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AMS">
+      <UniqueIdentifier>{454e0d09-286b-4694-80fb-8c2301c8d4bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JCM">
+      <UniqueIdentifier>{02db4bab-6ba2-476c-b69a-c4f2c9c30d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PSM">
+      <UniqueIdentifier>{22c0655d-38d6-40f7-a33d-e271b1c00a11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUSHQCUSMAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_create_lot.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_end_lot.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_start_lot.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_change_resource_control_mode.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_raise_alarm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_clear_alarm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_change_resource_state.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_request_login.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_notify_system_alarm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_resource_event.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_set_resource_data_collection_method.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_resource_data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_request_production_order_list.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_validate_production_order.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_dock_in_cart.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_dock_out_cart.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_validate_magazine.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_load_magazine.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_unload_magazine.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_assign_magazine_to_cart.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_load_material.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_unload_material.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_process_data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_update_tool_usage_count.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_validate_lot.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_match_matrix_pallet.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_load_module.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_unload_module.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_terminate_lot.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_cell_id.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_get_process_tack_time.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_move_halfcell_cart.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_current_order_by_line.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_packing_fullcell.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_packing_halfcell.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_fqc_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_fqc_flash_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_fqc_result.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_fqc_result.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_fullcell_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_halfcell_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_process_data_string.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_packing_module_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_module_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_order_bom_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_attached_material_list_by_resource.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_label_print.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CORD_view_order_list_by_line.c">
+      <Filter>Source Files\ORD</Filter>
+    </ClCompile>
+    <ClCompile Include="CORD_view_current_order_by_line.c">
+      <Filter>Source Files\ORD</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_line_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_inspection_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_inspection_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_inventory_lot_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_bom_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CORD_change_current_order.c">
+      <Filter>Source Files\ORD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_Module_grade_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_article_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_operation_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_attached_material_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_resource_list_by_line.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_start_lot_lami.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_end_lot_lami.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_process_data_cell.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_process_data_lami.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_process_data_fqc.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data_cleaving.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data_cell.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data_string.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_validate_lot_fqc.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_barcode_print.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_module_label_print.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_module_repair.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_save_module_information.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRPT_view_fullcell_cart_label.c">
+      <Filter>Source Files\RPT</Filter>
+    </ClCompile>
+    <ClCompile Include="CRPT_view_halfcell_cart_label.c">
+      <Filter>Source Files\RPT</Filter>
+    </ClCompile>
+    <ClCompile Include="CRPT_view_productivity_by_order.c">
+      <Filter>Source Files\RPT</Filter>
+    </ClCompile>
+    <ClCompile Include="CRPT_view_productivity_by_period.c">
+      <Filter>Source Files\RPT</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_fullcell_lot_validation.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_grade.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_pallet_current_seq.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_data_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_image.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_scrap_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_scrap_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_complete_packing.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_cart.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_daily_work_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_daily_work_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_multi_update_daily_work_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRPT_view_manage_fullcell_cart_label.c">
+      <Filter>Source Files\RPT</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_view_xlink_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_multi_update_patrol_check_sheet.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_patrol_check_sheet.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_patrol_check_sheet.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_update_xlink_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_multi_update_plan.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_monthly_plan.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_plan.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_4m.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_4m_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_view_reference_sample_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_update_reference_sample_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_view_eva_to_glass_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_update_eva_to_glass_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_view_eva_to_backsheet_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CMDM_update_eva_to_backsheet_data_list.c">
+      <Filter>Source Files\MDM</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_terminate_cause_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_recipe_id_list.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_recipe_parameter_list.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_remote_request_mes_to_eap.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_recipe_management.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_recipe_release_confirm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRCP_update_para_version.c">
+      <Filter>Source Files\RCP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_download_fqc_inspection_data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_equipment_working_time.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data_sualab.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_sample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_inspection_data_busbar.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_cleaving_loss.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_cleaving_loss_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_validate_terminate_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_update_recipe.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_delete_recipe.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_releaseconfirm_recipe.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_product_plan.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_equipment_average_working_time.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_fmb_notice.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_ctm.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_material_list_by_production.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_Cleaving_Hourly_Summary.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_Collect_Inspection_Vision_Cleaving.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_Layup_Repair_Tray_Input_Data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_tray.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_tray.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_validate_for_fqc_rejudgment.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_start_lot_oqc.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_end_lot_oqc.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_collect_inspection_data_oqc.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_buffercount_inquiry_res.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_acmodule_remove.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_acmodule_history_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_silicone_management.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_silicone_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_validation_silicone_management.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_lgv_acmodule_alarm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_lgv_load_alarm.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_pmpp_diode_alert_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_pmpp_diode_alert.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_tabber_status.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_tabber_status.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_oqc_technician.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_oqc_technician.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_scrap_list_lb.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_scrap_list_lb.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_cleaving_loss_list_gram.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_cleaving_loss_gram.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_lot_rework.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_rework_result.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_hour_gap.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_hour_gap_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_crasdshift.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_crasdwntim.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_crasdshift_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_crasdwntim_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_lot_extention.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_extention.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_extention_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_equipment_work_log.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_equipment_work_log_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_entry_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_entry.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_entry_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_material_termination.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_material_termination.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_material_termination_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_module_repair_overkill.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_tabber_clean.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_tabber_clean_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_collect_lgv_terminal_event.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_cleaving_status.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_cleaving_status.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_cleaving_status_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_get_db_systime.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_lot_image_save.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_image_save.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_image_save_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_update_cgcmtbldat.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_cgcmtbldat.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_cgcmtbldat_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_repair_insentive.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_repair_insentive.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_collect_peel_test_data.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_string_repair_data_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_string_repair_data.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_string_repair_data.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_label_print_v1.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_data.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_move_confirm.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_move_request.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_rework_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_port_operation_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CINV_move_store.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_packing_label_print_v2.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_scraplb_list_tb.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_scraplb_tb_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_scraplb_tb.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_scraplb_tb.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_scraplb_tb_mst_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_raise_alarm.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_tran_attached_file.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_analysis_plan.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_calibration_equipment.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_calibration_institute.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_calibration_plan.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_calibration_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_calibration_user.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_equipment.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_equipment_item.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_equipmentitem.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_evaluation_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_item.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_measuring_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_update_sample.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_analysis_plan.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_analysis_plan_item_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_analysis_plan_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_analysis_plan_result_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_equipment.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_equipment_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_institute.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_institute_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_plan.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_plan_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_result_registration_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_user.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_calibration_user_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_cmms_equip_list_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipment.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipment_item.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipment_item_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipment_Ledger_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipment_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipmentitem.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_equipmentitem_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_evaluation_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_evaluation_result_registration_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_item.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_item_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_measuring_result_registration.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_measuring_result_registration_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_sample.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMS_view_sample_list.c">
+      <Filter>Source Files\MMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_check_job_change_item.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_create_job_change_master.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_insert_job_item_history.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_raise_alarm.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_update_job_change_item.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_update_job_change_status.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_update_setup_job_change_item.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_cjcm_join_list.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_job_change_item.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_job_change_item_list.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_job_change_status.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_job_change_status_list.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_order_list.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_setup_job_change_item.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_view_setup_job_change_item_list.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_close_job_change_master.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CJCM_copy_job_change_master.c">
+      <Filter>Source Files\JCM</Filter>
+    </ClCompile>
+    <ClCompile Include="CPSM_update_monitoring_status.c">
+      <Filter>Source Files\PSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_update_audit_plan.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_update_audit_result.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_update_audit_result_item.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_plan.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_plan_list.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_result.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_result_item.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_result_item_list.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_audit_result_list.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CAMS_view_cams_join_list.c">
+      <Filter>Source Files\AMS</Filter>
+    </ClCompile>
+    <ClCompile Include="CPSM_update_prod_monitoring.c">
+      <Filter>Source Files\PSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CPSM_view_prod_monitoring.c">
+      <Filter>Source Files\PSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CPSM_view_prod_monitoring_list.c">
+      <Filter>Source Files\PSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_save_traceability_material_data.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_materials_in_bom_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_day_inventory.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_hourly_fqc_worklog_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_hourly_fqc_worklog.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_day_inventory.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_day_inventory_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_hourly_fqc_worklog.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_orders_by_material_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_laminator_recipe.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_laminator_recipe.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_laminator_recipe_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_grade_multi.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_laminator_pull_test_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_laminator_pull_test.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_laminator_pull_test.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_xlinktest.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_xlinktest_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_xlinktest.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_tray_management.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_validate_lot_label_e23.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_change_resource_state_nozzle_pressure.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_change_resource_bypass_mode.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_peeltestresult.c" />
+    <ClCompile Include="CWIP_view_peeltestresult.c" />
+    <ClCompile Include="CWIP_view_peeltestresult_list.c" />
+    <ClCompile Include="CWIP_update_repacking_log.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_repacking_log.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_repacking_log_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_update_tabber_jig_repair.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_tabber_jig_repair.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CRAS_view_tabber_jig_repair_list.c">
+      <Filter>Source Files\RAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_update_tb_cleaning_schedule.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_tb_cleaning_schedule.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_tb_cleaning_schedule_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\bin\Debug\CompressNew.exe.config
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CompressNew.exe
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CompressNew.pdb
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\bin\Debug\CompressNew.exe
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\bin\Debug\CompressNew.pdb
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CTMAgent.csprojResolveAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CTMAgent.Form1.resources
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CTMAgent.Properties.Resources.resources
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram - 복사본\CTMAgent\obj\x86\Debug\CTMAgent.csproj.GenerateResource.Cache

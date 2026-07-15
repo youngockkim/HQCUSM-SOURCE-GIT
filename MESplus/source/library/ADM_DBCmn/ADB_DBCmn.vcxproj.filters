@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="ADB_arc_query.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_arccore_join.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_col_name.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_get_keyvalue.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_marclogdef.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_marcloghis.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_marcoptdef.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_marcrundat.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_marctabdef.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_session.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_table.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="ADB_tablespace.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ADB_arc_query.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_arccore_join.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_col_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_get_keyvalue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marclogdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcloghis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcoptdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcrundat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marctabdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_tablespace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_arc_query_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_arccore_join_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_col_name_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_get_keyvalue_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marclogdef_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcloghis_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcoptdef_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marcrundat_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_marctabdef_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_session_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_table_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADB_tablespace_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adb_common_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="AddLib.bat" />
+    <None Include="AddLib_Sample.bat">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

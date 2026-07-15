@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7663F33-1159-44C2-A3A9-094D96AEF9AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.SPMCore</RootNamespace>
+    <AssemblyName>Miracom.SPMCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Miracom.BASCore">
+      <HintPath>..\..\Components\Miracom.BASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmSPMCompareSpecValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmSPMCompareSpecValue.Designer.cs">
+      <DependentUpon>frmSPMCompareSpecValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmSPMViewSpecValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmSPMViewSpecValue.Designer.cs">
+      <DependentUpon>frmSPMViewSpecValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmSPMSetupSpecRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmSPMSetupSpecRelation.Designer.cs">
+      <DependentUpon>frmSPMSetupSpecRelation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Inquiry\frmSPMCompareSpecValue.resx">
+      <DependentUpon>frmSPMCompareSpecValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmSPMViewSpecValue.resx">
+      <DependentUpon>frmSPMViewSpecValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setup\frmSPMSetupSpecRelation.resx">
+      <DependentUpon>frmSPMSetupSpecRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

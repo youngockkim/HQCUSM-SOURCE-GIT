@@ -1,0 +1,15 @@
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\bin\Debug\SECSParser.exe
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\bin\Debug\SECSParser.pdb
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\obj\x86\Debug\SECSParser.Form1.resources
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\obj\x86\Debug\SECSParser.Properties.Resources.resources
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\obj\x86\Debug\SECSParser.csproj.GenerateResource.Cache
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\obj\x86\Debug\SECSParser.exe
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\SECSParser\obj\x86\Debug\SECSParser.pdb
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.exe
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.pdb
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\bin\Debug\SECSParser.exe
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\bin\Debug\SECSParser.pdb
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.csprojResolveAssemblyReference.cache
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.Form1.resources
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.Properties.Resources.resources
+C:\HQCELL\HQCUSM-SOURCE\MESplus\source\client\SECSParser\SECSParser\obj\x86\Debug\SECSParser.csproj.GenerateResource.Cache

@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace SOI.Samples.SampleLayout
+{
+    public partial class frmSampleLayout1_1 : frmSampleBase
+    {
+        public frmSampleLayout1_1()
+        {
+            InitializeComponent();
+        }
+    }
+}

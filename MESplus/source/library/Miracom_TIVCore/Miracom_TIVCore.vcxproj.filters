@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TIVCore_adapt_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_change_cmf.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_consume_Lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_consume_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_create_material_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_cv_Lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_deconsume_Lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_defect_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_generate_lot_id.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_hold_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_inspection_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_IQC_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_loss_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_merge_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_multi_hold_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_multi_release_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_multi_split_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_release_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_split_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_transfer_confirm.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_transfer_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_transfer_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_transfer_request.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_update_inv_material.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_update_inv_operation.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_update_location.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_transfer_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_inv_material.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_inv_material_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_inv_operation.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_inv_operation_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_data.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_history.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_history_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_history_N.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_list_detail.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_New.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material_list_by_bomset.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material_version_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_oper.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_oper_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_spare_part_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_transfer.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_transfer_detail.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_transfer_detail_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_transfer_history.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCoreAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_common_function.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material_inout_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_trs_assigned_lot.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_assign_lot_list_to_trs.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_adapt_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_update_material_list_for_trs.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_material_list_for_trs.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_update_ship_factory.c">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_ship_factory_list.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_ship_factory.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_ship_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_ship_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_inspection_lot_multi.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_inv_lot_list_ext.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_view_lot_ext.c">
+      <Filter>Source Files\Inquiry</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_assgin_material_to_resource.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="TIVCore_multi_merge_lot.c">
+      <Filter>Source Files\Transaction</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TIVCore_common.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TIVCore_defines.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TIVCore_services.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2afe1c18-85ac-4dd4-a37f-c3b8639e0cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Inquiry">
+      <UniqueIdentifier>{3796e5cf-2050-4e61-84c7-2912469d7896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Setup">
+      <UniqueIdentifier>{190a4935-9641-49de-9aaf-01b1f60cdf08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transaction">
+      <UniqueIdentifier>{f5208cc5-dda4-43f7-a43b-39fb98600653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header Files">
+      <UniqueIdentifier>{18670338-8e73-405b-a0c7-a82a902c0d70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

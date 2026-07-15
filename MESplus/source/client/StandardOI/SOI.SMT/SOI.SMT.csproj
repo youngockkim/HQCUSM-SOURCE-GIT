@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF8A8750-E194-49F0-A242-BC0C395300F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOI.SMT</RootNamespace>
+    <AssemblyName>SOI.SMT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_Http</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListBar.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListView.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerH101">
+      <HintPath>..\Components\SOI.MsgHandlerH101.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerHTTP">
+      <HintPath>..\Components\SOI.MsgHandlerHTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.OIFrx">
+      <HintPath>..\Components\SOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmSMTAlterInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTAlterInvLot.Designer.cs">
+      <DependentUpon>frmSMTAlterInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTCleanPCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTCleanPCB.Designer.cs">
+      <DependentUpon>frmSMTCleanPCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTEndPCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTEndPCB.Designer.cs">
+      <DependentUpon>frmSMTEndPCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTInputPCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTInputPCB.Designer.cs">
+      <DependentUpon>frmSMTInputPCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTInputQCLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTInputQCLot.Designer.cs">
+      <DependentUpon>frmSMTInputQCLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTMappingFeederReel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTMappingFeederReel.Designer.cs">
+      <DependentUpon>frmSMTMappingFeederReel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMTSlotMappingMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTSlotMappingMat.Designer.cs">
+      <DependentUpon>frmSMTSlotMappingMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmSMTAlterInvLot.resx">
+      <DependentUpon>frmSMTAlterInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTCleanPCB.resx">
+      <DependentUpon>frmSMTCleanPCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTEndPCB.resx">
+      <DependentUpon>frmSMTEndPCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTInputPCB.resx">
+      <DependentUpon>frmSMTInputPCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTInputQCLot.resx">
+      <DependentUpon>frmSMTInputQCLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTMappingFeederReel.resx">
+      <DependentUpon>frmSMTMappingFeederReel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTSlotMappingMat.resx">
+      <DependentUpon>frmSMTSlotMappingMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

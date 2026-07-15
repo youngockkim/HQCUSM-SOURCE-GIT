@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D90B68DE-DD6A-4AB9-B9A8-8CFA0B83A219}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BOI.INVCus</RootNamespace>
+    <AssemblyName>BOI.INVCus</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_Http</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BOI.OIFrx">
+      <HintPath>..\Components\BOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListBar.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListView.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.POPCore">
+      <HintPath>..\Components\Miracom.POPCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerH101">
+      <HintPath>..\Components\SOI.MsgHandlerH101.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerHTTP">
+      <HintPath>..\Components\SOI.MsgHandlerHTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.OIFrx">
+      <HintPath>..\Components\SOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet, Version=7.0.0.0, Culture=neutral, PublicKeyToken=d1edfc8a280ba121, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmINVViewInventoryLotStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmINVViewInventoryLotStatus.designer.cs">
+      <DependentUpon>frmINVViewInventoryLotStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVInputWeightQtyPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVInputWeightQtyPopup.Designer.cs">
+      <DependentUpon>frmINVInputWeightQtyPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmInvRawmilkConfirmPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmInvRawmilkConfirmPopup.Designer.cs">
+      <DependentUpon>frmInvRawmilkConfirmPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvDispense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvDispense.designer.cs">
+      <DependentUpon>frmInvViewInvDispense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvMove.designer.cs">
+      <DependentUpon>frmInvViewInvMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmInvViewInvReturn.designer.cs">
+      <DependentUpon>frmInvViewInvReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmInvViewMatList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmInvViewMatList.Designer.cs">
+      <DependentUpon>frmInvViewMatList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputInspectionRawmilk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputInspectionRawmilk.designer.cs">
+      <DependentUpon>frmINVInputInspectionRawmilk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVMoveInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVMoveInventoryLot.Designer.cs">
+      <DependentUpon>frmINVMoveInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutPickingInventoryByOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutPickingInventoryByOrder.Designer.cs">
+      <DependentUpon>frmINVOutPickingInventoryByOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVPendingReceiptMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVPendingReceiptMaterial.designer.cs">
+      <DependentUpon>frmINVPendingReceiptMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotDispense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotDispense.Designer.cs">
+      <DependentUpon>frmINVPickingInventoryLotDispense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVReturnInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVReturnInventoryLot.Designer.cs">
+      <DependentUpon>frmINVReturnInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutInventoryLot.Designer.cs">
+      <DependentUpon>frmINVOutInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVChangeQtyInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVChangeQtyInventoryLot.designer.cs">
+      <DependentUpon>frmINVChangeQtyInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotMove.Designer.cs">
+      <DependentUpon>frmINVPickingInventoryLotMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVSelectDetaulItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVSelectDetaulItem.Designer.cs">
+      <DependentUpon>frmINVSelectDetaulItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVShipInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVShipInventoryLot.Designer.cs">
+      <DependentUpon>frmINVShipInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmINVViewInventoryLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmINVViewInventoryLotHistory.Designer.cs">
+      <DependentUpon>frmINVViewInventoryLotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmCINVViewResourceListPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmCINVViewResourceListPopup.designer.cs">
+      <DependentUpon>frmCINVViewResourceListPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVInputInTypePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVInputInTypePopup.designer.cs">
+      <DependentUpon>frmINVInputInTypePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVInputOutTypePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVInputOutTypePopup.designer.cs">
+      <DependentUpon>frmINVInputOutTypePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVOutRawmilkToOtherFacPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVOutRawmilkToOtherFacPopup.Designer.cs">
+      <DependentUpon>frmINVOutRawmilkToOtherFacPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVPutInTankPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVPutInTankPopup.designer.cs">
+      <DependentUpon>frmINVPutInTankPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmINVEmptyTankPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmINVEmptyTankPopup.designer.cs">
+      <DependentUpon>frmINVEmptyTankPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVCreateInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVCreateInventoryLot.Designer.cs">
+      <DependentUpon>frmINVCreateInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVDivideInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVDivideInventoryLot.designer.cs">
+      <DependentUpon>frmINVDivideInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputCollectionRawmilk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputCollectionRawmilk.Designer.cs">
+      <DependentUpon>frmINVInputCollectionRawmilk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputProccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVInputProccess.Designer.cs">
+      <DependentUpon>frmINVInputProccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVLossInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVLossInventoryLot.Designer.cs">
+      <DependentUpon>frmINVLossInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVMergeInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVMergeInventoryLot.Designer.cs">
+      <DependentUpon>frmINVMergeInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVTranReprintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVTranReprintLabel.designer.cs">
+      <DependentUpon>frmINVTranReprintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVWeighInRawMilkCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVWeighInRawMilkCar.designer.cs">
+      <DependentUpon>frmINVWeighInRawMilkCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVSelectRawmilkInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVSelectRawmilkInOut.Designer.cs">
+      <DependentUpon>frmINVSelectRawmilkInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVWeighOutRawMilkCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVWeighOutRawMilkCar.designer.cs">
+      <DependentUpon>frmINVWeighOutRawMilkCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVPickingInventoryLotReturn.Designer.cs">
+      <DependentUpon>frmINVPickingInventoryLotReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutInventoryLotInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVOutInventoryLotInfo.Designer.cs">
+      <DependentUpon>frmINVOutInventoryLotInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVReturnInventoryLotInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVReturnInventoryLotInfo.Designer.cs">
+      <DependentUpon>frmINVReturnInventoryLotInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVBulkLossInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVBulkLossInventoryLot.Designer.cs">
+      <DependentUpon>frmINVBulkLossInventoryLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmINVMoveOutWarehouseInventoryLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmINVMoveOutWarehouseInventoryLot.Designer.cs">
+      <DependentUpon>frmINVMoveOutWarehouseInventoryLot.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inquiry\frmINVViewInventoryLotStatus.resx">
+      <DependentUpon>frmINVViewInventoryLotStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVInputWeightQtyPopup.resx">
+      <DependentUpon>frmINVInputWeightQtyPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmInvRawmilkConfirmPopup.resx">
+      <DependentUpon>frmInvRawmilkConfirmPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmInvViewInvDispense.resx">
+      <DependentUpon>frmInvViewInvDispense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmInvViewInvMove.resx">
+      <DependentUpon>frmInvViewInvMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmInvViewInvReturn.resx">
+      <DependentUpon>frmInvViewInvReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmInvViewMatList.resx">
+      <DependentUpon>frmInvViewMatList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Transaction\frmINVInputInspectionRawmilk.resx">
+      <DependentUpon>frmINVInputInspectionRawmilk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVMoveInventoryLot.resx">
+      <DependentUpon>frmINVMoveInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVOutPickingInventoryByOrder.resx">
+      <DependentUpon>frmINVOutPickingInventoryByOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVPendingReceiptMaterial.resx">
+      <DependentUpon>frmINVPendingReceiptMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVPickingInventoryLotDispense.resx">
+      <DependentUpon>frmINVPickingInventoryLotDispense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVReturnInventoryLot.resx">
+      <DependentUpon>frmINVReturnInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVOutInventoryLot.resx">
+      <DependentUpon>frmINVOutInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVChangeQtyInventoryLot.resx">
+      <DependentUpon>frmINVChangeQtyInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVPickingInventoryLotMove.resx">
+      <DependentUpon>frmINVPickingInventoryLotMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVSelectDetaulItem.resx">
+      <DependentUpon>frmINVSelectDetaulItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVShipInventoryLot.resx">
+      <DependentUpon>frmINVShipInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmINVViewInventoryLotHistory.resx">
+      <DependentUpon>frmINVViewInventoryLotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmCINVViewResourceListPopup.resx">
+      <DependentUpon>frmCINVViewResourceListPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVInputInTypePopup.resx">
+      <DependentUpon>frmINVInputInTypePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVInputOutTypePopup.resx">
+      <DependentUpon>frmINVInputOutTypePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVOutRawmilkToOtherFacPopup.resx">
+      <DependentUpon>frmINVOutRawmilkToOtherFacPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVPutInTankPopup.resx">
+      <DependentUpon>frmINVPutInTankPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmINVEmptyTankPopup.resx">
+      <DependentUpon>frmINVEmptyTankPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVCreateInventoryLot.resx">
+      <DependentUpon>frmINVCreateInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVDivideInventoryLot.resx">
+      <DependentUpon>frmINVDivideInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVInputCollectionRawmilk.resx">
+      <DependentUpon>frmINVInputCollectionRawmilk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVInputProccess.resx">
+      <DependentUpon>frmINVInputProccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVLossInventoryLot.resx">
+      <DependentUpon>frmINVLossInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVMergeInventoryLot.resx">
+      <DependentUpon>frmINVMergeInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVTranReprintLabel.resx">
+      <DependentUpon>frmINVTranReprintLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVWeighInRawMilkCar.resx">
+      <DependentUpon>frmINVWeighInRawMilkCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVSelectRawmilkInOut.resx">
+      <DependentUpon>frmINVSelectRawmilkInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVWeighOutRawMilkCar.resx">
+      <DependentUpon>frmINVWeighOutRawMilkCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVPickingInventoryLotReturn.resx">
+      <DependentUpon>frmINVPickingInventoryLotReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVOutInventoryLotInfo.resx">
+      <DependentUpon>frmINVOutInventoryLotInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVReturnInventoryLotInfo.resx">
+      <DependentUpon>frmINVReturnInventoryLotInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVBulkLossInventoryLot.resx">
+      <DependentUpon>frmINVBulkLossInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmINVMoveOutWarehouseInventoryLot.resx">
+      <DependentUpon>frmINVMoveOutWarehouseInventoryLot.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Setup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOI.COMCus\BOI.COMCus.csproj">
+      <Project>{EC2221DC-04FC-4C78-90CC-5419C5FB478E}</Project>
+      <Name>BOI.COMCus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Soi.DNM\SOI.DNM.csproj">
+      <Project>{541660EB-1EE4-48DF-8C18-D058588707ED}</Project>
+      <Name>SOI.DNM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

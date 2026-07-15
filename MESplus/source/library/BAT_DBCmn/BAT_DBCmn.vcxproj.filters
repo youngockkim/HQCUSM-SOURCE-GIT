@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="BDB_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdb_common_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_bin_ooc_calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_bin_ooc_calc_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipbingrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipbingrd_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipbinunt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipbinunt_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipqtmdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwipqtmdef_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwiplotsts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BDB_mwiplotsts_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddLib.bat" />
+    <None Include="AddLib_Sample.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{41fdf697-b098-4b24-bd5e-ee93aefa38fe}</UniqueIdentifier>
+      <Extensions>pc;c</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{949deda9-f41a-4905-8a7d-c5023ca32fca}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="BDB_common.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="BDB_bin_ooc_calc.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="BDB_mwipbingrd.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="BDB_mwipbinunt.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="BDB_mwipqtmdef.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="BDB_mwiplotsts.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+  </ItemGroup>
+</Project>

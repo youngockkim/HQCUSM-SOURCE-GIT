@@ -1,0 +1,2185 @@
+﻿namespace Miracom.WIPCore
+{
+    partial class frmWIPTranMultiMergeLot
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer1 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType1 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            this.pnlConditionInfo = new System.Windows.Forms.Panel();
+            this.grpConditionInfo = new System.Windows.Forms.GroupBox();
+            this.cdvAttributeValue = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.lblAttributeValue = new System.Windows.Forms.Label();
+            this.chkOnlyWaitLot = new System.Windows.Forms.CheckBox();
+            this.chkZeroQuantityLot = new System.Windows.Forms.CheckBox();
+            this.cdvAttributeName = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.lblAttributeName = new System.Windows.Forms.Label();
+            this.cdvFlow = new Miracom.MESCore.Controls.udcFlowAndSeq();
+            this.cdvMaterial = new Miracom.MESCore.Controls.udcMaterial();
+            this.cdvOperation = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.lblOperation = new System.Windows.Forms.Label();
+            this.udcCondition = new Miracom.MESCore.Controls.udcFlexibleConditionForLot();
+            this.pnlCheck = new System.Windows.Forms.Panel();
+            this.grpCheck = new System.Windows.Forms.GroupBox();
+            this.btnUncheckAll = new System.Windows.Forms.Button();
+            this.btnCheckAll = new System.Windows.Forms.Button();
+            this.pnlLotList = new System.Windows.Forms.Panel();
+            this.grpLotList = new System.Windows.Forms.GroupBox();
+            this.lisLotList = new Miracom.UI.Controls.MCListView.MCListView();
+            this.colSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaterial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMatVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFlow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFlowSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOperation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colQty1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colQty2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colQty3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOwnerCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCreateCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPriority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoldFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoldCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCreateQty1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCreateQty2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCreateQty3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOperInQty1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOperInQty2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOperInQty3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colInvFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTransitFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colUnitExistFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colInvUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkRetFlow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkRetOper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkEndFlow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkEndOper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkRetClearFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRwkTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNstdFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNstdRetFlow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNstdRetOper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNstdTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRepFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRepOper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStrRetFlow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStrRetFlowSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStrRetOper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStartFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStartResID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEndFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEndTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEndResID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSampleFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSampleWaitFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSampleResult = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSplitFromLotID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colShipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colShipTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrgDueTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSchDueTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCreateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFactoryInTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFlowInTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOperInTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colResvResID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBatchID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBatchSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddOrder1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddOrder2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddOrder3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotCmf20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBomSetID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBomSetVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBomActiveSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBomHistSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotDelFlag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotDelTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLotDelReason = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLastTranCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLastTranTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLastComment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLastActiveHistSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colLastHistSeq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlLotInfo = new System.Windows.Forms.Panel();
+            this.pnlTargetLotInfo = new System.Windows.Forms.Panel();
+            this.grpTargetLotInfo = new System.Windows.Forms.GroupBox();
+            this.pnlTagetLotInfoMain = new System.Windows.Forms.Panel();
+            this.udcLotInfor = new Miracom.MESCore.Controls.udcFlexibleScreen();
+            this.grpTranInfo = new System.Windows.Forms.GroupBox();
+            this.chkNoAutoTermLot = new System.Windows.Forms.CheckBox();
+            this.txtTargetLotDesc = new System.Windows.Forms.TextBox();
+            this.txtTargetLotID = new System.Windows.Forms.TextBox();
+            this.lblTargetLotID = new System.Windows.Forms.Label();
+            this.splLotInfo = new System.Windows.Forms.Splitter();
+            this.pnlSetLotInfo = new System.Windows.Forms.Panel();
+            this.grpSelLotList = new System.Windows.Forms.GroupBox();
+            this.spdSelLotList = new FarPoint.Win.Spread.FpSpread();
+            this.spdSelLotList_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.pnlSummaryInfo = new System.Windows.Forms.Panel();
+            this.lblTotQty3 = new System.Windows.Forms.Label();
+            this.lblTotQty2 = new System.Windows.Forms.Label();
+            this.lblTotQty1 = new System.Windows.Forms.Label();
+            this.lblTotMoveQty3 = new System.Windows.Forms.Label();
+            this.lblTotMoveQty2 = new System.Windows.Forms.Label();
+            this.lblTotMoveQty1 = new System.Windows.Forms.Label();
+            this.lblTotCnt = new System.Windows.Forms.Label();
+            this.grpMergeInfo = new System.Windows.Forms.GroupBox();
+            this.chkBindSameTr = new System.Windows.Forms.CheckBox();
+            this.chkCommitCond = new System.Windows.Forms.CheckBox();
+            this.lblQty23 = new System.Windows.Forms.Label();
+            this.txtMoveQty3 = new System.Windows.Forms.TextBox();
+            this.txtMoveQty2 = new System.Windows.Forms.TextBox();
+            this.txtMoveQty1 = new System.Windows.Forms.TextBox();
+            this.lblQty1 = new System.Windows.Forms.Label();
+            this.pnlTranTime = new System.Windows.Forms.Panel();
+            this.txtTranDateTime = new System.Windows.Forms.TextBox();
+            this.dtpTranTime = new System.Windows.Forms.DateTimePicker();
+            this.chkTranDateTime = new System.Windows.Forms.CheckBox();
+            this.dtpTranDate = new System.Windows.Forms.DateTimePicker();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.rbnPartialQty = new System.Windows.Forms.RadioButton();
+            this.rbnAllQty = new System.Windows.Forms.RadioButton();
+            this.cdvspdCrrID = new Miracom.UI.Controls.MCCodeView.MCSPCodeView();
+            this.btnView = new System.Windows.Forms.Button();
+            this.tabTran.SuspendLayout();
+            this.tbpGeneral.SuspendLayout();
+            this.tbpCMF.SuspendLayout();
+            this.grpCMF.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF1)).BeginInit();
+            this.pnlTranInfo.SuspendLayout();
+            this.tbpLotInfo.SuspendLayout();
+            this.pnlComment.SuspendLayout();
+            this.grpComment.SuspendLayout();
+            this.pnlBottom.SuspendLayout();
+            this.pnlCenter.SuspendLayout();
+            this.pnlTop.SuspendLayout();
+            this.pnlConditionInfo.SuspendLayout();
+            this.grpConditionInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvAttributeValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvAttributeName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvOperation)).BeginInit();
+            this.pnlCheck.SuspendLayout();
+            this.grpCheck.SuspendLayout();
+            this.pnlLotList.SuspendLayout();
+            this.grpLotList.SuspendLayout();
+            this.pnlLotInfo.SuspendLayout();
+            this.pnlTargetLotInfo.SuspendLayout();
+            this.grpTargetLotInfo.SuspendLayout();
+            this.pnlTagetLotInfoMain.SuspendLayout();
+            this.grpTranInfo.SuspendLayout();
+            this.pnlSetLotInfo.SuspendLayout();
+            this.grpSelLotList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spdSelLotList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdSelLotList_Sheet1)).BeginInit();
+            this.pnlSummaryInfo.SuspendLayout();
+            this.grpMergeInfo.SuspendLayout();
+            this.pnlTranTime.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvspdCrrID)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // cdvCMF19
+            // 
+            this.cdvCMF19.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF19.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF18
+            // 
+            this.cdvCMF18.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF18.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF17
+            // 
+            this.cdvCMF17.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF17.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF16
+            // 
+            this.cdvCMF16.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF16.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF15
+            // 
+            this.cdvCMF15.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF15.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF14
+            // 
+            this.cdvCMF14.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF14.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF13
+            // 
+            this.cdvCMF13.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF13.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF12
+            // 
+            this.cdvCMF12.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF12.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF20
+            // 
+            this.cdvCMF20.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF20.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF11
+            // 
+            this.cdvCMF11.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF11.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF9
+            // 
+            this.cdvCMF9.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF9.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF8
+            // 
+            this.cdvCMF8.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF8.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF7
+            // 
+            this.cdvCMF7.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF7.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF6
+            // 
+            this.cdvCMF6.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF6.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF5
+            // 
+            this.cdvCMF5.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF5.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF4
+            // 
+            this.cdvCMF4.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF4.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF3
+            // 
+            this.cdvCMF3.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF3.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF2
+            // 
+            this.cdvCMF2.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF2.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF10
+            // 
+            this.cdvCMF10.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF10.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // cdvCMF1
+            // 
+            this.cdvCMF1.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvCMF1.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            // 
+            // pnlTranInfo
+            // 
+            this.pnlTranInfo.Controls.Add(this.pnlLotList);
+            this.pnlTranInfo.Controls.Add(this.pnlCheck);
+            this.pnlTranInfo.Controls.Add(this.pnlConditionInfo);
+            // 
+            // tbpLotInfo
+            // 
+            this.tbpLotInfo.Controls.Add(this.pnlLotInfo);
+            this.tbpLotInfo.Controls.SetChildIndex(this.pnlComment, 0);
+            this.tbpLotInfo.Controls.SetChildIndex(this.pnlLotInfo, 0);
+            // 
+            // lblComment
+            // 
+            this.lblComment.AutoSize = true;
+            this.lblComment.Location = new System.Drawing.Point(15, 16);
+            this.lblComment.Size = new System.Drawing.Size(51, 13);
+            // 
+            // txtComment
+            // 
+            this.txtComment.Location = new System.Drawing.Point(102, 12);
+            this.txtComment.Size = new System.Drawing.Size(608, 20);
+            // 
+            // btnProcess
+            // 
+            this.btnProcess.TabIndex = 1;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.TabIndex = 2;
+            // 
+            // pnlBottom
+            // 
+            this.pnlBottom.Controls.Add(this.btnView);
+            this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnProcess, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
+            // 
+            // lblFormTitle
+            // 
+            this.lblFormTitle.Text = "TranForm12";
+            // 
+            // pnlConditionInfo
+            // 
+            this.pnlConditionInfo.Controls.Add(this.grpConditionInfo);
+            this.pnlConditionInfo.Controls.Add(this.udcCondition);
+            this.pnlConditionInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlConditionInfo.Location = new System.Drawing.Point(3, 3);
+            this.pnlConditionInfo.Name = "pnlConditionInfo";
+            this.pnlConditionInfo.Size = new System.Drawing.Size(722, 177);
+            this.pnlConditionInfo.TabIndex = 0;
+            // 
+            // grpConditionInfo
+            // 
+            this.grpConditionInfo.Controls.Add(this.cdvAttributeValue);
+            this.grpConditionInfo.Controls.Add(this.lblAttributeValue);
+            this.grpConditionInfo.Controls.Add(this.chkOnlyWaitLot);
+            this.grpConditionInfo.Controls.Add(this.chkZeroQuantityLot);
+            this.grpConditionInfo.Controls.Add(this.cdvAttributeName);
+            this.grpConditionInfo.Controls.Add(this.lblAttributeName);
+            this.grpConditionInfo.Controls.Add(this.cdvFlow);
+            this.grpConditionInfo.Controls.Add(this.cdvMaterial);
+            this.grpConditionInfo.Controls.Add(this.cdvOperation);
+            this.grpConditionInfo.Controls.Add(this.lblOperation);
+            this.grpConditionInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpConditionInfo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpConditionInfo.Location = new System.Drawing.Point(0, 0);
+            this.grpConditionInfo.Name = "grpConditionInfo";
+            this.grpConditionInfo.Size = new System.Drawing.Size(722, 91);
+            this.grpConditionInfo.TabIndex = 0;
+            this.grpConditionInfo.TabStop = false;
+            // 
+            // cdvAttributeValue
+            // 
+            this.cdvAttributeValue.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvAttributeValue.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvAttributeValue.BtnFlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cdvAttributeValue.BtnToolTipText = "";
+            this.cdvAttributeValue.ButtonWidth = 20;
+            this.cdvAttributeValue.DescText = "";
+            this.cdvAttributeValue.DisplaySubItemIndex = -1;
+            this.cdvAttributeValue.DisplayText = "";
+            this.cdvAttributeValue.Focusing = null;
+            this.cdvAttributeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvAttributeValue.Index = 0;
+            this.cdvAttributeValue.IsViewBtnImage = false;
+            this.cdvAttributeValue.Location = new System.Drawing.Point(396, 39);
+            this.cdvAttributeValue.MaxLength = 1000;
+            this.cdvAttributeValue.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvAttributeValue.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            this.cdvAttributeValue.Name = "cdvAttributeValue";
+            this.cdvAttributeValue.ReadOnly = false;
+            this.cdvAttributeValue.SameWidthHeightOfButton = false;
+            this.cdvAttributeValue.SearchSubItemIndex = 0;
+            this.cdvAttributeValue.SelectedDescIndex = -1;
+            this.cdvAttributeValue.SelectedSubItemIndex = -1;
+            this.cdvAttributeValue.SelectionStart = 0;
+            this.cdvAttributeValue.Size = new System.Drawing.Size(180, 20);
+            this.cdvAttributeValue.SmallImageList = null;
+            this.cdvAttributeValue.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cdvAttributeValue.TabIndex = 7;
+            this.cdvAttributeValue.TextBoxToolTipText = "";
+            this.cdvAttributeValue.TextBoxWidth = 180;
+            this.cdvAttributeValue.VisibleButton = true;
+            this.cdvAttributeValue.VisibleColumnHeader = false;
+            this.cdvAttributeValue.VisibleDescription = false;
+            this.cdvAttributeValue.ButtonPress += new System.EventHandler(this.cdvAttributeValue_ButtonPress);
+            // 
+            // lblAttributeValue
+            // 
+            this.lblAttributeValue.AutoSize = true;
+            this.lblAttributeValue.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblAttributeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttributeValue.Location = new System.Drawing.Point(309, 42);
+            this.lblAttributeValue.Name = "lblAttributeValue";
+            this.lblAttributeValue.Size = new System.Drawing.Size(76, 13);
+            this.lblAttributeValue.TabIndex = 6;
+            this.lblAttributeValue.Text = "Attribute Value";
+            this.lblAttributeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chkOnlyWaitLot
+            // 
+            this.chkOnlyWaitLot.AutoSize = true;
+            this.chkOnlyWaitLot.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkOnlyWaitLot.Location = new System.Drawing.Point(596, 40);
+            this.chkOnlyWaitLot.Name = "chkOnlyWaitLot";
+            this.chkOnlyWaitLot.Size = new System.Drawing.Size(96, 18);
+            this.chkOnlyWaitLot.TabIndex = 9;
+            this.chkOnlyWaitLot.Text = "Only Wait Lot";
+            // 
+            // chkZeroQuantityLot
+            // 
+            this.chkZeroQuantityLot.AutoSize = true;
+            this.chkZeroQuantityLot.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkZeroQuantityLot.Location = new System.Drawing.Point(596, 16);
+            this.chkZeroQuantityLot.Name = "chkZeroQuantityLot";
+            this.chkZeroQuantityLot.Size = new System.Drawing.Size(114, 18);
+            this.chkZeroQuantityLot.TabIndex = 8;
+            this.chkZeroQuantityLot.Text = "Zero Quantity Lot";
+            // 
+            // cdvAttributeName
+            // 
+            this.cdvAttributeName.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvAttributeName.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvAttributeName.BtnFlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cdvAttributeName.BtnToolTipText = "";
+            this.cdvAttributeName.ButtonWidth = 20;
+            this.cdvAttributeName.DescText = "";
+            this.cdvAttributeName.DisplaySubItemIndex = -1;
+            this.cdvAttributeName.DisplayText = "";
+            this.cdvAttributeName.Focusing = null;
+            this.cdvAttributeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvAttributeName.Index = 0;
+            this.cdvAttributeName.IsViewBtnImage = false;
+            this.cdvAttributeName.Location = new System.Drawing.Point(396, 15);
+            this.cdvAttributeName.MaxLength = 100;
+            this.cdvAttributeName.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvAttributeName.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            this.cdvAttributeName.Name = "cdvAttributeName";
+            this.cdvAttributeName.ReadOnly = false;
+            this.cdvAttributeName.SameWidthHeightOfButton = false;
+            this.cdvAttributeName.SearchSubItemIndex = 0;
+            this.cdvAttributeName.SelectedDescIndex = -1;
+            this.cdvAttributeName.SelectedSubItemIndex = -1;
+            this.cdvAttributeName.SelectionStart = 0;
+            this.cdvAttributeName.Size = new System.Drawing.Size(180, 20);
+            this.cdvAttributeName.SmallImageList = null;
+            this.cdvAttributeName.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cdvAttributeName.TabIndex = 5;
+            this.cdvAttributeName.TextBoxToolTipText = "";
+            this.cdvAttributeName.TextBoxWidth = 180;
+            this.cdvAttributeName.VisibleButton = true;
+            this.cdvAttributeName.VisibleColumnHeader = false;
+            this.cdvAttributeName.VisibleDescription = false;
+            this.cdvAttributeName.SelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvAttributeName_SelectedItemChanged);
+            // 
+            // lblAttributeName
+            // 
+            this.lblAttributeName.AutoSize = true;
+            this.lblAttributeName.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblAttributeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttributeName.Location = new System.Drawing.Point(309, 18);
+            this.lblAttributeName.Name = "lblAttributeName";
+            this.lblAttributeName.Size = new System.Drawing.Size(77, 13);
+            this.lblAttributeName.TabIndex = 4;
+            this.lblAttributeName.Text = "Attribute Name";
+            this.lblAttributeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cdvFlow
+            // 
+            this.cdvFlow.AddEmptyRowToLast = true;
+            this.cdvFlow.AddEmptyRowToTop = false;
+            this.cdvFlow.DisplaySubItemIndex = 0;
+            this.cdvFlow.FlowReadOnly = false;
+            this.cdvFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvFlow.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvFlow.LabelText = "Flow";
+            this.cdvFlow.LabelWidth = 90;
+            this.cdvFlow.ListCond_ExtFactory = "";
+            this.cdvFlow.ListCond_Step = '2';
+            this.cdvFlow.Location = new System.Drawing.Point(12, 63);
+            this.cdvFlow.Name = "cdvFlow";
+            this.cdvFlow.SearchSubItemIndex = 0;
+            this.cdvFlow.SelectedDescIndex = -1;
+            this.cdvFlow.SelectedSubItemIndex = 0;
+            this.cdvFlow.SequenceReadOnly = false;
+            this.cdvFlow.Size = new System.Drawing.Size(270, 20);
+            this.cdvFlow.TabIndex = 3;
+            this.cdvFlow.VisibleColumnHeader = false;
+            this.cdvFlow.VisibleDescription = false;
+            this.cdvFlow.VisibleFlowButton = true;
+            this.cdvFlow.VisibleSequenceButton = true;
+            this.cdvFlow.WidthButton = 20;
+            this.cdvFlow.WidthFlowAndSequence = 180;
+            this.cdvFlow.WidthSequence = 50;
+            this.cdvFlow.FlowButtonPress += new System.EventHandler(this.cdvFlow_ButtonPress);
+            // 
+            // cdvMaterial
+            // 
+            this.cdvMaterial.AddEmptyRowToLast = true;
+            this.cdvMaterial.AddEmptyRowToTop = false;
+            this.cdvMaterial.CodeViewBackColor = System.Drawing.SystemColors.Window;
+            this.cdvMaterial.DisplaySubItemIndex = 0;
+            this.cdvMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial.LabelBackColor = System.Drawing.SystemColors.Control;
+            this.cdvMaterial.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial.LabelText = "Material";
+            this.cdvMaterial.ListCond_ExtFactory = "";
+            this.cdvMaterial.ListCond_StepMaterial = '1';
+            this.cdvMaterial.ListCond_StepVersion = '1';
+            this.cdvMaterial.Location = new System.Drawing.Point(12, 39);
+            this.cdvMaterial.MaterialEnabled = true;
+            this.cdvMaterial.MaterialReadOnly = false;
+            this.cdvMaterial.Name = "cdvMaterial";
+            this.cdvMaterial.SearchSubItemIndex = 0;
+            this.cdvMaterial.SelectedDescIndex = -1;
+            this.cdvMaterial.SelectedSubItemIndex = 0;
+            this.cdvMaterial.Size = new System.Drawing.Size(270, 20);
+            this.cdvMaterial.TabIndex = 2;
+            this.cdvMaterial.VersionEnabled = true;
+            this.cdvMaterial.VersionReadOnly = false;
+            this.cdvMaterial.VisibleColumnHeader = false;
+            this.cdvMaterial.VisibleDescription = false;
+            this.cdvMaterial.VisibleMaterialButton = true;
+            this.cdvMaterial.VisibleVersionButton = true;
+            this.cdvMaterial.WidthButton = 20;
+            this.cdvMaterial.WidthLabel = 90;
+            this.cdvMaterial.WidthMaterialAndVersion = 180;
+            this.cdvMaterial.WidthVersion = 50;
+            this.cdvMaterial.VersionChanged += new System.EventHandler(this.cdvMaterial_VersionChanged);
+            // 
+            // cdvOperation
+            // 
+            this.cdvOperation.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvOperation.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvOperation.BtnFlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cdvOperation.BtnToolTipText = "";
+            this.cdvOperation.ButtonWidth = 20;
+            this.cdvOperation.DescText = "";
+            this.cdvOperation.DisplaySubItemIndex = -1;
+            this.cdvOperation.DisplayText = "";
+            this.cdvOperation.Focusing = null;
+            this.cdvOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvOperation.Index = 0;
+            this.cdvOperation.IsViewBtnImage = false;
+            this.cdvOperation.Location = new System.Drawing.Point(102, 15);
+            this.cdvOperation.MaxLength = 10;
+            this.cdvOperation.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvOperation.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            this.cdvOperation.Name = "cdvOperation";
+            this.cdvOperation.ReadOnly = false;
+            this.cdvOperation.SameWidthHeightOfButton = false;
+            this.cdvOperation.SearchSubItemIndex = 0;
+            this.cdvOperation.SelectedDescIndex = -1;
+            this.cdvOperation.SelectedSubItemIndex = -1;
+            this.cdvOperation.SelectionStart = 0;
+            this.cdvOperation.Size = new System.Drawing.Size(180, 20);
+            this.cdvOperation.SmallImageList = null;
+            this.cdvOperation.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cdvOperation.TabIndex = 1;
+            this.cdvOperation.TextBoxToolTipText = "";
+            this.cdvOperation.TextBoxWidth = 180;
+            this.cdvOperation.VisibleButton = true;
+            this.cdvOperation.VisibleColumnHeader = false;
+            this.cdvOperation.VisibleDescription = false;
+            this.cdvOperation.SelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvOperation_SelectedItemChanged);
+            // 
+            // lblOperation
+            // 
+            this.lblOperation.AutoSize = true;
+            this.lblOperation.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperation.Location = new System.Drawing.Point(12, 17);
+            this.lblOperation.Name = "lblOperation";
+            this.lblOperation.Size = new System.Drawing.Size(62, 13);
+            this.lblOperation.TabIndex = 0;
+            this.lblOperation.Text = "Operation";
+            this.lblOperation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // udcCondition
+            // 
+            this.udcCondition.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.udcCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.udcCondition.Location = new System.Drawing.Point(0, 91);
+            this.udcCondition.Name = "udcCondition";
+            this.udcCondition.Size = new System.Drawing.Size(722, 86);
+            this.udcCondition.TabIndex = 1;
+            // 
+            // pnlCheck
+            // 
+            this.pnlCheck.Controls.Add(this.grpCheck);
+            this.pnlCheck.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlCheck.Location = new System.Drawing.Point(3, 180);
+            this.pnlCheck.Name = "pnlCheck";
+            this.pnlCheck.Padding = new System.Windows.Forms.Padding(0, 4, 4, 0);
+            this.pnlCheck.Size = new System.Drawing.Size(90, 294);
+            this.pnlCheck.TabIndex = 1;
+            // 
+            // grpCheck
+            // 
+            this.grpCheck.Controls.Add(this.btnUncheckAll);
+            this.grpCheck.Controls.Add(this.btnCheckAll);
+            this.grpCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpCheck.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpCheck.Location = new System.Drawing.Point(0, 4);
+            this.grpCheck.Name = "grpCheck";
+            this.grpCheck.Size = new System.Drawing.Size(86, 290);
+            this.grpCheck.TabIndex = 0;
+            this.grpCheck.TabStop = false;
+            this.grpCheck.Text = "Check Method";
+            // 
+            // btnUncheckAll
+            // 
+            this.btnUncheckAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUncheckAll.Location = new System.Drawing.Point(8, 44);
+            this.btnUncheckAll.Name = "btnUncheckAll";
+            this.btnUncheckAll.Size = new System.Drawing.Size(70, 26);
+            this.btnUncheckAll.TabIndex = 1;
+            this.btnUncheckAll.Text = "Uncheck All";
+            this.btnUncheckAll.Click += new System.EventHandler(this.btnUncheckAll_Click);
+            // 
+            // btnCheckAll
+            // 
+            this.btnCheckAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCheckAll.Location = new System.Drawing.Point(8, 16);
+            this.btnCheckAll.Name = "btnCheckAll";
+            this.btnCheckAll.Size = new System.Drawing.Size(70, 26);
+            this.btnCheckAll.TabIndex = 0;
+            this.btnCheckAll.Text = "Check All";
+            this.btnCheckAll.Click += new System.EventHandler(this.btnCheckAll_Click);
+            // 
+            // pnlLotList
+            // 
+            this.pnlLotList.Controls.Add(this.grpLotList);
+            this.pnlLotList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLotList.Location = new System.Drawing.Point(93, 180);
+            this.pnlLotList.Name = "pnlLotList";
+            this.pnlLotList.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.pnlLotList.Size = new System.Drawing.Size(632, 294);
+            this.pnlLotList.TabIndex = 2;
+            // 
+            // grpLotList
+            // 
+            this.grpLotList.Controls.Add(this.lisLotList);
+            this.grpLotList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpLotList.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpLotList.Location = new System.Drawing.Point(0, 4);
+            this.grpLotList.Name = "grpLotList";
+            this.grpLotList.Size = new System.Drawing.Size(632, 290);
+            this.grpLotList.TabIndex = 0;
+            this.grpLotList.TabStop = false;
+            this.grpLotList.Text = "Lot List";
+            // 
+            // lisLotList
+            // 
+            this.lisLotList.AllowColumnReorder = true;
+            this.lisLotList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colSeq,
+            this.colLotID,
+            this.colMaterial,
+            this.colMatVersion,
+            this.colFlow,
+            this.colFlowSeq,
+            this.colOperation,
+            this.colQty1,
+            this.colQty2,
+            this.colQty3,
+            this.colLotType,
+            this.colOwnerCode,
+            this.colCreateCode,
+            this.colPriority,
+            this.colLotStatus,
+            this.colHoldFlag,
+            this.colHoldCode,
+            this.colCreateQty1,
+            this.colCreateQty2,
+            this.colCreateQty3,
+            this.colOperInQty1,
+            this.colOperInQty2,
+            this.colOperInQty3,
+            this.colInvFlag,
+            this.colTransitFlag,
+            this.colUnitExistFlag,
+            this.colInvUnit,
+            this.colRwkFlag,
+            this.colRwkCode,
+            this.colRwkCount,
+            this.colRwkRetFlow,
+            this.colRwkRetOper,
+            this.colRwkEndFlow,
+            this.colRwkEndOper,
+            this.colRwkRetClearFlag,
+            this.colRwkTime,
+            this.colNstdFlag,
+            this.colNstdRetFlow,
+            this.colNstdRetOper,
+            this.colNstdTime,
+            this.colRepFlag,
+            this.colRepOper,
+            this.colStrRetFlow,
+            this.colStrRetFlowSeq,
+            this.colStrRetOper,
+            this.colStartFlag,
+            this.colStartTime,
+            this.colStartResID,
+            this.colEndFlag,
+            this.colEndTime,
+            this.colEndResID,
+            this.colSampleFlag,
+            this.colSampleWaitFlag,
+            this.colSampleResult,
+            this.colSplitFromLotID,
+            this.colShipCode,
+            this.colShipTime,
+            this.colOrgDueTime,
+            this.colSchDueTime,
+            this.colCreateTime,
+            this.colFactoryInTime,
+            this.colFlowInTime,
+            this.colOperInTime,
+            this.colResvResID,
+            this.colBatchID,
+            this.colBatchSeq,
+            this.colOrderID,
+            this.colAddOrder1,
+            this.colAddOrder2,
+            this.colAddOrder3,
+            this.colLocation,
+            this.colLotCmf1,
+            this.colLotCmf2,
+            this.colLotCmf3,
+            this.colLotCmf4,
+            this.colLotCmf5,
+            this.colLotCmf6,
+            this.colLotCmf7,
+            this.colLotCmf8,
+            this.colLotCmf9,
+            this.colLotCmf10,
+            this.colLotCmf11,
+            this.colLotCmf12,
+            this.colLotCmf13,
+            this.colLotCmf14,
+            this.colLotCmf15,
+            this.colLotCmf16,
+            this.colLotCmf17,
+            this.colLotCmf18,
+            this.colLotCmf19,
+            this.colLotCmf20,
+            this.colBomSetID,
+            this.colBomSetVersion,
+            this.colBomActiveSeq,
+            this.colBomHistSeq,
+            this.colLotDelFlag,
+            this.colLotDelTime,
+            this.colLotDelReason,
+            this.colLastTranCode,
+            this.colLastTranTime,
+            this.colLastComment,
+            this.colLastActiveHistSeq,
+            this.colLastHistSeq});
+            this.lisLotList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lisLotList.EnableSort = true;
+            this.lisLotList.EnableSortIcon = true;
+            this.lisLotList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lisLotList.FullRowSelect = true;
+            this.lisLotList.Location = new System.Drawing.Point(3, 16);
+            this.lisLotList.Name = "lisLotList";
+            this.lisLotList.Size = new System.Drawing.Size(626, 271);
+            this.lisLotList.TabIndex = 0;
+            this.lisLotList.UseCompatibleStateImageBehavior = false;
+            this.lisLotList.View = System.Windows.Forms.View.Details;
+            this.lisLotList.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lisLotList_ItemChecked);
+            // 
+            // colSeq
+            // 
+            this.colSeq.Text = "Seq";
+            this.colSeq.Width = 80;
+            // 
+            // colLotID
+            // 
+            this.colLotID.Text = "Lot ID";
+            this.colLotID.Width = 120;
+            // 
+            // colMaterial
+            // 
+            this.colMaterial.Text = "Material";
+            this.colMaterial.Width = 100;
+            // 
+            // colMatVersion
+            // 
+            this.colMatVersion.Text = "Mat Ver";
+            // 
+            // colFlow
+            // 
+            this.colFlow.Text = "Flow";
+            this.colFlow.Width = 90;
+            // 
+            // colFlowSeq
+            // 
+            this.colFlowSeq.Text = "Flow Seq";
+            // 
+            // colOperation
+            // 
+            this.colOperation.Text = "Operation";
+            this.colOperation.Width = 80;
+            // 
+            // colQty1
+            // 
+            this.colQty1.Text = "Qty 1";
+            this.colQty1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // colQty2
+            // 
+            this.colQty2.Text = "Qty 2";
+            this.colQty2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // colQty3
+            // 
+            this.colQty3.Text = "Qty3";
+            this.colQty3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // colLotType
+            // 
+            this.colLotType.Text = "Lot Type";
+            this.colLotType.Width = 70;
+            // 
+            // colOwnerCode
+            // 
+            this.colOwnerCode.Text = "Owner Code";
+            this.colOwnerCode.Width = 90;
+            // 
+            // colCreateCode
+            // 
+            this.colCreateCode.Text = "Create Code";
+            this.colCreateCode.Width = 90;
+            // 
+            // colPriority
+            // 
+            this.colPriority.Text = "Priority";
+            // 
+            // colLotStatus
+            // 
+            this.colLotStatus.Text = "Lot Status";
+            this.colLotStatus.Width = 80;
+            // 
+            // colHoldFlag
+            // 
+            this.colHoldFlag.Text = "Hold Flag";
+            this.colHoldFlag.Width = 80;
+            // 
+            // colHoldCode
+            // 
+            this.colHoldCode.Text = "Hold Code";
+            this.colHoldCode.Width = 80;
+            // 
+            // colCreateQty1
+            // 
+            this.colCreateQty1.Text = "Create Qty 1";
+            this.colCreateQty1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colCreateQty1.Width = 100;
+            // 
+            // colCreateQty2
+            // 
+            this.colCreateQty2.Text = "Create Qty 2";
+            this.colCreateQty2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colCreateQty2.Width = 100;
+            // 
+            // colCreateQty3
+            // 
+            this.colCreateQty3.Text = "Create Qty 3";
+            this.colCreateQty3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colCreateQty3.Width = 100;
+            // 
+            // colOperInQty1
+            // 
+            this.colOperInQty1.Text = "Oper In Qty 1";
+            this.colOperInQty1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colOperInQty1.Width = 100;
+            // 
+            // colOperInQty2
+            // 
+            this.colOperInQty2.Text = "Oper In Qty 2";
+            this.colOperInQty2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colOperInQty2.Width = 100;
+            // 
+            // colOperInQty3
+            // 
+            this.colOperInQty3.Text = "Oper In Qty 3";
+            this.colOperInQty3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colOperInQty3.Width = 100;
+            // 
+            // colInvFlag
+            // 
+            this.colInvFlag.Text = "Inventory Flag";
+            this.colInvFlag.Width = 100;
+            // 
+            // colTransitFlag
+            // 
+            this.colTransitFlag.Text = "Transit Flag";
+            this.colTransitFlag.Width = 100;
+            // 
+            // colUnitExistFlag
+            // 
+            this.colUnitExistFlag.Text = "Unit Exist Flag";
+            this.colUnitExistFlag.Width = 100;
+            // 
+            // colInvUnit
+            // 
+            this.colInvUnit.Text = "Inv Unit";
+            // 
+            // colRwkFlag
+            // 
+            this.colRwkFlag.Text = "Rework Flag";
+            this.colRwkFlag.Width = 120;
+            // 
+            // colRwkCode
+            // 
+            this.colRwkCode.Text = "Rework Code";
+            this.colRwkCode.Width = 120;
+            // 
+            // colRwkCount
+            // 
+            this.colRwkCount.Text = "Rework Count";
+            this.colRwkCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colRwkCount.Width = 120;
+            // 
+            // colRwkRetFlow
+            // 
+            this.colRwkRetFlow.Text = "Rework Ret Flow";
+            this.colRwkRetFlow.Width = 120;
+            // 
+            // colRwkRetOper
+            // 
+            this.colRwkRetOper.Text = "Rework Ret Oper";
+            this.colRwkRetOper.Width = 120;
+            // 
+            // colRwkEndFlow
+            // 
+            this.colRwkEndFlow.Text = "Rework End Flow";
+            this.colRwkEndFlow.Width = 120;
+            // 
+            // colRwkEndOper
+            // 
+            this.colRwkEndOper.Text = "Rework End Oper";
+            this.colRwkEndOper.Width = 120;
+            // 
+            // colRwkRetClearFlag
+            // 
+            this.colRwkRetClearFlag.Text = "Rework Ret Clear Flag";
+            this.colRwkRetClearFlag.Width = 155;
+            // 
+            // colRwkTime
+            // 
+            this.colRwkTime.Text = "Rework Time";
+            this.colRwkTime.Width = 120;
+            // 
+            // colNstdFlag
+            // 
+            this.colNstdFlag.Text = "NSTD Flag";
+            this.colNstdFlag.Width = 120;
+            // 
+            // colNstdRetFlow
+            // 
+            this.colNstdRetFlow.Text = "NSTD Ret Flow";
+            this.colNstdRetFlow.Width = 120;
+            // 
+            // colNstdRetOper
+            // 
+            this.colNstdRetOper.Text = "NSTD Ret Oper";
+            this.colNstdRetOper.Width = 120;
+            // 
+            // colNstdTime
+            // 
+            this.colNstdTime.Text = "NSTD Time";
+            this.colNstdTime.Width = 120;
+            // 
+            // colRepFlag
+            // 
+            this.colRepFlag.Text = "Repair Flag";
+            this.colRepFlag.Width = 100;
+            // 
+            // colRepOper
+            // 
+            this.colRepOper.Text = "Repair Return Oper";
+            this.colRepOper.Width = 120;
+            // 
+            // colStrRetFlow
+            // 
+            this.colStrRetFlow.Text = "Store Return Flow";
+            this.colStrRetFlow.Width = 120;
+            // 
+            // colStrRetFlowSeq
+            // 
+            this.colStrRetFlowSeq.Text = "Store Return Flow Seq";
+            this.colStrRetFlowSeq.Width = 120;
+            // 
+            // colStrRetOper
+            // 
+            this.colStrRetOper.Text = "Store Return Oper";
+            this.colStrRetOper.Width = 120;
+            // 
+            // colStartFlag
+            // 
+            this.colStartFlag.Text = "Start Flag";
+            this.colStartFlag.Width = 70;
+            // 
+            // colStartTime
+            // 
+            this.colStartTime.Text = "Start Time";
+            this.colStartTime.Width = 120;
+            // 
+            // colStartResID
+            // 
+            this.colStartResID.Text = "Start Res ID";
+            this.colStartResID.Width = 80;
+            // 
+            // colEndFlag
+            // 
+            this.colEndFlag.Text = "End Flag";
+            this.colEndFlag.Width = 70;
+            // 
+            // colEndTime
+            // 
+            this.colEndTime.Text = "End Time";
+            this.colEndTime.Width = 120;
+            // 
+            // colEndResID
+            // 
+            this.colEndResID.Text = "End Res ID";
+            this.colEndResID.Width = 80;
+            // 
+            // colSampleFlag
+            // 
+            this.colSampleFlag.Text = "Sample Flag";
+            this.colSampleFlag.Width = 100;
+            // 
+            // colSampleWaitFlag
+            // 
+            this.colSampleWaitFlag.Text = "Sample Wait Flag";
+            this.colSampleWaitFlag.Width = 110;
+            // 
+            // colSampleResult
+            // 
+            this.colSampleResult.Text = "Sample Result";
+            this.colSampleResult.Width = 100;
+            // 
+            // colSplitFromLotID
+            // 
+            this.colSplitFromLotID.Text = "From To Lot ID";
+            this.colSplitFromLotID.Width = 120;
+            // 
+            // colShipCode
+            // 
+            this.colShipCode.Text = "Ship Code";
+            this.colShipCode.Width = 80;
+            // 
+            // colShipTime
+            // 
+            this.colShipTime.Text = "Ship Time";
+            this.colShipTime.Width = 120;
+            // 
+            // colOrgDueTime
+            // 
+            this.colOrgDueTime.Text = "Original Due Time";
+            this.colOrgDueTime.Width = 120;
+            // 
+            // colSchDueTime
+            // 
+            this.colSchDueTime.Text = "Scheduled Due Time";
+            this.colSchDueTime.Width = 145;
+            // 
+            // colCreateTime
+            // 
+            this.colCreateTime.Text = "Create Time";
+            this.colCreateTime.Width = 120;
+            // 
+            // colFactoryInTime
+            // 
+            this.colFactoryInTime.Text = "Factory In Time";
+            this.colFactoryInTime.Width = 120;
+            // 
+            // colFlowInTime
+            // 
+            this.colFlowInTime.Text = "Flow In Time";
+            this.colFlowInTime.Width = 120;
+            // 
+            // colOperInTime
+            // 
+            this.colOperInTime.Text = "Oper In Time";
+            this.colOperInTime.Width = 120;
+            // 
+            // colResvResID
+            // 
+            this.colResvResID.Text = "Reserve Res ID";
+            this.colResvResID.Width = 120;
+            // 
+            // colBatchID
+            // 
+            this.colBatchID.Text = "Batch ID";
+            // 
+            // colBatchSeq
+            // 
+            this.colBatchSeq.Text = "Batch Seq";
+            this.colBatchSeq.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colBatchSeq.Width = 70;
+            // 
+            // colOrderID
+            // 
+            this.colOrderID.Text = "Order ID";
+            this.colOrderID.Width = 100;
+            // 
+            // colAddOrder1
+            // 
+            this.colAddOrder1.Text = "Add Order ID 1";
+            this.colAddOrder1.Width = 100;
+            // 
+            // colAddOrder2
+            // 
+            this.colAddOrder2.Text = "Add Order ID 2";
+            this.colAddOrder2.Width = 100;
+            // 
+            // colAddOrder3
+            // 
+            this.colAddOrder3.Text = "Add Order ID 3";
+            this.colAddOrder3.Width = 100;
+            // 
+            // colLocation
+            // 
+            this.colLocation.Text = "Location";
+            this.colLocation.Width = 80;
+            // 
+            // colLotCmf1
+            // 
+            this.colLotCmf1.Text = "Lot Cmf 1";
+            this.colLotCmf1.Width = 100;
+            // 
+            // colLotCmf2
+            // 
+            this.colLotCmf2.Text = "Lot Cmf 2";
+            this.colLotCmf2.Width = 100;
+            // 
+            // colLotCmf3
+            // 
+            this.colLotCmf3.Text = "Lot Cmf 3";
+            this.colLotCmf3.Width = 100;
+            // 
+            // colLotCmf4
+            // 
+            this.colLotCmf4.Text = "Lot Cmf 4";
+            this.colLotCmf4.Width = 100;
+            // 
+            // colLotCmf5
+            // 
+            this.colLotCmf5.Text = "Lot Cmf 5";
+            this.colLotCmf5.Width = 100;
+            // 
+            // colLotCmf6
+            // 
+            this.colLotCmf6.Text = "Lot Cmf 6";
+            this.colLotCmf6.Width = 100;
+            // 
+            // colLotCmf7
+            // 
+            this.colLotCmf7.Text = "Lot Cmf 7";
+            this.colLotCmf7.Width = 100;
+            // 
+            // colLotCmf8
+            // 
+            this.colLotCmf8.Text = "Lot Cmf 8";
+            this.colLotCmf8.Width = 100;
+            // 
+            // colLotCmf9
+            // 
+            this.colLotCmf9.Text = "Lot Cmf 9";
+            this.colLotCmf9.Width = 100;
+            // 
+            // colLotCmf10
+            // 
+            this.colLotCmf10.Text = "Lot Cmf 10";
+            this.colLotCmf10.Width = 100;
+            // 
+            // colLotCmf11
+            // 
+            this.colLotCmf11.Text = "Lot Cmf 11";
+            this.colLotCmf11.Width = 100;
+            // 
+            // colLotCmf12
+            // 
+            this.colLotCmf12.Text = "Lot Cmf 12";
+            this.colLotCmf12.Width = 100;
+            // 
+            // colLotCmf13
+            // 
+            this.colLotCmf13.Text = "Lot Cmf 13";
+            this.colLotCmf13.Width = 100;
+            // 
+            // colLotCmf14
+            // 
+            this.colLotCmf14.Text = "Lot Cmf 14";
+            this.colLotCmf14.Width = 100;
+            // 
+            // colLotCmf15
+            // 
+            this.colLotCmf15.Text = "Lot Cmf 15";
+            this.colLotCmf15.Width = 100;
+            // 
+            // colLotCmf16
+            // 
+            this.colLotCmf16.Text = "Lot Cmf 16";
+            this.colLotCmf16.Width = 100;
+            // 
+            // colLotCmf17
+            // 
+            this.colLotCmf17.Text = "Lot Cmf 17";
+            this.colLotCmf17.Width = 100;
+            // 
+            // colLotCmf18
+            // 
+            this.colLotCmf18.Text = "Lot Cmf 18";
+            this.colLotCmf18.Width = 100;
+            // 
+            // colLotCmf19
+            // 
+            this.colLotCmf19.Text = "Lot Cmf 19";
+            this.colLotCmf19.Width = 100;
+            // 
+            // colLotCmf20
+            // 
+            this.colLotCmf20.Text = "Lot Cmf 20";
+            this.colLotCmf20.Width = 100;
+            // 
+            // colBomSetID
+            // 
+            this.colBomSetID.Text = "BOM Set ID";
+            this.colBomSetID.Width = 100;
+            // 
+            // colBomSetVersion
+            // 
+            this.colBomSetVersion.Text = "BOM Set Version";
+            this.colBomSetVersion.Width = 120;
+            // 
+            // colBomActiveSeq
+            // 
+            this.colBomActiveSeq.Text = "BOM Act Hist Seq";
+            this.colBomActiveSeq.Width = 120;
+            // 
+            // colBomHistSeq
+            // 
+            this.colBomHistSeq.Text = "BOM Hist Seq";
+            this.colBomHistSeq.Width = 100;
+            // 
+            // colLotDelFlag
+            // 
+            this.colLotDelFlag.Text = "Lot Delete Flag";
+            this.colLotDelFlag.Width = 100;
+            // 
+            // colLotDelTime
+            // 
+            this.colLotDelTime.Text = "Lot Delete Time";
+            this.colLotDelTime.Width = 120;
+            // 
+            // colLotDelReason
+            // 
+            this.colLotDelReason.Text = "Lot Delete Reason";
+            this.colLotDelReason.Width = 150;
+            // 
+            // colLastTranCode
+            // 
+            this.colLastTranCode.Text = "Last Trans Code";
+            this.colLastTranCode.Width = 120;
+            // 
+            // colLastTranTime
+            // 
+            this.colLastTranTime.Text = "Last Trans Time";
+            this.colLastTranTime.Width = 120;
+            // 
+            // colLastComment
+            // 
+            this.colLastComment.Text = "Last Comment";
+            this.colLastComment.Width = 200;
+            // 
+            // colLastActiveHistSeq
+            // 
+            this.colLastActiveHistSeq.Text = "Last Active Hist Seq";
+            this.colLastActiveHistSeq.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colLastActiveHistSeq.Width = 140;
+            // 
+            // colLastHistSeq
+            // 
+            this.colLastHistSeq.Text = "Last Hist Seq";
+            this.colLastHistSeq.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colLastHistSeq.Width = 120;
+            // 
+            // pnlLotInfo
+            // 
+            this.pnlLotInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlLotInfo.Controls.Add(this.pnlTargetLotInfo);
+            this.pnlLotInfo.Controls.Add(this.splLotInfo);
+            this.pnlLotInfo.Controls.Add(this.pnlSetLotInfo);
+            this.pnlLotInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLotInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLotInfo.Name = "pnlLotInfo";
+            this.pnlLotInfo.Size = new System.Drawing.Size(728, 436);
+            this.pnlLotInfo.TabIndex = 2;
+            // 
+            // pnlTargetLotInfo
+            // 
+            this.pnlTargetLotInfo.Controls.Add(this.grpTargetLotInfo);
+            this.pnlTargetLotInfo.Controls.Add(this.grpTranInfo);
+            this.pnlTargetLotInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTargetLotInfo.Location = new System.Drawing.Point(0, 278);
+            this.pnlTargetLotInfo.Name = "pnlTargetLotInfo";
+            this.pnlTargetLotInfo.Size = new System.Drawing.Size(728, 158);
+            this.pnlTargetLotInfo.TabIndex = 10;
+            // 
+            // grpTargetLotInfo
+            // 
+            this.grpTargetLotInfo.Controls.Add(this.pnlTagetLotInfoMain);
+            this.grpTargetLotInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpTargetLotInfo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpTargetLotInfo.Location = new System.Drawing.Point(0, 61);
+            this.grpTargetLotInfo.Name = "grpTargetLotInfo";
+            this.grpTargetLotInfo.Size = new System.Drawing.Size(728, 97);
+            this.grpTargetLotInfo.TabIndex = 1;
+            this.grpTargetLotInfo.TabStop = false;
+            this.grpTargetLotInfo.Text = "Target Lot Infomation";
+            // 
+            // pnlTagetLotInfoMain
+            // 
+            this.pnlTagetLotInfoMain.Controls.Add(this.udcLotInfor);
+            this.pnlTagetLotInfoMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTagetLotInfoMain.Location = new System.Drawing.Point(3, 16);
+            this.pnlTagetLotInfoMain.Name = "pnlTagetLotInfoMain";
+            this.pnlTagetLotInfoMain.Size = new System.Drawing.Size(722, 78);
+            this.pnlTagetLotInfoMain.TabIndex = 0;
+            // 
+            // udcLotInfor
+            // 
+            this.udcLotInfor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.udcLotInfor.Location = new System.Drawing.Point(0, 0);
+            this.udcLotInfor.Name = "udcLotInfor";
+            this.udcLotInfor.ScreenAutoStretch = false;
+            this.udcLotInfor.ScreenID = null;
+            this.udcLotInfor.ScreenLock = false;
+            this.udcLotInfor.ScreenLockBackColor = System.Drawing.Color.Empty;
+            this.udcLotInfor.Size = new System.Drawing.Size(722, 78);
+            this.udcLotInfor.TabIndex = 0;
+            // 
+            // grpTranInfo
+            // 
+            this.grpTranInfo.Controls.Add(this.chkNoAutoTermLot);
+            this.grpTranInfo.Controls.Add(this.txtTargetLotDesc);
+            this.grpTranInfo.Controls.Add(this.txtTargetLotID);
+            this.grpTranInfo.Controls.Add(this.lblTargetLotID);
+            this.grpTranInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpTranInfo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpTranInfo.Location = new System.Drawing.Point(0, 0);
+            this.grpTranInfo.Name = "grpTranInfo";
+            this.grpTranInfo.Size = new System.Drawing.Size(728, 61);
+            this.grpTranInfo.TabIndex = 0;
+            this.grpTranInfo.TabStop = false;
+            // 
+            // chkNoAutoTermLot
+            // 
+            this.chkNoAutoTermLot.AutoSize = true;
+            this.chkNoAutoTermLot.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkNoAutoTermLot.Location = new System.Drawing.Point(12, 38);
+            this.chkNoAutoTermLot.Name = "chkNoAutoTermLot";
+            this.chkNoAutoTermLot.Size = new System.Drawing.Size(201, 18);
+            this.chkNoAutoTermLot.TabIndex = 3;
+            this.chkNoAutoTermLot.Text = "No Automatic Terminate Source Lot";
+            // 
+            // txtTargetLotDesc
+            // 
+            this.txtTargetLotDesc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTargetLotDesc.Location = new System.Drawing.Point(320, 15);
+            this.txtTargetLotDesc.MaxLength = 200;
+            this.txtTargetLotDesc.Name = "txtTargetLotDesc";
+            this.txtTargetLotDesc.ReadOnly = true;
+            this.txtTargetLotDesc.Size = new System.Drawing.Size(396, 20);
+            this.txtTargetLotDesc.TabIndex = 2;
+            this.txtTargetLotDesc.TabStop = false;
+            // 
+            // txtTargetLotID
+            // 
+            this.txtTargetLotID.Location = new System.Drawing.Point(118, 15);
+            this.txtTargetLotID.MaxLength = 25;
+            this.txtTargetLotID.Name = "txtTargetLotID";
+            this.txtTargetLotID.Size = new System.Drawing.Size(200, 20);
+            this.txtTargetLotID.TabIndex = 1;
+            this.txtTargetLotID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTargetLotID_KeyPress);
+            // 
+            // lblTargetLotID
+            // 
+            this.lblTargetLotID.AutoSize = true;
+            this.lblTargetLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblTargetLotID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTargetLotID.Location = new System.Drawing.Point(12, 18);
+            this.lblTargetLotID.Name = "lblTargetLotID";
+            this.lblTargetLotID.Size = new System.Drawing.Size(83, 13);
+            this.lblTargetLotID.TabIndex = 0;
+            this.lblTargetLotID.Text = "Target Lot ID";
+            this.lblTargetLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // splLotInfo
+            // 
+            this.splLotInfo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splLotInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splLotInfo.Location = new System.Drawing.Point(0, 275);
+            this.splLotInfo.Name = "splLotInfo";
+            this.splLotInfo.Size = new System.Drawing.Size(728, 3);
+            this.splLotInfo.TabIndex = 3;
+            this.splLotInfo.TabStop = false;
+            // 
+            // pnlSetLotInfo
+            // 
+            this.pnlSetLotInfo.Controls.Add(this.grpSelLotList);
+            this.pnlSetLotInfo.Controls.Add(this.grpMergeInfo);
+            this.pnlSetLotInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSetLotInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlSetLotInfo.Name = "pnlSetLotInfo";
+            this.pnlSetLotInfo.Size = new System.Drawing.Size(728, 275);
+            this.pnlSetLotInfo.TabIndex = 8;
+            // 
+            // grpSelLotList
+            // 
+            this.grpSelLotList.Controls.Add(this.spdSelLotList);
+            this.grpSelLotList.Controls.Add(this.pnlSummaryInfo);
+            this.grpSelLotList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpSelLotList.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpSelLotList.Location = new System.Drawing.Point(0, 68);
+            this.grpSelLotList.Name = "grpSelLotList";
+            this.grpSelLotList.Size = new System.Drawing.Size(728, 207);
+            this.grpSelLotList.TabIndex = 1;
+            this.grpSelLotList.TabStop = false;
+            this.grpSelLotList.Text = "Lot List";
+            // 
+            // spdSelLotList
+            // 
+            this.spdSelLotList.AccessibleDescription = "spdSelLotList, Sheet1, Row 0, Column 0, ";
+            this.spdSelLotList.BackColor = System.Drawing.SystemColors.Control;
+            this.spdSelLotList.ButtonDrawMode = FarPoint.Win.Spread.ButtonDrawModes.CurrentRow;
+            this.spdSelLotList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spdSelLotList.EditModePermanent = true;
+            this.spdSelLotList.EditModeReplace = true;
+            this.spdSelLotList.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdSelLotList.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdSelLotList.HorizontalScrollBar.Name = "";
+            this.spdSelLotList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.spdSelLotList.HorizontalScrollBar.TabIndex = 52;
+            this.spdSelLotList.Location = new System.Drawing.Point(3, 16);
+            this.spdSelLotList.Name = "spdSelLotList";
+            this.spdSelLotList.ScrollBarTrackPolicy = FarPoint.Win.Spread.ScrollBarTrackPolicy.Both;
+            this.spdSelLotList.ScrollTipPolicy = FarPoint.Win.Spread.ScrollTipPolicy.Both;
+            this.spdSelLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.spdSelLotList_Sheet1});
+            this.spdSelLotList.Size = new System.Drawing.Size(722, 168);
+            this.spdSelLotList.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.spdSelLotList.TabIndex = 0;
+            this.spdSelLotList.TabStop = false;
+            this.spdSelLotList.TextTipDelay = 200;
+            this.spdSelLotList.TextTipPolicy = FarPoint.Win.Spread.TextTipPolicy.Floating;
+            this.spdSelLotList.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdSelLotList.VerticalScrollBar.Name = "";
+            this.spdSelLotList.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
+            this.spdSelLotList.VerticalScrollBar.TabIndex = 53;
+            this.spdSelLotList.EditModeOff += new System.EventHandler(this.spdSelLotList_EditModeOff);
+            this.spdSelLotList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdSelLotList_CellClick);
+            this.spdSelLotList.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdSelLotList_ButtonClicked);
+            // 
+            // spdSelLotList_Sheet1
+            // 
+            this.spdSelLotList_Sheet1.Reset();
+            spdSelLotList_Sheet1.SheetName = "Sheet1";
+            // Formulas and custom names must be loaded with R1C1 reference style
+            this.spdSelLotList_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            spdSelLotList_Sheet1.ColumnCount = 12;
+            spdSelLotList_Sheet1.RowCount = 2;
+            this.spdSelLotList_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdSelLotList_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
+            this.spdSelLotList_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdSelLotList_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefault";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 0).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "Lot ID";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 1).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Move Qty 1";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 2).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Move Qty 2";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 3).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Move Qty 3";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 4).ColumnSpan = 2;
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 4).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "Carrier ID";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 5).Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "Material";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "Hold Flag";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 8).Value = "Hold Code";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 9).Value = "Qty 1";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 10).Value = "Qty 2";
+            this.spdSelLotList_Sheet1.ColumnHeader.Cells.Get(0, 11).Value = "Qty 3";
+            this.spdSelLotList_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdSelLotList_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.spdSelLotList_Sheet1.ColumnHeader.Rows.Get(0).Height = 18F;
+            this.spdSelLotList_Sheet1.Columns.Get(0).CellType = textCellType1;
+            this.spdSelLotList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdSelLotList_Sheet1.Columns.Get(0).Label = "Lot ID";
+            this.spdSelLotList_Sheet1.Columns.Get(0).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(0).ShowSortIndicator = false;
+            this.spdSelLotList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(0).Width = 110F;
+            this.spdSelLotList_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
+            this.spdSelLotList_Sheet1.Columns.Get(1).Label = "Move Qty 1";
+            this.spdSelLotList_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(1).Width = 90F;
+            this.spdSelLotList_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
+            this.spdSelLotList_Sheet1.Columns.Get(2).Label = "Move Qty 2";
+            this.spdSelLotList_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(2).Width = 89F;
+            this.spdSelLotList_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
+            this.spdSelLotList_Sheet1.Columns.Get(3).Label = "Move Qty 3";
+            this.spdSelLotList_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(3).Width = 90F;
+            textCellType2.MaxLength = 30;
+            this.spdSelLotList_Sheet1.Columns.Get(4).CellType = textCellType2;
+            this.spdSelLotList_Sheet1.Columns.Get(4).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdSelLotList_Sheet1.Columns.Get(4).Label = "Carrier ID";
+            this.spdSelLotList_Sheet1.Columns.Get(4).Locked = false;
+            this.spdSelLotList_Sheet1.Columns.Get(4).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(4).Width = 98F;
+            buttonCellType1.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType1.Text = "...";
+            this.spdSelLotList_Sheet1.Columns.Get(5).CellType = buttonCellType1;
+            this.spdSelLotList_Sheet1.Columns.Get(5).Width = 23F;
+            this.spdSelLotList_Sheet1.Columns.Get(6).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(6).Label = "Material";
+            this.spdSelLotList_Sheet1.Columns.Get(6).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(6).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(6).Width = 108F;
+            this.spdSelLotList_Sheet1.Columns.Get(7).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(7).Label = "Hold Flag";
+            this.spdSelLotList_Sheet1.Columns.Get(7).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(7).Width = 86F;
+            this.spdSelLotList_Sheet1.Columns.Get(8).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(8).Label = "Hold Code";
+            this.spdSelLotList_Sheet1.Columns.Get(8).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(8).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(8).Width = 95F;
+            this.spdSelLotList_Sheet1.Columns.Get(9).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(9).Label = "Qty 1";
+            this.spdSelLotList_Sheet1.Columns.Get(9).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(9).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(10).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(10).Label = "Qty 2";
+            this.spdSelLotList_Sheet1.Columns.Get(10).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(10).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.Columns.Get(11).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdSelLotList_Sheet1.Columns.Get(11).Label = "Qty 3";
+            this.spdSelLotList_Sheet1.Columns.Get(11).Locked = true;
+            this.spdSelLotList_Sheet1.Columns.Get(11).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdSelLotList_Sheet1.GrayAreaBackColor = System.Drawing.Color.White;
+            this.spdSelLotList_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.spdSelLotList_Sheet1.RowHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdSelLotList_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.spdSelLotList_Sheet1.SheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdSelLotList_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.spdSelLotList_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // pnlSummaryInfo
+            // 
+            this.pnlSummaryInfo.Controls.Add(this.lblTotQty3);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotQty2);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotQty1);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotMoveQty3);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotMoveQty2);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotMoveQty1);
+            this.pnlSummaryInfo.Controls.Add(this.lblTotCnt);
+            this.pnlSummaryInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSummaryInfo.Location = new System.Drawing.Point(3, 184);
+            this.pnlSummaryInfo.Name = "pnlSummaryInfo";
+            this.pnlSummaryInfo.Size = new System.Drawing.Size(722, 20);
+            this.pnlSummaryInfo.TabIndex = 3;
+            // 
+            // lblTotQty3
+            // 
+            this.lblTotQty3.AutoSize = true;
+            this.lblTotQty3.Location = new System.Drawing.Point(635, 4);
+            this.lblTotQty3.Name = "lblTotQty3";
+            this.lblTotQty3.Size = new System.Drawing.Size(38, 13);
+            this.lblTotQty3.TabIndex = 6;
+            this.lblTotQty3.Text = "Qty3 : ";
+            // 
+            // lblTotQty2
+            // 
+            this.lblTotQty2.AutoSize = true;
+            this.lblTotQty2.Location = new System.Drawing.Point(558, 4);
+            this.lblTotQty2.Name = "lblTotQty2";
+            this.lblTotQty2.Size = new System.Drawing.Size(38, 13);
+            this.lblTotQty2.TabIndex = 5;
+            this.lblTotQty2.Text = "Qty2 : ";
+            // 
+            // lblTotQty1
+            // 
+            this.lblTotQty1.AutoSize = true;
+            this.lblTotQty1.Location = new System.Drawing.Point(477, 4);
+            this.lblTotQty1.Name = "lblTotQty1";
+            this.lblTotQty1.Size = new System.Drawing.Size(38, 13);
+            this.lblTotQty1.TabIndex = 4;
+            this.lblTotQty1.Text = "Qty1 : ";
+            // 
+            // lblTotMoveQty3
+            // 
+            this.lblTotMoveQty3.AutoSize = true;
+            this.lblTotMoveQty3.Location = new System.Drawing.Point(343, 4);
+            this.lblTotMoveQty3.Name = "lblTotMoveQty3";
+            this.lblTotMoveQty3.Size = new System.Drawing.Size(68, 13);
+            this.lblTotMoveQty3.TabIndex = 3;
+            this.lblTotMoveQty3.Text = "Move Qty3 : ";
+            // 
+            // lblTotMoveQty2
+            // 
+            this.lblTotMoveQty2.AutoSize = true;
+            this.lblTotMoveQty2.Location = new System.Drawing.Point(232, 4);
+            this.lblTotMoveQty2.Name = "lblTotMoveQty2";
+            this.lblTotMoveQty2.Size = new System.Drawing.Size(68, 13);
+            this.lblTotMoveQty2.TabIndex = 2;
+            this.lblTotMoveQty2.Text = "Move Qty2 : ";
+            // 
+            // lblTotMoveQty1
+            // 
+            this.lblTotMoveQty1.AutoSize = true;
+            this.lblTotMoveQty1.Location = new System.Drawing.Point(121, 4);
+            this.lblTotMoveQty1.Name = "lblTotMoveQty1";
+            this.lblTotMoveQty1.Size = new System.Drawing.Size(68, 13);
+            this.lblTotMoveQty1.TabIndex = 1;
+            this.lblTotMoveQty1.Text = "Move Qty1 : ";
+            // 
+            // lblTotCnt
+            // 
+            this.lblTotCnt.AutoSize = true;
+            this.lblTotCnt.Location = new System.Drawing.Point(3, 4);
+            this.lblTotCnt.Name = "lblTotCnt";
+            this.lblTotCnt.Size = new System.Drawing.Size(71, 13);
+            this.lblTotCnt.TabIndex = 0;
+            this.lblTotCnt.Text = "Total Count : ";
+            // 
+            // grpMergeInfo
+            // 
+            this.grpMergeInfo.Controls.Add(this.chkBindSameTr);
+            this.grpMergeInfo.Controls.Add(this.chkCommitCond);
+            this.grpMergeInfo.Controls.Add(this.lblQty23);
+            this.grpMergeInfo.Controls.Add(this.txtMoveQty3);
+            this.grpMergeInfo.Controls.Add(this.txtMoveQty2);
+            this.grpMergeInfo.Controls.Add(this.txtMoveQty1);
+            this.grpMergeInfo.Controls.Add(this.lblQty1);
+            this.grpMergeInfo.Controls.Add(this.pnlTranTime);
+            this.grpMergeInfo.Controls.Add(this.btnApply);
+            this.grpMergeInfo.Controls.Add(this.rbnPartialQty);
+            this.grpMergeInfo.Controls.Add(this.rbnAllQty);
+            this.grpMergeInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpMergeInfo.Location = new System.Drawing.Point(0, 0);
+            this.grpMergeInfo.Name = "grpMergeInfo";
+            this.grpMergeInfo.Size = new System.Drawing.Size(728, 68);
+            this.grpMergeInfo.TabIndex = 0;
+            this.grpMergeInfo.TabStop = false;
+            this.grpMergeInfo.Text = "Merge Information";
+            // 
+            // chkBindSameTr
+            // 
+            this.chkBindSameTr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkBindSameTr.AutoSize = true;
+            this.chkBindSameTr.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkBindSameTr.Location = new System.Drawing.Point(532, 41);
+            this.chkBindSameTr.Name = "chkBindSameTr";
+            this.chkBindSameTr.Size = new System.Drawing.Size(164, 18);
+            this.chkBindSameTr.TabIndex = 10;
+            this.chkBindSameTr.Text = "Bind with Same Transaction";
+            this.chkBindSameTr.UseVisualStyleBackColor = true;
+            // 
+            // chkCommitCond
+            // 
+            this.chkCommitCond.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkCommitCond.AutoSize = true;
+            this.chkCommitCond.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkCommitCond.Location = new System.Drawing.Point(429, 41);
+            this.chkCommitCond.Name = "chkCommitCond";
+            this.chkCommitCond.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkCommitCond.Size = new System.Drawing.Size(94, 18);
+            this.chkCommitCond.TabIndex = 9;
+            this.chkCommitCond.Text = "Each Commit";
+            // 
+            // lblQty23
+            // 
+            this.lblQty23.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblQty23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty23.Location = new System.Drawing.Point(66, 44);
+            this.lblQty23.Name = "lblQty23";
+            this.lblQty23.Size = new System.Drawing.Size(48, 13);
+            this.lblQty23.TabIndex = 4;
+            this.lblQty23.Text = "/ 2/ 3";
+            this.lblQty23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtMoveQty3
+            // 
+            this.txtMoveQty3.Location = new System.Drawing.Point(252, 40);
+            this.txtMoveQty3.MaxLength = 11;
+            this.txtMoveQty3.Name = "txtMoveQty3";
+            this.txtMoveQty3.Size = new System.Drawing.Size(66, 20);
+            this.txtMoveQty3.TabIndex = 7;
+            this.txtMoveQty3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMoveQty3.TextChanged += new System.EventHandler(this.txtMoveQty3_TextChanged);
+            this.txtMoveQty3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMoveQty3_KeyPress);
+            // 
+            // txtMoveQty2
+            // 
+            this.txtMoveQty2.Location = new System.Drawing.Point(185, 40);
+            this.txtMoveQty2.MaxLength = 11;
+            this.txtMoveQty2.Name = "txtMoveQty2";
+            this.txtMoveQty2.Size = new System.Drawing.Size(66, 20);
+            this.txtMoveQty2.TabIndex = 6;
+            this.txtMoveQty2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMoveQty2.TextChanged += new System.EventHandler(this.txtMoveQty2_TextChanged);
+            this.txtMoveQty2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMoveQty2_KeyPress);
+            // 
+            // txtMoveQty1
+            // 
+            this.txtMoveQty1.Location = new System.Drawing.Point(118, 40);
+            this.txtMoveQty1.MaxLength = 11;
+            this.txtMoveQty1.Name = "txtMoveQty1";
+            this.txtMoveQty1.Size = new System.Drawing.Size(66, 20);
+            this.txtMoveQty1.TabIndex = 5;
+            this.txtMoveQty1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMoveQty1.TextChanged += new System.EventHandler(this.txtMoveQty1_TextChanged);
+            this.txtMoveQty1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMoveQty1_KeyPress);
+            // 
+            // lblQty1
+            // 
+            this.lblQty1.AutoSize = true;
+            this.lblQty1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblQty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty1.Location = new System.Drawing.Point(11, 44);
+            this.lblQty1.Name = "lblQty1";
+            this.lblQty1.Size = new System.Drawing.Size(62, 13);
+            this.lblQty1.TabIndex = 3;
+            this.lblQty1.Text = "Move Qty 1";
+            this.lblQty1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnlTranTime
+            // 
+            this.pnlTranTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTranTime.Controls.Add(this.txtTranDateTime);
+            this.pnlTranTime.Controls.Add(this.dtpTranTime);
+            this.pnlTranTime.Controls.Add(this.chkTranDateTime);
+            this.pnlTranTime.Controls.Add(this.dtpTranDate);
+            this.pnlTranTime.Location = new System.Drawing.Point(426, 15);
+            this.pnlTranTime.Name = "pnlTranTime";
+            this.pnlTranTime.Size = new System.Drawing.Size(296, 20);
+            this.pnlTranTime.TabIndex = 8;
+            // 
+            // txtTranDateTime
+            // 
+            this.txtTranDateTime.Location = new System.Drawing.Point(139, 0);
+            this.txtTranDateTime.MaxLength = 30;
+            this.txtTranDateTime.Name = "txtTranDateTime";
+            this.txtTranDateTime.ReadOnly = true;
+            this.txtTranDateTime.Size = new System.Drawing.Size(157, 20);
+            this.txtTranDateTime.TabIndex = 1;
+            this.txtTranDateTime.TabStop = false;
+            // 
+            // dtpTranTime
+            // 
+            this.dtpTranTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTranTime.Checked = false;
+            this.dtpTranTime.CustomFormat = "HH:mm:ss";
+            this.dtpTranTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTranTime.Location = new System.Drawing.Point(225, 0);
+            this.dtpTranTime.Name = "dtpTranTime";
+            this.dtpTranTime.ShowUpDown = true;
+            this.dtpTranTime.Size = new System.Drawing.Size(71, 20);
+            this.dtpTranTime.TabIndex = 2;
+            // 
+            // chkTranDateTime
+            // 
+            this.chkTranDateTime.AutoSize = true;
+            this.chkTranDateTime.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkTranDateTime.Location = new System.Drawing.Point(3, 1);
+            this.chkTranDateTime.Name = "chkTranDateTime";
+            this.chkTranDateTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkTranDateTime.Size = new System.Drawing.Size(114, 18);
+            this.chkTranDateTime.TabIndex = 0;
+            this.chkTranDateTime.Text = "Transaction Time";
+            this.chkTranDateTime.CheckedChanged += new System.EventHandler(this.chkTranDateTime_CheckedChanged);
+            // 
+            // dtpTranDate
+            // 
+            this.dtpTranDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTranDate.Checked = false;
+            this.dtpTranDate.CustomFormat = "";
+            this.dtpTranDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTranDate.Location = new System.Drawing.Point(139, 0);
+            this.dtpTranDate.Name = "dtpTranDate";
+            this.dtpTranDate.Size = new System.Drawing.Size(86, 20);
+            this.dtpTranDate.TabIndex = 2;
+            // 
+            // btnApply
+            // 
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnApply.Location = new System.Drawing.Point(244, 14);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(74, 22);
+            this.btnApply.TabIndex = 2;
+            this.btnApply.Text = "Apply";
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
+            // rbnPartialQty
+            // 
+            this.rbnPartialQty.AutoSize = true;
+            this.rbnPartialQty.Location = new System.Drawing.Point(118, 17);
+            this.rbnPartialQty.Name = "rbnPartialQty";
+            this.rbnPartialQty.Size = new System.Drawing.Size(73, 17);
+            this.rbnPartialQty.TabIndex = 1;
+            this.rbnPartialQty.TabStop = true;
+            this.rbnPartialQty.Text = "Partial Qty";
+            this.rbnPartialQty.UseVisualStyleBackColor = true;
+            this.rbnPartialQty.CheckedChanged += new System.EventHandler(this.rbnPartialQty_CheckedChanged);
+            // 
+            // rbnAllQty
+            // 
+            this.rbnAllQty.AutoSize = true;
+            this.rbnAllQty.Location = new System.Drawing.Point(11, 17);
+            this.rbnAllQty.Name = "rbnAllQty";
+            this.rbnAllQty.Size = new System.Drawing.Size(55, 17);
+            this.rbnAllQty.TabIndex = 0;
+            this.rbnAllQty.TabStop = true;
+            this.rbnAllQty.Text = "All Qty";
+            this.rbnAllQty.UseVisualStyleBackColor = true;
+            this.rbnAllQty.CheckedChanged += new System.EventHandler(this.rbnPartialQty_CheckedChanged);
+            // 
+            // cdvspdCrrID
+            // 
+            this.cdvspdCrrID.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.cdvspdCrrID.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvspdCrrID.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvspdCrrID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cdvspdCrrID.Location = new System.Drawing.Point(273, 17);
+            this.cdvspdCrrID.MCViewStyle.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvspdCrrID.MCViewStyle.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvspdCrrID.Name = "cdvRotate";
+            this.cdvspdCrrID.Size = new System.Drawing.Size(20, 20);
+            this.cdvspdCrrID.SmallImageList = null;
+            this.cdvspdCrrID.TabIndex = 0;
+            this.cdvspdCrrID.TabStop = false;
+            this.cdvspdCrrID.ViewPosition = new System.Drawing.Point(0, 0);
+            this.cdvspdCrrID.Visible = false;
+            this.cdvspdCrrID.VisibleColumnHeader = false;
+            this.cdvspdCrrID.SelectedItemChanged += new Miracom.UI.MCSSCodeViewSelChangedHandler(this.cdvspdCrrID_SelectedItemChanged);
+            // 
+            // btnView
+            // 
+            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnView.Location = new System.Drawing.Point(374, 7);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(88, 26);
+            this.btnView.TabIndex = 0;
+            this.btnView.Text = "View";
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // frmWIPTranMultiMergeLot
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(742, 546);
+            this.Name = "frmWIPTranMultiMergeLot";
+            this.Text = "Multi Merge Lot";
+            this.Activated += new System.EventHandler(this.frmWIPTranMultiMergeLot_Activated);
+            this.Load += new System.EventHandler(this.frmWIPTranMultiMergeLot_Load);
+            this.tabTran.ResumeLayout(false);
+            this.tbpGeneral.ResumeLayout(false);
+            this.tbpCMF.ResumeLayout(false);
+            this.grpCMF.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvCMF1)).EndInit();
+            this.pnlTranInfo.ResumeLayout(false);
+            this.tbpLotInfo.ResumeLayout(false);
+            this.pnlComment.ResumeLayout(false);
+            this.grpComment.ResumeLayout(false);
+            this.grpComment.PerformLayout();
+            this.pnlBottom.ResumeLayout(false);
+            this.pnlCenter.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlConditionInfo.ResumeLayout(false);
+            this.grpConditionInfo.ResumeLayout(false);
+            this.grpConditionInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvAttributeValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvAttributeName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvOperation)).EndInit();
+            this.pnlCheck.ResumeLayout(false);
+            this.grpCheck.ResumeLayout(false);
+            this.pnlLotList.ResumeLayout(false);
+            this.grpLotList.ResumeLayout(false);
+            this.pnlLotInfo.ResumeLayout(false);
+            this.pnlTargetLotInfo.ResumeLayout(false);
+            this.grpTargetLotInfo.ResumeLayout(false);
+            this.pnlTagetLotInfoMain.ResumeLayout(false);
+            this.grpTranInfo.ResumeLayout(false);
+            this.grpTranInfo.PerformLayout();
+            this.pnlSetLotInfo.ResumeLayout(false);
+            this.grpSelLotList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spdSelLotList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdSelLotList_Sheet1)).EndInit();
+            this.pnlSummaryInfo.ResumeLayout(false);
+            this.pnlSummaryInfo.PerformLayout();
+            this.grpMergeInfo.ResumeLayout(false);
+            this.grpMergeInfo.PerformLayout();
+            this.pnlTranTime.ResumeLayout(false);
+            this.pnlTranTime.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvspdCrrID)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlConditionInfo;
+        private System.Windows.Forms.GroupBox grpConditionInfo;
+        private UI.Controls.MCCodeView.MCCodeView cdvAttributeValue;
+        private System.Windows.Forms.Label lblAttributeValue;
+        private System.Windows.Forms.CheckBox chkOnlyWaitLot;
+        private System.Windows.Forms.CheckBox chkZeroQuantityLot;
+        private UI.Controls.MCCodeView.MCCodeView cdvAttributeName;
+        private System.Windows.Forms.Label lblAttributeName;
+        private MESCore.Controls.udcFlowAndSeq cdvFlow;
+        private MESCore.Controls.udcMaterial cdvMaterial;
+        private UI.Controls.MCCodeView.MCCodeView cdvOperation;
+        private System.Windows.Forms.Label lblOperation;
+        private MESCore.Controls.udcFlexibleConditionForLot udcCondition;
+        private System.Windows.Forms.Panel pnlCheck;
+        private System.Windows.Forms.GroupBox grpCheck;
+        private System.Windows.Forms.Button btnUncheckAll;
+        private System.Windows.Forms.Button btnCheckAll;
+        private System.Windows.Forms.Panel pnlLotList;
+        private System.Windows.Forms.GroupBox grpLotList;
+        private UI.Controls.MCListView.MCListView lisLotList;
+        private System.Windows.Forms.ColumnHeader colSeq;
+        private System.Windows.Forms.ColumnHeader colLotID;
+        private System.Windows.Forms.ColumnHeader colMaterial;
+        private System.Windows.Forms.ColumnHeader colMatVersion;
+        private System.Windows.Forms.ColumnHeader colFlow;
+        private System.Windows.Forms.ColumnHeader colFlowSeq;
+        private System.Windows.Forms.ColumnHeader colOperation;
+        private System.Windows.Forms.ColumnHeader colQty1;
+        private System.Windows.Forms.ColumnHeader colQty2;
+        private System.Windows.Forms.ColumnHeader colQty3;
+        private System.Windows.Forms.ColumnHeader colLotType;
+        private System.Windows.Forms.ColumnHeader colOwnerCode;
+        private System.Windows.Forms.ColumnHeader colCreateCode;
+        private System.Windows.Forms.ColumnHeader colPriority;
+        private System.Windows.Forms.ColumnHeader colLotStatus;
+        private System.Windows.Forms.ColumnHeader colHoldFlag;
+        private System.Windows.Forms.ColumnHeader colHoldCode;
+        private System.Windows.Forms.ColumnHeader colCreateQty1;
+        private System.Windows.Forms.ColumnHeader colCreateQty2;
+        private System.Windows.Forms.ColumnHeader colCreateQty3;
+        private System.Windows.Forms.ColumnHeader colOperInQty1;
+        private System.Windows.Forms.ColumnHeader colOperInQty2;
+        private System.Windows.Forms.ColumnHeader colOperInQty3;
+        private System.Windows.Forms.ColumnHeader colInvFlag;
+        private System.Windows.Forms.ColumnHeader colTransitFlag;
+        private System.Windows.Forms.ColumnHeader colUnitExistFlag;
+        private System.Windows.Forms.ColumnHeader colInvUnit;
+        private System.Windows.Forms.ColumnHeader colRwkFlag;
+        private System.Windows.Forms.ColumnHeader colRwkCode;
+        private System.Windows.Forms.ColumnHeader colRwkCount;
+        private System.Windows.Forms.ColumnHeader colRwkRetFlow;
+        private System.Windows.Forms.ColumnHeader colRwkRetOper;
+        private System.Windows.Forms.ColumnHeader colRwkEndFlow;
+        private System.Windows.Forms.ColumnHeader colRwkEndOper;
+        private System.Windows.Forms.ColumnHeader colRwkRetClearFlag;
+        private System.Windows.Forms.ColumnHeader colRwkTime;
+        private System.Windows.Forms.ColumnHeader colNstdFlag;
+        private System.Windows.Forms.ColumnHeader colNstdRetFlow;
+        private System.Windows.Forms.ColumnHeader colNstdRetOper;
+        private System.Windows.Forms.ColumnHeader colNstdTime;
+        private System.Windows.Forms.ColumnHeader colRepFlag;
+        private System.Windows.Forms.ColumnHeader colRepOper;
+        private System.Windows.Forms.ColumnHeader colStrRetFlow;
+        private System.Windows.Forms.ColumnHeader colStrRetFlowSeq;
+        private System.Windows.Forms.ColumnHeader colStrRetOper;
+        private System.Windows.Forms.ColumnHeader colStartFlag;
+        private System.Windows.Forms.ColumnHeader colStartTime;
+        private System.Windows.Forms.ColumnHeader colStartResID;
+        private System.Windows.Forms.ColumnHeader colEndFlag;
+        private System.Windows.Forms.ColumnHeader colEndTime;
+        private System.Windows.Forms.ColumnHeader colEndResID;
+        private System.Windows.Forms.ColumnHeader colSampleFlag;
+        private System.Windows.Forms.ColumnHeader colSampleWaitFlag;
+        private System.Windows.Forms.ColumnHeader colSampleResult;
+        private System.Windows.Forms.ColumnHeader colSplitFromLotID;
+        private System.Windows.Forms.ColumnHeader colShipCode;
+        private System.Windows.Forms.ColumnHeader colShipTime;
+        private System.Windows.Forms.ColumnHeader colOrgDueTime;
+        private System.Windows.Forms.ColumnHeader colSchDueTime;
+        private System.Windows.Forms.ColumnHeader colCreateTime;
+        private System.Windows.Forms.ColumnHeader colFactoryInTime;
+        private System.Windows.Forms.ColumnHeader colFlowInTime;
+        private System.Windows.Forms.ColumnHeader colOperInTime;
+        private System.Windows.Forms.ColumnHeader colResvResID;
+        private System.Windows.Forms.ColumnHeader colBatchID;
+        private System.Windows.Forms.ColumnHeader colBatchSeq;
+        private System.Windows.Forms.ColumnHeader colOrderID;
+        private System.Windows.Forms.ColumnHeader colAddOrder1;
+        private System.Windows.Forms.ColumnHeader colAddOrder2;
+        private System.Windows.Forms.ColumnHeader colAddOrder3;
+        private System.Windows.Forms.ColumnHeader colLocation;
+        private System.Windows.Forms.ColumnHeader colLotCmf1;
+        private System.Windows.Forms.ColumnHeader colLotCmf2;
+        private System.Windows.Forms.ColumnHeader colLotCmf3;
+        private System.Windows.Forms.ColumnHeader colLotCmf4;
+        private System.Windows.Forms.ColumnHeader colLotCmf5;
+        private System.Windows.Forms.ColumnHeader colLotCmf6;
+        private System.Windows.Forms.ColumnHeader colLotCmf7;
+        private System.Windows.Forms.ColumnHeader colLotCmf8;
+        private System.Windows.Forms.ColumnHeader colLotCmf9;
+        private System.Windows.Forms.ColumnHeader colLotCmf10;
+        private System.Windows.Forms.ColumnHeader colLotCmf11;
+        private System.Windows.Forms.ColumnHeader colLotCmf12;
+        private System.Windows.Forms.ColumnHeader colLotCmf13;
+        private System.Windows.Forms.ColumnHeader colLotCmf14;
+        private System.Windows.Forms.ColumnHeader colLotCmf15;
+        private System.Windows.Forms.ColumnHeader colLotCmf16;
+        private System.Windows.Forms.ColumnHeader colLotCmf17;
+        private System.Windows.Forms.ColumnHeader colLotCmf18;
+        private System.Windows.Forms.ColumnHeader colLotCmf19;
+        private System.Windows.Forms.ColumnHeader colLotCmf20;
+        private System.Windows.Forms.ColumnHeader colBomSetID;
+        private System.Windows.Forms.ColumnHeader colBomSetVersion;
+        private System.Windows.Forms.ColumnHeader colBomActiveSeq;
+        private System.Windows.Forms.ColumnHeader colBomHistSeq;
+        private System.Windows.Forms.ColumnHeader colLotDelFlag;
+        private System.Windows.Forms.ColumnHeader colLotDelTime;
+        private System.Windows.Forms.ColumnHeader colLotDelReason;
+        private System.Windows.Forms.ColumnHeader colLastTranCode;
+        private System.Windows.Forms.ColumnHeader colLastTranTime;
+        private System.Windows.Forms.ColumnHeader colLastComment;
+        private System.Windows.Forms.ColumnHeader colLastActiveHistSeq;
+        private System.Windows.Forms.ColumnHeader colLastHistSeq;
+        private System.Windows.Forms.Panel pnlLotInfo;
+        private UI.Controls.MCCodeView.MCSPCodeView cdvspdCrrID;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Panel pnlTargetLotInfo;
+        private System.Windows.Forms.GroupBox grpTargetLotInfo;
+        private System.Windows.Forms.Panel pnlTagetLotInfoMain;
+        protected MESCore.Controls.udcFlexibleScreen udcLotInfor;
+        private System.Windows.Forms.GroupBox grpTranInfo;
+        private System.Windows.Forms.CheckBox chkNoAutoTermLot;
+        protected System.Windows.Forms.TextBox txtTargetLotDesc;
+        protected System.Windows.Forms.TextBox txtTargetLotID;
+        protected System.Windows.Forms.Label lblTargetLotID;
+        private System.Windows.Forms.Splitter splLotInfo;
+        private System.Windows.Forms.Panel pnlSetLotInfo;
+        private System.Windows.Forms.GroupBox grpMergeInfo;
+        private System.Windows.Forms.CheckBox chkCommitCond;
+        private System.Windows.Forms.Label lblQty23;
+        private System.Windows.Forms.TextBox txtMoveQty3;
+        private System.Windows.Forms.TextBox txtMoveQty2;
+        private System.Windows.Forms.TextBox txtMoveQty1;
+        private System.Windows.Forms.Label lblQty1;
+        protected System.Windows.Forms.Panel pnlTranTime;
+        protected System.Windows.Forms.TextBox txtTranDateTime;
+        protected System.Windows.Forms.DateTimePicker dtpTranTime;
+        protected System.Windows.Forms.CheckBox chkTranDateTime;
+        protected System.Windows.Forms.DateTimePicker dtpTranDate;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.RadioButton rbnPartialQty;
+        private System.Windows.Forms.RadioButton rbnAllQty;
+        private System.Windows.Forms.GroupBox grpSelLotList;
+        private FarPoint.Win.Spread.FpSpread spdSelLotList;
+        private FarPoint.Win.Spread.SheetView spdSelLotList_Sheet1;
+        private System.Windows.Forms.Panel pnlSummaryInfo;
+        private System.Windows.Forms.Label lblTotQty3;
+        private System.Windows.Forms.Label lblTotQty2;
+        private System.Windows.Forms.Label lblTotQty1;
+        private System.Windows.Forms.Label lblTotMoveQty3;
+        private System.Windows.Forms.Label lblTotMoveQty2;
+        private System.Windows.Forms.Label lblTotMoveQty1;
+        private System.Windows.Forms.Label lblTotCnt;
+        private System.Windows.Forms.CheckBox chkBindSameTr;
+    }
+}

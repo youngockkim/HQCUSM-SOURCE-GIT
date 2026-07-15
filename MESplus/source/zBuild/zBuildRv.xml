@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<project name="MESplusV5" default="Build" basedir="../">
+
+    <target name="MES_DBCmn">
+        <exec executable="make" dir="./library/MES_DBCmn" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="ALMCore">
+        <exec executable="make" dir="./library/Miracom_ALMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="BASCore">
+        <exec executable="make" dir="./library/Miracom_BASCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="BOMCore">
+        <exec executable="make" dir="./library/Miracom_BOMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="COMCore">
+        <exec executable="make" dir="./library/Miracom_COMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="EDCCore">
+        <exec executable="make" dir="./library/Miracom_EDCCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="FMBCore">
+        <exec executable="make" dir="./library/Miracom_FMBCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="INVCore">
+        <exec executable="make" dir="./library/Miracom_INVCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="LOGCore">
+        <exec executable="make" dir="./library/Miracom_LOGCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="MESCore">
+        <exec executable="make" dir="./library/Miracom_MESCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="ORDCore">
+        <exec executable="make" dir="./library/Miracom_ORDCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="POPCore">
+        <exec executable="make" dir="./library/Miracom_POPCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="QCMCore">
+        <exec executable="make" dir="./library/Miracom_QCMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="RASCore">
+        <exec executable="make" dir="./library/Miracom_RASCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="RCPCore">
+        <exec executable="make" dir="./library/Miracom_RCPCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="RTDCore">
+        <exec executable="make" dir="./library/Miracom_RTDCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="SECCore">
+        <exec executable="make" dir="./library/Miracom_SECCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="SPCCore">
+        <exec executable="make" dir="./library/Miracom_SPCCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="WIPCore">
+        <exec executable="make" dir="./library/Miracom_WIPCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="SVMCore">
+        <exec executable="make" dir="./library/Miracom_SVMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="TRSCore">
+        <exec executable="make" dir="./library/Miracom_TRSCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="XMLCore">
+        <exec executable="make" dir="./library/Miracom_XMLCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="SLPCore">
+        <exec executable="make" dir="./library/Miracom_SLPCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="SLCCore">
+        <exec executable="make" dir="./library/Miracom_SLCCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="MSGCore">
+        <exec executable="make" dir="./library/Miracom_MSGCore" failonerror="true">
+            <arg line="-f makefile.tibrv default"/>
+        </exec>
+    </target>
+
+    <target name="ACTCore">
+        <exec executable="make" dir="./library/Miracom_ACTCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="MANCore">
+        <exec executable="make" dir="./library/Miracom_MANCore" failonerror="true">
+            <arg line="-f makefile.tibrv default"/>
+        </exec>
+    </target>
+
+    <target name="SPMCore">
+        <exec executable="make" dir="./library/Miracom_SPMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="WEMCore">
+        <exec executable="make" dir="./library/Miracom_WEMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    
+    <!-- *** Start Shared Library for User Routine *** -->
+    <target name="MES_UserCMN">
+        <exec executable="make" dir="./library/MES_UserCMN" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserALM">
+        <exec executable="make" dir="./library/MES_UserALM" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserBAS">
+        <exec executable="make" dir="./library/MES_UserBAS" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserBOM">
+        <exec executable="make" dir="./library/MES_UserBOM" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserEDC">
+        <exec executable="make" dir="./library/MES_UserEDC" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserFMB">
+        <exec executable="make" dir="./library/MES_UserFMB" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserINV">
+        <exec executable="make" dir="./library/MES_UserINV" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserORD">
+        <exec executable="make" dir="./library/MES_UserORD" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserPOP">
+        <exec executable="make" dir="./library/MES_UserPOP" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserQCM">
+        <exec executable="make" dir="./library/MES_UserQCM" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserRAS">
+        <exec executable="make" dir="./library/MES_UserRAS" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserRCP">
+        <exec executable="make" dir="./library/MES_UserRCP" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserRTD">
+        <exec executable="make" dir="./library/MES_UserRTD" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserSEC">
+        <exec executable="make" dir="./library/MES_UserSEC" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserSPC">
+        <exec executable="make" dir="./library/MES_UserSPC" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserSVM">
+        <exec executable="make" dir="./library/MES_UserSVM" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserWIP">
+        <exec executable="make" dir="./library/MES_UserWIP" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserXML">
+        <exec executable="make" dir="./library/MES_UserXML" failonerror="true">
+            <arg line="-f makefile.tibrv default"/>
+        </exec>
+    </target>
+    <target name="MES_UserSPM">
+        <exec executable="make" dir="./library/MES_UserSPM" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <target name="MES_UserWEM">
+        <exec executable="make" dir="./library/MES_UserXML" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+    <!-- *** End Shared Library for User Routine *** -->
+
+    <target name="SampleLib">
+        <exec executable="make" dir="./library/MES_SampleLib" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="MESServer.exe" depends="MES_DBCmn, COMCore, LOGCore, XMLCore, TRSCore, MESCore, SVMCore, SLPCore, SLCCore, MSGCore, ACTCore, ALMCore, BASCore, BOMCore, EDCCore, FMBCore, INVCore, ORDCore, POPCore, QCMCore, RASCore, RCPCore, RTDCore, SECCore, SPCCore, WIPCore, MANCore, SPMCore, WEMCore, MES_UserCMN, MES_UserALM, MES_UserBAS, MES_UserBOM, MES_UserEDC, MES_UserFMB, MES_UserINV, MES_UserORD, MES_UserPOP, MES_UserQCM, MES_UserRAS, MES_UserRCP, MES_UserRTD, MES_UserSEC, MES_UserSPC, MES_UserSVM, MES_UserWIP, MES_UserXML, MES_UserSPM, MES_UserWEM, SampleLib">
+        <exec executable="make" dir="./server/MESServer" failonerror="true">
+            <arg line="-f makefile.tibrv all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER">
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_ALMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_BASCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_BOMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_COMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_EDCCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_FMBCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_INVCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_LOGCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_MESCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_ORDCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_POPCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_QCMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_RASCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_RCPCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_RTDCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SECCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SPCCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_WIPCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SVMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_TRSCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc/xmlparser">
+            <fileset dir="library/Miracom_XMLCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SLPCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SLCCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_MSGCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_ACTCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_MANCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_SPMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_WEMCore" includes="*.h"/>
+        </copy>
+        
+        <copy todir="../inc">
+            <fileset dir="server/MESServer" includes="*.h"/>
+        </copy>
+    </target>
+
+
+    <!-- *** Start Administrator *** -->
+    <target name="ADM_DBCmn">
+        <exec executable="make" dir="./library/ADM_DBCmn" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="ADMCore">
+        <exec executable="make" dir="./library/Miracom_ADMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="ARCCore">
+        <exec executable="make" dir="./library/Miracom_ARCCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="ADMServer.exe" depends="ADM_DBCmn, ADMCore, ARCCore">
+        <exec executable="make" dir="./server/ADMServer" failonerror="true">
+            <arg line="-f makefile.tibrv all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_ADMIN">
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_ADMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_ARCCore" includes="*.h"/>
+        </copy>
+
+        <copy todir="../inc">
+            <fileset dir="server/ADMServer" includes="*.h"/>
+        </copy>
+    </target>
+
+    <target name="MESArchive.exe">
+        <exec executable="make" dir="./server/MESArchive" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+    <!-- *** End Administrator *** -->
+
+    <!-- *** Start Batch Job Server *** -->
+    <target name="BAT_DBCmn">
+        <exec executable="make" dir="./library/BAT_DBCmn" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="BATCore">
+        <exec executable="make" dir="./library/Miracom_BATCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="BATServer.exe" depends="BAT_DBCmn, BATCore">
+        <exec executable="make" dir="./server/BATServer" failonerror="true">
+            <arg line="-f makefile.tibrv all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_BATJOB">
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_BATCore" includes="*.h"/>
+        </copy>
+
+        <copy todir="../inc">
+            <fileset dir="server/BATServer" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End Batch Job Server *** -->
+
+    <!-- *** Start MESStopProc *** -->
+    <target name="MESStopProc.exe">
+        <exec executable="make" dir="./util/MESStopProc" failonerror="true">
+            <arg line="-f makefile.tibrv all"/>
+        </exec>
+    </target>
+    <!-- *** End MESStopProc *** -->
+
+    <target name="Build" depends="COPY_HEADER, MESServer.exe, COPY_HEADER_ADMIN, ADMServer.exe, COPY_HEADER_BATJOB, BATServer.exe, MESArchive.exe, MESStopProc.exe">
+        <tstamp>
+            <format property="bld.end.date" pattern="yyyy/MM/dd"/>
+            <format property="bld.end.time" pattern="HH:mm:ss"/>
+        </tstamp>
+        <zip destfile="${artifactsDir}/${buildVersion}-NOCODE.zip">
+            <zipfileset dir="../bin" prefix="MESplusV5/bin" filemode="755"/>
+            <zipfileset dir="../lib" prefix="MESplusV5/lib" excludes="**/*.so, **/*.a"/>
+            <zipfileset dir="../lic" prefix="MESplusV5/lic" excludes="**/*.lic"/>
+            <zipfileset dir="../cmd" includes="startMESServer.suse" fullpath="MESplusV5/cmd/startMESServer" filemode="755"/>
+            <zipfileset dir="../cmd" includes="stopMESServer.suse" fullpath="MESplusV5/cmd/stopMESServer" filemode="755"/>
+            <zipfileset dir="../cmd" includes="checkMESServer.suse" fullpath="MESplusV5/cmd/checkMESServer" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_MESplus.ini" fullpath="MESplusV5/cmd/MESplus.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_MESServer.ini" fullpath="MESplusV5/cmd/MESServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_RTDServer.ini" fullpath="MESplusV5/cmd/RTDServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_ADMServer.ini" fullpath="MESplusV5/cmd/ADMServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_BATServer.ini" fullpath="MESplusV5/cmd/BATServer.ini" filemode="755"/>
+            <zipfileset dir="../inc" prefix="MESplusV5/inc"/>
+            <zipfileset dir="../data" prefix="MESplusV5/data"/>
+            <zipfileset dir="../log" prefix="MESplusV5/log"/>
+            <zipfileset dir="../mail" prefix="MESplusV5/mail"/>
+            <zipfileset dir="../temp" prefix="MESplusV5/temp"/>
+            <zipfileset dir="../" includes="version.txt" fullpath="MESplusV5/z${buildVersion}.ver"/>
+        </zip>
+
+        <zip destfile="${artifactsDir}/${buildVersion}-WITHCODE.zip">    
+			<zipfileset dir="../bin" prefix="MESplusV5/bin" filemode="755"/>
+            <zipfileset dir="../lib" prefix="MESplusV5/lib" excludes="**/*.so, **/*.a"/>
+            <zipfileset dir="../lic" prefix="MESplusV5/lic" excludes="**/*.lic"/>
+            <zipfileset dir="../cmd" includes="startMESServer.suse" fullpath="MESplusV5/cmd/startMESServer" filemode="755"/>
+			<zipfileset dir="../cmd" includes="stopMESServer.suse" fullpath="MESplusV5/cmd/stopMESServer" filemode="755"/>
+			<zipfileset dir="../cmd" includes="checkMESServer.suse" fullpath="MESplusV5/cmd/checkMESServer" filemode="755"/>
+			<zipfileset dir="../cmd" includes="Sample_MESplus.ini" fullpath="MESplusV5/cmd/MESplus.ini" filemode="755"/>
+			<zipfileset dir="../cmd" includes="Sample_MESServer.ini" fullpath="MESplusV5/cmd/MESServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_RTDServer.ini" fullpath="MESplusV5/cmd/RTDServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_ADMServer.ini" fullpath="MESplusV5/cmd/ADMServer.ini" filemode="755"/>
+            <zipfileset dir="../cmd" includes="Sample_BATServer.ini" fullpath="MESplusV5/cmd/BATServer.ini" filemode="755"/>
+            <zipfileset dir="../inc" prefix="MESplusV5/inc"/>
+            <zipfileset dir="../data" prefix="MESplusV5/data"/>
+            <zipfileset dir="../log" prefix="MESplusV5/log"/>
+            <zipfileset dir="../mail" prefix="MESplusV5/mail"/>
+            <zipfileset dir="../temp" prefix="MESplusV5/temp"/>
+            <zipfileset dir="../" includes="version.txt" fullpath="MESplusV5/z${buildVersion}.ver"/>
+
+            <zipfileset dir="../source/library/MES_DBCmn" prefix="MESplusV5/source/library/MES_DBCmn" excludes="*.o"/>
+            <zipfileset dir="../source/library/BAT_DBCmn" prefix="MESplusV5/source/library/BAT_DBCmn" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_DBCmn_N" prefix="MESplusV5/source/library/MES_DBCmn_N" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_SampleLib" prefix="MESplusV5/source/library/MES_SampleLib" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserALM" prefix="MESplusV5/source/library/MES_UserALM" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserBAS" prefix="MESplusV5/source/library/MES_UserBAS" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserBOM" prefix="MESplusV5/source/library/MES_UserBOM" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserCMN" prefix="MESplusV5/source/library/MES_UserCMN" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserEDC" prefix="MESplusV5/source/library/MES_UserEDC" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserFMB" prefix="MESplusV5/source/library/MES_UserFMB" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserINV" prefix="MESplusV5/source/library/MES_UserINV" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserORD" prefix="MESplusV5/source/library/MES_UserORD" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserPOP" prefix="MESplusV5/source/library/MES_UserPOP" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserQCM" prefix="MESplusV5/source/library/MES_UserQCM" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserRAS" prefix="MESplusV5/source/library/MES_UserRAS" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserRCP" prefix="MESplusV5/source/library/MES_UserRCP" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserRTD" prefix="MESplusV5/source/library/MES_UserRTD" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserSEC" prefix="MESplusV5/source/library/MES_UserSEC" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserSPC" prefix="MESplusV5/source/library/MES_UserSPC" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserSVM" prefix="MESplusV5/source/library/MES_UserSVM" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserWIP" prefix="MESplusV5/source/library/MES_UserWIP" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserSPM" prefix="MESplusV5/source/library/MES_UserSPM" excludes="*.o"/>
+            <zipfileset dir="../source/library/MES_UserWEM" prefix="MESplusV5/source/library/MES_UserWEM" excludes="*.o"/>
+            <zipfileset dir="../source/zBuild" prefix="MESplusV5/source/zBuild"/>
+
+            <zipfileset dir="../source/server/MESServer" prefix="MESplusV5/source/server/MESServer" excludes="*.o"/>
+            <zipfileset dir="../source/server/BATServer" prefix="MESplusV5/source/server/BATServer" excludes="*.o"/>
+            <zipfileset dir="../" includes="version.txt" fullpath="MESplusV5/z${buildVersion}.ver"/>
+		</zip>
+
+        <echo message="=========================================================="/>
+        <echo message="Build finished at ${bld.end.date} ${bld.end.time}"/>
+        <echo message="=========================================================="/>
+    </target>
+
+</project>

@@ -1,0 +1,48 @@
+#### Name of created component ####
+TARGET   := BATServer.exe
+
+#### Get options depending on OS and platform ####
+include ../../zBuild/makefile.cmm 
+
+##### Libraries #####
+MESDB_LIB       = -L${MES_HOME}/lib -lMES_DBCmn
+MESBASE_LIB     = -L${MES_HOME}/lib -lMiracom_MSGCore -lMiracom_MESCore -lMiracom_SLPCore -lMiracom_TRSCore -lMiracom_XMLCore -lMiracom_LOGCore -lMiracom_COMCore
+BAT_LIB         = -L${MES_HOME}/lib -lMiracom_BATCore
+LIB             = ${BAT_LIB} ${MESBASE_LIB} ${MESDB_LIB} ${ORACLE_LIB} ${H101_LIB} -lm -ldl -Wl,-export-dynamic
+
+##### Include files #####
+INCLUDE = -I${MES_INC} -I${MES_DBINC} -I${ORACLE_INC} -I${H101_INC}
+
+##### Compile options #####
+CFLAGS  = -c ${_DEB} ${_ARC} ${_OPT} ${_OPTDB} ${INCLUDE} ${MES_DEFINES} -D_H101
+
+
+##### Object files #####
+OBJS = BATServer_main.o \
+	BATServerAddService.o \
+	BATServer_check_process.o \
+	BATServer_common.o \
+	BATServer_global_variables.o \
+	BATServer_process_batch.o \
+	BATServer_stop_proc.o 
+
+###### Build Rules ######
+default : ${TARGET}
+
+build : clean ${TARGET}
+
+all : ${TARGET}
+	mv ${TARGET} ${MES_HOME}/bin/.
+
+###### Compile all source files ######
+.c.o :
+	${CC} ${CFLAGS} $?
+
+###### Link all objects ######
+${TARGET} : ${OBJS}
+	${CC} ${_ARC} -o $@ ${OBJS} ${LIB}
+
+###### Remove all object files ######
+clean :
+	rm -f ${OBJS} ${TARGET}
+

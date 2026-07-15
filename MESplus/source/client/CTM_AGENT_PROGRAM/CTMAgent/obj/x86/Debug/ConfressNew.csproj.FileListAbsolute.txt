@@ -1,0 +1,10 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\bin\Debug\ConfressNew.exe.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\bin\Debug\ConfressNew.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\bin\Debug\ConfressNew.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\ConfressNew.Form1.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\ConfressNew.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\ConfressNew.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\ConfressNew\ConfressNew\obj\x86\Debug\ConfressNew.pdb

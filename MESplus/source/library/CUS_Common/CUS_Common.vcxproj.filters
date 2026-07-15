@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CUSCommonAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp102_module_location.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp110_costcenter_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp105_power_range.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd201_article_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm102_vendor_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_summary_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_main_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CCOM_common_function.c">
+      <Filter>Source Files\COM</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd202_packing_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp101_material_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_start_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_end_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_create_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp104_production_order.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp107_production_routing.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp108_production_bom.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm101_material_lot.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm103_cell_move.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm104_stock_transfer.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm105_cell_grbatch.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_upload_erp_function.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_layup_end_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_cleaving_end_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_tabber_end_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_tabber_start_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_cleaving_start_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_layup_start_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp103_bom_function.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd204_packinginfo_send.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CEIS_common_function.c">
+      <Filter>Source Files\EIS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_trimming_end_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CEDC_update_inspection_data.c">
+      <Filter>Source Files\EDC</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_resummary_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_resource_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_data_maint.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_large_data_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_split_copy_lot.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_qm101_cell_block.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_resource_status_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CPOP_update_label_print_history.c">
+      <Filter>Source Files\POP</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_summary_resource.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_summary_shiftchange.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_view_shift_list.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_spc_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_summary_lossrate.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CEDC_update_main_defect_code.c">
+      <Filter>Source Files\EDC</Filter>
+    </ClCompile>
+    <ClCompile Include="CPOP_view_label_print_history.c">
+      <Filter>Source Files\POP</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_pmpp_check.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CUS_HQCUSM\CWIP_tabber_inspection_cell.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_View_Query_Result.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBAS_send_mail.c">
+      <Filter>Source Files\BAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_tool_use_check.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CEDC_update_matrix_defect_alarm.c">
+      <Filter>Source Files\EDC</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_resource_cus_status_function.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp115_additional_master.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd205_terminate_info.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_multi_lot_list.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp101_material_master_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd202_packing_master_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp105_power_range_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp107_production_routing_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_main_function_gerp.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_upload_erp_function_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_pp109_production_rework_Gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm102_vendor_master_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd201_article_master_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_qm103_oqc_confirm_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_qm106_oqc_request_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_sd204_packinginfo_send_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_mm104_stock_transfer_gerp.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CINF_download_le107_inventory_by_module_grade_info.c">
+      <Filter>Source Files\INF</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_main_function_e1.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_main_function_e23.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_resource_function_e1.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CSUM_batchprocess_resource_function_e2.c">
+      <Filter>Source Files\SUM</Filter>
+    </ClCompile>
+    <ClCompile Include="CWIP_view_lot_list_terminate.c">
+      <Filter>Source Files\WIP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_common_service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4bc17b98-e89f-45b3-b180-fd532e9bcf5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2605353e-688a-4111-891c-b5ba5299d6b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\INF">
+      <UniqueIdentifier>{0aa1f216-985e-42a0-9c62-6b947d45be51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BAS">
+      <UniqueIdentifier>{e464d9b4-1530-4d46-be19-fec52c80cc35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SUM">
+      <UniqueIdentifier>{85b67aeb-a8a6-475c-b3c2-33f1f79a4a50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\COM">
+      <UniqueIdentifier>{cd9d7db7-105f-4f3d-a1a0-6e720ac31fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WIP">
+      <UniqueIdentifier>{e3fc6884-719e-4d08-80bc-df32a7bb182c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EIS">
+      <UniqueIdentifier>{417efa81-ce1a-4c8e-b421-0078f809f7d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EDC">
+      <UniqueIdentifier>{2a765f3b-2451-4734-a22d-eff21615dcc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\POP">
+      <UniqueIdentifier>{c2eef3ec-6954-42ce-8c0f-a0d3b33c2b4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

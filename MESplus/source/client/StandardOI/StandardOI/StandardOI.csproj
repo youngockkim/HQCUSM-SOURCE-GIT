@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3045AC71-3FC8-4B84-A961-679ABCCDA14C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StandardOI</RootNamespace>
+    <AssemblyName>StandardOI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|x86'">
+    <OutputPath>bin\x86\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_Http</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_Http</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\StandardOI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SOIResources\Icons\MESplus_OI_icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BOI.OIFrx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\BOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread.Design, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="FTPClient, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\FTPClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.83.1.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Components\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Components\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Components\Interop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.ATP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.ATP.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.BAS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.BAS.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.DNM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.DNM.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.EDC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.EDC.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.HanwhaQcell.USModule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.HanwhaQcell.USModule.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.INV, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.INV.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerH101">
+      <HintPath>..\Components\SOI.MsgHandlerH101.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerHTTP">
+      <HintPath>..\Components\SOI.MsgHandlerHTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.OIFrx">
+      <HintPath>..\Components\SOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.RAS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.RAS.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.SMT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.SMT.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.Solar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.Solar.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.SPC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.SPC.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.TOL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\SOI.TOL.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.WIP">
+      <HintPath>..\Components\SOI.WIP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet, Version=7.0.0.0, Culture=neutral, PublicKeyToken=d1edfc8a280ba121, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\transceiverxnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsFormEventFunctionImp.cs" />
+    <Compile Include="clsInitialFunctionImp.cs" />
+    <Compile Include="frmAlarmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmMessage.Designer.cs">
+      <DependentUpon>frmAlarmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFavoriteSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFavoriteSetup.Designer.cs">
+      <DependentUpon>frmFavoriteSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIMain.Designer.cs">
+      <DependentUpon>frmMDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenedMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenedMenu.Designer.cs">
+      <DependentUpon>frmOpenedMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOption.Designer.cs">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewAlarmPublishMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAlarmPublishMessage.Designer.cs">
+      <DependentUpon>frmViewAlarmPublishMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewErrorMessage.Designer.cs">
+      <DependentUpon>frmViewErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleBasicControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleBasicControls.Designer.cs">
+      <DependentUpon>frmTestSampleBasicControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleBasicControls2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleBasicControls2.Designer.cs">
+      <DependentUpon>frmTestSampleBasicControls2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleChart.Designer.cs">
+      <DependentUpon>frmTestSampleChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleFlexibleScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleFlexibleScreen.Designer.cs">
+      <DependentUpon>frmTestSampleFlexibleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleFlexibleScreenMfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleFlexibleScreenMfo.designer.cs">
+      <DependentUpon>frmTestSampleFlexibleScreenMfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleGridControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleGridControls.Designer.cs">
+      <DependentUpon>frmTestSampleGridControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleImageFileUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleImageFileUpload.Designer.cs">
+      <DependentUpon>frmTestSampleImageFileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleLayoutAndOthers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleLayoutAndOthers.Designer.cs">
+      <DependentUpon>frmTestSampleLayoutAndOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleMessageFromHttp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleMessageFromHttp.Designer.cs">
+      <DependentUpon>frmTestSampleMessageFromHttp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSamplePLMView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSamplePLMView.Designer.cs">
+      <DependentUpon>frmTestSamplePLMView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSamplePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSamplePopup.Designer.cs">
+      <DependentUpon>frmTestSamplePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleSpreadAndPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\frmTestSampleSpreadAndPrint.Designer.cs">
+      <DependentUpon>frmTestSampleSpreadAndPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SamplePopups\frmTestSampleFuncAsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samples\SamplePopups\frmTestSampleFuncAsPopup.Designer.cs">
+      <DependentUpon>frmTestSampleFuncAsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardOIMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\frmTempSOIBaseForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm02.Designer.cs">
+      <DependentUpon>frmTempSOIBaseForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm03.Designer.cs">
+      <DependentUpon>frmTempSOIBaseForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm04.Designer.cs">
+      <DependentUpon>frmTempSOIBaseForm04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIBaseForm12.Designer.cs">
+      <DependentUpon>frmTempSOIBaseForm12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates\frmTempSOIPopup.Designer.cs">
+      <DependentUpon>frmTempSOIPopup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAlarmMessage.resx">
+      <DependentUpon>frmAlarmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFavoriteSetup.resx">
+      <DependentUpon>frmFavoriteSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIMain.resx">
+      <DependentUpon>frmMDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenedMenu.resx">
+      <DependentUpon>frmOpenedMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOption.resx">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAlarmPublishMessage.resx">
+      <DependentUpon>frmViewAlarmPublishMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewErrorMessage.resx">
+      <DependentUpon>frmViewErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Samples\frmTestSampleBasicControls.resx">
+      <DependentUpon>frmTestSampleBasicControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleBasicControls2.resx">
+      <DependentUpon>frmTestSampleBasicControls2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleChart.resx">
+      <DependentUpon>frmTestSampleChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleFlexibleScreen.resx">
+      <DependentUpon>frmTestSampleFlexibleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleFlexibleScreenMfo.resx">
+      <DependentUpon>frmTestSampleFlexibleScreenMfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleGridControls.resx">
+      <DependentUpon>frmTestSampleGridControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleImageFileUpload.resx">
+      <DependentUpon>frmTestSampleImageFileUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleLayoutAndOthers.resx">
+      <DependentUpon>frmTestSampleLayoutAndOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleMessageFromHttp.resx">
+      <DependentUpon>frmTestSampleMessageFromHttp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSamplePLMView.resx">
+      <DependentUpon>frmTestSamplePLMView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSamplePopup.resx">
+      <DependentUpon>frmTestSamplePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\frmTestSampleSpreadAndPrint.resx">
+      <DependentUpon>frmTestSampleSpreadAndPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SamplePopups\frmTestSampleFuncAsPopup.resx">
+      <DependentUpon>frmTestSampleFuncAsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\frmTempSOIBaseForm02.resx">
+      <DependentUpon>frmTempSOIBaseForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\frmTempSOIBaseForm03.resx">
+      <DependentUpon>frmTempSOIBaseForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\frmTempSOIBaseForm04.resx">
+      <DependentUpon>frmTempSOIBaseForm04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\frmTempSOIBaseForm12.resx">
+      <DependentUpon>frmTempSOIBaseForm12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\frmTempSOIPopup.resx">
+      <DependentUpon>frmTempSOIPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ChangeFiles\MESCaption.xlsx" />
+    <None Include="ChangeFiles\MESMessage_CL_SV.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_copy_change_files.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="ChangeFiles\errorsound.wav" />
+    <Content Include="ChangeFiles\MainImage.png" />
+    <Content Include="ChangeFiles\MESalpha\errorsound.wav" />
+    <Content Include="ChangeFiles\MESalpha\MainImage.png" />
+    <Content Include="ChangeFiles\MESalpha\MESCaption.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeFiles\MESalpha\MESMessage.xml" />
+    <Content Include="ChangeFiles\MESalpha\MESOI_logo.png" />
+    <Content Include="ChangeFiles\MESCaption.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeFiles\MESMessage.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeFiles\MESOI_logo.png" />
+    <Content Include="ChangeFiles\MESplusEE\errorsound.wav" />
+    <Content Include="ChangeFiles\MESplusEE\MainImage.png" />
+    <Content Include="ChangeFiles\MESplusEE\MESCaption.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeFiles\MESplusEE\MESMessage.xml" />
+    <Content Include="ChangeFiles\MESplusEE\MESOI_logo.png" />
+    <Content Include="ChangeFiles\MESplusSE\errorsound.wav" />
+    <Content Include="ChangeFiles\MESplusSE\MainImage.png" />
+    <Content Include="ChangeFiles\MESplusSE\MESCaption.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeFiles\MESplusSE\MESMessage.xml" />
+    <Content Include="ChangeFiles\MESplusSE\MESOI_logo.png" />
+    <None Include="Resources\Qcells_logo_white_s.png" />
+    <None Include="Resources\Qcells_logo_white_s1.png" />
+    <Content Include="SOIResources\Icons\Add.png" />
+    <Content Include="SOIResources\Icons\Add_s.png" />
+    <Content Include="SOIResources\Icons\AlarmCloseButton.png" />
+    <Content Include="SOIResources\Icons\AlarmIcon.png" />
+    <Content Include="SOIResources\Icons\Arrow-Down.png" />
+    <Content Include="SOIResources\Icons\Arrow-Up.png" />
+    <Content Include="SOIResources\Icons\ArrowDown.png" />
+    <Content Include="SOIResources\Icons\ArrowDown_200.png" />
+    <Content Include="SOIResources\Icons\ArrowDown_70.png" />
+    <Content Include="SOIResources\Icons\ArrowLeft.png" />
+    <Content Include="SOIResources\Icons\ArrowNext.png" />
+    <Content Include="SOIResources\Icons\ArrowPrev.png" />
+    <Content Include="SOIResources\Icons\ArrowUp.png" />
+    <Content Include="SOIResources\Icons\ArrowUp_200.png" />
+    <Content Include="SOIResources\Icons\ArrowUp_70.png" />
+    <Content Include="SOIResources\Icons\BoxedOk.png" />
+    <Content Include="SOIResources\Icons\BoxedOk_s.png" />
+    <Content Include="SOIResources\Icons\CategoryError.png" />
+    <Content Include="SOIResources\Icons\CategoryInformation.png" />
+    <Content Include="SOIResources\Icons\CategorySuccess.png" />
+    <Content Include="SOIResources\Icons\CategoryWarning.png" />
+    <Content Include="SOIResources\Icons\Check.png" />
+    <Content Include="SOIResources\Icons\CheckBox_Checked.png" />
+    <Content Include="SOIResources\Icons\CheckBox_Checked_New.bmp" />
+    <Content Include="SOIResources\Icons\CheckBox_Disabled_New.bmp" />
+    <Content Include="SOIResources\Icons\CheckBox_NonChecked.png" />
+    <Content Include="SOIResources\Icons\CheckBox_NonChecked_New.bmp" />
+    <Content Include="SOIResources\Icons\Close.png" />
+    <Content Include="SOIResources\Icons\closeWin1.png" />
+    <Content Include="SOIResources\Icons\Close_s.png" />
+    <Content Include="SOIResources\Icons\Close_White.png" />
+    <Content Include="SOIResources\Icons\CodeViewButtonImage.png" />
+    <Content Include="SOIResources\Icons\CodeViewLeftArrow.png" />
+    <Content Include="SOIResources\Icons\CodeViewLeftArrow_First.png" />
+    <Content Include="SOIResources\Icons\CodeViewRefresh.png" />
+    <Content Include="SOIResources\Icons\CodeViewRightArrow.png" />
+    <Content Include="SOIResources\Icons\CodeViewRightArrow_Last.png" />
+    <Content Include="SOIResources\Icons\DatePickerCalendarButtonImage.png" />
+    <Content Include="SOIResources\Icons\DocumentSetting.png" />
+    <Content Include="SOIResources\Icons\DocumentSetting_s.png" />
+    <Content Include="SOIResources\Icons\Edit.png" />
+    <Content Include="SOIResources\Icons\EditIcon.png" />
+    <Content Include="SOIResources\Icons\Excel-Export.png" />
+    <Content Include="SOIResources\Icons\Excel.png" />
+    <Content Include="SOIResources\Icons\favoriteOff.png" />
+    <Content Include="SOIResources\Icons\favoriteOn.png" />
+    <Content Include="SOIResources\Icons\favoriteTitleImage.png" />
+    <Content Include="SOIResources\Icons\Help.png" />
+    <Content Include="SOIResources\Icons\HelpImage.png" />
+    <Content Include="SOIResources\Icons\HelpImage_DarkGray.png" />
+    <Content Include="SOIResources\Icons\History.png" />
+    <Content Include="SOIResources\Icons\Hold.png" />
+    <Content Include="SOIResources\Icons\Hover.png" />
+    <Content Include="SOIResources\Icons\iconStar.png" />
+    <Content Include="SOIResources\Icons\icon_favorite_off.png" />
+    <Content Include="SOIResources\Icons\icon_favorite_on.png" />
+    <Content Include="SOIResources\Icons\InfoImage.png" />
+    <Content Include="SOIResources\Icons\InfoImage_DarkGray.png" />
+    <Content Include="SOIResources\Icons\Information.png" />
+    <Content Include="SOIResources\Icons\Information2.png" />
+    <Content Include="SOIResources\Icons\InputCMFImage.png" />
+    <Content Include="SOIResources\Icons\Inventory.png" />
+    <Content Include="SOIResources\Icons\LoadingImage.gif" />
+    <Content Include="SOIResources\Icons\LoginIcon.png" />
+    <Content Include="SOIResources\Icons\LoginUserId.png" />
+    <Content Include="SOIResources\Icons\LoginUserPw.png" />
+    <Content Include="SOIResources\Icons\Logout.png" />
+    <Content Include="SOIResources\Icons\Logout_SOI.png" />
+    <Content Include="SOIResources\Icons\Main_Alarm_Circle.png" />
+    <Content Include="SOIResources\Icons\Main_Alarm_Image.png" />
+    <Content Include="SOIResources\Icons\Main_Control_logout.png" />
+    <Content Include="SOIResources\Icons\Main_Control_menu.png" />
+    <Content Include="SOIResources\Icons\Main_Control_setting.png" />
+    <Content Include="SOIResources\Icons\Main_Control_user.png" />
+    <Content Include="SOIResources\Icons\Main_exit.png" />
+    <Content Include="SOIResources\Icons\Main_max.png" />
+    <Content Include="SOIResources\Icons\Main_min.png" />
+    <Content Include="SOIResources\Icons\Main_Msg_Error.png" />
+    <Content Include="SOIResources\Icons\Main_Msg_Info.png" />
+    <Content Include="SOIResources\Icons\Main_Msg_None.png" />
+    <Content Include="SOIResources\Icons\Main_Msg_Warn.png" />
+    <Content Include="SOIResources\Icons\Main_nor.png" />
+    <Content Include="SOIResources\Icons\Main_Open_Form_Menu_Close.png" />
+    <Content Include="SOIResources\Icons\Main_Open_Form_Menu_Open.png" />
+    <Content Include="SOIResources\Icons\maxWin1.png" />
+    <Content Include="SOIResources\Icons\MenuINV.png" />
+    <Content Include="SOIResources\Icons\MenuQCM.png" />
+    <Content Include="SOIResources\Icons\MenuRAS.png" />
+    <Content Include="SOIResources\Icons\MenuTitleImage.png" />
+    <Content Include="SOIResources\Icons\MenuWIP.png" />
+    <Content Include="SOIResources\Icons\Menu_Close.png" />
+    <Content Include="SOIResources\Icons\Menu_Collapsed.png" />
+    <Content Include="SOIResources\Icons\Menu_Expand.png" />
+    <Content Include="SOIResources\Icons\Menu_Fav_Image.png" />
+    <Content Include="SOIResources\Icons\MESplus_logo.png" />
+    <Content Include="SOIResources\Icons\MESplus_logo_white.png" />
+    <Content Include="SOIResources\Icons\MESplus_OI_icon.ico" />
+    <Content Include="SOIResources\Icons\MESplus_OI_icon2.ico" />
+    <Content Include="SOIResources\Icons\MessageImageError.png" />
+    <Content Include="SOIResources\Icons\MessageImageInfo.png" />
+    <Content Include="SOIResources\Icons\MessageImageWarning.png" />
+    <Content Include="SOIResources\Icons\Minus.png" />
+    <Content Include="SOIResources\Icons\Minus_s.png" />
+    <Content Include="SOIResources\Icons\minWin1.png" />
+    <Content Include="SOIResources\Icons\More.png" />
+    <Content Include="SOIResources\Icons\Move.png" />
+    <Content Include="SOIResources\Icons\MultiCheck.png" />
+    <Content Include="SOIResources\Icons\MultiCheck_s.png" />
+    <Content Include="SOIResources\Icons\MultiUncheck.png" />
+    <Content Include="SOIResources\Icons\MultiUncheck_s.png" />
+    <Content Include="SOIResources\Icons\norWin1.png" />
+    <Content Include="SOIResources\Icons\NotHold.png" />
+    <Content Include="SOIResources\Icons\Notice.png" />
+    <Content Include="SOIResources\Icons\NoticeNew.png" />
+    <Content Include="SOIResources\Icons\Notice_OI.png" />
+    <Content Include="SOIResources\Icons\NotInventory.png" />
+    <Content Include="SOIResources\Icons\NotRepair.png" />
+    <Content Include="SOIResources\Icons\NotRework.png" />
+    <Content Include="SOIResources\Icons\NotTransit.png" />
+    <Content Include="SOIResources\Icons\Opened.png" />
+    <Content Include="SOIResources\Icons\OptionImage.png" />
+    <Content Include="SOIResources\Icons\PopupTitle.png" />
+    <Content Include="SOIResources\Icons\PowerOff.png" />
+    <Content Include="SOIResources\Icons\PowerOn.png" />
+    <Content Include="SOIResources\Icons\Print.png" />
+    <Content Include="SOIResources\Icons\PrintOption.png" />
+    <Content Include="SOIResources\Icons\print_s.png" />
+    <Content Include="SOIResources\Icons\process.png" />
+    <Content Include="SOIResources\Icons\Process_s.png" />
+    <Content Include="SOIResources\Icons\Repair.png" />
+    <Content Include="SOIResources\Icons\Rework.png" />
+    <Content Include="SOIResources\Icons\Save.png" />
+    <Content Include="SOIResources\Icons\SaveIcon.png" />
+    <Content Include="SOIResources\Icons\Search.png" />
+    <Content Include="SOIResources\Icons\Search_s.png" />
+    <Content Include="SOIResources\Icons\Setting.png" />
+    <Content Include="SOIResources\Icons\SettingNew.png" />
+    <Content Include="SOIResources\Icons\SettingsImage.png" />
+    <Content Include="SOIResources\Icons\settings_icon3.png" />
+    <Content Include="SOIResources\Icons\StatusFail.png" />
+    <Content Include="SOIResources\Icons\StatusProc.png" />
+    <Content Include="SOIResources\Icons\StatusSuccess.png" />
+    <Content Include="SOIResources\Icons\StatusWait.png" />
+    <Content Include="SOIResources\Icons\Transit.png" />
+    <Content Include="SOIResources\Icons\User.png" />
+    <Content Include="SOIResources\Icons\View.png" />
+    <Content Include="SOIResources\Icons\ViewCMFImage.png" />
+    <Content Include="SOIResources\Icons\ViewDetails.png" />
+    <Content Include="SOIResources\Icons\ViewList.png" />
+    <Content Include="SOIResources\Icons\View_s.png" />
+    <Content Include="SOIResources\Icons\Warning.png" />
+    <Content Include="SOIResources\Images\Dark_Main_Image.png" />
+    <Content Include="SOIResources\Images\eng.PNG" />
+    <Content Include="SOIResources\Images\Light_Main_Image.png" />
+    <Content Include="SOIResources\Images\LoginImage.png" />
+    <Content Include="SOIResources\Images\login_dark_img.png" />
+    <Content Include="SOIResources\Images\MainBackImage.png" />
+    <Content Include="SOIResources\Images\MainImage.png" />
+    <Content Include="SOIResources\Images\MESplus_OI_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)Components\*.*" "$(TargetDir)" /d/r/y
+$(ProjectDir)\_copy_change_files $(ProjectDir) $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

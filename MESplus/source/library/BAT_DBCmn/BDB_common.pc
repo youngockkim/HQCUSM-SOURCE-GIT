@@ -1,0 +1,12 @@
+EXEC SQL BEGIN DECLARE SECTION;
+    EXEC SQL INCLUDE DBC_Q_COND_N;
+EXEC SQL END DECLARE SECTION;
+
+/* SQL Common Header File */
+#include "BDB_common.h"
+
+void a()
+{
+    printf("a");
+}
+

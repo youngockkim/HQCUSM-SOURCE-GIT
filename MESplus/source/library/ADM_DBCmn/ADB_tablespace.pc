@@ -1,0 +1,187 @@
+EXEC SQL BEGIN DECLARE SECTION;
+    EXEC SQL INCLUDE ADB_COMMON_N;
+EXEC SQL END DECLARE SECTION;
+
+/* SQL Common Header File */
+#include "ADB_common.h"
+
+
+/* SQL Error Handling */
+EXEC SQL WHENEVER SQLERROR DO DB_usr_error();
+EXEC SQL WHENEVER NOT FOUND DO DB_usr_error();
+
+
+void ADB_add_null_tablespace(struct TABLESPACE_N_TAG *TABLESPACE_N, struct TABLESPACE_TAG *TABLESPACE);
+void ADB_del_null_tablespace(struct TABLESPACE_N_TAG *TABLESPACE_N, struct TABLESPACE_TAG *TABLESPACE);
+
+
+void ADB_open_tablespace(int sel_type, struct TABLESPACE_TAG *TABLESPACE)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TABLESPACE_N_TAG TABLESPACE_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tablespace(&TABLESPACE_N, TABLESPACE);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            /* 속도가 느려 아래의 QUERY로 대체
+            EXEC SQL DECLARE ADB_TABLESPACE_CUR_1 CURSOR FOR 
+                SELECT d.file_id, d.tablespace_name, d.file_name AS File_Name, v.status AS Status,
+                        (d.BYTES / 1024 / 1024) AS Total_Space,
+                        NVL (((d.BYTES - s.BYTES) / 1024 / 1024),
+                        (d.BYTES / 1024 / 1024) ) AS Used_Space, d.autoextensible, d.increment_by
+                FROM SYS.dba_data_files d, v$datafile v,
+                        (SELECT   file_id, SUM (BYTES) BYTES
+                                FROM SYS.dba_free_space
+                            WHERE tablespace_name >= :TABLESPACE_N.TABLESPACE_NAME
+                            GROUP BY file_id) s
+                WHERE (s.file_id(+) = d.file_id)
+                    AND (d.tablespace_name >= :TABLESPACE_N.TABLESPACE_NAME)
+                    AND (d.file_name = v.NAME)
+                ORDER BY 1;
+            EXEC SQL OPEN ADB_TABLESPACE_CUR_1;
+            break;
+            */
+            
+            EXEC SQL DECLARE ADB_TABLESPACE_CUR_1 CURSOR FOR 
+                SELECT 
+                    DATA.FILE_ID FILE_ID, 
+                    DATA.TABLESPACE_NAME TABLESPACE_NAME, 
+                    DATA.FILE_NAME FILE_NAME,
+                    SPACES.STATUS,
+                    ROUND((DATA.BYTES / 1024 / 1024),2) TOTAL_SPACE,
+                    ROUND(((DATA.BYTES - NVL(FREE.BYTES,0)) / 1024 /1024),2) USED_SPACE,
+                    ROUND((((DATA.BYTES-NVL(FREE.BYTES,0))/DATA.BYTES)*100),2) USED_RATE,
+                    DATA.AUTOEXTENSIBLE AUTOEXTENSIBLE, 
+                    DATA.INCREMENT_BY INCREMEMT_BY
+                FROM DBA_DATA_FILES DATA, 
+                    (SELECT TABLESPACE_NAME, FILE_ID, SUM(BYTES) BYTES 
+                    FROM DBA_FREE_SPACE FREE
+                    GROUP BY TABLESPACE_NAME, FILE_ID) FREE,
+                    DBA_TABLESPACES SPACES
+                WHERE SPACES.TABLESPACE_NAME = DATA.TABLESPACE_NAME      
+                AND DATA.TABLESPACE_NAME = FREE.TABLESPACE_NAME(+)
+                AND DATA.FILE_ID = FREE.FILE_ID(+) 
+                ORDER BY DATA.TABLESPACE_NAME;
+            EXEC SQL OPEN ADB_TABLESPACE_CUR_1;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_open_tablespace", sel_type);
+}
+
+void ADB_fetch_tablespace(int sel_type, struct TABLESPACE_TAG *TABLESPACE)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TABLESPACE_N_TAG TABLESPACE_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL FETCH ADB_TABLESPACE_CUR_1 INTO 
+                :TABLESPACE_N.FILE_ID,
+                :TABLESPACE_N.TABLESPACE_NAME,
+                :TABLESPACE_N.FILE_NAME,
+                :TABLESPACE_N.STATUS,
+                :TABLESPACE_N.TOTAL_SPACE,
+                :TABLESPACE_N.USED_SPACE,
+                :TABLESPACE_N.USED_RATE,
+                :TABLESPACE_N.AUTOEXTENSIBLE,
+                :TABLESPACE_N.INCREMENT_BY;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    
+    if(DB_error_code == 0)
+    {
+        ADB_del_null_tablespace(&TABLESPACE_N, TABLESPACE);
+    }
+    DB_stop_query_timer("ADB_fetch_tablespace", sel_type);
+}
+
+void ADB_close_tablespace(int sel_type)
+{
+
+    DB_start_query_timer();
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL CLOSE ADB_TABLESPACE_CUR_1;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_close_tablespace", sel_type);
+}
+
+/* Initialize Function */
+void ADB_init_tablespace(struct TABLESPACE_TAG *TABLESPACE)
+{
+    /* memset by Space */
+    memset(TABLESPACE, ' ', sizeof(struct TABLESPACE_TAG));
+    
+    TABLESPACE->FILE_ID = 0;
+    TABLESPACE->TOTAL_SPACE = 0;
+    TABLESPACE->USED_SPACE = 0;
+    TABLESPACE->INCREMENT_BY = 0;
+
+}
+
+void ADB_add_null_tablespace(struct TABLESPACE_N_TAG *TABLESPACE_N, struct TABLESPACE_TAG *TABLESPACE)
+{
+
+    memset(TABLESPACE_N, '\0', sizeof(struct TABLESPACE_N_TAG));
+    TABLESPACE_N->FILE_ID = TABLESPACE->FILE_ID;
+    MEMCPY_AN(TABLESPACE_N->TABLESPACE_NAME, TABLESPACE->TABLESPACE_NAME, sizeof(TABLESPACE->TABLESPACE_NAME));
+    MEMCPY_AN(TABLESPACE_N->FILE_NAME, TABLESPACE->FILE_NAME, sizeof(TABLESPACE->FILE_NAME));
+    MEMCPY_AN(TABLESPACE_N->STATUS, TABLESPACE->STATUS, sizeof(TABLESPACE->STATUS));
+    TABLESPACE_N->TOTAL_SPACE = TABLESPACE->TOTAL_SPACE;
+    TABLESPACE_N->USED_SPACE = TABLESPACE->USED_SPACE;    
+    TABLESPACE_N->USED_RATE = TABLESPACE->USED_RATE;    
+    MEMCPY_AN(TABLESPACE_N->AUTOEXTENSIBLE, TABLESPACE->AUTOEXTENSIBLE, sizeof(TABLESPACE->AUTOEXTENSIBLE));
+    TABLESPACE_N->INCREMENT_BY = TABLESPACE->INCREMENT_BY; 
+    
+}
+
+void ADB_del_null_tablespace(struct TABLESPACE_N_TAG *TABLESPACE_N, struct TABLESPACE_TAG *TABLESPACE)
+{
+    TABLESPACE->FILE_ID = TABLESPACE_N->FILE_ID;
+    MEMCPY_DN(TABLESPACE->TABLESPACE_NAME, TABLESPACE_N->TABLESPACE_NAME, sizeof(TABLESPACE->TABLESPACE_NAME));
+    MEMCPY_DN(TABLESPACE->FILE_NAME, TABLESPACE_N->FILE_NAME, sizeof(TABLESPACE->FILE_NAME));
+    MEMCPY_DN(TABLESPACE->STATUS, TABLESPACE_N->STATUS, sizeof(TABLESPACE->STATUS));
+    TABLESPACE->TOTAL_SPACE = TABLESPACE_N->TOTAL_SPACE;
+    TABLESPACE->USED_SPACE = TABLESPACE_N->USED_SPACE;    
+    TABLESPACE->USED_RATE = TABLESPACE_N->USED_RATE;    
+    MEMCPY_DN(TABLESPACE->AUTOEXTENSIBLE, TABLESPACE_N->AUTOEXTENSIBLE, sizeof(TABLESPACE->AUTOEXTENSIBLE));
+    TABLESPACE->INCREMENT_BY = TABLESPACE_N->INCREMENT_BY;
+    
+}
+

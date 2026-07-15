@@ -1,0 +1,187 @@
+﻿namespace SOI.OIFrx.SOIBaseForm
+{
+    partial class SOIBaseForm06
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SOIBaseForm06));
+            this.pnlMiddle = new SOI.OIFrx.SOIControls.SOIPanel(this.components);
+            this.pnlMiddleMargin = new SOI.OIFrx.SOIControls.SOIPanel(this.components);
+            this.soiPanel2 = new SOI.OIFrx.SOIControls.SOIPanel(this.components);
+            this.pnlBottom = new SOI.OIFrx.SOIControls.SOIPanel(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pb = new SOI.OIFrx.SOIControls.SOIPictureBox(this.components);
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.pnlMiddle.SuspendLayout();
+            this.pnlMiddleMargin.SuspendLayout();
+            this.pnlBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlMiddle
+            // 
+            this.pnlMiddle._UseOITheme = false;
+            this.pnlMiddle._UseStyle = SOI.OIFrx.SOIPanelStyle.TransparentStyle;
+            this.pnlMiddle.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMiddle.Controls.Add(this.pnlMiddleMargin);
+            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMiddle.Location = new System.Drawing.Point(0, 0);
+            this.pnlMiddle.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMiddle.Name = "pnlMiddle";
+            this.pnlMiddle.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.pnlMiddle.Size = new System.Drawing.Size(1240, 714);
+            this.pnlMiddle.TabIndex = 3;
+            // 
+            // pnlMiddleMargin
+            // 
+            this.pnlMiddleMargin._UseOITheme = false;
+            this.pnlMiddleMargin._UseStyle = SOI.OIFrx.SOIPanelStyle.TransparentStyle;
+            this.pnlMiddleMargin.AutoScroll = true;
+            this.pnlMiddleMargin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMiddleMargin.Controls.Add(this.soiPanel2);
+            this.pnlMiddleMargin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMiddleMargin.Location = new System.Drawing.Point(20, 5);
+            this.pnlMiddleMargin.Margin = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.pnlMiddleMargin.Name = "pnlMiddleMargin";
+            this.pnlMiddleMargin.Size = new System.Drawing.Size(1200, 704);
+            this.pnlMiddleMargin.TabIndex = 2;
+            // 
+            // soiPanel2
+            // 
+            this.soiPanel2._UseOITheme = false;
+            this.soiPanel2._UseStyle = SOI.OIFrx.SOIPanelStyle.TransparentStyle;
+            this.soiPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.soiPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soiPanel2.Location = new System.Drawing.Point(0, 0);
+            this.soiPanel2.Margin = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.soiPanel2.Name = "soiPanel2";
+            this.soiPanel2.Size = new System.Drawing.Size(1200, 704);
+            this.soiPanel2.TabIndex = 4;
+            // 
+            // pnlBottom
+            // 
+            this.pnlBottom._UseOITheme = false;
+            this.pnlBottom._UseStyle = SOI.OIFrx.SOIPanelStyle.TransparentStyle;
+            this.pnlBottom.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBottom.Controls.Add(this.splitContainer1);
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 714);
+            this.pnlBottom.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.pnlBottom.Size = new System.Drawing.Size(1240, 46);
+            this.pnlBottom.TabIndex = 2;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(20, 5);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.splitContainer1.Panel1.Controls.Add(this.pb);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblMessage);
+            this.splitContainer1.Size = new System.Drawing.Size(1200, 36);
+            this.splitContainer1.SplitterDistance = 38;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // pb
+            // 
+            this.pb._UseLotStatusStyle = SOI.OIFrx.SOIPictureBoxStyle.None;
+            this.pb._UseOITheme = false;
+            this.pb.BackColor = System.Drawing.Color.Transparent;
+            this.pb.BorderShadowColor = System.Drawing.Color.Empty;
+            this.pb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pb.Image = ((object)(resources.GetObject("pb.Image")));
+            this.pb.Location = new System.Drawing.Point(0, 0);
+            this.pb.LotStatus = false;
+            this.pb.Margin = new System.Windows.Forms.Padding(0);
+            this.pb.Name = "pb";
+            this.pb.ScaleImage = Infragistics.Win.ScaleImage.Always;
+            this.pb.Size = new System.Drawing.Size(38, 36);
+            this.pb.TabIndex = 1;
+            this.pb.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
+            this.pb.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMessage.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblMessage.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(0, 0);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(1158, 36);
+            this.lblMessage.TabIndex = 1;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SOIBaseForm06
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1240, 760);
+            this.Controls.Add(this.pnlMiddle);
+            this.Controls.Add(this.pnlBottom);
+            this.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "SOIBaseForm06";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "SOIBaseForm06";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SOIBaseForm06_FormClosed);
+            this.Load += new System.EventHandler(this.SOIBaseForm06_Load);
+            this.pnlMiddle.ResumeLayout(false);
+            this.pnlMiddleMargin.ResumeLayout(false);
+            this.pnlBottom.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        public SOIControls.SOIPanel pnlBottom;
+        public SOIControls.SOIPanel pnlMiddleMargin;
+        public SOIControls.SOIPanel pnlMiddle;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private SOIControls.SOIPictureBox pb;
+        public System.Windows.Forms.Label lblMessage;
+        public SOIControls.SOIPanel soiPanel2;
+    }
+}

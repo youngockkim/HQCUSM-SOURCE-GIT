@@ -1,0 +1,44 @@
+#### Name of created component ####
+TARGET   := MESServer.exe
+
+#### Get options depending on OS and platform ####
+include ../../zBuild/makefile.cmm 
+
+##### Libraries #####
+MESDB_LIB       = -L${MES_HOME}/lib -lMES_DBCmn
+MESBASE_LIB     = -L${MES_HOME}/lib -lMiracom_MANCore -lMiracom_ACTCore -lMiracom_MSGCore -lMiracom_MESCore -lMiracom_SLPCore -lMiracom_TRSCore -lMiracom_XMLCore -lMiracom_LOGCore -lMiracom_COMCore
+MES_LIB         = -L${MES_HOME}/lib -lMiracom_WIPCore -lMiracom_BASCore -lMiracom_SECCore -lMiracom_BOMCore -lMiracom_INVCore -lMiracom_RASCore -lMiracom_EDCCore -lMiracom_ORDCore -lMiracom_ALMCore -lMiracom_FMBCore -lMiracom_POPCore -lMiracom_QCMCore -lMiracom_RCPCore -lMiracom_RTDCore -lMiracom_SPCCore -lMiracom_SVMCore -lMiracom_SPMCore -lMiracom_WEMCore
+LIB             = ${MES_LIB} ${MESBASE_LIB} ${MESDB_LIB} ${ORACLE_LIB} ${H101_LIB} -lm -ldl -Wl,-export-dynamic
+
+##### Include files #####
+INCLUDE = -I${MES_INC} -I${MES_DBINC} -I${ORACLE_INC}
+
+##### Compile options #####
+CFLAGS  = -c ${_DEB} ${_ARC} ${_OPT} ${_OPTDB} ${INCLUDE} ${MES_DEFINES}
+
+
+##### Object files #####
+OBJS = MESServer_main.o \
+	MESServerAddService.o \
+
+
+###### Build Rules ######
+default : ${TARGET}
+
+build : clean ${TARGET}
+
+all : ${TARGET}
+	mv ${TARGET} ${MES_HOME}/bin/.
+
+###### Compile all source files ######
+.c.o :
+	${CC} ${CFLAGS} $?
+
+###### Link all objects ######
+${TARGET} : ${OBJS} 
+	${CC} ${_ARC} -o $@ ${OBJS} ${LIB}
+
+###### Remove all object files ######
+clean :
+	rm -f ${OBJS} ${TARGET}
+

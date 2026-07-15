@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21C0914B-8D2D-4F00-B20D-42D17DFB49C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Custom.HanwhaQcell.USModule</RootNamespace>
+    <AssemblyName>Custom.HanwhaQcell.USModule</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Custom.Common">
+      <HintPath>..\..\Components\Custom.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Chart, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.DNMCore">
+      <HintPath>..\..\Components\Miracom.DNMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.POPCore">
+      <HintPath>..\..\Components\Miracom.POPCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.OIFrx">
+      <HintPath>..\..\Components\SOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CAMS\Inquiry\frmViewAuditResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Inquiry\frmViewAuditResult.designer.cs">
+      <DependentUpon>frmViewAuditResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputAuditPlanPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputAuditPlanPopup.designer.cs">
+      <DependentUpon>frmInputAuditPlanPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputAuditResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputAuditResultPopup.designer.cs">
+      <DependentUpon>frmInputAuditResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputActionResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Popup\frmInputActionResultPopup.designer.cs">
+      <DependentUpon>frmInputActionResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Setup\frmInputAuditPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Setup\frmInputAuditPlan.designer.cs">
+      <DependentUpon>frmInputAuditPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Transaction\frmInputAuditResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Transaction\frmInputAuditResult.designer.cs">
+      <DependentUpon>frmInputAuditResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAMS\Transaction\frmInputActionResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMS\Transaction\frmInputActionResult.designer.cs">
+      <DependentUpon>frmInputActionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CJCM\Inquiry\frmViewJobChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CJCM\Inquiry\frmViewJobChangeStatus.designer.cs">
+      <DependentUpon>frmViewJobChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CJCM\Popup\frmViewOrderPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CJCM\Popup\frmViewOrderPopup.designer.cs">
+      <DependentUpon>frmViewOrderPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CJCM\Popup\frmJobChangeCopyToPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CJCM\Popup\frmJobChangeCopyToPopup.designer.cs">
+      <DependentUpon>frmJobChangeCopyToPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CJCM\Setup\frmJobChangeItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CJCM\Setup\frmJobChangeItemSetup.designer.cs">
+      <DependentUpon>frmJobChangeItemSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CJCM\Setup\frmJobChangeSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CJCM\Setup\frmJobChangeSetup.Designer.cs">
+      <DependentUpon>frmJobChangeSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSAttributesAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSAttributesAnalysis.designer.cs">
+      <DependentUpon>frmMMSAttributesAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSBiasAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSBiasAnalysis.designer.cs">
+      <DependentUpon>frmMMSBiasAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSEquipmentLedgerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSEquipmentLedgerList.designer.cs">
+      <DependentUpon>frmMMSEquipmentLedgerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSLinearityAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSLinearityAnalysis.designer.cs">
+      <DependentUpon>frmMMSLinearityAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSVariablesAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSVariablesAnalysis.designer.cs">
+      <DependentUpon>frmMMSVariablesAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSEquipmentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Inquiry\frmMMSEquipmentList.designer.cs">
+      <DependentUpon>frmMMSEquipmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSAnalysisPlanPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSAnalysisPlanPopup.designer.cs">
+      <DependentUpon>frmMMSAnalysisPlanPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSAttributesAnalysisPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSAttributesAnalysisPopup.designer.cs">
+      <DependentUpon>frmMMSAttributesAnalysisPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSBiasAnalysisPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSBiasAnalysisPopup.designer.cs">
+      <DependentUpon>frmMMSBiasAnalysisPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSCalibrationResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSCalibrationResultPopup.designer.cs">
+      <DependentUpon>frmMMSCalibrationResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSLinearityAnalysisPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSLinearityAnalysisPopup.designer.cs">
+      <DependentUpon>frmMMSLinearityAnalysisPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSMeasuringResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSMeasuringResultPopup.designer.cs">
+      <DependentUpon>frmMMSMeasuringResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSVariablesAnalysisPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Popup\frmMMSVariablesAnalysisPopup.designer.cs">
+      <DependentUpon>frmMMSVariablesAnalysisPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationInstituteSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationInstituteSetup.designer.cs">
+      <DependentUpon>frmMMSCalibrationInstituteSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationPlanSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationPlanSetup.designer.cs">
+      <DependentUpon>frmMMSCalibrationPlanSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationUserSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSCalibrationUserSetup.designer.cs">
+      <DependentUpon>frmMMSCalibrationUserSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSEquipmentSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSEquipmentSetup.designer.cs">
+      <DependentUpon>frmMMSEquipmentSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSEvaluationResultRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSEvaluationResultRegistration.designer.cs">
+      <DependentUpon>frmMMSEvaluationResultRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSItemSetup.designer.cs">
+      <DependentUpon>frmMMSItemSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSMeasuringPlanSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSMeasuringPlanSetup.designer.cs">
+      <DependentUpon>frmMMSMeasuringPlanSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSSampleSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Setup\frmMMSSampleSetup.Designer.cs">
+      <DependentUpon>frmMMSSampleSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Transaction\frmMMSCalibrationResultRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Transaction\frmMMSCalibrationResultRegistration.designer.cs">
+      <DependentUpon>frmMMSCalibrationResultRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMMS\Transaction\frmMMSMeasuringResultRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMMS\Transaction\frmMMSMeasuringResultRegistration.designer.cs">
+      <DependentUpon>frmMMSMeasuringResultRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPSM\Inquiry\frmViewProdMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPSM\Inquiry\frmViewProdMonitoring.designer.cs">
+      <DependentUpon>frmViewProdMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPSM\Setup\frmProdMonitoringSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPSM\Setup\frmProdMonitoringSetup.designer.cs">
+      <DependentUpon>frmProdMonitoringSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Inquiry\frmWIPViewPalletInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Inquiry\frmWIPViewPalletInfo.Designer.cs">
+      <DependentUpon>frmWIPViewPalletInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Setup\frmProductPlanSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Setup\frmProductPlanSetup.designer.cs">
+      <DependentUpon>frmProductPlanSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Setup\frmFMBNoticeSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Setup\frmFMBNoticeSetup.designer.cs">
+      <DependentUpon>frmFMBNoticeSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Setup\frmCTMSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Setup\frmCTMSetup.designer.cs">
+      <DependentUpon>frmCTMSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCINVInputRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCINVInputRawMaterial.Designer.cs">
+      <DependentUpon>frmCINVInputRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranLabelSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranLabelSample.Designer.cs">
+      <DependentUpon>frmCUSTranLabelSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranPackingHalfCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranPackingHalfCell.Designer.cs">
+      <DependentUpon>frmCUSTranPackingHalfCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranStartLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTST\Transaction\frmCUSTranStartLot.Designer.cs">
+      <DependentUpon>frmCUSTranStartLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWIP\Transaction\frmFamateRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWIP\Transaction\frmFamateRecall.Designer.cs">
+      <DependentUpon>frmFamateRecall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CWIP\Inquiry\" />
+    <Folder Include="CWIP\Setup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CAMS\Inquiry\frmViewAuditResult.resx">
+      <DependentUpon>frmViewAuditResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Popup\frmInputAuditPlanPopup.resx">
+      <DependentUpon>frmInputAuditPlanPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Popup\frmInputAuditResultPopup.resx">
+      <DependentUpon>frmInputAuditResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Popup\frmInputActionResultPopup.resx">
+      <DependentUpon>frmInputActionResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Setup\frmInputAuditPlan.resx">
+      <DependentUpon>frmInputAuditPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Transaction\frmInputAuditResult.resx">
+      <DependentUpon>frmInputAuditResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMS\Transaction\frmInputActionResult.resx">
+      <DependentUpon>frmInputActionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CJCM\Inquiry\frmViewJobChangeStatus.resx">
+      <DependentUpon>frmViewJobChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CJCM\Popup\frmViewOrderPopup.resx">
+      <DependentUpon>frmViewOrderPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CJCM\Popup\frmJobChangeCopyToPopup.resx">
+      <DependentUpon>frmJobChangeCopyToPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CJCM\Setup\frmJobChangeItemSetup.resx">
+      <DependentUpon>frmJobChangeItemSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CJCM\Setup\frmJobChangeSetup.resx">
+      <DependentUpon>frmJobChangeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSAttributesAnalysis.resx">
+      <DependentUpon>frmMMSAttributesAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSBiasAnalysis.resx">
+      <DependentUpon>frmMMSBiasAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSEquipmentLedgerList.resx">
+      <DependentUpon>frmMMSEquipmentLedgerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSLinearityAnalysis.resx">
+      <DependentUpon>frmMMSLinearityAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSVariablesAnalysis.resx">
+      <DependentUpon>frmMMSVariablesAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Inquiry\frmMMSEquipmentList.resx">
+      <DependentUpon>frmMMSEquipmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSAnalysisPlanPopup.resx">
+      <DependentUpon>frmMMSAnalysisPlanPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSAttributesAnalysisPopup.resx">
+      <DependentUpon>frmMMSAttributesAnalysisPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSBiasAnalysisPopup.resx">
+      <DependentUpon>frmMMSBiasAnalysisPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSCalibrationResultPopup.resx">
+      <DependentUpon>frmMMSCalibrationResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSLinearityAnalysisPopup.resx">
+      <DependentUpon>frmMMSLinearityAnalysisPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSMeasuringResultPopup.resx">
+      <DependentUpon>frmMMSMeasuringResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Popup\frmMMSVariablesAnalysisPopup.resx">
+      <DependentUpon>frmMMSVariablesAnalysisPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSCalibrationInstituteSetup.resx">
+      <DependentUpon>frmMMSCalibrationInstituteSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSCalibrationPlanSetup.resx">
+      <DependentUpon>frmMMSCalibrationPlanSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSCalibrationUserSetup.resx">
+      <DependentUpon>frmMMSCalibrationUserSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSEquipmentSetup.resx">
+      <DependentUpon>frmMMSEquipmentSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSEvaluationResultRegistration.resx">
+      <DependentUpon>frmMMSEvaluationResultRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSItemSetup.resx">
+      <DependentUpon>frmMMSItemSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSMeasuringPlanSetup.resx">
+      <DependentUpon>frmMMSMeasuringPlanSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Setup\frmMMSSampleSetup.resx">
+      <DependentUpon>frmMMSSampleSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Transaction\frmMMSCalibrationResultRegistration.resx">
+      <DependentUpon>frmMMSCalibrationResultRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMMS\Transaction\frmMMSMeasuringResultRegistration.resx">
+      <DependentUpon>frmMMSMeasuringResultRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPSM\Inquiry\frmViewProdMonitoring.resx">
+      <DependentUpon>frmViewProdMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPSM\Setup\frmProdMonitoringSetup.resx">
+      <DependentUpon>frmProdMonitoringSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Inquiry\frmWIPViewPalletInfo.resx">
+      <DependentUpon>frmWIPViewPalletInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Setup\frmProductPlanSetup.resx">
+      <DependentUpon>frmProductPlanSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Setup\frmFMBNoticeSetup.resx">
+      <DependentUpon>frmFMBNoticeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Setup\frmCTMSetup.resx">
+      <DependentUpon>frmCTMSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Transaction\frmCINVInputRawMaterial.resx">
+      <DependentUpon>frmCINVInputRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Transaction\frmCUSTranLabelSample.resx">
+      <DependentUpon>frmCUSTranLabelSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Transaction\frmCUSTranPackingHalfCell.resx">
+      <DependentUpon>frmCUSTranPackingHalfCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTST\Transaction\frmCUSTranStartLot.resx">
+      <DependentUpon>frmCUSTranStartLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWIP\Transaction\frmFamateRecall.resx">
+      <DependentUpon>frmFamateRecall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

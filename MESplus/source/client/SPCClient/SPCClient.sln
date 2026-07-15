@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPCClient", "SPCClient.csproj", "{28A180C0-ABFB-4A1E-A6E5-5DEEEAE4FD10}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE55FD35-F81A-41DE-A512-9521BE55BD1D} = {CE55FD35-F81A-41DE-A512-9521BE55BD1D}
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8} = {360B8268-2C9F-4C30-B5D7-1F94409E9EB8}
+		{385B77C1-DDEC-49BA-8B03-94743893B47B} = {385B77C1-DDEC-49BA-8B03-94743893B47B}
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4} = {B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miracom.SPCCore", "Miracom.SPCCore\Miracom.SPCCore.csproj", "{CE55FD35-F81A-41DE-A512-9521BE55BD1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8} = {360B8268-2C9F-4C30-B5D7-1F94409E9EB8}
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4} = {B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miracom.Stat", "Miracom.Stat\Miracom.Stat.csproj", "{385B77C1-DDEC-49BA-8B03-94743893B47B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPCHistogram", "SPCControlChart\SPCHistogram\SPCHistogram.vbproj", "{360B8268-2C9F-4C30-B5D7-1F94409E9EB8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385B77C1-DDEC-49BA-8B03-94743893B47B} = {385B77C1-DDEC-49BA-8B03-94743893B47B}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPCControlChart", "SPCControlChart\SPCControlChart\SPCControlChart.vbproj", "{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385B77C1-DDEC-49BA-8B03-94743893B47B} = {385B77C1-DDEC-49BA-8B03-94743893B47B}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SPCClientSetupKit", "SPCClientSetupKit\SPCClientSetupKit.vdproj", "{2BA2AE13-0CC0-470A-9BCD-F3EC0A3DB1D3}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SPCClientSetupKitForWin7", "SPCClientSetupKitForWin7\SPCClientSetupKitForWin7.vdproj", "{020F0EA2-D843-4F88-8BD7-6CBEB3C972E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28A180C0-ABFB-4A1E-A6E5-5DEEEAE4FD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A180C0-ABFB-4A1E-A6E5-5DEEEAE4FD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A180C0-ABFB-4A1E-A6E5-5DEEEAE4FD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A180C0-ABFB-4A1E-A6E5-5DEEEAE4FD10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE55FD35-F81A-41DE-A512-9521BE55BD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE55FD35-F81A-41DE-A512-9521BE55BD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE55FD35-F81A-41DE-A512-9521BE55BD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE55FD35-F81A-41DE-A512-9521BE55BD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385B77C1-DDEC-49BA-8B03-94743893B47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385B77C1-DDEC-49BA-8B03-94743893B47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385B77C1-DDEC-49BA-8B03-94743893B47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385B77C1-DDEC-49BA-8B03-94743893B47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360B8268-2C9F-4C30-B5D7-1F94409E9EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79EF2E5-C9A5-4468-B3F2-66B7D05768A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA2AE13-0CC0-470A-9BCD-F3EC0A3DB1D3}.Debug|Any CPU.ActiveCfg = Debug
+		{2BA2AE13-0CC0-470A-9BCD-F3EC0A3DB1D3}.Release|Any CPU.ActiveCfg = Release
+		{020F0EA2-D843-4F88-8BD7-6CBEB3C972E8}.Debug|Any CPU.ActiveCfg = Debug
+		{020F0EA2-D843-4F88-8BD7-6CBEB3C972E8}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

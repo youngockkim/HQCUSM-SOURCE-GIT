@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_11g|Win32">
+      <Configuration>Debug_11g</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_11g|x64">
+      <Configuration>Debug_11g</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_12c|Win32">
+      <Configuration>Debug_12c</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_12c|x64">
+      <Configuration>Debug_12c</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_TibRv_11g|Win32">
+      <Configuration>Debug_TibRv_11g</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_TibRv_11g|x64">
+      <Configuration>Debug_TibRv_11g</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_TibRv|Win32">
+      <Configuration>Debug_TibRv</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_TibRv|x64">
+      <Configuration>Debug_TibRv</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_11g|Win32">
+      <Configuration>Release_11g</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_11g|x64">
+      <Configuration>Release_11g</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_TibRv_11g|Win32">
+      <Configuration>Release_TibRv_11g</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_TibRv_11g|x64">
+      <Configuration>Release_TibRv_11g</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_TibRv|Win32">
+      <Configuration>Release_TibRv</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_TibRv|x64">
+      <Configuration>Release_TibRv</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C689275D-D882-4350-AB6E-8EBF23D5B659}</ProjectGuid>
+    <RootNamespace>MESServer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">false</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">false</EmbedManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'">$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">false</EmbedManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql12.lib;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;CUS_Common.lib;CUS_DBCmn.lib;CUS_HQCUSM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4189;4996;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4189;4996;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4127;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4127;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql10.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;CUS_DBCmn.lib;CUS_Common.lib;CUS_HQCUSM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_12c|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql12.lib;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SVMCore.lib;Miracom_SLPCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;CUS_DBCmn.lib;CUS_Common.lib;CUS_HQCUSM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4189;4996;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcm.lib;libtibrvcmq.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_TibRv_11g|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;C:\MESplusV5\Server\inc\tibrv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4189;4996;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)MESServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <HeapReserveSize>0</HeapReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_11g|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;4306;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;transceiverx.lib;wsock32.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\h101\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4127;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;MES_SampleLib.lib;MES_UserALM.lib;MES_UserBAS.lib;MES_UserBOM.lib;MES_UserCMN.lib;MES_UserEDC.lib;MES_UserFMB.lib;MES_UserINV.lib;MES_UserORD.lib;MES_UserPOP.lib;MES_UserQCM.lib;MES_UserRAS.lib;MES_UserRCP.lib;MES_UserRTD.lib;MES_UserSEC.lib;MES_UserSPC.lib;MES_UserSVM.lib;MES_UserWIP.lib;MES_UserSPM.lib;MES_UserWEM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_TibRv_11g|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RTD;_SPC;_WIP;_CRR;_TOOL;_SPM;_WEM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4127;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>orasql11.LIB;wsock32.lib;ws2_32.lib;libtibrv.lib;libtibrvft.lib;libtibrvcmq.lib;libtibrvcm.lib;Dbghelp.lib;MES_DBCmn.lib;Miracom_COMCore.lib;Miracom_LOGCore.lib;Miracom_MESCore.lib;Miracom_BASCore.lib;Miracom_SECCore.lib;Miracom_BOMCore.lib;Miracom_EDCCore.lib;Miracom_INVCore.lib;Miracom_ORDCore.lib;Miracom_RASCore.lib;Miracom_WIPCore.lib;Miracom_POPCore.lib;Miracom_SPCCore.lib;Miracom_FMBCore.lib;Miracom_RCPCore.lib;Miracom_RTDCore.lib;Miracom_ALMCore.lib;Miracom_QCMCore.lib;Miracom_TRSCore.lib;Miracom_SLPCore.lib;Miracom_SVMCore.lib;Miracom_MSGCore.lib;Miracom_ACTCore.lib;Miracom_XMLCore.lib;Miracom_MANCore.lib;Miracom_SPMCore.lib;Miracom_WEMCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\lib;$(ProjectDir)..\..\..\lib\tibrv;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>100000000</StackReserveSize>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="MESServer_main.c" />
+    <ClCompile Include="MESServerAddService.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resource\ADMServer.ico" />
+    <None Include="..\..\resource\MESServer.ico" />
+    <None Include="..\..\resource\RTDServer.ico" />
+    <None Include="..\..\zBuild\makefile.cmm" />
+    <None Include="..\..\zBuild\symbolic_link.bat" />
+    <None Include="..\..\zBuild\zBuild.xml" />
+    <None Include="..\..\zBuild\zBuildRv.xml" />
+    <None Include="..\..\zBuild\zBuildRvSiltronic.xml" />
+    <None Include="..\..\zBuild\zCopySrcExe.xml" />
+    <None Include="..\..\zBuild\zWinBuild.bat" />
+    <None Include="..\..\zBuild\zWinBuilder.bat" />
+    <None Include="..\..\zBuild\zWinCopyExe.bat" />
+    <None Include="..\..\zBuild\zWinPackage.bat" />
+    <None Include="..\..\zBuild\zWinPackageServer.bat" />
+    <None Include="..\..\..\cmd\MESplus.ini" />
+    <None Include="..\..\..\cmd\MESServer.ini" />
+    <None Include="..\..\..\cmd\RTDServer.ini" />
+    <None Include="makefile" />
+    <None Include="makefile.tibrv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MESServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

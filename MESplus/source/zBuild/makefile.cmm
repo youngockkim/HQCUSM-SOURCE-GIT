@@ -1,0 +1,123 @@
+# MESplus Server component build script
+#
+# date   : 2009-11-04
+# author : Aiden
+
+# Put these environment variables to your .profile on linux
+#
+# @@ mandatory variables @@
+# MESplus_HOME=<MESplus Home Directory>
+# ORACLE_HOME=<Oracle Home Directory>
+# IOI_HOME=<Highway101 Home Directory>
+# TIBRV_HOME=<TibRV Home Directory>
+# LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<Oracle Library>:<Highway101 Library>:<TibRV Library>:<MESplus Library>
+#
+# @@ optional variables @@
+# PROC_USERID=<user>/<password>@<TNS name>
+# CC_LIB_PATH=<C library path>
+# MES_DEFINES=<Module definitions>
+
+# Oracle ProC compiler needs a valid database connection string for full SQL checks. 
+# use the PROC_USERID environment variable to overwite the defaults.
+# e.g. put this to your .profile on linux
+#
+# PROC_USERID=<user>/<password>@<TNS name>
+# export PROC_USERID
+#
+# set a default value if it isn't defined
+ifndef PROC_USERID
+    PROC_USERID := mesmgr/mesmgr@ORAMES11
+endif
+
+# C compiler needs a valid library file path. 
+# use the CC_LIB_PATH environment variable to overwite the defaults.
+# e.g. put this to your .profile on linux
+#
+# CC_LIB_PATH=<C library path>
+# export CC_LIB_PATH
+#
+# CC_LIB_PATH = /usr/lib/gcc/i586-suse-linux/4.1.2
+# CC_LIB_PATH = /usr/lib64/gcc/x86_64-suse-linux/4.1.2
+
+# Compilation Option
+#
+# _ARC       : The hardware platform
+# _DEB       : Debug flag
+# _OPT       : CC compilation option
+# _OPTDB     : Database c file compilation option
+# _PROCFLAGS : ProC/C++ pc file compilation option
+# _H101LIB   : Highway101 library
+# _RVLIB     : TibRV library
+
+# concatenate the strings of $(shell uname -m) and $(shell uname -i) and search for 'x86_64'
+ifeq ($(findstring x86_64, $(shell uname -m)$(shell uname -i)), x86_64)		
+	ifeq (${VERSION},LINUX_DEBUG)
+		_ARC = -m64
+		_DEB = -g
+		_OPT =
+		_OPTDB = -Wno-unused -Wno-implicit-int
+		_PROCFLAGS = PARSE=PARTIAL SQLCHECK=FULL USERID=${PROC_USERID}
+		_H101LIB = libtransceiverx.a
+		_RVLIB = -ltibrv64 -ltibrvcm64 -ltibrvft64 -ltibrvcmq64
+	else		
+		_ARC = -m64
+		_DEB = 
+		_OPT = -O2 -Wall -Werror-implicit-function-declaration
+		_OPTDB =
+		_PROCFLAGS = PARSE=PARTIAL
+		_H101LIB = libtransceiverx.a
+		_RVLIB = -ltibrv64 -ltibrvcm64 -ltibrvft64 -ltibrvcmq64
+	endif
+
+endif
+
+ifeq ($(shell uname -i),i386)		
+	ifeq (${VERSION},LINUX_DEBUG)
+		_ARC = -m32
+		_DEB = -g
+		_OPT =
+		_OPTDB = -Wno-unused -Wno-implicit-int
+		_PROCFLAGS = PARSE=PARTIAL SQLCHECK=FULL USERID=${PROC_USERID}
+		_H101LIB = libtransceiverx.a
+		_RVLIB = -ltibrv -ltibrvcm -ltibrvft -ltibrvcmq
+	else
+		_ARC = -m32
+		_DEB = 
+		_OPT = -O2 -Wall -Werror-implicit-function-declaration
+		_OPTDB =
+		_PROCFLAGS = PARSE=PARTIAL
+		_H101LIB = libtransceiverx.a
+		_RVLIB = -ltibrv -ltibrvcm -ltibrvft -ltibrvcmq
+	endif
+endif
+
+# Directories 
+MES_HOME        = ${MESplus_HOME}
+
+# Libraries 
+ORACLE_LIB      = -L${ORACLE_HOME}/lib -lclntsh
+H101_LIB        = ${IOI_HOME}/sdk/transceiverx/lib/${_H101LIB} -lpthread
+TIBRV_LIB       = -L${TIBRV_HOME}/lib ${_RVLIB}
+MES_SLC_LIB     = -L${MES_HOME}/lib -lMiracom_SLCCore
+BOOST_LIB       = -L/usr/local/lib -lboost_unit_test_framework
+
+# Includes
+MES_INC	        = ${MES_HOME}/inc
+MES_DBINC       = ${MES_HOME}/inc/dbinc
+ORACLE_INC      = ${ORACLE_HOME}/precomp/public
+H101_INC        = ${IOI_HOME}/sdk/transceiverx/include
+TIBRV_INC       = ${TIBRV_HOME}/include/tibrv
+BOOST_INC       = /usr/local/include
+
+# MESplus needs Module definition for compilation
+# use the MES_DEFINES environment variable to overwite the defaults.
+# e.g. put this to your .profile on linux
+#
+# MES_DEFINES=<Module definitions>
+# export MES_DEFINES
+#
+# set a default value if it isn't defined
+ifndef MES_DEFINES
+    MES_DEFINES = -D_HPUX_SOURCE -D_GNU_SOURCE -D_Linux -D_ALM -D_BOM -D_EDC -D_FMB -D_INV -D_ORD -D_POP -D_QCM -D_RAS -D_RCP -D_RTD -D_SPC -D_WIP -D_CRR -D_TOOL -D_SPM -D_WEM -D_LICS
+endif
+

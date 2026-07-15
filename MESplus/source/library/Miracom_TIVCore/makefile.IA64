@@ -1,0 +1,52 @@
+#### Name of created component ####
+LIB_NAME = libMiracom_INVCore
+TARGET   = ${LIB_NAME}.a
+#### Get options depending on OS and platform ####
+include ../../makefile.cmm 
+
+##### Include files #####
+INCLUDE = -I${MES_INC} -I${MES_DBINC} -I${ORACLE_INC}
+
+##### Compile options #####
+CFLAGS  =  ${_DEB} ${_ARC} ${_OPT} ${INCLUDE} ${MES_DEFINES}
+
+
+OBJS = INVCoreAddService.o \
+	INVCore_in_inventory.o \
+	INVCore_in_inventory_serial.o \
+	INVCore_out_inventory.o \
+	INVCore_out_inventory_serial.o \
+	INVCore_scrap.o \
+	INVCore_scrap_serial.o \
+	INVCore_transfer_inventory.o \
+	INVCore_transfer_inventory_serial.o \
+	INVCore_update_serial_list.o \
+	INVCore_consume.o \
+	INVCore_conv_to_inv.o \
+	INVCore_conv_to_lot.o \
+	INVCore_delete_inventory_history.o \
+	INVCore_view_inventory_history.o \
+	INVCore_view_inventory_info.o \
+	INVCore_view_inventory_info_serial.o
+
+
+###### Build Rules ######
+default : ${TARGET}
+
+build : clean ${TARGET}
+
+
+###### Compile all source files ######
+.c.o :
+	${CC} ${CFLAGS} $?
+
+###### Make a library ######
+${TARGET} : ${OBJS}
+	ar -r  $@ ${OBJS}
+	mv -f ${TARGET} ${MES_HOME}/lib/.
+	cp -f *.h ${MES_INC}/.
+
+###### Remove all object files ######
+clean :
+	rm -f ${OBJS}
+

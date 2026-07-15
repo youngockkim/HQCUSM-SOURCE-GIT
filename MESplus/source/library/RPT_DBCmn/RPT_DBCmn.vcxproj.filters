@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{fb50029a-5b05-4929-92af-64b06240cc0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPT">
+      <UniqueIdentifier>{ee4be363-6a38-4985-b5e5-bf10e2bb7210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPT\Header File">
+      <UniqueIdentifier>{2b7a4e38-977d-44de-a47b-340eccb1bb87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPT\Source File">
+      <UniqueIdentifier>{38e54bc4-396f-43cd-b70b-aac85396ce0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MES">
+      <UniqueIdentifier>{7a771267-3961-496a-87bc-fc61af24ae7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MES\Header File">
+      <UniqueIdentifier>{621b8b0e-0a85-45b3-8573-7daf5a6ae6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MES\Source File">
+      <UniqueIdentifier>{c70d0ae0-9287-4347-9d9d-57bf3fbf5df5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="AddLib.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RPT_common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpatrhis_bak.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpcrrhis_bak.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmplothis_bak.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpreshis_bak.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_ratrnamhis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_ratrnamsts.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_redclotdat.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_redcresdat.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rprcprcstp.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrascrrdef.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrascrrhis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasresdef.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasreshis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasreslth.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrsdef.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrshis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrslot.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrslth.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrwkclshis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrwklotsts.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumfacmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumlincyc.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumlinmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumprclog.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumresmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumrestmh.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumseccyc.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumsecmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmplyd.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmpwct.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmpwyd.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipeoh.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipldr.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwiplth.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwrkcyc.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwrkmov.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rtmpdsmhis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotbns.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotcmb.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotcvr.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotdel.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotdue.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplothis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplothld.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotlos.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotlsm.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotmrg.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotrwk.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotshp.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotspl.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotspm.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotsts.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplottxt.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwippltsts.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipslthis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipsltlos.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipsltsts.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mbasglbdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_medclotdat.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_medcresdat.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mgcmtbldat.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mmsgmsgdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasresdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasreshis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasreslth.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrassrslot.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrassrslth.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpatrhis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpcrrhis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmplothis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpreshis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipcaldef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipcytdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipfacdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipflwdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipflwopr.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotcvm.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotdel.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplothis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplothld.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotsts.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipmatdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipmatflw.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipoprdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipslthis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipsltlos.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipsltsts.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="rpt_common_n.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mbasglbdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_medclotdat_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_medcresdat_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mgcmtbldat_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mmsgmsgdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasresdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasreshis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrasreslth_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrassrslot_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mrassrslth_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpatrhis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpcrrhis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmplothis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpreshis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipcaldef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipcytdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipfacdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipflwdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipflwopr_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotcvm_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotdel_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplothis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplothld_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwiplotsts_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipmatdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipmatflw_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipoprdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipslthis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipsltlos_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mwipsltsts_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpatrhis_bak_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpcrrhis_bak_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmplothis_bak_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmpreshis_bak_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_ratrnamhis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_ratrnamsts_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_redclotdat_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_redcresdat_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rprcprcstp_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrascrrdef_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrascrrhis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasresdef_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasreshis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrasreslth_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrsdef_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrshis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrslot_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrassrslth_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrwkclshis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rrwklotsts_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumfacmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumlincyc_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumlinmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumprclog_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumresmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumrestmh_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumseccyc_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumsecmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmplyd_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmpwct_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumtmpwyd_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipeoh_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipldr_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwiplth_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwipmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwrkcyc_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rsumwrkmov_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotbns_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rtmpdsmhis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotcmb_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotcvr_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotdel_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotdue_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplothis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplothld_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotlos_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotlsm_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotmrg_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotrwk_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotshp_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotspl_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotspm_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplotsts_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwiplottxt_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwippltsts_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipslthis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipsltlos_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipsltsts_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppothis.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppothis_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppotdef.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppotdef_n.h">
+      <Filter>MES\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rraspotdef.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rraspotdef_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rraspothis.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rraspothis_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppothis_bak.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_mtmppothis_bak_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipcrrlot.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipcrrlot_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipcrrlth.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="RPT_rwipcrrlth_n.h">
+      <Filter>RPT\Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="RPT_common.pc">
+      <Filter>Common</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpatrhis_bak.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpcrrhis_bak.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmplothis_bak.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpreshis_bak.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_ratrnamhis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_ratrnamsts.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_redclotdat.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_redcresdat.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rprcprcstp.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrascrrdef.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrascrrhis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrasresdef.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrasreshis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrasreslth.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrassrsdef.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrassrshis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrassrslot.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrassrslth.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrwkclshis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rrwklotsts.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumfacmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumlincyc.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumlinmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumprclog.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumresmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumrestmh.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumseccyc.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumsecmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumtmplyd.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumtmpwct.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumtmpwyd.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwipeoh.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwipldr.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwiplth.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwipmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwrkcyc.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rsumwrkmov.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rtmpdsmhis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotbns.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotcmb.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotcvr.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotdel.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotdue.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplothis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplothld.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotlos.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotlsm.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotmrg.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotrwk.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotshp.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotspl.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotspm.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplotsts.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwiplottxt.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwippltsts.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwipslthis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwipsltlos.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwipsltsts.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mbasglbdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_medclotdat.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_medcresdat.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mgcmtbldat.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mmsgmsgdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mrasresdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mrasreshis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mrasreslth.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mrassrslot.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mrassrslth.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpatrhis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpcrrhis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmplothis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmpreshis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipcaldef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipcytdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipfacdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipflwdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipflwopr.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwiplotcvm.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwiplotdel.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwiplothis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwiplothld.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwiplotsts.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipmatdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipmatflw.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipoprdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipslthis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipsltlos.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mwipsltsts.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmppothis.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmppotdef.pc">
+      <Filter>MES\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rraspotdef.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rraspothis.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_mtmppothis_bak.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwipcrrlot.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="RPT_rwipcrrlth.pc">
+      <Filter>RPT\Source File</Filter>
+    </PC_File_Compile>
+  </ItemGroup>
+</Project>

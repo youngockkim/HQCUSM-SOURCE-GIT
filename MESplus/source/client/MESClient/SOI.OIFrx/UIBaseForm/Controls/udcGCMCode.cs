@@ -1,0 +1,937 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+using Miracom.TRSCore;
+using Miracom.UI;
+using Miracom.CliFrx;
+using Miracom.MESCore;
+
+namespace SOI.OIFrx
+{
+    [DefaultEvent("SelectedItemChanged")]
+    public partial class udcGCMCode : UserControl, intCodeListControl
+    {
+        public udcGCMCode()
+        {
+            InitializeComponent();
+
+            Init();
+        }
+
+        #region " Constant Definition "
+
+        #endregion
+
+        #region " Variable Definition "
+
+        private object[] m_cond_list_argument;
+        private string s_table_name;
+        private string s_key_1;
+        private string s_ext_factory;
+
+        private bool b_add_empty_row_to_top = false;
+        private bool b_add_empty_row_to_last = false;
+        private bool[] b_visible_data_flag;
+
+        private char c_step;
+
+        #endregion
+
+        #region " Properties Definition "
+
+        public bool Custom_AddEmptyRowTop
+        {
+            get
+            {
+                return b_add_empty_row_to_top;
+            }
+            set
+            {
+                b_add_empty_row_to_top = value;
+            }
+        }
+
+        public bool Custom_AddEmptyRowLast
+        {
+            get
+            {
+                return b_add_empty_row_to_last;
+            }
+            set
+            {
+                b_add_empty_row_to_last = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string Custom_TableName
+        {
+            get
+            {
+                return s_table_name;
+            }
+            set
+            {
+                if (value == null) s_table_name = string.Empty;
+                else               s_table_name = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string Custom_SubTableName
+        {
+            get
+            {
+                return s_key_1;
+            }
+            set
+            {
+                if (value == null) s_key_1 = string.Empty;
+                else               s_key_1 = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public Font LabelFont
+        {
+            get
+            {
+
+                return this.lblLabel.Font;
+            }
+            set
+            {
+                this.lblLabel.Font = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public override string Text
+        {
+            get
+            {
+                return cdvData.Text;
+            }
+            set
+            {
+                if (value == null) cdvData.Text = string.Empty;
+                else               cdvData.Text = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string DisplayText
+        {
+            get
+            {
+                return cdvData.DisplayText;
+            }
+            set
+            {
+                if (value == null) cdvData.DisplayText = string.Empty;
+                else               cdvData.DisplayText = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string DescText
+        {
+            get
+            {
+                return cdvData.DescText;
+            }
+            set
+            {
+                if (value == null) cdvData.DescText = string.Empty;
+                else               cdvData.DescText = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public ListView GetListView
+        {
+            get
+            {
+                return cdvData.GetListView;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public object[] ArguList
+        {
+            get
+            {
+                if (m_cond_list_argument == null)
+                {
+                    m_cond_list_argument = new object[0];
+                }
+                return m_cond_list_argument;
+            }
+            set
+            {
+                m_cond_list_argument = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public char Custom_Step
+        {
+            get
+            {
+                return c_step;
+            }
+            set
+            {
+                c_step = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool[] Custom_VisibleDataFlag
+        {
+            get
+            {
+                if (b_visible_data_flag == null) b_visible_data_flag = new bool[10];
+                return b_visible_data_flag;
+            }
+            set
+            {
+                b_visible_data_flag = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_1
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[0];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[0] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_2
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[1];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[1] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_3
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[2];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[2] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_4
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[3];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[3] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_5
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[4];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[4] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_6
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[5];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[5] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_7
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[6];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[6] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_8
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[7];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[7] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_9
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[8];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[8] = value;
+            }
+        }
+
+        [Browsable(true), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool Custom_Visible_DATA_10
+        {
+            get
+            {
+                return Custom_VisibleDataFlag[9];
+            }
+            set
+            {
+                Custom_VisibleDataFlag[9] = value;
+            }
+        }
+
+        #region " Default Properties Definition "
+
+        public string ExtFactory
+        {
+            get
+            {
+                if (s_ext_factory == null) s_ext_factory = "";
+                return s_ext_factory;
+            }
+            set
+            {
+                s_ext_factory = value;
+            }
+        }
+
+        public new Color BackColor
+        {
+            get
+            {
+                return cdvData.BackColor;
+            }
+            set
+            {
+                cdvData.BackColor = value;
+                lblLabel.BackColor = value;
+            }
+        }
+
+        public int ButtonWidth
+        {
+            get
+            {
+                return cdvData.ButtonWidth;
+            }
+            set
+            {
+                cdvData.ButtonWidth = value;
+            }
+        }
+
+        public int TextBoxWidth
+        {
+            get
+            {
+                return cdvData.TextBoxWidth;
+            }
+            set
+            {
+                cdvData.TextBoxWidth = value;
+            }
+        }
+
+        public int LabelWidth
+        {
+            get
+            {
+                return lblLabel.Width;
+            }
+            set
+            {
+                lblLabel.Width = value;
+                pnlLeft.Width = value;
+            }
+        }
+
+        public int MaxLength
+        {
+            get
+            {
+                return cdvData.MaxLength;
+            }
+            set
+            {
+                cdvData.MaxLength = value;
+            }
+        }
+
+        public string LabelText
+        {
+            get
+            {
+                return lblLabel.Text;
+            }
+            set
+            {
+                lblLabel.Text = value;
+            }
+        }
+
+        public int SelectedSubItemIndex
+        {
+            get
+            {
+                return cdvData.SelectedSubItemIndex;
+            }
+            set
+            {
+                cdvData.SelectedSubItemIndex = value;
+            }
+        }
+
+        public int DisplaySubItemIndex
+        {
+            get
+            {
+                return cdvData.DisplaySubItemIndex;
+            }
+            set
+            {
+                cdvData.DisplaySubItemIndex = value;
+            }
+        }
+
+        public int SelectedDescIndex
+        {
+            get
+            {
+                return cdvData.SelectedDescIndex;
+            }
+            set
+            {
+                cdvData.SelectedDescIndex = value;
+            }
+        }
+
+        public int SearchSubItemIndex
+        {
+            get
+            {
+                return cdvData.SearchSubItemIndex;
+            }
+            set
+            {
+                cdvData.SearchSubItemIndex = value;
+            }
+        }
+
+        public bool ReadOnly
+        {
+            get
+            {
+                return cdvData.ReadOnly;
+            }
+            set
+            {
+                if (value == true)
+                    cdvData.BackColor = this.BackColor;
+                else
+                    cdvData.BackColor = SystemColors.Window;
+                cdvData.ReadOnly = value;
+            }
+        }
+
+        public bool VisibleButton
+        {
+            get
+            {
+                return cdvData.VisibleButton;
+            }
+            set
+            {
+                cdvData.VisibleButton = value;
+            }
+        }
+
+        public bool VisibleDescription
+        {
+            get
+            {
+                return cdvData.VisibleDescription;
+            }
+            set
+            {
+                cdvData.VisibleDescription = value;
+            }
+        }
+
+        public bool VisibleColumnHeader
+        {
+            get
+            {
+                return cdvData.VisibleColumnHeader;
+            }
+            set
+            {
+                cdvData.VisibleColumnHeader = value;
+            }
+        }
+
+        public Miracom.UI.Controls.MCCodeView.MCCodeView GetCodeView()
+        {
+            return this.cdvData;
+        }
+
+
+        #endregion
+
+        #endregion
+
+        #region " Add Controls Definition "
+
+        private MCCodeViewSelChangedHandler SelectedItemChangedEvent;
+        public event MCCodeViewSelChangedHandler SelectedItemChanged
+        {
+            add
+            {
+                SelectedItemChangedEvent = (MCCodeViewSelChangedHandler)System.Delegate.Combine(SelectedItemChangedEvent, value);
+            }
+            remove
+            {
+                SelectedItemChangedEvent = (MCCodeViewSelChangedHandler)System.Delegate.Remove(SelectedItemChangedEvent, value);
+            }
+        }
+
+        private System.EventHandler ButtonPressBeforeEvent;
+        public event System.EventHandler ButtonBeforePress
+        {
+            add
+            {
+                ButtonPressBeforeEvent = (System.EventHandler)System.Delegate.Combine(ButtonPressBeforeEvent, value);
+            }
+            remove
+            {
+                ButtonPressBeforeEvent = (System.EventHandler)System.Delegate.Remove(ButtonPressBeforeEvent, value);
+            }
+        }
+
+        private System.EventHandler ButtonPressAfterEvent;
+        public event System.EventHandler ButtonPressAfter
+        {
+            add
+            {
+                ButtonPressAfterEvent = (System.EventHandler)System.Delegate.Combine(ButtonPressAfterEvent, value);
+            }
+            remove
+            {
+                ButtonPressAfterEvent = (System.EventHandler)System.Delegate.Remove(ButtonPressAfterEvent, value);
+            }
+        }
+
+        private System.Windows.Forms.KeyPressEventHandler TextBoxKeyPressEvent;
+        public event System.Windows.Forms.KeyPressEventHandler TextBoxKeyPress
+        {
+            add
+            {
+                TextBoxKeyPressEvent = (System.Windows.Forms.KeyPressEventHandler)System.Delegate.Combine(TextBoxKeyPressEvent, value);
+            }
+            remove
+            {
+                TextBoxKeyPressEvent = (System.Windows.Forms.KeyPressEventHandler)System.Delegate.Remove(TextBoxKeyPressEvent, value);
+            }
+        }
+
+        private System.EventHandler TextBoxTextChangedEvent;
+        public event System.EventHandler TextBoxTextChanged
+        {
+            add
+            {
+                TextBoxTextChangedEvent = (System.EventHandler)System.Delegate.Combine(TextBoxTextChangedEvent, value);
+            }
+            remove
+            {
+                TextBoxTextChangedEvent = (System.EventHandler)System.Delegate.Remove(TextBoxTextChangedEvent, value);
+            }
+        }
+
+        private System.EventHandler TextBoxLostFocusEvent;
+        public event System.EventHandler TextBoxLostFocus
+        {
+            add
+            {
+                TextBoxLostFocusEvent = (System.EventHandler)System.Delegate.Combine(TextBoxLostFocusEvent, value);
+            }
+            remove
+            {
+                TextBoxLostFocusEvent = (System.EventHandler)System.Delegate.Remove(TextBoxLostFocusEvent, value);
+            }
+        }
+
+        private System.EventHandler TextBoxGotFocusEvent;
+        public event System.EventHandler TextBoxGotFocus
+        {
+            add
+            {
+                TextBoxGotFocusEvent = (System.EventHandler)System.Delegate.Combine(TextBoxGotFocusEvent, value);
+            }
+            remove
+            {
+                TextBoxGotFocusEvent = (System.EventHandler)System.Delegate.Remove(TextBoxGotFocusEvent, value);
+            }
+        }
+
+        #endregion
+
+        #region " Function Definition "
+
+        public void Init()
+        {
+            c_step = '1';
+
+            b_visible_data_flag = null;
+
+            SelectedDescIndex = 1;
+            SearchSubItemIndex = 0;
+        }
+
+        public bool CheckValue()
+        {
+            return MPCF.CheckValue(this.cdvData, 1);
+        }
+
+        public void ClearField()
+        {
+            MPCF.FieldClear(cdvData);
+        }
+
+        private DataTable FillDataTable(DataTable dt, TRSNode out_node)
+        {
+            int c;
+            int r;
+            DataColumn dc;
+            DataRow dr;
+
+            /*** #753 GCM Reference (2012.04.04 by JYPARK) ***/
+            if (dt == null)
+            {
+                if (out_node.GetList(0).Count < 1) return null;
+
+                dt = new DataTable("DataTable");
+
+                for (c = 0; c < out_node.GetList(0)[0].MemberCount; c++)
+                {
+                    dc = new DataColumn();
+                    dc.DataType = System.Type.GetType("System.String");
+                    dc.DefaultValue = "";
+                    dc.ColumnName = out_node.GetList(0)[0].GetMember(c).Name;
+
+                    dt.Columns.Add(dc);
+                }
+            }
+
+            for (r = 0; r < out_node.GetList(0).Count; r++)
+            {
+                dr = dt.NewRow();
+
+                for (c = 0; c < dt.Columns.Count; c++)
+                {
+                    dr[c] = out_node.GetList(0)[r].GetString(dt.Columns[c].ColumnName);
+                }
+
+                dt.Rows.Add(dr);
+            }
+            /*** End of Modification (2012.04.04) ***/
+
+            return dt;
+        }
+
+        private bool ViewGCMDataList(Control Form_control, char c_step, string s_table_name, string s_sub_table_name, params object[] argu_list)
+        {
+            return ViewGCMDataList(Form_control, c_step, s_table_name, s_sub_table_name, -1, null, "", false, argu_list);
+        }
+
+        private bool ViewGCMDataList(Control Form_control, char c_step, string s_table_name, string s_sub_talbe_name, int Image_idx, TreeNode parentNode, string Ext_Factory, bool bIgnoreError, params object[] argu_list)
+        {
+
+            ListViewItem itmX;
+            int i;
+            int j;
+            List<string> sList = new List<string>();
+            ArrayList a_list;
+            DataTable dt;
+
+            TRSNode in_node = new TRSNode("VIEW_DATA_LIST_IN");
+            TRSNode out_node;
+            TRSNode list_item;
+
+            string member_name;
+
+            a_list = new ArrayList();
+
+            if (Form_control is ListView)
+            {
+                MPCF.InitListView((ListView)Form_control);
+            }
+
+            if (Image_idx == -1)
+            {
+                Image_idx = (int)SMALLICON_INDEX.IDX_CODE_DATA;
+            }
+            else
+            {
+                if (MPGV.gIMdiForm.GetSmallIconList().Images[Image_idx] == null)
+                {
+                    if (bIgnoreError == false)
+                    {
+                        MPCF.ShowMsgBox("Invalid Image Index");
+                    }
+                    return false;
+                }
+            }
+
+            MPCR.SetInMsg(in_node);
+            in_node.ProcStep = c_step;
+
+            if (Ext_Factory != "")
+            {
+                in_node.Factory = Ext_Factory;
+            }
+
+            in_node.AddString("TABLE_NAME", s_table_name);
+            
+            if (string.IsNullOrEmpty(MPCF.Trim(s_sub_talbe_name)) == false)
+                in_node.AddString("KEY_1", s_sub_talbe_name);
+
+            //Argument Member for SQL
+            if (argu_list != null)
+            {
+                for (i = 0; i < argu_list.Length; i++)
+                {
+                    list_item = in_node.AddNode("ARGU_LIST");
+                    list_item.AddString("ARGUMENT", MPCF.Trim(argu_list[i]));
+
+                }
+            }
+
+            do
+            {
+                out_node = new TRSNode("VIEW_DATA_LIST_OUT");
+
+                if (MPCR.CallService("BAS", "BAS_View_Data_List", in_node, ref out_node, bIgnoreError) == false)
+                {
+                    return false;
+                }
+
+                a_list.Add(out_node);
+
+                in_node.SetString("NEXT_KEY_1", out_node.GetString("NEXT_KEY_1"));
+                in_node.SetString("NEXT_KEY_2", out_node.GetString("NEXT_KEY_2"));
+                in_node.SetString("NEXT_KEY_3", out_node.GetString("NEXT_KEY_3"));
+                in_node.SetString("NEXT_KEY_4", out_node.GetString("NEXT_KEY_4"));
+                in_node.SetString("NEXT_KEY_5", out_node.GetString("NEXT_KEY_5"));
+                in_node.SetString("NEXT_KEY_6", out_node.GetString("NEXT_KEY_6"));
+                in_node.SetString("NEXT_KEY_7", out_node.GetString("NEXT_KEY_7"));
+                in_node.SetString("NEXT_KEY_8", out_node.GetString("NEXT_KEY_8"));
+                in_node.SetString("NEXT_KEY_9", out_node.GetString("NEXT_KEY_9"));
+                in_node.SetString("NEXT_KEY_10", out_node.GetString("NEXT_KEY_10"));
+                in_node.SetInt("NEXT_ROW", out_node.GetInt("NEXT_ROW"));
+
+            } while (in_node.GetString("NEXT_KEY_1") != "" ||
+                in_node.GetString("NEXT_KEY_2") != "" ||
+                in_node.GetString("NEXT_KEY_3") != "" ||
+                in_node.GetString("NEXT_KEY_4") != "" ||
+                in_node.GetString("NEXT_KEY_5") != "" ||
+                in_node.GetString("NEXT_KEY_6") != "" ||
+                in_node.GetString("NEXT_KEY_7") != "" ||
+                in_node.GetString("NEXT_KEY_8") != "" ||
+                in_node.GetString("NEXT_KEY_9") != "" ||
+                in_node.GetString("NEXT_KEY_10") != "" ||
+                in_node.GetInt("NEXT_ROW") > 0);
+
+            foreach (object obj in a_list)
+            {
+                out_node = null;
+                out_node = (TRSNode)obj;
+                dt = null;
+                if (out_node.GetList("SQL_OUT").Count > 0)
+                {
+                    dt = MPCR.ConvertToDataTable(out_node.GetList("SQL_OUT")[0]);
+                }
+                else
+                {
+                    dt = FillDataTable(dt, out_node);
+                }
+
+                if (dt == null || dt.Columns.Count == 0 || dt.Rows.Count == 0) continue;
+
+                for (i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (Form_control is ListView)
+                    {
+                        /*
+                         * Key Column 순위
+                         * 1. ListView 컬럼 Tag
+                         * 2. List결과의 첫번째 컬럼
+                         */
+                        member_name = MPCF.Trim(((ListView)Form_control).Columns[0].Tag);
+                        if (member_name == "" || dt.Columns.Contains(member_name) == false)
+                        {
+                            member_name = dt.Columns[0].ColumnName;
+                        }
+
+                        if (MPCF.Trim(dt.Rows[i][member_name]) == "") continue;
+                        itmX = new ListViewItem(MPCF.Trim(dt.Rows[i][member_name]), Image_idx);
+
+                        if (((ListView)Form_control).Columns.Count > 1)
+                        {
+                            for (j = 1; j <= ((ListView)Form_control).Columns.Count - 1; j++)
+                            {
+                                /*
+                                 * SubItem 컬럼명 순위
+                                 * 1. ListView 컬럼 Tag
+                                 * 2. DATA_1....DATA_10
+                                 * 3. List결과의 두번째 컬럼...
+                                 */
+                                member_name = MPCF.Trim(((ListView)Form_control).Columns[j].Tag);
+                                if (member_name == "" || dt.Columns.Contains(member_name) == false)
+                                {
+                                    if (dt.Columns.Contains(string.Format("DATA_{0}", j)) == true)
+                                    {
+                                        member_name = string.Format("DATA_{0}", j);
+                                    }
+                                    else if (dt.Columns.Count > j)
+                                    {
+                                        member_name = dt.Columns[j].ColumnName;
+                                    }
+                                }
+                                itmX.SubItems.Add(MPCF.Trim(dt.Rows[i][member_name]));
+                            }
+                        }
+                        ((ListView)Form_control).Items.Add(itmX);
+                    }
+                }
+            }
+            return true;
+        }
+
+        #endregion
+
+        private void cdvData_ButtonPress(object sender, EventArgs e)
+        {
+            if (ButtonPressBeforeEvent != null)
+                ButtonPressBeforeEvent(this, e);
+
+            cdvData.Init();
+            MPCF.InitListView(cdvData.GetListView);
+            cdvData.Columns.Add("Key", 100, HorizontalAlignment.Left);
+            if (string.IsNullOrEmpty(MPCF.Trim(Custom_SubTableName)) == true)
+                cdvData.Columns[0].Tag = "KEY_1";
+            else cdvData.Columns[0].Tag = "KEY_2";
+            for (int i = 0; i < Custom_VisibleDataFlag.Length; i++)
+            {
+                if (Custom_VisibleDataFlag[i] == false) continue;
+                
+                cdvData.Columns.Add("Desc", 200, HorizontalAlignment.Left);
+                cdvData.Columns[cdvData.Columns.Count - 1].Tag = "DATA_" + (i + 1);
+            }
+            if (ViewGCMDataList(cdvData.GetListView, Custom_Step, Custom_TableName, Custom_SubTableName, ArguList) == false) return;
+
+            //공백 줄 추가 여부
+            if (Custom_AddEmptyRowTop == true)
+            {
+                cdvData.InsertEmptyRow(0, 1);
+            }
+            if (Custom_AddEmptyRowLast == true)
+            {
+                cdvData.AddEmptyRow(1);
+            }
+
+            if (ButtonPressAfterEvent != null)
+                ButtonPressAfterEvent(this, e);
+        }
+
+        private void cdvData_SelectedItemChanged(object sender, MCCodeViewSelChanged_EventArgs e)
+        {
+            if (SelectedItemChangedEvent != null)
+                SelectedItemChangedEvent(this, e);
+        }
+
+        private void cdvData_TextBoxGotFocus(object sender, EventArgs e)
+        {
+            if (TextBoxGotFocusEvent != null)
+                TextBoxGotFocusEvent(this, e);
+        }
+
+        private void cdvData_TextBoxKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (TextBoxKeyPressEvent != null)
+                TextBoxKeyPressEvent(this, e);
+        }
+
+        private void cdvData_TextBoxLostFocus(object sender, EventArgs e)
+        {
+            if (TextBoxLostFocusEvent != null)
+                TextBoxLostFocusEvent(this, e);
+        }
+
+        private void cdvData_TextBoxTextChanged(object sender, EventArgs e)
+        {
+            if (TextBoxTextChangedEvent != null)
+                TextBoxTextChangedEvent(this, e);
+        }
+
+        private void udcCComCodeGCM_FontChanged(object sender, EventArgs e)
+        {
+            cdvData.Font = this.Font;
+        }
+
+    }
+}

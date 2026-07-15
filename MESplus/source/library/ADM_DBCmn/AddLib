@@ -1,0 +1,19 @@
+echo "==============================================================================================="
+echo PROC Compile $1.pc
+proc PARSE=FULL $1.pc include="/usr/lib/gcc/i586-suse-linux/4.1.2/include" include="/opt/oracle/product/10.2.0/rdbms/public"
+
+echo CC Compile
+cc -c -w $1.c -I/opt/oracle/product/10.2.0/precomp/public -I/opt/oracle/product/10.2.0/rdbms/public
+
+echo Insert to library            
+ar r libADM_DBCmn.a $1.o 
+
+echo Copy Head file
+cp $1.h ../../../inc/dbinc
+cp DBC_common.h ../../../inc/dbinc
+
+echo Copy Library
+cp libADM_DBCmn.a ../../../lib
+rm -f $1.o $1.c $1.lis
+
+echo ""

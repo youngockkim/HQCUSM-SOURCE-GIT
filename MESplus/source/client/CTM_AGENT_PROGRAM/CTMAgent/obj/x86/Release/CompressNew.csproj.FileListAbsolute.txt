@@ -1,0 +1,16 @@
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\bin\Release\CompressNew.exe.config
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\bin\Release\CompressNew.exe
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\bin\Release\CompressNew.pdb
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.Form1.resources
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.Properties.Resources.resources
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.exe
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.pdb
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\C# Source\CompressNew\CompressNew\obj\x86\Release\CompressNew.csproj.GenerateResource.Cache
+D:\CompressNew\CompressNew\bin\Release\CompressNew.exe.config
+D:\CompressNew\CompressNew\obj\x86\Release\CompressNew.exe
+D:\CompressNew\CompressNew\obj\x86\Release\CompressNew.pdb
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram\CompressNew\bin\Release\CompressNew.exe.config
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram\CompressNew\obj\x86\Release\CompressNew.exe
+C:\Users\SAMSUNG\Desktop\작업중\CTM\ifprogram\CompressNew\obj\x86\Release\CompressNew.pdb

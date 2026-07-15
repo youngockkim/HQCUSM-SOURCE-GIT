@@ -1,0 +1,1521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D23333D5-F4B7-44DE-987F-1B5A73587C66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.WIPCore</RootNamespace>
+    <AssemblyName>Miracom.WIPCore</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Miracom.WIPCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Miracom.WIPCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinMaskedEdit.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.BASCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.BASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmWIPViewBinHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewBinHistory.Designer.cs">
+      <DependentUpon>frmWIPViewBinHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewQAHistoryByLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewQAHistoryByLot.designer.cs">
+      <DependentUpon>frmWIPViewQAHistoryByLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewBatchHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewBatchHistory.Designer.cs">
+      <DependentUpon>frmWIPViewBatchHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewBatchStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewBatchStatus.Designer.cs">
+      <DependentUpon>frmWIPViewBatchStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewFlexibleLotStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewFlexibleLotStatus.Designer.cs">
+      <DependentUpon>frmWIPViewFlexibleLotStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotHistoryForStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotHistoryForStep.Designer.cs">
+      <DependentUpon>frmWIPViewLotHistoryForStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewSublotLossList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewSublotLossList.Designer.cs">
+      <DependentUpon>frmWIPViewSublotLossList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewTransitLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionStore.Designer.cs">
+      <DependentUpon>udcFutureActionStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupAttachQARule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupAttachQARule.Designer.cs">
+      <DependentUpon>frmWIPSetupAttachQARule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinDefinition.Designer.cs">
+      <DependentUpon>frmWIPSetupBinDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinGrade.Designer.cs">
+      <DependentUpon>frmWIPSetupBinGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupPriorityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupPriorityControl.Designer.cs">
+      <DependentUpon>frmWIPSetupPriorityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBinRelation.Designer.cs">
+      <DependentUpon>frmWIPSetupBinRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupInputAttributeRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupInputAttributeRelation.Designer.cs">
+      <DependentUpon>frmWIPSetupInputAttributeRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupInputOperationCMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupInputOperationCMF.Designer.cs">
+      <DependentUpon>frmWIPSetupInputOperationCMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupCustomizedField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupCustomizedField.Designer.cs">
+      <DependentUpon>frmWIPSetupCustomizedField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupGroupDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupGroupDefinition.Designer.cs">
+      <DependentUpon>frmWIPSetupGroupDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupLotExtensionTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupLotExtensionTable.Designer.cs">
+      <DependentUpon>frmWIPSetupLotExtensionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupLowYield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupLowYield.designer.cs">
+      <DependentUpon>frmWIPSetupLowYield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupMFOCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupMFOCopy.Designer.cs">
+      <DependentUpon>frmWIPSetupMFOCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQAActionRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQAActionRule.designer.cs">
+      <DependentUpon>frmWIPSetupQAActionRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQASampleRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQASampleRule.designer.cs">
+      <DependentUpon>frmWIPSetupQASampleRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupStepMFORelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupStepMFORelation.Designer.cs">
+      <DependentUpon>frmWIPSetupStepMFORelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupTestProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupTestProgram.Designer.cs">
+      <DependentUpon>frmWIPSetupTestProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionError.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionError.Designer.cs">
+      <DependentUpon>udcFutureActionError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionInputAttribute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionInputAttribute.Designer.cs">
+      <DependentUpon>udcFutureActionInputAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionRaiseAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionRaiseAlarm.Designer.cs">
+      <DependentUpon>udcFutureActionRaiseAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionAdapt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionAdapt.Designer.cs">
+      <DependentUpon>udcFutureActionAdapt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionRework.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionRework.Designer.cs">
+      <DependentUpon>udcFutureActionRework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionTerminate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionTerminate.Designer.cs">
+      <DependentUpon>udcFutureActionTerminate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionCustom.Designer.cs">
+      <DependentUpon>udcFutureActionCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionSkip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionSkip.Designer.cs">
+      <DependentUpon>udcFutureActionSkip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionMove.Designer.cs">
+      <DependentUpon>udcFutureActionMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBatchCreationRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBatchCreationRule.Designer.cs">
+      <DependentUpon>frmWIPSetupBatchCreationRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBatchCreationRuleRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupBatchCreationRuleRelation.Designer.cs">
+      <DependentUpon>frmWIPSetupBatchCreationRuleRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFutureActionSub01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFutureActionSub01.Designer.cs">
+      <DependentUpon>frmWIPSetupFutureActionSub01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupIDGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupIDGenerator.Designer.cs">
+      <DependentUpon>frmWIPSetupIDGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupIDGeneratorRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupIDGeneratorRelation.Designer.cs">
+      <DependentUpon>frmWIPSetupIDGeneratorRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupYield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionBase.Designer.cs">
+      <DependentUpon>udcFutureActionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionEnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionEnd.Designer.cs">
+      <DependentUpon>udcFutureActionEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionHold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcFutureActionHold.Designer.cs">
+      <DependentUpon>udcFutureActionHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranAbortStartLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranAbortStartLot.Designer.cs">
+      <DependentUpon>frmWIPTranAbortStartLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranBonusLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranBonusLotExt.designer.cs">
+      <DependentUpon>frmWIPTranBonusLotExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangeCMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangeCMF.designer.cs">
+      <DependentUpon>frmWIPTranChangeCMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangePortCarrierExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangePortCarrierExt.Designer.cs">
+      <DependentUpon>frmWIPTranChangePortCarrierExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCheckCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCheckCarrier.Designer.cs">
+      <DependentUpon>frmWIPTranCheckCarrier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCollectBinData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCollectBinData.Designer.cs">
+      <DependentUpon>frmWIPTranCollectBinData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCVLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCVLot.Designer.cs">
+      <DependentUpon>frmWIPTranCVLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCVLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCVLotExt.designer.cs">
+      <DependentUpon>frmWIPTranCVLotExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranDeleteLotHistoryForStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotExt.Designer.cs">
+      <DependentUpon>frmWIPTranEndLotExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotExt2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotExt2.Designer.cs">
+      <DependentUpon>frmWIPTranEndLotExt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotForStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranLossLotExt2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranLossLotExt2.Designer.cs">
+      <DependentUpon>frmWIPTranLossLotExt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMakeSubLotBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMakeSubLotBatch.Designer.cs">
+      <DependentUpon>frmWIPTranMakeSubLotBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiHoldLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiHoldLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiHoldLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiMergeLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiMergeLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiMergeLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiReceiveLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiReceiveLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiReceiveLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiReleaseLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiReleaseLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiReleaseLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiShipLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiShipLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiShipLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiSplitLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiSplitLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiSplitLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiTerminateLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiTerminateLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiTerminateLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotBonusList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotBonusList.Designer.cs">
+      <DependentUpon>frmWIPViewLotBonusList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotLossList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotLossList.designer.cs">
+      <DependentUpon>frmWIPViewLotLossList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewDataListByAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFutureAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFutureAction.Designer.cs">
+      <DependentUpon>frmWIPSetupFutureAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupMFOOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupMFOOption.Designer.cs">
+      <DependentUpon>frmWIPSetupMFOOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQueueTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupQueueTime.designer.cs">
+      <DependentUpon>frmWIPSetupQueueTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewFlowByOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewHoldLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotDefectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotListByOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotTraceTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewLotTraceTreeSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewMaterialByFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewMaterialByGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewReturnLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewReworkLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewSubLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewSubLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewSublotStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWIPViewTroubleLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmWIPSetupBatchKeepMFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupCycleTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupGradeRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupRepairOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupReworkFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupReworkFlow.Designer.cs">
+      <DependentUpon>frmWIPSetupReworkFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWIPSetupSubLotOptionToMFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranAdaptLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranBonusLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangePortCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranChangePortCarrier.Designer.cs">
+      <DependentUpon>frmWIPTranChangePortCarrier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCleanLotDefect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCloseReturnLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCollectLotDefect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCombineLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCombineLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranCreateLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranDeleteLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranDeleteSublotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndSublot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranHoldLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranLocalRepairLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranLossLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranLossLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMakeBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMergeLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMoveLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiEndLotByResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiEndLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiEndLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiEndLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiStartLotInResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiStartLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiStartLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiStartLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiTransferLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMultiTransferLot.Designer.cs">
+      <DependentUpon>frmWIPTranMultiTransferLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranOpenReturnLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranQAGate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranQAGate.designer.cs">
+      <DependentUpon>frmWIPTranQAGate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranQAMaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranQAMaint.designer.cs">
+      <DependentUpon>frmWIPTranQAMaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReceiveLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranRegenerateLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranRegenerateLot.Designer.cs">
+      <DependentUpon>frmWIPTranRegenerateLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReleaseBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReleaseLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReleaseLotByForce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranRepairEndLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranRepairLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveLotBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveLotBatch.Designer.cs">
+      <DependentUpon>frmWIPTranReserveLotBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveLot.Designer.cs">
+      <DependentUpon>frmWIPTranReserveLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveSubLotBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReserveSubLotBatch.Designer.cs">
+      <DependentUpon>frmWIPTranReserveSubLotBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReworkLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranReworkSublot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranScribeLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranShipLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranSkipLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranSortLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranSplitLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranSplitLot.Designer.cs">
+      <DependentUpon>frmWIPTranSplitLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranSplitLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranMergeLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartLotExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartLotExt.Designer.cs">
+      <DependentUpon>frmWIPTranStartLotExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartLotForStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartSublot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStoreLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranTerminateLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranTransferLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranTransferLot.Designer.cs">
+      <DependentUpon>frmWIPTranTransferLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranTroubleLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranUnReserveLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranUnReserveLot.Designer.cs">
+      <DependentUpon>frmWIPTranUnReserveLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranUnstoreLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranDeleteStartBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranStartLotForIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWIPTranEndLotForIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inquiry\frmWIPViewBinHistory.resx">
+      <DependentUpon>frmWIPViewBinHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewQAHistoryByLot.resx">
+      <DependentUpon>frmWIPViewQAHistoryByLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewBatchHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewBatchHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewBatchStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewBatchStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewFlexibleLotStatus.resx">
+      <DependentUpon>frmWIPViewFlexibleLotStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotBonusList.resx">
+      <DependentUpon>frmWIPViewLotBonusList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotHistoryForStep.resx">
+      <DependentUpon>frmWIPViewLotHistoryForStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotLossList.resx">
+      <DependentUpon>frmWIPViewLotLossList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewDataListByAttribute.resx">
+      <DependentUpon>frmWIPViewDataListByAttribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewSublotLossList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewSublotLossList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewTransitLotList.resx">
+      <DependentUpon>frmWIPViewTransitLotList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionStore.resx">
+      <DependentUpon>udcFutureActionStore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupAttachQARule.resx">
+      <DependentUpon>frmWIPSetupAttachQARule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupBinDefinition.resx">
+      <DependentUpon>frmWIPSetupBinDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupBinGrade.resx">
+      <DependentUpon>frmWIPSetupBinGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupPriorityControl.resx">
+      <DependentUpon>frmWIPSetupPriorityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupBinRelation.resx">
+      <DependentUpon>frmWIPSetupBinRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupInputAttributeRelation.resx">
+      <DependentUpon>frmWIPSetupInputAttributeRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupInputOperationCMF.resx">
+      <DependentUpon>frmWIPSetupInputOperationCMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupCustomizedField.resx">
+      <DependentUpon>frmWIPSetupCustomizedField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupGroupDefinition.resx">
+      <DependentUpon>frmWIPSetupGroupDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupLotExtensionTable.resx">
+      <DependentUpon>frmWIPSetupLotExtensionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupLowYield.resx">
+      <DependentUpon>frmWIPSetupLowYield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupMFOCopy.resx">
+      <DependentUpon>frmWIPSetupMFOCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupQAActionRule.resx">
+      <DependentUpon>frmWIPSetupQAActionRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupQASampleRule.resx">
+      <DependentUpon>frmWIPSetupQASampleRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupStep.resx">
+      <DependentUpon>frmWIPSetupStep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupStepMFORelation.resx">
+      <DependentUpon>frmWIPSetupStepMFORelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupTestProgram.resx">
+      <DependentUpon>frmWIPSetupTestProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionError.resx">
+      <DependentUpon>udcFutureActionError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionInputAttribute.resx">
+      <DependentUpon>udcFutureActionInputAttribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionRaiseAlarm.resx">
+      <DependentUpon>udcFutureActionRaiseAlarm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionAdapt.resx">
+      <DependentUpon>udcFutureActionAdapt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionRework.resx">
+      <DependentUpon>udcFutureActionRework.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionTerminate.resx">
+      <DependentUpon>udcFutureActionTerminate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionCustom.resx">
+      <DependentUpon>udcFutureActionCustom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionSkip.resx">
+      <DependentUpon>udcFutureActionSkip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionMove.resx">
+      <DependentUpon>udcFutureActionMove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupBatchCreationRule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupBatchCreationRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupBatchCreationRuleRelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupBatchCreationRuleRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupFutureAction.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupFutureAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupFutureActionSub01.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupFutureActionSub01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupIDGenerator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupIDGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupIDGeneratorRelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupIDGeneratorRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupMFOOption.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupMFOOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupQueueTime.resx">
+      <DependentUpon>frmWIPSetupQueueTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewFlowByOperation.resx">
+      <DependentUpon>frmWIPViewFlowByOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewHoldLotList.resx">
+      <DependentUpon>frmWIPViewHoldLotList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotDefectList.resx">
+      <DependentUpon>frmWIPViewLotDefectList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotHistory.resx">
+      <DependentUpon>frmWIPViewLotHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotListByOperation.resx">
+      <DependentUpon>frmWIPViewLotListByOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotStatus.resx">
+      <DependentUpon>frmWIPViewLotStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotTrace.resx">
+      <DependentUpon>frmWIPViewLotTrace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotTraceTree.resx">
+      <DependentUpon>frmWIPViewLotTraceTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewLotTraceTreeSub.resx">
+      <DependentUpon>frmWIPViewLotTraceTreeSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewMaterialByFlow.resx">
+      <DependentUpon>frmWIPViewMaterialByFlow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewMaterialByGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewMaterialByGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewReturnLotList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewReturnLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewReworkLotList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewReworkLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewSubLotHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewSubLotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewSubLotList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewSubLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewSublotStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewSublotStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWIPViewTroubleLotList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPViewTroubleLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartLotForIT.resx">
+      <DependentUpon>frmWIPTranStartLotForIT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndLotForIT.resx">
+      <DependentUpon>frmWIPTranEndLotForIT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Setup\frmWIPSetupBatchKeepMFO.resx">
+      <DependentUpon>frmWIPSetupBatchKeepMFO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupCycleTime.resx">
+      <DependentUpon>frmWIPSetupCycleTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupFactory.resx">
+      <DependentUpon>frmWIPSetupFactory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupFlow.resx">
+      <DependentUpon>frmWIPSetupFlow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupGradeRule.resx">
+      <DependentUpon>frmWIPSetupGradeRule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupMaterial.resx">
+      <DependentUpon>frmWIPSetupMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupOperation.resx">
+      <DependentUpon>frmWIPSetupOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupRepairOper.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupRepairOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupReworkFlow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupReworkFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupSubLotOptionToMFO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPSetupSubLotOptionToMFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWIPSetupYield.resx">
+      <DependentUpon>frmWIPSetupYield.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>udcFutureActionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionEnd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>udcFutureActionEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcFutureActionHold.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>udcFutureActionHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranAbortStartLot.resx">
+      <DependentUpon>frmWIPTranAbortStartLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranAdaptLot.resx">
+      <DependentUpon>frmWIPTranAdaptLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranBonusLot.resx">
+      <DependentUpon>frmWIPTranBonusLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranBonusLotExt.resx">
+      <DependentUpon>frmWIPTranBonusLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranChangeCMF.resx">
+      <DependentUpon>frmWIPTranChangeCMF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranChangePortCarrier.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranChangePortCarrier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranChangePortCarrierExt.resx">
+      <DependentUpon>frmWIPTranChangePortCarrierExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCheckCarrier.resx">
+      <DependentUpon>frmWIPTranCheckCarrier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCleanLotDefect.resx">
+      <DependentUpon>frmWIPTranCleanLotDefect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCloseReturnLot.resx">
+      <DependentUpon>frmWIPTranCloseReturnLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCollectBinData.resx">
+      <DependentUpon>frmWIPTranCollectBinData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCollectLotDefect.resx">
+      <DependentUpon>frmWIPTranCollectLotDefect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCombineLot.resx">
+      <DependentUpon>frmWIPTranCombineLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCombineLotExt.resx">
+      <DependentUpon>frmWIPTranCombineLotExt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCreateLot.resx">
+      <DependentUpon>frmWIPTranCreateLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCVLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranCVLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranCVLotExt.resx">
+      <DependentUpon>frmWIPTranCVLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranDeleteLotHistory.resx">
+      <DependentUpon>frmWIPTranDeleteLotHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranDeleteLotHistoryForStep.resx">
+      <DependentUpon>frmWIPTranDeleteLotHistoryForStep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranDeleteSublotHistory.resx">
+      <DependentUpon>frmWIPTranDeleteSublotHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranEndBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranEndLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndLotExt.resx">
+      <DependentUpon>frmWIPTranEndLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndLotExt2.resx">
+      <DependentUpon>frmWIPTranEndLotExt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndLotForStep.resx">
+      <DependentUpon>frmWIPTranEndLotForStep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranEndSublot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranEndSublot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranHoldLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranHoldLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranLocalRepairLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranLocalRepairLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranLossLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranLossLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranLossLotExt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranLossLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranLossLotExt2.resx">
+      <DependentUpon>frmWIPTranLossLotExt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMakeBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMakeBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMakeSubLotBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMakeSubLotBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMergeLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMergeLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMoveLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMoveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiEndLotByResource.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMultiEndLotByResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiEndLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMultiEndLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiHoldLot.resx">
+      <DependentUpon>frmWIPTranMultiHoldLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiMergeLot.resx">
+      <DependentUpon>frmWIPTranMultiMergeLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiReceiveLot.resx">
+      <DependentUpon>frmWIPTranMultiReceiveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiReleaseLot.resx">
+      <DependentUpon>frmWIPTranMultiReleaseLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiShipLot.resx">
+      <DependentUpon>frmWIPTranMultiShipLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiSplitLot.resx">
+      <DependentUpon>frmWIPTranMultiSplitLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiStartLotInResource.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMultiStartLotInResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiStartLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMultiStartLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiTerminateLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMultiTerminateLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMultiTransferLot.resx">
+      <DependentUpon>frmWIPTranMultiTransferLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranOpenReturnLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranOpenReturnLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranQAGate.resx">
+      <DependentUpon>frmWIPTranQAGate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranQAMaint.resx">
+      <DependentUpon>frmWIPTranQAMaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReceiveLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReceiveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranRegenerateLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranRegenerateLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReleaseBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReleaseBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReleaseLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReleaseLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReleaseLotByForce.resx">
+      <DependentUpon>frmWIPTranReleaseLotByForce.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranRepairEndLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranRepairEndLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranRepairLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranRepairLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReserveLotBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReserveLotBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReserveLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReserveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReserveSubLotBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReserveSubLotBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReworkLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReworkLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranReworkSublot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranReworkSublot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranScribeLotExt.resx">
+      <DependentUpon>frmWIPTranScribeLotExt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranShipLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranShipLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranSkipLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranSkipLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranSortLotExt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranSortLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranSplitLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranSplitLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranSplitLotExt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranSplitLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranMergeLotExt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranMergeLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranStartBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranStartLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartLotExt.resx">
+      <DependentUpon>frmWIPTranStartLotExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartLotForStep.resx">
+      <DependentUpon>frmWIPTranStartLotForStep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStartSublot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranStartSublot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranStoreLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranStoreLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranTerminateLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranTerminateLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranTransferLot.resx">
+      <DependentUpon>frmWIPTranTransferLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranTroubleLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranTroubleLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranUnReserveLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranUnReserveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranUnstoreLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWIPTranUnstoreLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWIPTranDeleteStartBatch.resx">
+      <DependentUpon>frmWIPTranDeleteStartBatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Miracom.MESCore\Miracom.MESCore.csproj">
+      <Project>{F7657612-69FE-42B2-A99E-A1B63BC591F3}</Project>
+      <Name>Miracom.MESCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

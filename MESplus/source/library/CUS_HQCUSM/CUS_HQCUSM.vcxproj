@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BF7CFB4F-0F1A-4E77-A033-A424ED1240B4}</ProjectGuid>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRR;_DEBUG;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CAMS_update_audit_plan.c" />
+    <ClCompile Include="CAMS_update_audit_result.c" />
+    <ClCompile Include="CAMS_update_audit_result_item.c" />
+    <ClCompile Include="CAMS_view_audit_plan.c" />
+    <ClCompile Include="CAMS_view_audit_plan_list.c" />
+    <ClCompile Include="CAMS_view_audit_result.c" />
+    <ClCompile Include="CAMS_view_audit_result_item.c" />
+    <ClCompile Include="CAMS_view_audit_result_item_list.c" />
+    <ClCompile Include="CAMS_view_audit_result_list.c" />
+    <ClCompile Include="CAMS_view_cams_join_list.c" />
+    <ClCompile Include="CBAS_update_cgcmtbldat.c" />
+    <ClCompile Include="CBAS_view_article_list.c" />
+    <ClCompile Include="CBAS_view_cgcmtbldat.c" />
+    <ClCompile Include="CBAS_view_cgcmtbldat_list.c" />
+    <ClCompile Include="CBAS_view_data.c" />
+    <ClCompile Include="CBAS_view_data_list.c" />
+    <ClCompile Include="CBAS_view_Module_grade_list.c" />
+    <ClCompile Include="CEIS_assign_magazine_to_cart.c" />
+    <ClCompile Include="CEIS_buffercount_inquiry_res.c" />
+    <ClCompile Include="CEIS_change_resource_bypass_mode.c" />
+    <ClCompile Include="CEIS_change_resource_control_mode.c" />
+    <ClCompile Include="CEIS_change_resource_state.c" />
+    <ClCompile Include="CEIS_change_resource_state_nozzle_pressure.c" />
+    <ClCompile Include="CEIS_clear_alarm.c" />
+    <ClCompile Include="CEIS_collect_cell_id.c" />
+    <ClCompile Include="CEIS_collect_equipment_average_working_time.c" />
+    <ClCompile Include="CEIS_collect_equipment_working_time.c" />
+    <ClCompile Include="CEIS_collect_image.c" />
+    <ClCompile Include="CEIS_collect_inspection_data.c" />
+    <ClCompile Include="CEIS_collect_inspection_data_busbar.c" />
+    <ClCompile Include="CEIS_collect_inspection_data_cell.c" />
+    <ClCompile Include="CEIS_collect_inspection_data_cleaving.c" />
+    <ClCompile Include="CEIS_collect_inspection_data_string.c" />
+    <ClCompile Include="CEIS_collect_inspection_data_sualab.c" />
+    <ClCompile Include="CEIS_collect_lgv_terminal_event.c" />
+    <ClCompile Include="CEIS_collect_process_data.c" />
+    <ClCompile Include="CEIS_collect_process_data_cell.c" />
+    <ClCompile Include="CEIS_collect_process_data_fqc.c" />
+    <ClCompile Include="CEIS_collect_process_data_lami.c" />
+    <ClCompile Include="CEIS_collect_process_data_string.c" />
+    <ClCompile Include="CEIS_collect_resource_data.c" />
+    <ClCompile Include="CEIS_collect_resource_event.c" />
+    <ClCompile Include="CEIS_complete_packing.c" />
+    <ClCompile Include="CEIS_create_lot.c" />
+    <ClCompile Include="CEIS_delete_recipe.c" />
+    <ClCompile Include="CEIS_dock_in_cart.c" />
+    <ClCompile Include="CEIS_dock_out_cart.c" />
+    <ClCompile Include="CEIS_download_fqc_inspection_data.c" />
+    <ClCompile Include="CEIS_end_lot.c" />
+    <ClCompile Include="CEIS_end_lot_lami.c" />
+    <ClCompile Include="CEIS_get_process_tack_time.c" />
+    <ClCompile Include="CEIS_Layup_Repair_Tray_Input_Data.c" />
+    <ClCompile Include="CEIS_lgv_acmodule_alarm.c" />
+    <ClCompile Include="CEIS_lgv_load_alarm.c" />
+    <ClCompile Include="CEIS_load_magazine.c" />
+    <ClCompile Include="CEIS_load_material.c" />
+    <ClCompile Include="CEIS_load_module.c" />
+    <ClCompile Include="CEIS_recipe_management.c" />
+    <ClCompile Include="CEIS_match_matrix_pallet.c" />
+    <ClCompile Include="CEIS_notify_system_alarm.c" />
+    <ClCompile Include="CEIS_raise_alarm.c" />
+    <ClCompile Include="CEIS_recipe_id_list.c" />
+    <ClCompile Include="CEIS_recipe_parameter_list.c" />
+    <ClCompile Include="CEIS_recipe_release_confirm.c" />
+    <ClCompile Include="CEIS_releaseconfirm_recipe.c" />
+    <ClCompile Include="CEIS_remote_request_mes_to_eap.c" />
+    <ClCompile Include="CEIS_request_login.c" />
+    <ClCompile Include="CEIS_request_production_order_list.c" />
+    <ClCompile Include="CEIS_sample.c" />
+    <ClCompile Include="CEIS_save_module_information.c" />
+    <ClCompile Include="CEIS_save_traceability_material_data.c" />
+    <ClCompile Include="CEIS_set_resource_data_collection_method.c" />
+    <ClCompile Include="CEIS_start_lot.c" />
+    <ClCompile Include="CEIS_start_lot_lami.c" />
+    <ClCompile Include="CEIS_validate_lot_label_e23.c" />
+    <ClCompile Include="CINV_move_store.c" />
+    <ClCompile Include="CJCM_check_job_change_item.c" />
+    <ClCompile Include="CJCM_close_job_change_master.c" />
+    <ClCompile Include="CJCM_copy_job_change_master.c" />
+    <ClCompile Include="CJCM_create_job_change_master.c" />
+    <ClCompile Include="CJCM_insert_job_item_history.c" />
+    <ClCompile Include="CJCM_raise_alarm.c" />
+    <ClCompile Include="CJCM_update_job_change_item.c" />
+    <ClCompile Include="CJCM_update_job_change_status.c" />
+    <ClCompile Include="CJCM_update_setup_job_change_item.c" />
+    <ClCompile Include="CJCM_view_cjcm_join_list.c" />
+    <ClCompile Include="CJCM_view_job_change_item.c" />
+    <ClCompile Include="CJCM_view_job_change_item_list.c" />
+    <ClCompile Include="CJCM_view_job_change_status.c" />
+    <ClCompile Include="CJCM_view_job_change_status_list.c" />
+    <ClCompile Include="CJCM_view_order_list.c" />
+    <ClCompile Include="CJCM_view_setup_job_change_item.c" />
+    <ClCompile Include="CJCM_view_setup_job_change_item_list.c" />
+    <ClCompile Include="CMMS_raise_alarm.c" />
+    <ClCompile Include="CMMS_tran_attached_file.c" />
+    <ClCompile Include="CMMS_update_analysis_plan.c" />
+    <ClCompile Include="CMMS_update_calibration_equipment.c" />
+    <ClCompile Include="CMMS_update_calibration_institute.c" />
+    <ClCompile Include="CMMS_update_calibration_plan.c" />
+    <ClCompile Include="CMMS_update_calibration_result_registration.c" />
+    <ClCompile Include="CMMS_update_calibration_user.c" />
+    <ClCompile Include="CMMS_update_equipment.c" />
+    <ClCompile Include="CMMS_update_equipmentitem.c" />
+    <ClCompile Include="CMMS_update_equipment_item.c" />
+    <ClCompile Include="CMMS_update_evaluation_result_registration.c" />
+    <ClCompile Include="CMMS_update_item.c" />
+    <ClCompile Include="CMMS_update_measuring_result_registration.c" />
+    <ClCompile Include="CMMS_update_sample.c" />
+    <ClCompile Include="CMMS_view_analysis_plan.c" />
+    <ClCompile Include="CMMS_view_analysis_plan_item_list.c" />
+    <ClCompile Include="CMMS_view_analysis_plan_list.c" />
+    <ClCompile Include="CMMS_view_analysis_plan_result_list.c" />
+    <ClCompile Include="CMMS_view_calibration_equipment.c" />
+    <ClCompile Include="CMMS_view_calibration_equipment_list.c" />
+    <ClCompile Include="CMMS_view_calibration_institute.c" />
+    <ClCompile Include="CMMS_view_calibration_institute_list.c" />
+    <ClCompile Include="CMMS_view_calibration_plan.c" />
+    <ClCompile Include="CMMS_view_calibration_plan_list.c" />
+    <ClCompile Include="CMMS_view_calibration_result_registration.c" />
+    <ClCompile Include="CMMS_view_calibration_result_registration_list.c" />
+    <ClCompile Include="CMMS_view_calibration_user.c" />
+    <ClCompile Include="CMMS_view_calibration_user_list.c" />
+    <ClCompile Include="CMMS_view_cmms_equip_list_list.c" />
+    <ClCompile Include="CMMS_view_equipment.c" />
+    <ClCompile Include="CMMS_view_equipmentitem.c" />
+    <ClCompile Include="CMMS_view_equipmentitem_list.c" />
+    <ClCompile Include="CMMS_view_equipment_item.c" />
+    <ClCompile Include="CMMS_view_equipment_item_list.c" />
+    <ClCompile Include="CMMS_view_equipment_Ledger_list.c" />
+    <ClCompile Include="CMMS_view_equipment_list.c" />
+    <ClCompile Include="CMMS_view_evaluation_result_registration.c" />
+    <ClCompile Include="CMMS_view_evaluation_result_registration_list.c" />
+    <ClCompile Include="CMMS_view_item.c" />
+    <ClCompile Include="CMMS_view_item_list.c" />
+    <ClCompile Include="CMMS_view_measuring_result_registration.c" />
+    <ClCompile Include="CMMS_view_measuring_result_registration_list.c" />
+    <ClCompile Include="CMMS_view_sample.c" />
+    <ClCompile Include="CMMS_view_sample_list.c" />
+    <ClCompile Include="CPSM_update_monitoring_status.c" />
+    <ClCompile Include="CPSM_update_prod_monitoring.c" />
+    <ClCompile Include="CPSM_view_prod_monitoring.c" />
+    <ClCompile Include="CPSM_view_prod_monitoring_list.c" />
+    <ClCompile Include="CRAS_update_crasdshift.c" />
+    <ClCompile Include="CRAS_update_crasdwntim.c" />
+    <ClCompile Include="CRAS_update_equipment_work_log.c" />
+    <ClCompile Include="CRAS_update_hour_gap.c" />
+    <ClCompile Include="CRAS_update_tabber_clean.c" />
+    <ClCompile Include="CRAS_update_tabber_jig_repair.c" />
+    <ClCompile Include="CRAS_update_xlinktest.c" />
+    <ClCompile Include="CRAS_view_crasdshift_list.c" />
+    <ClCompile Include="CRAS_view_crasdwntim_list.c" />
+    <ClCompile Include="CRAS_view_equipment_work_log_list.c" />
+    <ClCompile Include="CRAS_view_hour_gap_list.c" />
+    <ClCompile Include="CRAS_view_tabber_clean_list.c" />
+    <ClCompile Include="CRAS_view_tabber_jig_repair.c" />
+    <ClCompile Include="CRAS_view_tabber_jig_repair_list.c" />
+    <ClCompile Include="CRAS_view_xlinktest.c" />
+    <ClCompile Include="CRAS_view_xlinktest_list.c" />
+    <ClCompile Include="CWIP_collect_inspection_data_oqc.c" />
+    <ClCompile Include="CWIP_end_lot_oqc.c" />
+    <ClCompile Include="CWIP_get_db_systime.c" />
+    <ClCompile Include="CWIP_start_lot_oqc.c" />
+    <ClCompile Include="CEIS_terminate_lot.c" />
+    <ClCompile Include="CEIS_unload_magazine.c" />
+    <ClCompile Include="CEIS_unload_material.c" />
+    <ClCompile Include="CEIS_unload_module.c" />
+    <ClCompile Include="CEIS_update_recipe.c" />
+    <ClCompile Include="CEIS_update_tool_usage_count.c" />
+    <ClCompile Include="CEIS_validate_lot.c" />
+    <ClCompile Include="CEIS_validate_lot_fqc.c" />
+    <ClCompile Include="CEIS_validate_magazine.c" />
+    <ClCompile Include="CEIS_validate_production_order.c" />
+    <ClCompile Include="CMDM_update_eva_to_backsheet_data_list.c" />
+    <ClCompile Include="CMDM_update_eva_to_glass_data_list.c" />
+    <ClCompile Include="CMDM_update_reference_sample_data_list.c" />
+    <ClCompile Include="CMDM_update_xlink_data_list.c" />
+    <ClCompile Include="CMDM_view_eva_to_backsheet_data_list.c" />
+    <ClCompile Include="CMDM_view_eva_to_glass_data_list.c" />
+    <ClCompile Include="CMDM_view_reference_sample_data_list.c" />
+    <ClCompile Include="CMDM_view_xlink_data_list.c" />
+    <ClCompile Include="CORD_change_current_order.c" />
+    <ClCompile Include="CORD_view_current_order_by_line.c" />
+    <ClCompile Include="CORD_view_order_list_by_line.c" />
+    <ClCompile Include="CRAS_multi_update_daily_work_list.c" />
+    <ClCompile Include="CRAS_multi_update_patrol_check_sheet.c" />
+    <ClCompile Include="CRAS_update_attached_material_list.c" />
+    <ClCompile Include="CRAS_update_daily_work_list.c" />
+    <ClCompile Include="CRAS_update_patrol_check_sheet.c" />
+    <ClCompile Include="CRAS_view_attached_material_list_by_resource.c" />
+    <ClCompile Include="CRAS_view_daily_work_list.c" />
+    <ClCompile Include="CRAS_view_patrol_check_sheet.c" />
+    <ClCompile Include="CRAS_view_resource_list_by_line.c" />
+    <ClCompile Include="CRCP_update_para_version.c" />
+    <ClCompile Include="CRPT_view_fullcell_cart_label.c" />
+    <ClCompile Include="CRPT_view_halfcell_cart_label.c" />
+    <ClCompile Include="CRPT_view_manage_fullcell_cart_label.c" />
+    <ClCompile Include="CRPT_view_productivity_by_order.c" />
+    <ClCompile Include="CRPT_view_productivity_by_period.c" />
+    <ClCompile Include="CUSHQCUSMAddService.c" />
+    <ClCompile Include="CEIS_cleaving_hourly_summary.c" />
+    <ClCompile Include="CEIS_collect_inspection_vision_cleaving.c" />
+    <ClCompile Include="CWIP_multi_update_plan.c" />
+    <ClCompile Include="CWIP_update_4m.c" />
+    <ClCompile Include="CWIP_update_acmodule_remove.c" />
+    <ClCompile Include="CWIP_update_cart.c" />
+    <ClCompile Include="CWIP_update_cleaving_loss.c" />
+    <ClCompile Include="CWIP_update_cleaving_loss_gram.c" />
+    <ClCompile Include="CWIP_update_cleaving_status.c" />
+    <ClCompile Include="CWIP_collect_peel_test_data.c" />
+    <ClCompile Include="CWIP_update_ctm.c" />
+    <ClCompile Include="CWIP_update_day_inventory.c" />
+    <ClCompile Include="CWIP_update_entry_list.c" />
+    <ClCompile Include="CWIP_update_fmb_notice.c" />
+    <ClCompile Include="CWIP_update_hourly_fqc_worklog.c" />
+    <ClCompile Include="CWIP_update_inspection_list.c" />
+    <ClCompile Include="CWIP_update_laminator_pull_test.c" />
+    <ClCompile Include="CWIP_update_laminator_recipe.c" />
+    <ClCompile Include="CWIP_update_lot_extention.c" />
+    <ClCompile Include="CWIP_update_lot_image_save.c" />
+    <ClCompile Include="CWIP_update_lot_rework.c" />
+    <ClCompile Include="CWIP_update_material_termination.c" />
+    <ClCompile Include="CWIP_update_module_repair.c" />
+    <ClCompile Include="CWIP_update_module_repair_overkill.c" />
+    <ClCompile Include="CWIP_update_move_confirm.c" />
+    <ClCompile Include="CWIP_update_move_request.c" />
+    <ClCompile Include="CWIP_update_oqc_technician.c" />
+    <ClCompile Include="CWIP_update_packing_module_list.c" />
+    <ClCompile Include="CWIP_update_peeltestresult.c" />
+    <ClCompile Include="CWIP_update_plan.c" />
+    <ClCompile Include="CWIP_update_pmpp_diode_alert.c" />
+    <ClCompile Include="CWIP_update_product_plan.c" />
+    <ClCompile Include="CWIP_update_repacking_log.c" />
+    <ClCompile Include="CWIP_update_repair_insentive.c" />
+    <ClCompile Include="CWIP_update_scraplb_list_tb.c" />
+    <ClCompile Include="CWIP_update_scraplb_tb.c" />
+    <ClCompile Include="CWIP_update_scrap_list.c" />
+    <ClCompile Include="CWIP_update_scrap_list_lb.c" />
+    <ClCompile Include="CWIP_update_silicone_management.c" />
+    <ClCompile Include="CWIP_update_tabber_status.c" />
+    <ClCompile Include="CWIP_update_tb_cleaning_schedule.c" />
+    <ClCompile Include="CWIP_update_tray.c" />
+    <ClCompile Include="CWIP_update_tray_management.c" />
+    <ClCompile Include="CWIP_validate_for_fqc_rejudgment.c" />
+    <ClCompile Include="CWIP_validate_terminate_lot.c" />
+    <ClCompile Include="CWIP_validation_silicone_management.c" />
+    <ClCompile Include="CWIP_view_4m_list.c" />
+    <ClCompile Include="CWIP_view_acmodule_history_list.c" />
+    <ClCompile Include="CWIP_view_bom_list.c" />
+    <ClCompile Include="CWIP_view_cleaving_loss_list.c" />
+    <ClCompile Include="CWIP_view_cleaving_loss_list_gram.c" />
+    <ClCompile Include="CWIP_view_cleaving_status.c" />
+    <ClCompile Include="CWIP_view_cleaving_status_list.c" />
+    <ClCompile Include="CWIP_view_day_inventory.c" />
+    <ClCompile Include="CWIP_view_day_inventory_list.c" />
+    <ClCompile Include="CWIP_view_entry.c" />
+    <ClCompile Include="CWIP_view_entry_list.c" />
+    <ClCompile Include="CWIP_view_fqc_flash_list.c" />
+    <ClCompile Include="CWIP_view_fqc_list.c" />
+    <ClCompile Include="CWIP_view_fqc_result.c" />
+    <ClCompile Include="CWIP_update_fqc_result.c" />
+    <ClCompile Include="CWIP_move_halfcell_cart.c" />
+    <ClCompile Include="CWIP_packing_fullcell.c" />
+    <ClCompile Include="CWIP_packing_halfcell.c" />
+    <ClCompile Include="CWIP_view_current_order_by_line.c" />
+    <ClCompile Include="CWIP_view_fullcell_lot_validation.c" />
+    <ClCompile Include="CWIP_view_grade.c" />
+    <ClCompile Include="CWIP_view_grade_multi.c" />
+    <ClCompile Include="CWIP_view_hourly_fqc_worklog.c" />
+    <ClCompile Include="CWIP_view_hourly_fqc_worklog_list.c" />
+    <ClCompile Include="CWIP_view_inspection_list.c" />
+    <ClCompile Include="CWIP_view_laminator_pull_test.c" />
+    <ClCompile Include="CWIP_view_laminator_pull_test_list.c" />
+    <ClCompile Include="CWIP_view_laminator_recipe.c" />
+    <ClCompile Include="CWIP_view_laminator_recipe_list.c" />
+    <ClCompile Include="CWIP_view_line_list.c" />
+    <ClCompile Include="CWIP_view_lot.c" />
+    <ClCompile Include="CWIP_view_inventory_lot_list.c" />
+    <ClCompile Include="CWIP_view_lot_extention.c" />
+    <ClCompile Include="CWIP_view_lot_extention_list.c" />
+    <ClCompile Include="CWIP_view_lot_image_save.c" />
+    <ClCompile Include="CWIP_view_lot_image_save_list.c" />
+    <ClCompile Include="CWIP_view_materials_in_bom_list.c" />
+    <ClCompile Include="CWIP_view_material_list_by_production.c" />
+    <ClCompile Include="CWIP_view_material_termination.c" />
+    <ClCompile Include="CWIP_view_material_termination_list.c" />
+    <ClCompile Include="CWIP_view_module_label_print.c" />
+    <ClCompile Include="CWIP_view_monthly_plan.c" />
+    <ClCompile Include="CWIP_view_operation_list.c" />
+    <ClCompile Include="CWIP_view_oqc_technician.c" />
+    <ClCompile Include="CWIP_view_orders_by_material_list.c" />
+    <ClCompile Include="CWIP_view_order_bom_list.c" />
+    <ClCompile Include="CWIP_view_packing_barcode_print.c" />
+    <ClCompile Include="CWIP_view_packing_fullcell_list.c" />
+    <ClCompile Include="CWIP_view_packing_halfcell_list.c" />
+    <ClCompile Include="CWIP_view_packing_label_print.c" />
+    <ClCompile Include="CWIP_view_packing_label_print_v1.c" />
+    <ClCompile Include="CWIP_view_packing_label_print_v2.c" />
+    <ClCompile Include="CWIP_view_packing_lot.c" />
+    <ClCompile Include="CWIP_view_packing_module_list.c" />
+    <ClCompile Include="CWIP_view_pallet_current_seq.c" />
+    <ClCompile Include="CWIP_view_peeltestresult.c" />
+    <ClCompile Include="CWIP_view_peeltestresult_list.c" />
+    <ClCompile Include="CWIP_view_pmpp_diode_alert_list.c" />
+    <ClCompile Include="CWIP_view_port_operation_list.c" />
+    <ClCompile Include="CWIP_view_repacking_log.c" />
+    <ClCompile Include="CWIP_view_repacking_log_list.c" />
+    <ClCompile Include="CWIP_view_repair_insentive.c" />
+    <ClCompile Include="CWIP_view_rework_list.c" />
+    <ClCompile Include="CWIP_view_rework_result.c" />
+    <ClCompile Include="CWIP_view_scraplb_tb.c" />
+    <ClCompile Include="CWIP_view_scraplb_tb_list.c" />
+    <ClCompile Include="CWIP_view_scraplb_tb_mst_list.c" />
+    <ClCompile Include="CWIP_view_scrap_list.c" />
+    <ClCompile Include="CWIP_view_scrap_list_lb.c" />
+    <ClCompile Include="CWIP_view_silicone_list.c" />
+    <ClCompile Include="CWIP_view_tabber_status.c" />
+    <ClCompile Include="CWIP_view_tb_cleaning_schedule.c" />
+    <ClCompile Include="CWIP_view_tb_cleaning_schedule_list.c" />
+    <ClCompile Include="CWIP_view_terminate_cause_list.c" />
+    <ClCompile Include="CWIP_view_tray.c" />
+    <ClCompile Include="CWIP_update_string_repair_data.c" />
+    <ClCompile Include="CWIP_view_string_repair_data.c" />
+    <ClCompile Include="CWIP_view_string_repair_data_list.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_HQCUSM_common.h" />
+    <ClInclude Include="CUS_HQCUSM_service.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

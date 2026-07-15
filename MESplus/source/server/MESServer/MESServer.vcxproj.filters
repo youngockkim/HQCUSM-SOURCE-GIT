@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{401133a3-7107-48f4-9bdd-ec0d34fae24c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Build Files">
+      <UniqueIdentifier>{b9cda3b0-e027-4364-84f9-2e88db010dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Ini Files">
+      <UniqueIdentifier>{3fc775a7-fe65-420e-9889-c4bc650aaed7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MESServer_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MESServerAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resource\ADMServer.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resource\MESServer.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resource\RTDServer.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\makefile.cmm">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\symbolic_link.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zBuild.xml">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zBuildRv.xml">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zCopySrcExe.xml">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zWinBuild.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zWinBuilder.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zWinCopyExe.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zWinPackage.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\zBuild\zWinPackageServer.bat">
+      <Filter>_Build Files</Filter>
+    </None>
+    <None Include="..\..\..\cmd\MESplus.ini">
+      <Filter>_Ini Files</Filter>
+    </None>
+    <None Include="..\..\..\cmd\MESServer.ini">
+      <Filter>_Ini Files</Filter>
+    </None>
+    <None Include="..\..\..\cmd\RTDServer.ini">
+      <Filter>_Ini Files</Filter>
+    </None>
+    <None Include="makefile" />
+    <None Include="makefile.tibrv" />
+    <None Include="..\..\zBuild\zBuildRvSiltronic.xml">
+      <Filter>_Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MESServer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

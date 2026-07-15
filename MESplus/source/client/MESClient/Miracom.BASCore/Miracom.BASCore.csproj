@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0547C8B1-B1B3-45C9-B192-8D0F38891221}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.BASCore</RootNamespace>
+    <AssemblyName>Miracom.BASCore</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Miracom.BASCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Miracom.BASCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Excel, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.Design, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Miracom.CliFrx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\udcChecklistKeyPrompt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcChecklistKeyPrompt.Designer.cs">
+      <DependentUpon>udcChecklistKeyPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewBatchJobProcessorHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewBatchJobProcessorHistory.Designer.cs">
+      <DependentUpon>frmBASViewBatchJobProcessorHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewBatchJobProcessorStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewBatchJobProcessorStatus.Designer.cs">
+      <DependentUpon>frmBASViewBatchJobProcessorStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewGeneralCodeDataHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewGeneralCodeDataHistory.Designer.cs">
+      <DependentUpon>frmBASViewGeneralCodeDataHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewGeneralCodeTableHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewGeneralCodeTableHistory.Designer.cs">
+      <DependentUpon>frmBASViewGeneralCodeTableHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupBatchJobProcessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupBatchJobProcessor.designer.cs">
+      <DependentUpon>frmBASSetupBatchJobProcessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMessage.Designer.cs">
+      <DependentUpon>frmBASSetupMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAnswerfortheChecklistPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAnswerfortheChecklistPopUp.Designer.cs">
+      <DependentUpon>frmBASTranAnswerfortheChecklistPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranChangeAnswerfortheChecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranChangeAnswerfortheChecklist.Designer.cs">
+      <DependentUpon>frmBASTranChangeAnswerfortheChecklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAnswerfortheChecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAnswerfortheChecklist.Designer.cs">
+      <DependentUpon>frmBASTranAnswerfortheChecklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewAnswerfortheChecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewAnswerfortheChecklist.Designer.cs">
+      <DependentUpon>frmBASViewAnswerfortheChecklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASAttributeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASAttributeDetail.Designer.cs">
+      <DependentUpon>frmBASAttributeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\udcAttributeStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASAttributeHistoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASAttributeHistoryDetail.Designer.cs">
+      <DependentUpon>frmBASAttributeHistoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewAttributeHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewAttributeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewFlexibleInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewFlexibleInquiry.Designer.cs">
+      <DependentUpon>frmBASViewFlexibleInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewFlexibleInquiryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmBASViewFlexibleInquiryMenu.designer.cs">
+      <DependentUpon>frmBASViewFlexibleInquiryMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modCommonRoutine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmBASSetupChecklistDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupChecklistDefinition.Designer.cs">
+      <DependentUpon>frmBASSetupChecklistDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupCalendarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupChecklistRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupChecklistRelation.Designer.cs">
+      <DependentUpon>frmBASSetupChecklistRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupCheckQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupCheckQuery.Designer.cs">
+      <DependentUpon>frmBASSetupCheckQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDataByImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDataByImport.Designer.cs">
+      <DependentUpon>frmBASSetupDataByImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentDesign.designer.cs">
+      <DependentUpon>frmBASSetupDocumentDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupFlexibleInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupFlexibleScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupFlexibleScreen.Designer.cs">
+      <DependentUpon>frmBASSetupFlexibleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGCMDataByPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGCMDataByPrivilege.Designer.cs">
+      <DependentUpon>frmBASSetupGCMDataByPrivilege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGeneralCodeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGeneralCodeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupInquiryScreenRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupInquiryScreenRelation.Designer.cs">
+      <DependentUpon>frmBASSetupInquiryScreenRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGCMCodeAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGCMCodeAttribute.Designer.cs">
+      <DependentUpon>frmBASSetupGCMCodeAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMenuGroupRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMenuGroupRelation.Designer.cs">
+      <DependentUpon>frmBASSetupMenuGroupRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentFormat.designer.cs">
+      <DependentUpon>frmBASSetupDocumentFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSubSetupTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSubSetupTable.Designer.cs">
+      <DependentUpon>frmBASSubSetupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGlobalOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupGlobalOption.Designer.cs">
+      <DependentUpon>frmBASSetupGlobalOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupDocumentTemplate.designer.cs">
+      <DependentUpon>frmBASSetupDocumentTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMenuGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBASSetupMenuGroup.Designer.cs">
+      <DependentUpon>frmBASSetupMenuGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranPrintDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranPrintDocument.Designer.cs">
+      <DependentUpon>frmBASTranPrintDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAttributeByPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAttributeByPrivilege.Designer.cs">
+      <DependentUpon>frmBASTranAttributeByPrivilege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAttributeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmBASTranAttributeDetail.Designer.cs">
+      <DependentUpon>frmBASTranAttributeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmCheckListTranMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmCheckListTranMain.Designer.cs">
+      <DependentUpon>frmCheckListTranMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\udcChecklistKeyPrompt.resx">
+      <DependentUpon>udcChecklistKeyPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewBatchJobProcessorHistory.resx">
+      <DependentUpon>frmBASViewBatchJobProcessorHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewBatchJobProcessorStatus.resx">
+      <DependentUpon>frmBASViewBatchJobProcessorStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewGeneralCodeDataHistory.resx">
+      <DependentUpon>frmBASViewGeneralCodeDataHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewGeneralCodeTableHistory.resx">
+      <DependentUpon>frmBASViewGeneralCodeTableHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupBatchJobProcessor.resx">
+      <DependentUpon>frmBASSetupBatchJobProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranAnswerfortheChecklist.resx">
+      <DependentUpon>frmBASTranAnswerfortheChecklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranAnswerfortheChecklistPopUp.resx">
+      <DependentUpon>frmBASTranAnswerfortheChecklistPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranChangeAnswerfortheChecklist.resx">
+      <DependentUpon>frmBASTranChangeAnswerfortheChecklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewAnswerfortheChecklist.resx">
+      <DependentUpon>frmBASViewAnswerfortheChecklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASAttributeDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASAttributeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcAttributeStatus.resx">
+      <DependentUpon>udcAttributeStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASAttributeHistoryDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASAttributeHistoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewAttributeHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASViewAttributeHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewAttributeStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASViewAttributeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewFlexibleInquiry.resx">
+      <DependentUpon>frmBASViewFlexibleInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmBASViewFlexibleInquiryMenu.resx">
+      <DependentUpon>frmBASViewFlexibleInquiryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Setup\frmBASSetupChecklistDefinition.resx">
+      <DependentUpon>frmBASSetupChecklistDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupAttribute.resx">
+      <DependentUpon>frmBASSetupAttribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupCalendar.resx">
+      <DependentUpon>frmBASSetupCalendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupCalendarDetail.resx">
+      <DependentUpon>frmBASSetupCalendarDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupChecklistRelation.resx">
+      <DependentUpon>frmBASSetupChecklistRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupCheckQuery.resx">
+      <DependentUpon>frmBASSetupCheckQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupDataByImport.resx">
+      <DependentUpon>frmBASSetupDataByImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupDocumentDesign.resx">
+      <DependentUpon>frmBASSetupDocumentDesign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupFlexibleInquiry.resx">
+      <DependentUpon>frmBASSetupFlexibleInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupFlexibleScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASSetupFlexibleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupGCMDataByPrivilege.resx">
+      <DependentUpon>frmBASSetupGCMDataByPrivilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupGeneralCodeData.resx">
+      <DependentUpon>frmBASSetupGeneralCodeData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupGeneralCodeTable.resx">
+      <DependentUpon>frmBASSetupGeneralCodeTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupInquiryScreenRelation.resx">
+      <DependentUpon>frmBASSetupInquiryScreenRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupGCMCodeAttribute.resx">
+      <DependentUpon>frmBASSetupGCMCodeAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupMenuGroupRelation.resx">
+      <DependentUpon>frmBASSetupMenuGroupRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupMessage.resx">
+      <DependentUpon>frmBASSetupMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupDocumentFormat.resx">
+      <DependentUpon>frmBASSetupDocumentFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSubSetupTable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASSubSetupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupGlobalOption.resx">
+      <DependentUpon>frmBASSetupGlobalOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupDocumentTemplate.resx">
+      <DependentUpon>frmBASSetupDocumentTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBASSetupMenuGroup.resx">
+      <DependentUpon>frmBASSetupMenuGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranAttribute.resx">
+      <DependentUpon>frmBASTranAttribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranAttributeByPrivilege.resx">
+      <DependentUpon>frmBASTranAttributeByPrivilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranAttributeDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBASTranAttributeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmBASTranPrintDocument.resx">
+      <DependentUpon>frmBASTranPrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmCheckListTranMain.resx">
+      <DependentUpon>frmCheckListTranMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

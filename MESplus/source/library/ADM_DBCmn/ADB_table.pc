@@ -1,0 +1,382 @@
+EXEC SQL BEGIN DECLARE SECTION;
+    EXEC SQL INCLUDE ADB_COMMON_N;
+EXEC SQL END DECLARE SECTION;
+
+/* SQL Common Header File */
+#include "ADB_common.h"
+
+
+/* SQL Error Handling */
+EXEC SQL WHENEVER SQLERROR DO DB_usr_error();
+EXEC SQL WHENEVER NOT FOUND DO DB_usr_error();
+
+
+void ADB_add_null_tab(struct TAB_N_TAG *TAB_N, struct TAB_TAG *TAB);
+void ADB_del_null_tab(struct TAB_N_TAG *TAB_N, struct TAB_TAG *TAB);
+
+
+void ADB_select_tab(int sel_type, struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tab(&TAB_N, TAB);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL SELECT 
+                FACTORY,
+                TNAME,
+                TABTYPE,
+                MODULE,
+                TBL_TYPE,
+                CLUSTERID
+            INTO
+                :TAB_N.FACTORY,
+                :TAB_N.TNAME,
+                :TAB_N.TABTYPE,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE,
+                :TAB_N.CLUSTERID
+            FROM TAB;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    if(DB_error_code == 0)
+    {
+        ADB_del_null_tab(&TAB_N, TAB);
+    }
+    DB_stop_query_timer("ADB_select_tab", sel_type);
+}
+
+void ADB_select_tab_for_update(int sel_type, struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tab(&TAB_N, TAB);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL SELECT 
+                FACTORY,
+                TNAME,
+                TABTYPE,
+                MODULE,
+                TBL_TYPE,
+                CLUSTERID
+            INTO
+                :TAB_N.FACTORY,
+                :TAB_N.TNAME,
+                :TAB_N.TABTYPE,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE,
+                :TAB_N.CLUSTERID
+            FROM TAB
+            FOR UPDATE;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    
+    if(DB_error_code == 0)
+    {
+        ADB_del_null_tab(&TAB_N, TAB);
+    }
+    DB_stop_query_timer("ADB_select_tab_for_update", sel_type);
+}
+
+void ADB_delete_tab(int sel_type, struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tab(&TAB_N, TAB);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL DELETE FROM TAB 
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_delete_tab", sel_type);
+}
+
+void ADB_insert_tab(struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tab(&TAB_N, TAB);
+    DB_error_code=0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    EXEC SQL INSERT INTO TAB (
+                    FACTORY,
+                    TNAME,
+                    TABTYPE,
+                    MODULE,
+                    TBL_TYPE,
+                    CLUSTERID
+        )
+        VALUES (
+                    :TAB_N.FACTORY,
+                    :TAB_N.TNAME,
+                    :TAB_N.TABTYPE,
+                    :TAB_N.MODULE,
+                    :TAB_N.TBL_TYPE,
+                    :TAB_N.CLUSTERID
+        );
+    DB_stop_query_timer("ADB_insert_tab", 0);
+}
+
+void ADB_open_tab(int sel_type, struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+        char  sql_stat[1024];
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_tab(&TAB_N, TAB);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL DECLARE ADB_TAB_CUR_1 CURSOR FOR 
+                SELECT NVL(TNAME,'1'), 
+                        NVL(TABTYPE,'1'), 
+                        NVL(CLUSTERID,0)
+                FROM TAB
+                WHERE TNAME >= :TAB_N.TNAME
+                ORDER BY TNAME ASC;
+            EXEC SQL OPEN ADB_TAB_CUR_1;
+            break;
+            
+        case 2:
+            EXEC SQL DECLARE ADB_TAB_CUR_2 CURSOR FOR 
+                SELECT NVL(A.TNAME,'1'), 
+                        NVL(B.MODULE,' '), NVL(B.TBL_TYPE,' ')
+                FROM TAB A, MARCTABDEF B
+                WHERE B.FACTORY = :TAB_N.FACTORY
+                    AND A.TNAME =  B.TBL_NAME (+)
+                    AND A.TNAME >= :TAB_N.TNAME
+                ORDER BY A.TNAME ASC;
+            EXEC SQL OPEN ADB_TAB_CUR_2;
+            break;
+        
+        case 3:
+                sprintf(sql_stat, "SELECT NVL(A.TNAME,'1'),NVL(B.MODULE,' '),NVL(B.TBL_TYPE,' ') ");
+                sprintf(sql_stat + strlen(sql_stat), "FROM  (SELECT '%s' AS FACTORY, TNAME FROM TAB ", TAB_N.FACTORY);
+                sprintf(sql_stat + strlen(sql_stat), "WHERE TNAME IN (SELECT TABLE_NAME FROM USER_TABLES MINUS ");
+                sprintf(sql_stat + strlen(sql_stat), "SELECT MVIEW_NAME FROM USER_MVIEWS)) A, MARCTABDEF B ");
+                sprintf(sql_stat + strlen(sql_stat), "WHERE  A.TNAME =  B.TBL_NAME (+) ");
+                sprintf(sql_stat + strlen(sql_stat), "AND A.FACTORY = B.FACTORY (+) ");
+                sprintf(sql_stat + strlen(sql_stat), "AND A.TNAME >= '%s' ", TAB_N.TNAME);
+                sprintf(sql_stat + strlen(sql_stat), "ORDER BY A.TNAME ASC");
+                EXEC SQL PREPARE S FROM :sql_stat;
+                EXEC SQL DECLARE ADB_TAB_CUR_3 CURSOR FOR S;
+                EXEC SQL OPEN ADB_TAB_CUR_3;
+            break;
+        
+        case 4:
+            EXEC SQL DECLARE ADB_TAB_CUR_4 CURSOR FOR 
+                SELECT NVL(A.TNAME,'1'), 
+                        NVL(B.MODULE,' '), NVL(B.TBL_TYPE,' ')
+                FROM TAB A, MARCTABDEF B
+                WHERE B.FACTORY = :TAB_N.FACTORY
+                    AND A.TNAME =  B.TBL_NAME (+)
+                    AND B.TBL_TYPE = 'M'
+                    AND A.TNAME >= :TAB_N.TNAME
+                ORDER BY A.TNAME ASC;
+            EXEC SQL OPEN ADB_TAB_CUR_4;
+            break;
+        
+        case 5:
+            EXEC SQL DECLARE ADB_TAB_CUR_5 CURSOR FOR 
+                SELECT NVL(A.TNAME,'1'), 
+                        NVL(B.MODULE,' '), NVL(B.TBL_TYPE,' ')
+                FROM TAB A, MARCTABDEF B
+                WHERE B.FACTORY = :TAB_N.FACTORY
+                    AND A.TNAME =  B.TBL_NAME (+)
+                    AND B.TBL_TYPE = 'S'
+                    AND A.TNAME >= :TAB_N.TNAME
+                ORDER BY A.TNAME ASC;
+            EXEC SQL OPEN ADB_TAB_CUR_5;
+            break;
+        
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_open_tab", sel_type);
+}
+
+void ADB_fetch_tab(int sel_type, struct TAB_TAG *TAB)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct TAB_N_TAG TAB_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL FETCH ADB_TAB_CUR_1 INTO 
+                :TAB_N.TNAME,
+                :TAB_N.TABTYPE,
+                :TAB_N.CLUSTERID;
+            break;
+            
+        case 2:
+            EXEC SQL FETCH ADB_TAB_CUR_2 INTO 
+                :TAB_N.TNAME,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE;
+            break;
+            
+        case 3:
+            EXEC SQL FETCH ADB_TAB_CUR_3 INTO 
+                :TAB_N.TNAME,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE;
+            break;
+            
+        case 4:
+            EXEC SQL FETCH ADB_TAB_CUR_4 INTO 
+                :TAB_N.TNAME,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE;
+            break;
+            
+        case 5:
+            EXEC SQL FETCH ADB_TAB_CUR_5 INTO 
+                :TAB_N.TNAME,
+                :TAB_N.MODULE,
+                :TAB_N.TBL_TYPE;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    
+    if(DB_error_code == 0)
+    {
+        ADB_del_null_tab(&TAB_N, TAB);
+    }
+    DB_stop_query_timer("ADB_fetch_tab", sel_type);
+}
+
+void ADB_close_tab(int sel_type)
+{
+
+    DB_start_query_timer();
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL CLOSE ADB_TAB_CUR_1;
+            break;
+            
+        case 2:
+            EXEC SQL CLOSE ADB_TAB_CUR_2;
+            break;
+            
+        case 3:
+            EXEC SQL CLOSE ADB_TAB_CUR_3;
+            break;
+            
+        case 4:
+            EXEC SQL CLOSE ADB_TAB_CUR_4;
+            break;
+            
+        case 5:
+            EXEC SQL CLOSE ADB_TAB_CUR_5;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_close_tab", sel_type);
+}
+
+/* Initialize Function */
+void ADB_init_tab(struct TAB_TAG *TAB)
+{
+    /* memset by Space */
+    memset(TAB, ' ', sizeof(struct TAB_TAG));
+    
+    TAB->CLUSTERID = 0;
+
+}
+
+void ADB_add_null_tab(struct TAB_N_TAG *TAB_N, struct TAB_TAG *TAB)
+{
+
+    memset(TAB_N, '\0', sizeof(struct TAB_N_TAG));
+    MEMCPY_AN(TAB_N->FACTORY, TAB->FACTORY, sizeof(TAB->FACTORY));
+    MEMCPY_AN(TAB_N->TNAME, TAB->TNAME, sizeof(TAB->TNAME));
+    MEMCPY_AN(TAB_N->TABTYPE, TAB->TABTYPE, sizeof(TAB->TABTYPE));
+    MEMCPY_AN(TAB_N->MODULE, TAB->MODULE, sizeof(TAB->MODULE));
+    TAB_N->TBL_TYPE = TAB->TBL_TYPE;
+    TAB_N->CLUSTERID = TAB->CLUSTERID;
+}
+
+void ADB_del_null_tab(struct TAB_N_TAG *TAB_N, struct TAB_TAG *TAB)
+{
+    MEMCPY_DN(TAB->FACTORY, TAB_N->FACTORY, sizeof(TAB->FACTORY));
+    MEMCPY_DN(TAB->TNAME, TAB_N->TNAME, sizeof(TAB->TNAME));
+    MEMCPY_DN(TAB->TABTYPE, TAB_N->TABTYPE, sizeof(TAB->TABTYPE));
+    MEMCPY_DN(TAB->MODULE, TAB_N->MODULE, sizeof(TAB->MODULE));
+    TAB->TBL_TYPE = TAB_N->TBL_TYPE;
+    TAB->CLUSTERID = TAB_N->CLUSTERID;
+}
+

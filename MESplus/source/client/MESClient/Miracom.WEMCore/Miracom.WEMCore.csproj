@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21D712AD-C372-46DB-85E4-6CEDF7A19AE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.WEMCore</RootNamespace>
+    <AssemblyName>Miracom.WEMCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Miracom.WEMCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\MicrosoftVisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\MicrosoftVisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Miracom.WEMCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\MicrosoftVisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\MicrosoftVisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.CalcEngine, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Excel, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PDF, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Chart, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.Design, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventHistory.Designer.cs">
+      <DependentUpon>frmWEMViewWorkProcessEventHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventList.Designer.cs">
+      <DependentUpon>frmWEMViewWorkProcessEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmWEMViewWorkProcessEventStatus.Designer.cs">
+      <DependentUpon>frmWEMViewWorkProcessEventStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmWEMSetupStepAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupStepAction.Designer.cs">
+      <DependentUpon>frmWEMSetupStepAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupProcessStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupProcessStep.Designer.cs">
+      <DependentUpon>frmWEMSetupProcessStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupWorkProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupWorkProcess.Designer.cs">
+      <DependentUpon>frmWEMSetupWorkProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupWorkProcessType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmWEMSetupWorkProcessType.Designer.cs">
+      <DependentUpon>frmWEMSetupWorkProcessType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionCustomAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionCustomAction.Designer.cs">
+      <DependentUpon>udcStepActionCustomAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionAdapt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionAdapt.Designer.cs">
+      <DependentUpon>udcStepActionAdapt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionBase.Designer.cs">
+      <DependentUpon>udcStepActionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionCarrierEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionCarrierEvent.Designer.cs">
+      <DependentUpon>udcStepActionCarrierEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionChangeStatusValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionChangeStatusValue.Designer.cs">
+      <DependentUpon>udcStepActionChangeStatusValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionDeactivateMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionDeactivateMaterial.Designer.cs">
+      <DependentUpon>udcStepActionDeactivateMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionEnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionEnd.Designer.cs">
+      <DependentUpon>udcStepActionEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionHold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionHold.Designer.cs">
+      <DependentUpon>udcStepActionHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionInputAttribute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionInputAttribute.Designer.cs">
+      <DependentUpon>udcStepActionInputAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionMoveLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionMoveLot.Designer.cs">
+      <DependentUpon>udcStepActionMoveLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionMoveStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionMoveStep.Designer.cs">
+      <DependentUpon>udcStepActionMoveStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionNewBBS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionNewBBS.Designer.cs">
+      <DependentUpon>udcStepActionNewBBS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRaiseAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRaiseAlarm.Designer.cs">
+      <DependentUpon>udcStepActionRaiseAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRelease.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRelease.Designer.cs">
+      <DependentUpon>udcStepActionRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRepair.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRepair.Designer.cs">
+      <DependentUpon>udcStepActionRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionResourceEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionResourceEvent.Designer.cs">
+      <DependentUpon>udcStepActionResourceEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionReturnMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionReturnMessage.Designer.cs">
+      <DependentUpon>udcStepActionReturnMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRework.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionRework.Designer.cs">
+      <DependentUpon>udcStepActionRework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionSkip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionSkip.Designer.cs">
+      <DependentUpon>udcStepActionSkip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionStore.Designer.cs">
+      <DependentUpon>udcStepActionStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionTerminate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionTerminate.Designer.cs">
+      <DependentUpon>udcStepActionTerminate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionToolEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionToolEvent.Designer.cs">
+      <DependentUpon>udcStepActionToolEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\udcStepActionUnstore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setup\udcStepActionUnstore.Designer.cs">
+      <DependentUpon>udcStepActionUnstore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWEMTranDeleteProcessEventHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWEMTranDeleteProcessEventHistory.Designer.cs">
+      <DependentUpon>frmWEMTranDeleteProcessEventHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmWEMTranWorkProcessEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmWEMTranWorkProcessEvent.Designer.cs">
+      <DependentUpon>frmWEMTranWorkProcessEvent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Inquiry\frmWEMViewWorkProcessEventHistory.resx">
+      <DependentUpon>frmWEMViewWorkProcessEventHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWEMViewWorkProcessEventList.resx">
+      <DependentUpon>frmWEMViewWorkProcessEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmWEMViewWorkProcessEventStatus.resx">
+      <DependentUpon>frmWEMViewWorkProcessEventStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setup\frmWEMSetupStepAction.resx">
+      <DependentUpon>frmWEMSetupStepAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWEMSetupProcessStep.resx">
+      <DependentUpon>frmWEMSetupProcessStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWEMSetupWorkProcess.resx">
+      <DependentUpon>frmWEMSetupWorkProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmWEMSetupWorkProcessType.resx">
+      <DependentUpon>frmWEMSetupWorkProcessType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionAdapt.resx">
+      <DependentUpon>udcStepActionAdapt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionCarrierEvent.resx">
+      <DependentUpon>udcStepActionCarrierEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionCustomAction.resx">
+      <DependentUpon>udcStepActionCustomAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionBase.resx">
+      <DependentUpon>udcStepActionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionChangeStatusValue.resx">
+      <DependentUpon>udcStepActionChangeStatusValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionDeactivateMaterial.resx">
+      <DependentUpon>udcStepActionDeactivateMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionEnd.resx">
+      <DependentUpon>udcStepActionEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionHold.resx">
+      <DependentUpon>udcStepActionHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionInputAttribute.resx">
+      <DependentUpon>udcStepActionInputAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionMoveLot.resx">
+      <DependentUpon>udcStepActionMoveLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionMoveStep.resx">
+      <DependentUpon>udcStepActionMoveStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionRaiseAlarm.resx">
+      <DependentUpon>udcStepActionRaiseAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionRelease.resx">
+      <DependentUpon>udcStepActionRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionRepair.resx">
+      <DependentUpon>udcStepActionRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionResourceEvent.resx">
+      <DependentUpon>udcStepActionResourceEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionReturnMessage.resx">
+      <DependentUpon>udcStepActionReturnMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionRework.resx">
+      <DependentUpon>udcStepActionRework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionSkip.resx">
+      <DependentUpon>udcStepActionSkip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionStore.resx">
+      <DependentUpon>udcStepActionStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionTerminate.resx">
+      <DependentUpon>udcStepActionTerminate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionToolEvent.resx">
+      <DependentUpon>udcStepActionToolEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\udcStepActionUnstore.resx">
+      <DependentUpon>udcStepActionUnstore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWEMTranDeleteProcessEventHistory.resx">
+      <DependentUpon>frmWEMTranDeleteProcessEventHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmWEMTranWorkProcessEvent.resx">
+      <DependentUpon>frmWEMTranWorkProcessEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

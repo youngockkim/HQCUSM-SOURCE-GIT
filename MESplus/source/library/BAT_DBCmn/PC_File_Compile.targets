@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="PC_File_Compile">
+      <Targets>_PC_File_Compile</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="PC_File_Compile"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_PC_File_Compile"
+    BeforeTargets="$(PC_File_CompileBeforeTargets)"
+    AfterTargets="$(PC_File_CompileAfterTargets)"
+    Condition="'@(PC_File_Compile)' != ''"
+    DependsOnTargets="$(PC_File_CompileDependsOn);ComputePC_File_CompileOutput"
+    Outputs="%(PC_File_Compile.Outputs)"
+    Inputs="%(PC_File_Compile.Identity);%(PC_File_Compile.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <PC_File_Compile
+        Remove="@(PC_File_Compile)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <PC_File_Compile_tlog
+        Include="%(PC_File_Compile.Outputs)"
+        Condition="'%(PC_File_Compile.Outputs)' != '' and '%(PC_File_Compile.ExcludedFromBuild)' != 'true'">
+        <Source>@(PC_File_Compile, '|')</Source>
+      </PC_File_Compile_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(PC_File_Compile.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(PC_File_Compile_tlog)' != '' and '%(PC_File_Compile_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(PC_File_Compile_tlog.Source);@(PC_File_Compile_tlog-&gt;'%(Fullpath)')" />
+    <PC_File_Compile
+      Condition="'@(PC_File_Compile)' != '' and '%(PC_File_Compile.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(PC_File_Compile.CommandLineTemplate)"
+      AdditionalOptions="%(PC_File_Compile.AdditionalOptions)"
+      Inputs="%(PC_File_Compile.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputePC_File_CompileOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputePC_File_CompileOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputePC_File_CompileOutput"
+    Condition="'@(PC_File_Compile)' != ''">
+    <ItemGroup>
+      <PC_File_CompileDirsToMake
+        Condition="'@(PC_File_Compile)' != '' and '%(PC_File_Compile.ExcludedFromBuild)' != 'true'"
+        Include="%(PC_File_Compile.Outputs)" />
+      <Link
+        Include="%(PC_File_CompileDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(PC_File_CompileDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(PC_File_CompileDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(PC_File_CompileDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

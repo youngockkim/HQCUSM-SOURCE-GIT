@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Captions>
+    
+    <Other>
+        <Text Key="Add">
+            <L>Add</L>
+            <L>추가</L>
+            <L>Add</L>
+        </Text>
+        <Text Key="Address">
+            <L>Address</L>
+            <L>서버주소</L>
+            <L>Address</L>
+        </Text>
+        <Text Key="Auto Logout">
+            <L>Auto Logout</L>
+            <L>자동 로그아웃</L>
+            <L>Auto Logout</L>
+        </Text>
+        <Text Key="Cancel">
+            <L>Cancel</L>
+            <L>취소</L>
+            <L>Cancel</L>
+        </Text>
+        <Text Key="Check Ver">
+            <L>Check Version</L>
+            <L>버전 확인</L>
+            <L>Check Version</L>
+        </Text>
+        <Text Key="Check Version">
+            <L>Check Version</L>
+            <L>버전 확인</L>
+            <L>Check Version</L>
+        </Text>
+        <Text Key="Close">
+            <L>Close</L>
+            <L>닫기</L>
+            <L>Close</L>
+        </Text>
+        <Text Key="Company">
+            <L>Company</L>
+            <L>회사</L>
+            <L>Company</L>
+        </Text>
+        <Text Key="Del">
+            <L>Del</L>
+            <L>삭제</L>
+            <L>Del</L>
+        </Text>
+        <Text Key="Error Sound">
+            <L>Error Sound</L>
+            <L>오류 발생음</L>
+            <L>Error Sound</L>
+        </Text>
+        <Text Key="Factory">
+            <L>Factory</L>
+            <L>공장</L>
+            <L>Factory</L>
+        </Text>
+        <Text Key="_Factory">
+            <L>Company</L>
+            <L>회사</L>
+            <L>Company</L>
+        </Text>
+        <Text Key="Help">
+            <L>Help</L>
+            <L>도움말</L>
+            <L>Help</L>
+        </Text>
+        <Text Key="Language">
+            <L>Language</L>
+            <L>언어</L>
+            <L>Language</L>
+        </Text>
+        <Text Key="Login">
+            <L>Login</L>
+            <L>로그인</L>
+            <L>Login</L>
+        </Text>
+        <Text Key="Logout">
+            <L>Logout</L>
+            <L>로그아웃</L>
+            <L>Logout</L>
+        </Text>
+        <Text Key="Maximize">
+            <L>Maximize</L>
+            <L>최대화</L>
+            <L>Maximize</L>
+        </Text>
+        <Text Key="Menu">
+            <L>Menu</L>
+            <L>메뉴</L>
+            <L>Menu</L>
+        </Text>
+        <Text Key="min">
+            <L>min</L>
+            <L>분</L>
+            <L>min</L>
+        </Text>
+        <Text Key="Min">
+            <L>Min</L>
+            <L>분</L>
+            <L>Min</L>
+        </Text>
+        <Text Key="Minimize">
+            <L>Minimize</L>
+            <L>최소화</L>
+            <L>Minimize</L>
+        </Text>
+        <Text Key="Not Use">
+            <L>Not Use</L>
+            <L>사용 안 함</L>
+            <L>Not Use</L>
+        </Text>
+        <Text Key="OK">
+            <L>OK</L>
+            <L>확인</L>
+            <L>OK</L>
+        </Text>
+        <Text Key="Password">
+            <L>Password</L>
+            <L>암호</L>
+            <L>Password</L>
+        </Text>
+        <Text Key="sec">
+            <L>sec</L>
+            <L>초</L>
+            <L>sec</L>
+        </Text>
+        <Text Key="Sec">
+            <L>Sec</L>
+            <L>초</L>
+            <L>Sec</L>
+        </Text>
+        <Text Key="Server Address">
+            <L>Server Address</L>
+            <L>서버주소</L>
+            <L>Server Address</L>
+        </Text>
+        <Text Key="Settings">
+            <L>Settings</L>
+            <L>환경설정</L>
+            <L>Settings</L>
+        </Text>
+        <Text Key="Setting">
+            <L>Setting</L>
+            <L>환경설정</L>
+            <L>Setting</L>
+        </Text>
+        <Text Key="Seq">
+            <L>Seq</L>
+            <L>순서</L>
+            <L>Seq</L>
+        </Text>
+        <Text Key="Site">
+            <L>Site</L>
+            <L>사이트</L>
+            <L>Site</L>
+        </Text>
+        <Text Key="Theme">
+            <L>Theme</L>
+            <L>테마</L>
+            <L>Theme</L>
+        </Text>
+        <Text Key="Time Out">
+            <L>Time Out</L>
+            <L>타임아웃</L>
+            <L>Time Out</L>
+        </Text>
+	    <Text Key="Touch Keyboard">
+            <L>Touch Keyboard</L>
+            <L>터치 키보드</L>
+            <L>Touch Keyboard</L>
+        </Text>
+	    <Text Key="Use">
+            <L>Use</L>
+            <L>사용</L>
+            <L>Use</L>
+        </Text>
+        <Text Key="User ID">
+            <L>User ID</L>
+            <L>사용자</L>
+            <L>User ID</L>
+        </Text>
+        <Text Key="User Info">
+            <L>User Info</L>
+            <L>사용자 정보</L>
+            <L>User Info</L>
+        </Text>
+        <Text Key="Version Check">
+            <L>Version Check</L>
+            <L>버전 확인</L>
+            <L>Version Check</L>
+        </Text>
+        <Text Key="Left">
+            <L>Left</L>
+            <L>좌측</L>
+            <L>Left</L>
+        </Text>
+        <Text Key="Right">
+            <L>Right</L>
+            <L>우측</L>
+            <L>Right</L>
+        </Text>
+        <Text Key="Alarm Popup">
+            <L>Alarm Popup</L>
+            <L>알람 표시</L>
+            <L>Alarm Popup</L>
+        </Text>
+        <Text Key="Show">
+            <L>Show</L>
+            <L>표시</L>
+            <L>Show</L>
+        </Text>
+        <Text Key="Hide">
+            <L>Hide</L>
+            <L>표시 안 함</L>
+            <L>Hide</L>
+        </Text>
+        <Text Key="Favorites">
+            <L>Favorites</L>
+            <L>즐겨찾기</L>
+            <L>Favorites</L>
+        </Text>
+        <Text Key="All Menu">
+            <L>All Menu</L>
+            <L>전체메뉴</L>
+            <L>All Menu</L>
+        </Text>
+        <Text Key="View Error Message">
+            <L>View Error Message</L>
+            <L>에러 메시지 상세 조회</L>
+            <L>View Error Message</L>
+        </Text>
+        <Text Key="Error List">
+            <L>Error List</L>
+            <L>에러 목록</L>
+            <L>Error List</L>
+        </Text>
+        <Text Key="Field Message">
+            <L>Field Message</L>
+            <L>필드 메시지</L>
+            <L>Field Message</L>
+        </Text>
+        <Text Key="Category">
+            <L>Category</L>
+            <L>카테고리</L>
+            <L>Category</L>
+        </Text>
+        <Text Key="Text">
+            <L>Text</L>
+            <L>텍스트</L>
+            <L>Text</L>
+        </Text>
+        <Text Key="Select All">
+            <L>Select All</L>
+            <L>모두 선택</L>
+            <L>Select All</L>
+        </Text>
+        <Text Key="Release All">
+            <L>Release All</L>
+            <L>모두 선택 해제</L>
+            <L>Release All</L>
+        </Text>
+        <Text Key="View Alarm Message">
+            <L>View Alarm Message</L>
+            <L>알람 메시지 조회</L>
+            <L>View Alarm Message</L>
+        </Text>
+    </Other>
+
+
+</Captions>

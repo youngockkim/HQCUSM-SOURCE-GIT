@@ -1,0 +1,2136 @@
+
+using System.Diagnostics;
+using System;
+using System.Windows.Forms;
+using System.Collections;
+using System.Drawing;
+
+using Miracom.MsgHandler;
+using System.Data;
+using Miracom.MESCore;
+using Miracom.CliFrx;
+using FarPoint.Win.Spread;
+using Miracom.TRSCore;
+
+
+//-----------------------------------------------------------------------------
+//
+//   System      : MES
+//   File Name   : frmEDCSetupGeneralCodeData.vb
+//   Description : General Code Data Transaction Form
+//
+//   MES Version : 4.1.0.0
+//
+//   Function List
+//       - ClearData() : Intialize Form Field
+//       - CheckCondition() : Check the conditions before transaction
+//       - Update_MFO_ColSet_List() : Attach/Detach Collection Sets to MFO, FO, O
+//       - View_MFO_ColSet_List() :View MFO-Collection Set Relation
+//
+//   Detail Description
+//       -
+//
+//   History
+//       - **** Do Not Modify in Site!!! ****
+//       - 2004-06-21 : Created by SKJIN
+//       - 2008-01-14 : Modified by LAVERWON : 
+//
+//
+//   Copyright(C) 1998-2005 MIRACOM,INC.
+//   All rights reserved.
+//
+//-----------------------------------------------------------------------------
+
+//Imports
+
+
+namespace Miracom.EDCCore
+{
+    public class frmEDCSetupAttachCollectionSetToMFO : Miracom.MESCore.SetupForm01
+    {
+
+#if _EDC
+        
+#region " Windows Form auto generated code "
+        
+        public frmEDCSetupAttachCollectionSetToMFO()
+        {
+            
+            
+            InitializeComponent();
+            
+            
+            
+        }
+        
+        
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (!(components == null))
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+        
+        
+        private System.ComponentModel.Container components = null;
+
+
+
+
+        private System.Windows.Forms.TabControl tabMFO;
+        private System.Windows.Forms.Panel pnlFOMid;
+        private System.Windows.Forms.GroupBox grpFO;
+        private Miracom.UI.Controls.MCCodeView.MCCodeView cdvFlow;
+        private System.Windows.Forms.Label lblFlow;
+        private System.Windows.Forms.Panel pnlMFOMid;
+        private System.Windows.Forms.GroupBox grpMFO;
+        private System.Windows.Forms.TabPage tbpOper;
+        private System.Windows.Forms.TabPage tbpFO;
+        private System.Windows.Forms.TabPage tbpMFO;
+        private Miracom.UI.Controls.MCCodeView.MCSPCodeView cdvColSet;
+        private Miracom.MESCore.Controls.udcMaterial cdvMaterial;
+        private FpSpread spdOper;
+        private SheetView spdOper_Sheet1;
+        private FpSpread spdFO;
+        private SheetView spdFO_Sheet1;
+        private FpSpread spdMFO;
+        private SheetView spdMFO_Sheet1;
+        private Miracom.MESCore.Controls.udcFlow cdvFlow2;
+        public Button btnExcel;
+        private TabPage tbpMO;
+        private Panel pnlMOMid;
+        private FpSpread spdMO;
+        private SheetView spdMO_Sheet1;
+        private GroupBox groupBox1;
+        private MESCore.Controls.udcMaterial cdvMaterial2;
+        private System.Windows.Forms.Button btnRefresh;
+        [System.Diagnostics.DebuggerStepThrough()]private void InitializeComponent()
+        {
+            FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer1 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType1 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType1 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType1 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType2 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType3 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer4 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType4 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType2 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType2 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType5 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType6 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer5 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer6 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType7 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType3 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType3 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType8 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType9 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer7 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer8 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType10 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType7 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType8 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType4 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType4 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType11 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType12 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEDCSetupAttachCollectionSetToMFO));
+            this.tabMFO = new System.Windows.Forms.TabControl();
+            this.tbpOper = new System.Windows.Forms.TabPage();
+            this.spdOper = new FarPoint.Win.Spread.FpSpread();
+            this.spdOper_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.tbpFO = new System.Windows.Forms.TabPage();
+            this.pnlFOMid = new System.Windows.Forms.Panel();
+            this.spdFO = new FarPoint.Win.Spread.FpSpread();
+            this.spdFO_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.grpFO = new System.Windows.Forms.GroupBox();
+            this.cdvFlow = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.lblFlow = new System.Windows.Forms.Label();
+            this.tbpMFO = new System.Windows.Forms.TabPage();
+            this.pnlMFOMid = new System.Windows.Forms.Panel();
+            this.spdMFO = new FarPoint.Win.Spread.FpSpread();
+            this.spdMFO_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.grpMFO = new System.Windows.Forms.GroupBox();
+            this.cdvFlow2 = new Miracom.MESCore.Controls.udcFlow();
+            this.cdvMaterial = new Miracom.MESCore.Controls.udcMaterial();
+            this.tbpMO = new System.Windows.Forms.TabPage();
+            this.pnlMOMid = new System.Windows.Forms.Panel();
+            this.spdMO = new FarPoint.Win.Spread.FpSpread();
+            this.spdMO_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cdvMaterial2 = new Miracom.MESCore.Controls.udcMaterial();
+            this.cdvColSet = new Miracom.UI.Controls.MCCodeView.MCSPCodeView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.pnlBottom.SuspendLayout();
+            this.pnlCenter.SuspendLayout();
+            this.pnlTop.SuspendLayout();
+            this.tabMFO.SuspendLayout();
+            this.tbpOper.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spdOper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdOper_Sheet1)).BeginInit();
+            this.tbpFO.SuspendLayout();
+            this.pnlFOMid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spdFO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdFO_Sheet1)).BeginInit();
+            this.grpFO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvFlow)).BeginInit();
+            this.tbpMFO.SuspendLayout();
+            this.pnlMFOMid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMFO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMFO_Sheet1)).BeginInit();
+            this.grpMFO.SuspendLayout();
+            this.tbpMO.SuspendLayout();
+            this.pnlMOMid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMO_Sheet1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvColSet)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(374, 5);
+            this.btnCreate.Text = "Add";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(556, 5);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(465, 5);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(647, 5);
+            // 
+            // pnlBottom
+            // 
+            this.pnlBottom.Controls.Add(this.btnExcel);
+            this.pnlBottom.Controls.Add(this.btnRefresh);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 516);
+            this.pnlBottom.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.pnlBottom.Size = new System.Drawing.Size(742, 37);
+            this.pnlBottom.TabIndex = 0;
+            this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnUpdate, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnDelete, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnCreate, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnRefresh, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnExcel, 0);
+            // 
+            // pnlCenter
+            // 
+            this.pnlCenter.Controls.Add(this.tabMFO);
+            this.pnlCenter.Size = new System.Drawing.Size(742, 516);
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.Padding = new System.Windows.Forms.Padding(1);
+            // 
+            // lblFormTitle
+            // 
+            this.lblFormTitle.Location = new System.Drawing.Point(1, 1);
+            this.lblFormTitle.Size = new System.Drawing.Size(740, 0);
+            this.lblFormTitle.Text = "Attach Collection Set to MFO";
+            // 
+            // tabMFO
+            // 
+            this.tabMFO.Controls.Add(this.tbpOper);
+            this.tabMFO.Controls.Add(this.tbpFO);
+            this.tabMFO.Controls.Add(this.tbpMFO);
+            this.tabMFO.Controls.Add(this.tbpMO);
+            this.tabMFO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMFO.ItemSize = new System.Drawing.Size(60, 18);
+            this.tabMFO.Location = new System.Drawing.Point(0, 0);
+            this.tabMFO.Name = "tabMFO";
+            this.tabMFO.SelectedIndex = 0;
+            this.tabMFO.Size = new System.Drawing.Size(742, 516);
+            this.tabMFO.TabIndex = 0;
+            this.tabMFO.TabStop = false;
+            // 
+            // tbpOper
+            // 
+            this.tbpOper.Controls.Add(this.spdOper);
+            this.tbpOper.Location = new System.Drawing.Point(4, 22);
+            this.tbpOper.Name = "tbpOper";
+            this.tbpOper.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpOper.Size = new System.Drawing.Size(734, 490);
+            this.tbpOper.TabIndex = 0;
+            this.tbpOper.Text = "Operation";
+            // 
+            // spdOper
+            // 
+            this.spdOper.AccessibleDescription = "spdOper, Sheet1";
+            this.spdOper.BackColor = System.Drawing.SystemColors.Control;
+            this.spdOper.ButtonDrawMode = FarPoint.Win.Spread.ButtonDrawModes.CurrentRow;
+            this.spdOper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spdOper.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdOper.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spdOper.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdOper.HorizontalScrollBar.Name = "";
+            this.spdOper.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.spdOper.HorizontalScrollBar.TabIndex = 2;
+            this.spdOper.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
+            this.spdOper.Location = new System.Drawing.Point(3, 3);
+            this.spdOper.Name = "spdOper";
+            this.spdOper.ScrollBarTrackPolicy = FarPoint.Win.Spread.ScrollBarTrackPolicy.Both;
+            this.spdOper.ScrollTipPolicy = FarPoint.Win.Spread.ScrollTipPolicy.Both;
+            this.spdOper.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.spdOper_Sheet1});
+            this.spdOper.Size = new System.Drawing.Size(728, 484);
+            this.spdOper.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.spdOper.TabIndex = 0;
+            this.spdOper.TabStop = false;
+            this.spdOper.TextTipDelay = 200;
+            this.spdOper.TextTipPolicy = FarPoint.Win.Spread.TextTipPolicy.Floating;
+            this.spdOper.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdOper.VerticalScrollBar.Name = "";
+            this.spdOper.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
+            this.spdOper.VerticalScrollBar.TabIndex = 3;
+            this.spdOper.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_ButtonClicked);
+            this.spdOper.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_EditChange);
+            this.spdOper.SetActiveViewport(0, -1, -1);
+            // 
+            // spdOper_Sheet1
+            // 
+            this.spdOper_Sheet1.Reset();
+            spdOper_Sheet1.SheetName = "Sheet1";
+            // Formulas and custom names must be loaded with R1C1 reference style
+            this.spdOper_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            spdOper_Sheet1.ColumnCount = 8;
+            spdOper_Sheet1.RowCount = 0;
+            this.spdOper_Sheet1.ActiveColumnIndex = -1;
+            this.spdOper_Sheet1.ActiveRowIndex = -1;
+            this.spdOper_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdOper_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
+            this.spdOper_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdOper_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefault";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "Sel";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Operation";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Description";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 3).ColumnSpan = 2;
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Collection Set";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "Collection Mode";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "Default";
+            this.spdOper_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "Disable";
+            this.spdOper_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdOper_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.spdOper_Sheet1.ColumnHeader.Rows.Get(0).Height = 18F;
+            checkBoxCellType1.BackgroundImage = new FarPoint.Win.Picture(null, FarPoint.Win.RenderStyle.Normal, System.Drawing.Color.Empty, 0, FarPoint.Win.HorizontalAlignment.Center, FarPoint.Win.VerticalAlignment.Center);
+            this.spdOper_Sheet1.Columns.Get(0).CellType = checkBoxCellType1;
+            this.spdOper_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(0).Label = "Sel";
+            this.spdOper_Sheet1.Columns.Get(0).ShowSortIndicator = false;
+            this.spdOper_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(0).Width = 32F;
+            this.spdOper_Sheet1.Columns.Get(1).BackColor = System.Drawing.Color.WhiteSmoke;
+            textCellType1.MaxLength = 20;
+            this.spdOper_Sheet1.Columns.Get(1).CellType = textCellType1;
+            this.spdOper_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdOper_Sheet1.Columns.Get(1).Label = "Operation";
+            this.spdOper_Sheet1.Columns.Get(1).Locked = true;
+            this.spdOper_Sheet1.Columns.Get(1).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Always;
+            this.spdOper_Sheet1.Columns.Get(1).ShowSortIndicator = false;
+            this.spdOper_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(1).Width = 70F;
+            this.spdOper_Sheet1.Columns.Get(2).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdOper_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdOper_Sheet1.Columns.Get(2).Label = "Description";
+            this.spdOper_Sheet1.Columns.Get(2).Locked = true;
+            this.spdOper_Sheet1.Columns.Get(2).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Restricted;
+            this.spdOper_Sheet1.Columns.Get(2).ShowSortIndicator = false;
+            this.spdOper_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(2).Width = 200F;
+            this.spdOper_Sheet1.Columns.Get(3).CellType = textCellType2;
+            this.spdOper_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdOper_Sheet1.Columns.Get(3).Label = "Collection Set";
+            this.spdOper_Sheet1.Columns.Get(3).Locked = false;
+            this.spdOper_Sheet1.Columns.Get(3).ShowSortIndicator = false;
+            this.spdOper_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(3).Width = 165F;
+            buttonCellType1.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType1.Text = "...";
+            this.spdOper_Sheet1.Columns.Get(4).CellType = buttonCellType1;
+            this.spdOper_Sheet1.Columns.Get(4).Locked = false;
+            this.spdOper_Sheet1.Columns.Get(4).Resizable = false;
+            this.spdOper_Sheet1.Columns.Get(4).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(4).Width = 20F;
+            comboBoxCellType1.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
+            comboBoxCellType1.Items = new string[] {
+        "Auto",
+        "Manual"};
+            this.spdOper_Sheet1.Columns.Get(5).CellType = comboBoxCellType1;
+            this.spdOper_Sheet1.Columns.Get(5).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdOper_Sheet1.Columns.Get(5).Label = "Collection Mode";
+            this.spdOper_Sheet1.Columns.Get(5).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(5).Width = 90F;
+            this.spdOper_Sheet1.Columns.Get(6).CellType = checkBoxCellType2;
+            this.spdOper_Sheet1.Columns.Get(6).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(6).Label = "Default";
+            this.spdOper_Sheet1.Columns.Get(6).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(6).Width = 45F;
+            this.spdOper_Sheet1.Columns.Get(7).CellType = checkBoxCellType3;
+            this.spdOper_Sheet1.Columns.Get(7).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(7).Label = "Disable";
+            this.spdOper_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdOper_Sheet1.Columns.Get(7).Width = 45F;
+            this.spdOper_Sheet1.GrayAreaBackColor = System.Drawing.Color.White;
+            this.spdOper_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.spdOper_Sheet1.RowHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdOper_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.spdOper_Sheet1.SheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdOper_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.spdOper_Sheet1.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            this.spdOper_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // tbpFO
+            // 
+            this.tbpFO.Controls.Add(this.pnlFOMid);
+            this.tbpFO.Controls.Add(this.grpFO);
+            this.tbpFO.Location = new System.Drawing.Point(4, 22);
+            this.tbpFO.Name = "tbpFO";
+            this.tbpFO.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.tbpFO.Size = new System.Drawing.Size(734, 490);
+            this.tbpFO.TabIndex = 1;
+            this.tbpFO.Text = "Flow-Operation";
+            this.tbpFO.Visible = false;
+            // 
+            // pnlFOMid
+            // 
+            this.pnlFOMid.Controls.Add(this.spdFO);
+            this.pnlFOMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFOMid.Location = new System.Drawing.Point(3, 44);
+            this.pnlFOMid.Name = "pnlFOMid";
+            this.pnlFOMid.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.pnlFOMid.Size = new System.Drawing.Size(728, 443);
+            this.pnlFOMid.TabIndex = 2;
+            // 
+            // spdFO
+            // 
+            this.spdFO.AccessibleDescription = "spdOper, Sheet1";
+            this.spdFO.BackColor = System.Drawing.SystemColors.Control;
+            this.spdFO.ButtonDrawMode = FarPoint.Win.Spread.ButtonDrawModes.CurrentRow;
+            this.spdFO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spdFO.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdFO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spdFO.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdFO.HorizontalScrollBar.Name = "";
+            this.spdFO.HorizontalScrollBar.Renderer = defaultScrollBarRenderer3;
+            this.spdFO.HorizontalScrollBar.TabIndex = 2;
+            this.spdFO.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.Never;
+            this.spdFO.Location = new System.Drawing.Point(0, 5);
+            this.spdFO.Name = "spdFO";
+            this.spdFO.ScrollBarTrackPolicy = FarPoint.Win.Spread.ScrollBarTrackPolicy.Both;
+            this.spdFO.ScrollTipPolicy = FarPoint.Win.Spread.ScrollTipPolicy.Both;
+            this.spdFO.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.spdFO_Sheet1});
+            this.spdFO.Size = new System.Drawing.Size(728, 438);
+            this.spdFO.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.spdFO.TabIndex = 1;
+            this.spdFO.TabStop = false;
+            this.spdFO.TextTipDelay = 200;
+            this.spdFO.TextTipPolicy = FarPoint.Win.Spread.TextTipPolicy.Floating;
+            this.spdFO.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdFO.VerticalScrollBar.Name = "";
+            this.spdFO.VerticalScrollBar.Renderer = defaultScrollBarRenderer4;
+            this.spdFO.VerticalScrollBar.TabIndex = 3;
+            this.spdFO.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_ButtonClicked);
+            this.spdFO.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_EditChange);
+            this.spdFO.SetActiveViewport(0, -1, -1);
+            // 
+            // spdFO_Sheet1
+            // 
+            this.spdFO_Sheet1.Reset();
+            spdFO_Sheet1.SheetName = "Sheet1";
+            // Formulas and custom names must be loaded with R1C1 reference style
+            this.spdFO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            spdFO_Sheet1.ColumnCount = 8;
+            spdFO_Sheet1.RowCount = 0;
+            this.spdFO_Sheet1.ActiveColumnIndex = -1;
+            this.spdFO_Sheet1.ActiveRowIndex = -1;
+            this.spdFO_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdFO_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
+            this.spdFO_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdFO_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefault";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "Sel";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Operation";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Description";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 3).ColumnSpan = 2;
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Collection Set";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "Collection Mode";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "Default";
+            this.spdFO_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "Disable";
+            this.spdFO_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdFO_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.spdFO_Sheet1.ColumnHeader.Rows.Get(0).Height = 18F;
+            checkBoxCellType4.BackgroundImage = new FarPoint.Win.Picture(null, FarPoint.Win.RenderStyle.Normal, System.Drawing.Color.Empty, 0, FarPoint.Win.HorizontalAlignment.Center, FarPoint.Win.VerticalAlignment.Center);
+            this.spdFO_Sheet1.Columns.Get(0).CellType = checkBoxCellType4;
+            this.spdFO_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(0).Label = "Sel";
+            this.spdFO_Sheet1.Columns.Get(0).ShowSortIndicator = false;
+            this.spdFO_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(0).Width = 32F;
+            this.spdFO_Sheet1.Columns.Get(1).BackColor = System.Drawing.Color.WhiteSmoke;
+            textCellType3.MaxLength = 20;
+            this.spdFO_Sheet1.Columns.Get(1).CellType = textCellType3;
+            this.spdFO_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdFO_Sheet1.Columns.Get(1).Label = "Operation";
+            this.spdFO_Sheet1.Columns.Get(1).Locked = true;
+            this.spdFO_Sheet1.Columns.Get(1).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Always;
+            this.spdFO_Sheet1.Columns.Get(1).ShowSortIndicator = false;
+            this.spdFO_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(1).Width = 70F;
+            this.spdFO_Sheet1.Columns.Get(2).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdFO_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdFO_Sheet1.Columns.Get(2).Label = "Description";
+            this.spdFO_Sheet1.Columns.Get(2).Locked = true;
+            this.spdFO_Sheet1.Columns.Get(2).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Restricted;
+            this.spdFO_Sheet1.Columns.Get(2).ShowSortIndicator = false;
+            this.spdFO_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(2).Width = 200F;
+            this.spdFO_Sheet1.Columns.Get(3).CellType = textCellType4;
+            this.spdFO_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdFO_Sheet1.Columns.Get(3).Label = "Collection Set";
+            this.spdFO_Sheet1.Columns.Get(3).Locked = false;
+            this.spdFO_Sheet1.Columns.Get(3).ShowSortIndicator = false;
+            this.spdFO_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(3).Width = 165F;
+            buttonCellType2.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType2.Text = "...";
+            this.spdFO_Sheet1.Columns.Get(4).CellType = buttonCellType2;
+            this.spdFO_Sheet1.Columns.Get(4).Locked = false;
+            this.spdFO_Sheet1.Columns.Get(4).Resizable = false;
+            this.spdFO_Sheet1.Columns.Get(4).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(4).Width = 20F;
+            comboBoxCellType2.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
+            comboBoxCellType2.Items = new string[] {
+        "Auto",
+        "Manual"};
+            this.spdFO_Sheet1.Columns.Get(5).CellType = comboBoxCellType2;
+            this.spdFO_Sheet1.Columns.Get(5).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdFO_Sheet1.Columns.Get(5).Label = "Collection Mode";
+            this.spdFO_Sheet1.Columns.Get(5).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(5).Width = 90F;
+            this.spdFO_Sheet1.Columns.Get(6).CellType = checkBoxCellType5;
+            this.spdFO_Sheet1.Columns.Get(6).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(6).Label = "Default";
+            this.spdFO_Sheet1.Columns.Get(6).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(6).Width = 45F;
+            this.spdFO_Sheet1.Columns.Get(7).CellType = checkBoxCellType6;
+            this.spdFO_Sheet1.Columns.Get(7).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(7).Label = "Disable";
+            this.spdFO_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdFO_Sheet1.Columns.Get(7).Width = 45F;
+            this.spdFO_Sheet1.GrayAreaBackColor = System.Drawing.Color.White;
+            this.spdFO_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.spdFO_Sheet1.RowHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdFO_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.spdFO_Sheet1.SheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdFO_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.spdFO_Sheet1.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            this.spdFO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // grpFO
+            // 
+            this.grpFO.Controls.Add(this.cdvFlow);
+            this.grpFO.Controls.Add(this.lblFlow);
+            this.grpFO.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpFO.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpFO.Location = new System.Drawing.Point(3, 0);
+            this.grpFO.Name = "grpFO";
+            this.grpFO.Size = new System.Drawing.Size(728, 44);
+            this.grpFO.TabIndex = 0;
+            this.grpFO.TabStop = false;
+            // 
+            // cdvFlow
+            // 
+            this.cdvFlow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cdvFlow.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvFlow.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvFlow.BtnFlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cdvFlow.BtnToolTipText = "";
+            this.cdvFlow.DescText = "";
+            this.cdvFlow.DisplaySubItemIndex = 1;
+            this.cdvFlow.DisplayText = "";
+            this.cdvFlow.Focusing = null;
+            this.cdvFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvFlow.Index = 0;
+            this.cdvFlow.IsViewBtnImage = false;
+            this.cdvFlow.Location = new System.Drawing.Point(122, 16);
+            this.cdvFlow.MaxLength = 20;
+            this.cdvFlow.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvFlow.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            this.cdvFlow.Name = "cdvFlow";
+            this.cdvFlow.ReadOnly = false;
+            this.cdvFlow.SearchSubItemIndex = 0;
+            this.cdvFlow.SelectedDescIndex = -1;
+            this.cdvFlow.SelectedSubItemIndex = -1;
+            this.cdvFlow.SelectionStart = 0;
+            this.cdvFlow.Size = new System.Drawing.Size(598, 20);
+            this.cdvFlow.SmallImageList = null;
+            this.cdvFlow.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cdvFlow.TabIndex = 1;
+            this.cdvFlow.TextBoxToolTipText = "";
+            this.cdvFlow.TextBoxWidth = 200;
+            this.cdvFlow.VisibleButton = true;
+            this.cdvFlow.VisibleColumnHeader = false;
+            this.cdvFlow.VisibleDescription = true;
+            this.cdvFlow.SelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvFlow_SelectedItemChanged);
+            this.cdvFlow.ButtonPress += new System.EventHandler(this.cdvFlow_ButtonPress);
+            // 
+            // lblFlow
+            // 
+            this.lblFlow.AutoSize = true;
+            this.lblFlow.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlow.Location = new System.Drawing.Point(15, 19);
+            this.lblFlow.Name = "lblFlow";
+            this.lblFlow.Size = new System.Drawing.Size(33, 13);
+            this.lblFlow.TabIndex = 0;
+            this.lblFlow.Text = "Flow";
+            this.lblFlow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbpMFO
+            // 
+            this.tbpMFO.Controls.Add(this.pnlMFOMid);
+            this.tbpMFO.Controls.Add(this.grpMFO);
+            this.tbpMFO.Location = new System.Drawing.Point(4, 22);
+            this.tbpMFO.Name = "tbpMFO";
+            this.tbpMFO.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.tbpMFO.Size = new System.Drawing.Size(734, 490);
+            this.tbpMFO.TabIndex = 2;
+            this.tbpMFO.Text = "Material-Flow-Operation";
+            this.tbpMFO.Visible = false;
+            // 
+            // pnlMFOMid
+            // 
+            this.pnlMFOMid.Controls.Add(this.spdMFO);
+            this.pnlMFOMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMFOMid.Location = new System.Drawing.Point(3, 68);
+            this.pnlMFOMid.Name = "pnlMFOMid";
+            this.pnlMFOMid.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.pnlMFOMid.Size = new System.Drawing.Size(728, 419);
+            this.pnlMFOMid.TabIndex = 3;
+            // 
+            // spdMFO
+            // 
+            this.spdMFO.AccessibleDescription = "spdOper, Sheet1";
+            this.spdMFO.BackColor = System.Drawing.SystemColors.Control;
+            this.spdMFO.ButtonDrawMode = FarPoint.Win.Spread.ButtonDrawModes.CurrentRow;
+            this.spdMFO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spdMFO.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdMFO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spdMFO.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdMFO.HorizontalScrollBar.Name = "";
+            this.spdMFO.HorizontalScrollBar.Renderer = defaultScrollBarRenderer5;
+            this.spdMFO.HorizontalScrollBar.TabIndex = 2;
+            this.spdMFO.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.Never;
+            this.spdMFO.Location = new System.Drawing.Point(0, 5);
+            this.spdMFO.Name = "spdMFO";
+            this.spdMFO.ScrollBarTrackPolicy = FarPoint.Win.Spread.ScrollBarTrackPolicy.Both;
+            this.spdMFO.ScrollTipPolicy = FarPoint.Win.Spread.ScrollTipPolicy.Both;
+            this.spdMFO.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.spdMFO_Sheet1});
+            this.spdMFO.Size = new System.Drawing.Size(728, 414);
+            this.spdMFO.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.spdMFO.TabIndex = 2;
+            this.spdMFO.TabStop = false;
+            this.spdMFO.TextTipDelay = 200;
+            this.spdMFO.TextTipPolicy = FarPoint.Win.Spread.TextTipPolicy.Floating;
+            this.spdMFO.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdMFO.VerticalScrollBar.Name = "";
+            this.spdMFO.VerticalScrollBar.Renderer = defaultScrollBarRenderer6;
+            this.spdMFO.VerticalScrollBar.TabIndex = 3;
+            this.spdMFO.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_ButtonClicked);
+            this.spdMFO.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_EditChange);
+            this.spdMFO.SetActiveViewport(0, -1, -1);
+            // 
+            // spdMFO_Sheet1
+            // 
+            this.spdMFO_Sheet1.Reset();
+            spdMFO_Sheet1.SheetName = "Sheet1";
+            // Formulas and custom names must be loaded with R1C1 reference style
+            this.spdMFO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            spdMFO_Sheet1.ColumnCount = 8;
+            spdMFO_Sheet1.RowCount = 0;
+            this.spdMFO_Sheet1.ActiveColumnIndex = -1;
+            this.spdMFO_Sheet1.ActiveRowIndex = -1;
+            this.spdMFO_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMFO_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
+            this.spdMFO_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMFO_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefault";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "Sel";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Operation";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Description";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 3).ColumnSpan = 2;
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Collection Set";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "Collection Mode";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "Default";
+            this.spdMFO_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "Disable";
+            this.spdMFO_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMFO_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.spdMFO_Sheet1.ColumnHeader.Rows.Get(0).Height = 18F;
+            checkBoxCellType7.BackgroundImage = new FarPoint.Win.Picture(null, FarPoint.Win.RenderStyle.Normal, System.Drawing.Color.Empty, 0, FarPoint.Win.HorizontalAlignment.Center, FarPoint.Win.VerticalAlignment.Center);
+            this.spdMFO_Sheet1.Columns.Get(0).CellType = checkBoxCellType7;
+            this.spdMFO_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(0).Label = "Sel";
+            this.spdMFO_Sheet1.Columns.Get(0).ShowSortIndicator = false;
+            this.spdMFO_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(0).Width = 32F;
+            this.spdMFO_Sheet1.Columns.Get(1).BackColor = System.Drawing.Color.WhiteSmoke;
+            textCellType5.MaxLength = 20;
+            this.spdMFO_Sheet1.Columns.Get(1).CellType = textCellType5;
+            this.spdMFO_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMFO_Sheet1.Columns.Get(1).Label = "Operation";
+            this.spdMFO_Sheet1.Columns.Get(1).Locked = true;
+            this.spdMFO_Sheet1.Columns.Get(1).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Always;
+            this.spdMFO_Sheet1.Columns.Get(1).ShowSortIndicator = false;
+            this.spdMFO_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(1).Width = 70F;
+            this.spdMFO_Sheet1.Columns.Get(2).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdMFO_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMFO_Sheet1.Columns.Get(2).Label = "Description";
+            this.spdMFO_Sheet1.Columns.Get(2).Locked = true;
+            this.spdMFO_Sheet1.Columns.Get(2).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Restricted;
+            this.spdMFO_Sheet1.Columns.Get(2).ShowSortIndicator = false;
+            this.spdMFO_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(2).Width = 200F;
+            this.spdMFO_Sheet1.Columns.Get(3).CellType = textCellType6;
+            this.spdMFO_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMFO_Sheet1.Columns.Get(3).Label = "Collection Set";
+            this.spdMFO_Sheet1.Columns.Get(3).Locked = false;
+            this.spdMFO_Sheet1.Columns.Get(3).ShowSortIndicator = false;
+            this.spdMFO_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(3).Width = 165F;
+            buttonCellType3.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType3.Text = "...";
+            this.spdMFO_Sheet1.Columns.Get(4).CellType = buttonCellType3;
+            this.spdMFO_Sheet1.Columns.Get(4).Locked = false;
+            this.spdMFO_Sheet1.Columns.Get(4).Resizable = false;
+            this.spdMFO_Sheet1.Columns.Get(4).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(4).Width = 20F;
+            comboBoxCellType3.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
+            comboBoxCellType3.Items = new string[] {
+        "Auto",
+        "Manual"};
+            this.spdMFO_Sheet1.Columns.Get(5).CellType = comboBoxCellType3;
+            this.spdMFO_Sheet1.Columns.Get(5).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdMFO_Sheet1.Columns.Get(5).Label = "Collection Mode";
+            this.spdMFO_Sheet1.Columns.Get(5).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(5).Width = 90F;
+            this.spdMFO_Sheet1.Columns.Get(6).CellType = checkBoxCellType8;
+            this.spdMFO_Sheet1.Columns.Get(6).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(6).Label = "Default";
+            this.spdMFO_Sheet1.Columns.Get(6).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(6).Width = 45F;
+            this.spdMFO_Sheet1.Columns.Get(7).CellType = checkBoxCellType9;
+            this.spdMFO_Sheet1.Columns.Get(7).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(7).Label = "Disable";
+            this.spdMFO_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMFO_Sheet1.Columns.Get(7).Width = 45F;
+            this.spdMFO_Sheet1.GrayAreaBackColor = System.Drawing.Color.White;
+            this.spdMFO_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.spdMFO_Sheet1.RowHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMFO_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.spdMFO_Sheet1.SheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMFO_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.spdMFO_Sheet1.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            this.spdMFO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // grpMFO
+            // 
+            this.grpMFO.Controls.Add(this.cdvFlow2);
+            this.grpMFO.Controls.Add(this.cdvMaterial);
+            this.grpMFO.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpMFO.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grpMFO.Location = new System.Drawing.Point(3, 0);
+            this.grpMFO.Name = "grpMFO";
+            this.grpMFO.Size = new System.Drawing.Size(728, 68);
+            this.grpMFO.TabIndex = 0;
+            this.grpMFO.TabStop = false;
+            // 
+            // cdvFlow2
+            // 
+            this.cdvFlow2.AddEmptyRowToLast = false;
+            this.cdvFlow2.AddEmptyRowToTop = false;
+            this.cdvFlow2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cdvFlow2.ButtonWidth = 21;
+            this.cdvFlow2.CodeViewBackColor = System.Drawing.SystemColors.Window;
+            this.cdvFlow2.DisplaySubItemIndex = 0;
+            this.cdvFlow2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvFlow2.LabelBackColor = System.Drawing.SystemColors.Control;
+            this.cdvFlow2.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvFlow2.LabelText = "Flow";
+            this.cdvFlow2.LabelWidth = 110;
+            this.cdvFlow2.ListCond_ExtFactory = "";
+            this.cdvFlow2.ListCond_Step = '3';
+            this.cdvFlow2.Location = new System.Drawing.Point(12, 41);
+            this.cdvFlow2.Name = "cdvFlow2";
+            this.cdvFlow2.ReadOnly = false;
+            this.cdvFlow2.SearchSubItemIndex = 0;
+            this.cdvFlow2.SelectedDescIndex = 1;
+            this.cdvFlow2.SelectedSubItemIndex = 0;
+            this.cdvFlow2.Size = new System.Drawing.Size(708, 20);
+            this.cdvFlow2.TabIndex = 2;
+            this.cdvFlow2.TextBoxWidth = 200;
+            this.cdvFlow2.VisibleButton = true;
+            this.cdvFlow2.VisibleColumnHeader = false;
+            this.cdvFlow2.VisibleDescription = true;
+            this.cdvFlow2.SelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvFlow2_SelectedItemChanged);
+            this.cdvFlow2.ButtonPress += new System.EventHandler(this.cdvFlow2_ButtonPress);
+            // 
+            // cdvMaterial
+            // 
+            this.cdvMaterial.AddEmptyRowToLast = false;
+            this.cdvMaterial.AddEmptyRowToTop = false;
+            this.cdvMaterial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cdvMaterial.CodeViewBackColor = System.Drawing.SystemColors.Window;
+            this.cdvMaterial.DisplaySubItemIndex = 0;
+            this.cdvMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial.LabelBackColor = System.Drawing.SystemColors.Control;
+            this.cdvMaterial.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial.LabelText = "Material";
+            this.cdvMaterial.ListCond_ExtFactory = "";
+            this.cdvMaterial.ListCond_StepMaterial = '1';
+            this.cdvMaterial.ListCond_StepVersion = '1';
+            this.cdvMaterial.Location = new System.Drawing.Point(12, 16);
+            this.cdvMaterial.MaterialEnabled = true;
+            this.cdvMaterial.MaterialReadOnly = false;
+            this.cdvMaterial.Name = "cdvMaterial";
+            this.cdvMaterial.SearchSubItemIndex = 0;
+            this.cdvMaterial.SelectedDescIndex = 2;
+            this.cdvMaterial.SelectedSubItemIndex = 0;
+            this.cdvMaterial.Size = new System.Drawing.Size(708, 20);
+            this.cdvMaterial.TabIndex = 1;
+            this.cdvMaterial.VersionEnabled = true;
+            this.cdvMaterial.VersionReadOnly = false;
+            this.cdvMaterial.VisibleColumnHeader = false;
+            this.cdvMaterial.VisibleDescription = true;
+            this.cdvMaterial.VisibleMaterialButton = true;
+            this.cdvMaterial.VisibleVersionButton = true;
+            this.cdvMaterial.WidthButton = 20;
+            this.cdvMaterial.WidthLabel = 110;
+            this.cdvMaterial.WidthMaterialAndVersion = 200;
+            this.cdvMaterial.WidthVersion = 50;
+            this.cdvMaterial.MaterialSelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvMaterial_SelectedItemChanged);
+            this.cdvMaterial.VersionSelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvMaterial_SelectedItemChanged);
+            // 
+            // tbpMO
+            // 
+            this.tbpMO.Controls.Add(this.pnlMOMid);
+            this.tbpMO.Controls.Add(this.groupBox1);
+            this.tbpMO.Location = new System.Drawing.Point(4, 22);
+            this.tbpMO.Name = "tbpMO";
+            this.tbpMO.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.tbpMO.Size = new System.Drawing.Size(734, 490);
+            this.tbpMO.TabIndex = 3;
+            this.tbpMO.Text = "Material-Operation";
+            // 
+            // pnlMOMid
+            // 
+            this.pnlMOMid.Controls.Add(this.spdMO);
+            this.pnlMOMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMOMid.Location = new System.Drawing.Point(3, 44);
+            this.pnlMOMid.Name = "pnlMOMid";
+            this.pnlMOMid.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.pnlMOMid.Size = new System.Drawing.Size(728, 443);
+            this.pnlMOMid.TabIndex = 3;
+            // 
+            // spdMO
+            // 
+            this.spdMO.AccessibleDescription = "spdMO, Sheet1";
+            this.spdMO.BackColor = System.Drawing.SystemColors.Control;
+            this.spdMO.ButtonDrawMode = FarPoint.Win.Spread.ButtonDrawModes.CurrentRow;
+            this.spdMO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spdMO.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdMO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spdMO.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdMO.HorizontalScrollBar.Name = "";
+            this.spdMO.HorizontalScrollBar.Renderer = defaultScrollBarRenderer7;
+            this.spdMO.HorizontalScrollBar.TabIndex = 2;
+            this.spdMO.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.Never;
+            this.spdMO.Location = new System.Drawing.Point(0, 5);
+            this.spdMO.Name = "spdMO";
+            this.spdMO.ScrollBarTrackPolicy = FarPoint.Win.Spread.ScrollBarTrackPolicy.Both;
+            this.spdMO.ScrollTipPolicy = FarPoint.Win.Spread.ScrollTipPolicy.Both;
+            this.spdMO.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.spdMO_Sheet1});
+            this.spdMO.Size = new System.Drawing.Size(728, 438);
+            this.spdMO.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.spdMO.TabIndex = 1;
+            this.spdMO.TabStop = false;
+            this.spdMO.TextTipDelay = 200;
+            this.spdMO.TextTipPolicy = FarPoint.Win.Spread.TextTipPolicy.Floating;
+            this.spdMO.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.spdMO.VerticalScrollBar.Name = "";
+            this.spdMO.VerticalScrollBar.Renderer = defaultScrollBarRenderer8;
+            this.spdMO.VerticalScrollBar.TabIndex = 3;
+            this.spdMO.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_ButtonClicked);
+            this.spdMO.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdOper_EditChange);
+            this.spdMO.SetActiveViewport(0, -1, -1);
+            // 
+            // spdMO_Sheet1
+            // 
+            this.spdMO_Sheet1.Reset();
+            spdMO_Sheet1.SheetName = "Sheet1";
+            // Formulas and custom names must be loaded with R1C1 reference style
+            this.spdMO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            spdMO_Sheet1.ColumnCount = 8;
+            spdMO_Sheet1.RowCount = 0;
+            this.spdMO_Sheet1.ActiveColumnIndex = -1;
+            this.spdMO_Sheet1.ActiveRowIndex = -1;
+            this.spdMO_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMO_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
+            this.spdMO_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMO_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefault";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "Sel";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Operation";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Description";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 3).ColumnSpan = 2;
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Collection Set";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "Collection Mode";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "Default";
+            this.spdMO_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "Disable";
+            this.spdMO_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMO_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.spdMO_Sheet1.ColumnHeader.Rows.Get(0).Height = 18F;
+            checkBoxCellType10.BackgroundImage = new FarPoint.Win.Picture(null, FarPoint.Win.RenderStyle.Normal, System.Drawing.Color.Empty, 0, FarPoint.Win.HorizontalAlignment.Center, FarPoint.Win.VerticalAlignment.Center);
+            this.spdMO_Sheet1.Columns.Get(0).CellType = checkBoxCellType10;
+            this.spdMO_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(0).Label = "Sel";
+            this.spdMO_Sheet1.Columns.Get(0).ShowSortIndicator = false;
+            this.spdMO_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(0).Width = 32F;
+            this.spdMO_Sheet1.Columns.Get(1).BackColor = System.Drawing.Color.WhiteSmoke;
+            textCellType7.MaxLength = 20;
+            this.spdMO_Sheet1.Columns.Get(1).CellType = textCellType7;
+            this.spdMO_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMO_Sheet1.Columns.Get(1).Label = "Operation";
+            this.spdMO_Sheet1.Columns.Get(1).Locked = true;
+            this.spdMO_Sheet1.Columns.Get(1).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Always;
+            this.spdMO_Sheet1.Columns.Get(1).ShowSortIndicator = false;
+            this.spdMO_Sheet1.Columns.Get(1).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(1).Width = 70F;
+            this.spdMO_Sheet1.Columns.Get(2).BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spdMO_Sheet1.Columns.Get(2).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMO_Sheet1.Columns.Get(2).Label = "Description";
+            this.spdMO_Sheet1.Columns.Get(2).Locked = true;
+            this.spdMO_Sheet1.Columns.Get(2).MergePolicy = FarPoint.Win.Spread.Model.MergePolicy.Restricted;
+            this.spdMO_Sheet1.Columns.Get(2).ShowSortIndicator = false;
+            this.spdMO_Sheet1.Columns.Get(2).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(2).Width = 200F;
+            this.spdMO_Sheet1.Columns.Get(3).CellType = textCellType8;
+            this.spdMO_Sheet1.Columns.Get(3).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            this.spdMO_Sheet1.Columns.Get(3).Label = "Collection Set";
+            this.spdMO_Sheet1.Columns.Get(3).Locked = false;
+            this.spdMO_Sheet1.Columns.Get(3).ShowSortIndicator = false;
+            this.spdMO_Sheet1.Columns.Get(3).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(3).Width = 165F;
+            buttonCellType4.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType4.Text = "...";
+            this.spdMO_Sheet1.Columns.Get(4).CellType = buttonCellType4;
+            this.spdMO_Sheet1.Columns.Get(4).Locked = false;
+            this.spdMO_Sheet1.Columns.Get(4).Resizable = false;
+            this.spdMO_Sheet1.Columns.Get(4).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(4).Width = 20F;
+            comboBoxCellType4.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
+            comboBoxCellType4.Items = new string[] {
+        "Auto",
+        "Manual"};
+            this.spdMO_Sheet1.Columns.Get(5).CellType = comboBoxCellType4;
+            this.spdMO_Sheet1.Columns.Get(5).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
+            this.spdMO_Sheet1.Columns.Get(5).Label = "Collection Mode";
+            this.spdMO_Sheet1.Columns.Get(5).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(5).Width = 90F;
+            this.spdMO_Sheet1.Columns.Get(6).CellType = checkBoxCellType11;
+            this.spdMO_Sheet1.Columns.Get(6).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(6).Label = "Default";
+            this.spdMO_Sheet1.Columns.Get(6).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(6).Width = 45F;
+            this.spdMO_Sheet1.Columns.Get(7).CellType = checkBoxCellType12;
+            this.spdMO_Sheet1.Columns.Get(7).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(7).Label = "Disable";
+            this.spdMO_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            this.spdMO_Sheet1.Columns.Get(7).Width = 45F;
+            this.spdMO_Sheet1.GrayAreaBackColor = System.Drawing.Color.White;
+            this.spdMO_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.spdMO_Sheet1.RowHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMO_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.spdMO_Sheet1.SheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
+            this.spdMO_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.spdMO_Sheet1.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            this.spdMO_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cdvMaterial2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Location = new System.Drawing.Point(3, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(728, 44);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            // 
+            // cdvMaterial2
+            // 
+            this.cdvMaterial2.AddEmptyRowToLast = false;
+            this.cdvMaterial2.AddEmptyRowToTop = false;
+            this.cdvMaterial2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cdvMaterial2.CodeViewBackColor = System.Drawing.SystemColors.Window;
+            this.cdvMaterial2.DisplaySubItemIndex = 0;
+            this.cdvMaterial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial2.LabelBackColor = System.Drawing.SystemColors.Control;
+            this.cdvMaterial2.LabelFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdvMaterial2.LabelText = "Material";
+            this.cdvMaterial2.ListCond_ExtFactory = "";
+            this.cdvMaterial2.ListCond_StepMaterial = '1';
+            this.cdvMaterial2.ListCond_StepVersion = '1';
+            this.cdvMaterial2.Location = new System.Drawing.Point(12, 16);
+            this.cdvMaterial2.MaterialEnabled = true;
+            this.cdvMaterial2.MaterialReadOnly = false;
+            this.cdvMaterial2.Name = "cdvMaterial2";
+            this.cdvMaterial2.SearchSubItemIndex = 0;
+            this.cdvMaterial2.SelectedDescIndex = 2;
+            this.cdvMaterial2.SelectedSubItemIndex = 0;
+            this.cdvMaterial2.Size = new System.Drawing.Size(708, 20);
+            this.cdvMaterial2.TabIndex = 1;
+            this.cdvMaterial2.VersionEnabled = true;
+            this.cdvMaterial2.VersionReadOnly = false;
+            this.cdvMaterial2.VisibleColumnHeader = false;
+            this.cdvMaterial2.VisibleDescription = true;
+            this.cdvMaterial2.VisibleMaterialButton = true;
+            this.cdvMaterial2.VisibleVersionButton = true;
+            this.cdvMaterial2.WidthButton = 20;
+            this.cdvMaterial2.WidthLabel = 110;
+            this.cdvMaterial2.WidthMaterialAndVersion = 200;
+            this.cdvMaterial2.WidthVersion = 50;
+            this.cdvMaterial2.MaterialSelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvMaterial2_MaterialSelectedItemChanged);
+            this.cdvMaterial2.VersionSelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvMaterial2_VersionSelectedItemChanged);
+            // 
+            // cdvColSet
+            // 
+            this.cdvColSet.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.cdvColSet.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvColSet.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvColSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cdvColSet.Location = new System.Drawing.Point(429, 17);
+            this.cdvColSet.MCViewStyle.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvColSet.MCViewStyle.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvColSet.Name = "cdvColSet";
+            this.cdvColSet.Size = new System.Drawing.Size(20, 20);
+            this.cdvColSet.SmallImageList = null;
+            this.cdvColSet.TabIndex = 0;
+            this.cdvColSet.TabStop = false;
+            this.cdvColSet.ViewPosition = new System.Drawing.Point(0, 0);
+            this.cdvColSet.Visible = false;
+            this.cdvColSet.VisibleColumnHeader = false;
+            this.cdvColSet.SelectedItemChanged += new Miracom.UI.MCSSCodeViewSelChangedHandler(this.cdvColSet_SelectedItemChanged);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(10, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(24, 24);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnExcel.Location = new System.Drawing.Point(37, 6);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(24, 24);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // frmEDCSetupAttachCollectionSetToMFO
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(742, 553);
+            this.Name = "frmEDCSetupAttachCollectionSetToMFO";
+            this.Text = "Attach Collection Set to MFO";
+            this.Activated += new System.EventHandler(this.frmEDCSetupAttachCollectionSetToMFO_Activated);
+            this.pnlBottom.ResumeLayout(false);
+            this.pnlCenter.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            this.tabMFO.ResumeLayout(false);
+            this.tbpOper.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spdOper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdOper_Sheet1)).EndInit();
+            this.tbpFO.ResumeLayout(false);
+            this.pnlFOMid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spdFO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdFO_Sheet1)).EndInit();
+            this.grpFO.ResumeLayout(false);
+            this.grpFO.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvFlow)).EndInit();
+            this.tbpMFO.ResumeLayout(false);
+            this.pnlMFOMid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spdMFO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMFO_Sheet1)).EndInit();
+            this.grpMFO.ResumeLayout(false);
+            this.tbpMO.ResumeLayout(false);
+            this.pnlMOMid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spdMO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spdMO_Sheet1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cdvColSet)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+        
+#endregion
+        
+#region " Constant Definition "
+        
+        private const int MAX_MFO_COUNT = 5000;
+
+        private const int COL_SEL = 0;
+        private const int COL_OPER = 1;
+        private const int COL_OPER_DESC = 2;
+        private const int COL_COL_SET_ID = 3;
+        private const int COL_COL_SET_BTN = 4;
+        private const int COL_COL_MODE = 5;
+        private const int COL_DEFUALT_FLAG = 6;
+        private const int COL_DISABLE_FLAG = 7;
+        
+#endregion
+        
+#region " Variable Definition "
+
+        bool LoadFlag;
+        
+#endregion
+        
+#region " Function Definition "
+        
+        //
+        // ClearData()
+        //       - Initalize form fields
+        // Return Value
+        //       -
+        // Arguments
+        //       - Optional ByVal ProcStep As String ("1", "2", "3")
+        //
+        private void ClearData(char ProcStep)
+        {
+        
+            try
+            {
+                if (ProcStep == '1')
+                {
+                    MPCF.ClearList(spdMFO);
+                }
+                else if (ProcStep == '2')
+                {
+                    MPCF.ClearList(spdFO);
+                }
+                else if (ProcStep == '3')
+                {
+                    MPCF.ClearList(spdOper);                    
+                }
+                else if (ProcStep == '4')
+                {
+                    MPCF.ClearList(spdMO);
+                }
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+        
+        //
+        // CheckCondition()
+        //       - Check the conditions before transaction
+        // Return Value
+        //       - Boolean : True or False
+        // Arguments
+        //       - ByVal FuncName As String : Function Name
+        //       - Optional ByVal ProcStep As String : Process Step
+        //
+        private bool CheckCondition(string FuncName, char ProcStep)
+        {
+            int i = 0;
+            int iChkCnt = 0;
+            
+            try
+            {
+                switch (MPCF.Trim(FuncName))
+                {
+                    case "Update_MFO_ColSet_List":
+                        
+                        
+                        if (tabMFO.SelectedTab == tbpOper)
+                        {
+                            for (i = 0; i <= spdOper.ActiveSheet.RowCount - 1; i++)
+                            {
+                                if (System.Convert.ToBoolean (spdOper.ActiveSheet.GetValue(i, 0)) == true)
+                                {
+                                    iChkCnt++;
+                                }
+                            }
+                            
+                            if (iChkCnt == 0)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                                spdOper.Select();
+                                return false;
+                            }
+                            else if (iChkCnt > MAX_MFO_COUNT)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(189));
+                                spdOper.Select();
+                                return false;
+                            }
+                            
+                        }
+                        else if (tabMFO.SelectedTab == tbpFO)
+                        {
+                            if (cdvFlow.Text == "")
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(108));
+                                cdvFlow.Select();
+                                return false;
+                            }
+                            
+                            for (i = 0; i <= spdFO.ActiveSheet.RowCount - 1; i++)
+                            {
+                                if (System.Convert.ToBoolean (spdFO.ActiveSheet.GetValue(i, 0)) == true)
+                                {
+                                    iChkCnt++;
+                                }
+                            }
+                            
+                            if (iChkCnt == 0)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                                spdFO.Select();
+                                return false;
+                            }
+                            else if (iChkCnt > MAX_MFO_COUNT)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(189));
+                                spdFO.Select();
+                                return false;
+                            }
+                            
+                        }
+                        else if (tabMFO.SelectedTab == tbpMFO)
+                        {
+                            if (cdvMaterial.Text == "")
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(108));
+                                cdvMaterial.MaterialFocus();
+                                return false;
+                            }
+                            
+                            for (i = 0; i <= spdMFO.ActiveSheet.RowCount - 1; i++)
+                            {
+                                if (System.Convert.ToBoolean (spdMFO.ActiveSheet.GetValue(i, 0)) == true)
+                                {
+                                    iChkCnt++;
+                                }
+                            }
+                            
+                            if (iChkCnt == 0)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                                spdMFO.Select();
+                                return false;
+                            }
+                            else if (iChkCnt > MAX_MFO_COUNT)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(189));
+                                spdMFO.Select();
+                                return false;
+                            }
+                        }
+                        else if (tabMFO.SelectedTab == tbpMO)
+                        {
+                            if (cdvMaterial2.Text == "")
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(108));
+                                cdvMaterial2.MaterialFocus();
+                                return false;
+                            }
+
+                            for (i = 0; i <= spdMO.ActiveSheet.RowCount - 1; i++)
+                            {
+                                if (System.Convert.ToBoolean(spdMO.ActiveSheet.GetValue(i, 0)) == true)
+                                {
+                                    iChkCnt++;
+                                }
+                            }
+
+                            if (iChkCnt == 0)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                                spdMO.Select();
+                                return false;
+                            }
+                            else if (iChkCnt > MAX_MFO_COUNT)
+                            {
+                                MPCF.ShowMsgBox(MPCF.GetMessage(189));
+                                spdMO.Select();
+                                return false;
+                            }
+                        }
+
+                        break;
+                        
+                    case "View_MFO_ColSet_List":
+                        
+                        break;
+                        
+                }
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+        }
+        
+        //
+        // View_MFO_ColSet_List()
+        //       - View MFO-Collection Set Relation List
+        // Return Value
+        //       - Boolean : True or False
+        // Arguments
+        //       -
+        //
+        private bool View_MFO_ColSet_List(char ProcStep, char OptLevel)
+        {
+            int i;
+            int LastRow = 0;
+
+            FarPoint.Win.Spread.SheetView spdListView = null;
+            TRSNode in_node = new TRSNode("VIEW_MFO_COLSET_LIST_IN");
+            TRSNode out_node = new TRSNode("VIEW_MFO_COLSET_LIST_OUT");
+            
+            try
+            {
+                ClearData(OptLevel);
+
+                MPCR.SetInMsg(in_node);
+                in_node.ProcStep = ProcStep;
+                in_node.AddChar("OPT_LEVEL", OptLevel);
+
+                if (OptLevel == '1')
+                {
+                    in_node.AddString("MAT_ID", MPCF.Trim(cdvMaterial.Text));
+                    in_node.AddInt("MAT_VER", cdvMaterial.Version);
+                    in_node.AddString("FLOW", MPCF.Trim(cdvFlow2.Text));
+
+                    spdListView = spdMFO.ActiveSheet;
+                }
+                else if (OptLevel == '2')
+                {
+                    in_node.AddString("FLOW", MPCF.Trim(cdvFlow.Text));
+
+                    spdListView = spdFO.ActiveSheet;
+                }
+                else if (OptLevel == '3')
+                {
+                    spdListView = spdOper.ActiveSheet;
+                }
+                else if (OptLevel == '4')
+                {
+                    in_node.AddString("MAT_ID", MPCF.Trim(cdvMaterial2.Text));
+                    in_node.AddInt("MAT_VER", cdvMaterial2.Version);
+
+                    spdListView = spdMO.ActiveSheet;
+                }
+                else
+                {
+                    return false;
+                }
+        
+                do
+                {
+                    if (MPCR.CallService("EDC", "EDC_View_MFO_ColSet_List", in_node, ref out_node) == false)
+                    {
+                        return false;
+                    }                       
+
+                    for (i = 0; i < out_node.GetList(0).Count; i++)
+                    {
+                        spdListView.RowCount++;
+                        LastRow = spdListView.RowCount - 1;
+
+                        spdListView.SetValue(LastRow, COL_OPER, MPCF.Trim(out_node.GetList(0)[i].GetString("OPER")));
+                        spdListView.SetValue(LastRow, COL_OPER_DESC, MPCF.Trim(out_node.GetList(0)[i].GetString("OPER_DESC")));
+                        spdListView.SetValue(LastRow, COL_COL_SET_ID, MPCF.Trim(out_node.GetList(0)[i].GetString("COL_SET_ID")));
+
+                        if (MPCF.Trim(out_node.GetList(0)[i].GetChar("COLLECTION_MODE")) == "A")
+                        {
+                            spdListView.SetValue(LastRow, COL_COL_MODE, "Auto");
+                        }
+                        else if (MPCF.Trim(out_node.GetList(0)[i].GetChar("COLLECTION_MODE")) == "M")
+                        {
+                            spdListView.SetValue(LastRow, COL_COL_MODE, "Manual");
+                        }
+                        if (MPCF.Trim(out_node.GetList(0)[i].GetChar("DEFAULT_FLAG")) == "Y")
+                        {
+                            spdListView.SetValue(LastRow, COL_DEFUALT_FLAG, true);
+                        }
+                        else
+                        {
+                            spdListView.SetValue(LastRow, COL_DEFUALT_FLAG, false);
+                        }
+                        if (MPCF.Trim(out_node.GetList(0)[i].GetChar("DISABLE_FLAG")) == "Y")
+                        {
+                            spdListView.SetValue(LastRow, COL_DISABLE_FLAG, true);
+                        }
+                        else
+                        {
+                            spdListView.SetValue(LastRow, COL_DISABLE_FLAG, false);
+                        }
+                    }
+
+                    in_node.SetString("NEXT_OPER", out_node.GetString("NEXT_OPER"));
+                    in_node.SetInt("NEXT_SEQ", out_node.GetInt("NEXT_SEQ"));
+                    in_node.SetString("NEXT_COL_SET_ID", out_node.GetString("NEXT_COL_SET_ID"));
+
+                } while (in_node.GetString("NEXT_OPER") != "" ||
+                         in_node.GetInt("NEXT_SEQ") > 0 ||
+                         in_node.GetString("NEXT_COL_SET_ID") != "");
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+
+            return true;
+            
+        }
+        
+        //
+        // Update_MFO_ColSet_List()
+        //       - Attach/Detach Collection Set to MFO
+        // Return Value
+        //       - Boolean : True or False
+        // Arguments
+        //       - ByVal ProcStep As String : Process Step
+        //
+        private bool Update_MFO_ColSet_List(char ProcStep, char OptLevel, ref FarPoint.Win.Spread.FpSpread spdList)
+        {
+            int i = 0;
+
+            TRSNode in_node = new TRSNode("UPDATE_MFO_COLSET_LIST_IN");
+            TRSNode out_node = new TRSNode("CMN_OUT");
+            TRSNode list_item;
+
+            try
+            {
+                MPCR.SetInMsg(in_node);
+                in_node.ProcStep = ProcStep;
+                in_node.AddChar("OPT_LEVEL", OptLevel);
+
+                for (i = 0; i < spdList.ActiveSheet.RowCount; i++)
+                {
+                    if (spdList.ActiveSheet.GetValue(i, COL_SEL) != null && Convert.ToBoolean(spdList.ActiveSheet.GetValue(i, COL_SEL)) == true)
+                    {
+                        list_item = in_node.AddNode("COLSET_LIST");
+                        
+                        if (OptLevel == '1')
+                        {
+                            list_item.AddString("MAT_ID", MPCF.Trim(cdvMaterial.Text));
+                            list_item.AddInt("MAT_VER", cdvMaterial.Version);
+                            list_item.AddString("FLOW", MPCF.Trim(cdvFlow2.Text));
+                        }
+                        else if (OptLevel == '2')
+                        {
+                            list_item.AddString("FLOW", MPCF.Trim(cdvFlow.Text));
+                        }
+                        else if (OptLevel == '4')
+                        {
+                            list_item.AddString("MAT_ID", MPCF.Trim(cdvMaterial2.Text));
+                            list_item.AddInt("MAT_VER", cdvMaterial2.Version);
+                        }
+
+                        list_item.AddString("OPER", MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_OPER)));
+                        list_item.AddString("COL_SET_ID", MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_COL_SET_ID)));
+
+                        if (MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_COL_SET_ID)) != "")
+                        {
+                            if (MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_COL_MODE)) != "")
+                            {
+                                list_item.AddChar("COLLECTION_MODE", MPCF.ToChar(MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_COL_MODE)).Substring(0, 1)));
+                            }
+                            list_item.AddChar("DEFAULT_FLAG", MPCF.ToChar(MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_DEFUALT_FLAG))) == 'T' ? 'Y' : 'N');
+                            list_item.AddChar("DISABLE_FLAG", MPCF.ToChar(MPCF.Trim(spdList.ActiveSheet.GetValue(i, COL_DISABLE_FLAG))) == 'T' ? 'Y' : 'N');
+                        }
+                    }
+                }
+
+                if (MPCR.CallService("EDC", "EDC_Update_MFO_ColSet_List", in_node, ref out_node) == false)
+                {
+                    return false;
+                }
+
+                MPCR.ShowSuccessMsg(out_node);
+
+                View_MFO_ColSet_List('1', OptLevel);
+                
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+            
+        }
+
+        //
+        // View_Col_Set()
+        //       - View Collection Set Definition
+        // Return Value
+        //       - Boolean : True or False
+        // Arguments
+        //       -
+        //
+        private bool View_Col_Set(ref FarPoint.Win.Spread.SheetView spdListView, int iRow, string sColSetID)
+        {
+            TRSNode in_node = new TRSNode("VIEW_COL_SET_IN");
+            TRSNode out_node = new TRSNode("VIEW_COL_SET_OUT");
+            
+            try
+            {
+                MPCR.SetInMsg(in_node);
+                in_node.ProcStep = '1';
+                in_node.AddString("COL_SET_ID", MPCF.Trim(sColSetID));
+
+                if (MPCR.CallService("EDC", "EDC_View_Col_Set", in_node, ref out_node) == false)
+                {
+                    return false;
+                }
+
+                //Default Collection Mode (e.g. Auto, Manual) - Added by LAVERWON (08/01/14)
+                // A : Auto, M : Manual
+                if (MPCF.Trim(out_node.GetChar("DEFAULT_COL_MODE_FLAG")) == "A")
+                {
+                    spdListView.SetValue(iRow, COL_COL_MODE, "Auto");
+                }
+                else if (MPCF.Trim(out_node.GetChar("DEFAULT_COL_MODE_FLAG")) == "M")
+                {
+                    spdListView.SetValue(iRow, COL_COL_MODE, "Manual");
+                }
+                else
+                {
+                    spdListView.SetValue(iRow, COL_COL_MODE, "");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+
+            return true;
+
+        }
+        
+        public virtual Control GetFisrtFocusItem()
+        {
+            
+            try
+            {
+                return this.tabMFO;
+                
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return null;
+            }
+            
+        }
+        
+#endregion
+
+        private void frmEDCSetupAttachCollectionSetToMFO_Activated(object sender, System.EventArgs e)
+        {
+            
+            try
+            {
+                if (LoadFlag == false)
+                {
+                    tabMFO.SelectedTab = tbpOper;
+                    if (View_MFO_ColSet_List('1', '3') == false)
+                    {
+                        return;
+                    }
+                    
+                    LoadFlag = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+            
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+            FarPoint.Win.Spread.SheetView spdListView = null;
+
+            try
+            {
+                if (tabMFO.SelectedTab == tbpOper)
+                {
+                    spdListView = spdOper.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpFO)
+                {
+                    spdListView = spdFO.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpMFO)
+                {
+                    spdListView = spdMFO.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpMO)
+                {
+                    spdListView = spdMO.ActiveSheet;
+                }
+                else
+                {
+                    return;
+                }
+
+                if (MPCF.Trim(spdListView.GetValue(spdListView.ActiveRowIndex, COL_COL_SET_ID)) == "")
+                {
+                    return;
+                }
+
+                spdListView.AddRows(spdListView.ActiveRowIndex + 1, 1);
+                spdListView.SetValue(spdListView.ActiveRowIndex + 1, COL_OPER, spdListView.GetValue(spdListView.ActiveRowIndex, COL_OPER));
+                spdListView.SetValue(spdListView.ActiveRowIndex + 1, COL_OPER_DESC, spdListView.GetValue(spdListView.ActiveRowIndex, COL_OPER_DESC));
+                spdListView.SetActiveCell(spdListView.ActiveRowIndex + 1, COL_COL_SET_BTN);
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }       
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+            FarPoint.Win.Spread.FpSpread spdList = new FarPoint.Win.Spread.FpSpread();
+            char optLevel = ' ';
+
+            try
+            {
+                if (MPCF.ShowMsgBox(MPCF.GetMessage(54), MessageBoxButtons.YesNo, 2) != System.Windows.Forms.DialogResult.Yes)
+                {
+                    return;
+                }
+                if (CheckCondition("Delete_MFO_ColSet_List", MPGC.MP_STEP_DELETE) == true)
+                {
+                    if (tabMFO.SelectedTab == tbpOper)
+                    {
+                        optLevel = '3';
+                        spdList = spdOper;
+                    }
+                    else if (tabMFO.SelectedTab == tbpFO)
+                    {
+                        optLevel = '2';
+                        spdList = spdFO;
+                    }
+                    else if (tabMFO.SelectedTab == tbpMFO)
+                    {
+                        optLevel = '1';
+                        spdList = spdMFO;
+                    }
+                    else if (tabMFO.SelectedTab == tbpMO)
+                    {
+                        optLevel = '4';
+                        spdList = spdMO;
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    if (Update_MFO_ColSet_List(MPGC.MP_STEP_DELETE, optLevel, ref spdList) == false)
+                    {
+                        return;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+        
+        private void btnUpdate_Click(System.Object sender, System.EventArgs e)
+        {
+            
+            FarPoint.Win.Spread.FpSpread spdList = new FarPoint.Win.Spread.FpSpread();
+            char optLevel = ' ';
+
+            try
+            {
+                if (CheckCondition("Update_MFO_ColSet_List", MPGC.MP_STEP_UPDATE) == true)
+                {
+                    if (tabMFO.SelectedTab == tbpOper)
+                    {
+                        optLevel = '3';
+                        spdList = spdOper;
+                    }
+                    else if (tabMFO.SelectedTab == tbpFO)
+                    {
+                        optLevel = '2';
+                        spdList = spdFO;
+                    }
+                    else if (tabMFO.SelectedTab == tbpMFO)
+                    {
+                        optLevel = '1';
+                        spdList = spdMFO;
+                    }
+                    else if (tabMFO.SelectedTab == tbpMO)
+                    {
+                        optLevel = '4';
+                        spdList = spdMO;
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    if (Update_MFO_ColSet_List(MPGC.MP_STEP_UPDATE, optLevel, ref spdList) == false)
+                    {
+                        return;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+
+        private void cdvFlow_ButtonPress(object sender, System.EventArgs e)
+        {
+
+            try
+            {
+                cdvFlow.Init();
+                MPCF.InitListView(cdvFlow.GetListView);
+                cdvFlow.Columns.Add("Flow", 100, HorizontalAlignment.Left);
+                cdvFlow.Columns.Add("Desc", 200, HorizontalAlignment.Left);
+                cdvFlow.SelectedSubItemIndex = 0;
+                cdvFlow.DisplaySubItemIndex = 0;
+                cdvFlow.SelectedDescIndex = 1;
+                cdvFlow.ReadOnly = true;
+                WIPLIST.ViewFlowList(cdvFlow.GetListView, '1', "", 0, "", null, "");
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+        
+        private void cdvFlow_SelectedItemChanged(System.Object sender, Miracom.UI.MCCodeViewSelChanged_EventArgs e)
+        {
+
+            try
+            {
+
+                if (cdvFlow.Text == "")
+                {
+                    ClearData('2');
+                }
+                else
+                {
+                    View_MFO_ColSet_List('1', '2');
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+            
+        }
+
+        private void cdvMaterial_SelectedItemChanged(System.Object sender, Miracom.UI.MCCodeViewSelChanged_EventArgs e)
+        {
+
+            try
+            {
+                ClearData('1');
+
+                cdvFlow2.Text = "";                
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+            
+        }    
+
+        private void cdvFlow2_ButtonPress(object sender, System.EventArgs e)
+        {
+
+            try
+            {
+                if (cdvMaterial.CheckValue() == false)
+                {
+                    cdvMaterial.Focus();
+                    return;
+                }
+
+                cdvFlow2.ListCond_MatID = cdvMaterial.Text;
+                cdvFlow2.ListCond_MatVersion = cdvMaterial.Version;
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+
+        private void cdvFlow2_SelectedItemChanged(object sender, Miracom.UI.MCCodeViewSelChanged_EventArgs e)
+        {
+
+            try
+            {
+                if (cdvFlow2.Text == "")
+                {
+                    ClearData('1');
+                }
+                else
+                {
+                    if (View_MFO_ColSet_List('1', '1') == false)
+                    {
+                        return;
+                    }
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+        
+        private void spdOper_EditChange(object sender, FarPoint.Win.Spread.EditorNotifyEventArgs e)
+        {
+
+            try
+            {
+                if (e.Column > 0 && e.Row >= 0)
+                {
+                    ((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.SetValue(e.Row, 0, true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }    
+        
+        private void spdOper_ButtonClicked(object sender, FarPoint.Win.Spread.EditorNotifyEventArgs e)
+        {
+           
+            int i = 0;
+
+            try
+            {
+                if (e.Column != COL_COL_SET_BTN)
+                {
+                    if (e.Column == COL_DEFUALT_FLAG || e.Column == COL_DISABLE_FLAG)
+                    {
+                        ((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.SetValue(e.Row, COL_SEL, true);
+                    }
+
+                    if (e.Column == COL_DEFUALT_FLAG)
+                    {
+                        if (Convert.ToBoolean(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.GetValue(e.Row, COL_DEFUALT_FLAG)) == false)
+                        {
+                            string sOperation = MPCF.Trim(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.Cells[e.Row, COL_OPER].Value);
+                            string sCollectionMode = MPCF.Trim(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.Cells[e.Row, COL_COL_MODE].Value);
+
+                            for (i = 0; i < ((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.RowCount; i++)
+                            {
+                                if (sOperation == MPCF.Trim(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.Cells[i, COL_OPER].Value)
+                                    && sCollectionMode == MPCF.Trim(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.Cells[i, COL_COL_MODE].Value) 
+                                    && i != e.Row
+                                    && Convert.ToBoolean(((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.GetValue(i, COL_DEFUALT_FLAG)) == true)
+                                {
+                                    ((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.SetValue(i, COL_DEFUALT_FLAG, false);
+                                    ((FarPoint.Win.Spread.FpSpread)sender).ActiveSheet.SetValue(i, COL_SEL, true);
+                                }
+                            }
+                        }
+                    }
+
+                    return;
+                }
+
+                cdvColSet.Init();
+                cdvColSet.ViewPosition = Control.MousePosition;
+                MPCF.InitListView(cdvColSet.GetListView);
+                cdvColSet.Columns.Add("Table Name", 100, HorizontalAlignment.Left);
+                cdvColSet.Columns.Add("Table Desc", 100, HorizontalAlignment.Left);
+                if (EDCLIST.ViewEDCColSetList(cdvColSet.GetListView, '3', null, "", -1, -1, 'L', true) == false)
+                {
+                    return;
+                }                
+                if (cdvColSet.ShowPopupList(e.Row, e.Column) == false)
+                {
+                    return;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+        
+        private void cdvColSet_SelectedItemChanged(object sender, UI.MCSSCodeViewSelChanged_EventArgs e)
+        {
+           
+            FarPoint.Win.Spread.SheetView spdListView = null;
+            int i = 0;
+            
+            try
+            {
+                if (tabMFO.SelectedTab == tbpOper)
+                {
+                    spdListView = spdOper.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpFO)
+                {
+                    spdListView = spdFO.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpMFO)
+                {
+                    spdListView = spdMFO.ActiveSheet;
+                }
+                else if (tabMFO.SelectedTab == tbpMO)
+                {
+                    spdListView = spdMO.ActiveSheet;
+                }
+                else
+                {
+                    return;
+                }
+
+                string sOperation = MPCF.Trim(spdListView.Cells[e.Row, COL_OPER].Value);
+
+                for (i = 0; i < spdListView.RowCount; i++)
+                {
+                    if (sOperation == MPCF.Trim(spdListView.Cells[i, COL_OPER].Value) && MPCF.Trim(e.SelectedItem.SubItems[0].Text) == MPCF.Trim(spdListView.Cells[i, COL_COL_SET_ID].Value))
+                    {
+                        MPCF.ShowMsgBox(MPCF.GetMessage(263));
+                        return;
+                    }
+                }
+                
+                spdListView.Cells[e.Row, e.Col - 1].Value = MPCF.Trim(e.SelectedItem.SubItems[0].Text);
+                
+                if (e.Col > 0 && e.Row >= 0)
+                {
+                    spdListView.SetValue(e.Row, 0, true);
+                }
+
+                if (View_Col_Set(ref spdListView, e.Row, e.SelectedItem.SubItems[0].Text) == false)
+                {
+                    return;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+        
+        private void btnRefresh_Click(System.Object sender, System.EventArgs e)
+        {
+            
+            try
+            {
+                if (tabMFO.SelectedTab == this.tbpOper)
+                {
+                    if (View_MFO_ColSet_List('1', '3') == false)
+                    {
+                        return;
+                    }
+                }
+                else if (tabMFO.SelectedTab == this.tbpFO)
+                {
+                    if (MPCF.CheckValue(cdvFlow, 1) == false)
+                    {
+                        cdvFlow.Focus();
+                        return;
+                    }
+                    if (View_MFO_ColSet_List('1', '2') == false)
+                    {
+                        return;
+                    }
+                }
+                else if (tabMFO.SelectedTab == this.tbpMFO)
+                {
+                    if (cdvMaterial.CheckValue() == false)
+                    {
+                        cdvMaterial.Focus();
+                        return;
+                    }
+
+                    if (cdvFlow2.CheckValue() == false)
+                    {
+                        cdvFlow2.Focus();
+                        return;
+                    }
+
+                    if (View_MFO_ColSet_List('1', '1') == false)
+                    {
+                        return;
+                    }
+                }
+                else if (tabMFO.SelectedTab == this.tbpMO)
+                {
+                    if (cdvMaterial2.CheckValue() == false)
+                    {
+                        cdvMaterial2.Focus();
+                        return;
+                    }
+
+                    if (View_MFO_ColSet_List('1', '4') == false)
+                    {
+                        return;
+                    }
+                }        
+        
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sCond = string.Empty;
+
+                if (tabMFO.SelectedTab == tbpOper)  // Operation
+                {
+                    MPCF.ExportToExcel(spdOper, this.Text, "");
+                }
+                else if (tabMFO.SelectedTab == tbpFO) // Flow - Operation
+                {
+                    sCond = "Flow : " + cdvFlow.Text;
+
+                    MPCF.ExportToExcel(spdFO, this.Text, sCond);
+                }
+                else if (tabMFO.SelectedTab == tbpMFO) // Material - Flow - Operation
+                {
+                    sCond = "Material : " + cdvMaterial.Text + ", Flow : " + cdvFlow2.Text;
+
+                    MPCF.ExportToExcel(spdMFO, this.Text, sCond);
+                }
+                else if (tabMFO.SelectedTab == tbpMO) // Material - Operation
+                {
+                    sCond = "Material : " + cdvMaterial2.Text;
+
+                    MPCF.ExportToExcel(spdMO, this.Text, sCond);
+                }
+            }
+            catch(Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
+        private void cdvMaterial2_MaterialSelectedItemChanged(object sender, UI.MCCodeViewSelChanged_EventArgs e)
+        {
+            try
+            {
+                if (cdvMaterial2.Text == "")
+                {
+                    ClearData('4');
+                }
+                else
+                {
+                    View_MFO_ColSet_List('1', '4');
+                }
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
+        private void cdvMaterial2_VersionSelectedItemChanged(object sender, UI.MCCodeViewSelChanged_EventArgs e)
+        {
+            cdvMaterial2_MaterialSelectedItemChanged(null, null);
+        }
+        
+#endif // _EDC
+
+     }
+}
+

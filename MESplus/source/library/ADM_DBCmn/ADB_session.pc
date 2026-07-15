@@ -1,0 +1,153 @@
+EXEC SQL BEGIN DECLARE SECTION;
+    EXEC SQL INCLUDE ADB_COMMON_N;
+EXEC SQL END DECLARE SECTION;
+
+/* SQL Common Header File */
+#include "ADB_common.h"
+
+
+/* SQL Error Handling */
+EXEC SQL WHENEVER SQLERROR DO DB_usr_error();
+EXEC SQL WHENEVER NOT FOUND DO DB_usr_error();
+
+
+void ADB_add_null_session(struct SESSION_N_TAG *SESSION_N, struct SESSION_TAG *SESSION);
+void ADB_del_null_session(struct SESSION_N_TAG *SESSION_N, struct SESSION_TAG *SESSION);
+
+void ADB_open_session(int sel_type, struct SESSION_TAG *SESSION)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct SESSION_N_TAG SESSION_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    ADB_add_null_session(&SESSION_N, SESSION);
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL DECLARE ADB_SESSION_CUR_1 CURSOR FOR 
+                SELECT SID,  
+                    STATUS,      
+                    NVL(USERNAME, ' '),   
+                    OSUSER,      
+                    MACHINE,     
+                    PROGRAM,   
+                    TYPE,        
+                TO_CHAR(LOGON_TIME, 'YYYYMMDDHHMMSS') AS LOGON_TIME 
+                FROM V$SESSION
+                WHERE SID >= :SESSION_N.SESSION_ID
+                ORDER BY SID ASC;
+            EXEC SQL OPEN ADB_SESSION_CUR_1;
+            break;
+        
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_open_session", sel_type);
+}
+
+void ADB_fetch_session(int sel_type, struct SESSION_TAG *SESSION)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        struct SESSION_N_TAG SESSION_N;
+    EXEC SQL END DECLARE SECTION;
+
+    DB_start_query_timer();
+
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL FETCH ADB_SESSION_CUR_1 INTO 
+                :SESSION_N.SESSION_ID,
+                :SESSION_N.STATUS,
+                :SESSION_N.USERNAME,
+                :SESSION_N.OSUSER,
+                :SESSION_N.MACHNIE,
+                :SESSION_N.PROGRAM,
+                :SESSION_N.TYPE,
+                :SESSION_N.LOGON_TIME;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    
+    if(DB_error_code == 0)
+    {
+        ADB_del_null_session(&SESSION_N, SESSION);
+    }
+    DB_stop_query_timer("ADB_fetch_session", sel_type);
+}
+
+void ADB_close_session(int sel_type)
+{
+
+    DB_start_query_timer();
+    DB_error_code = 0;
+    memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+    
+    switch(sel_type)
+    {
+        case 1:
+            EXEC SQL CLOSE ADB_SESSION_CUR_1;
+            break;
+            
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "INVALID RANGE", 13);
+            break;
+    }
+    DB_stop_query_timer("ADB_close_session", sel_type);
+}
+
+/* Initialize Function */
+void ADB_init_session(struct SESSION_TAG *SESSION)
+{
+    /* memset by Space */
+    memset(SESSION, ' ', sizeof(struct SESSION_TAG));
+    
+    SESSION->SESSION_ID = 0;
+
+}
+
+void ADB_add_null_session(struct SESSION_N_TAG *SESSION_N, struct SESSION_TAG *SESSION)
+{
+
+    memset(SESSION_N, '\0', sizeof(struct SESSION_N_TAG));
+    SESSION_N->SESSION_ID = SESSION->SESSION_ID;
+    MEMCPY_AN(SESSION_N->STATUS, SESSION->STATUS, sizeof(SESSION->STATUS));
+    MEMCPY_AN(SESSION_N->USERNAME, SESSION->USERNAME, sizeof(SESSION->USERNAME));
+    MEMCPY_AN(SESSION_N->OSUSER, SESSION->OSUSER, sizeof(SESSION->OSUSER));
+    MEMCPY_AN(SESSION_N->MACHNIE, SESSION->MACHNIE, sizeof(SESSION->MACHNIE));
+    MEMCPY_AN(SESSION_N->PROGRAM, SESSION->PROGRAM, sizeof(SESSION->PROGRAM));
+    MEMCPY_AN(SESSION_N->TYPE, SESSION->TYPE, sizeof(SESSION->TYPE));
+    MEMCPY_AN(SESSION_N->LOGON_TIME, SESSION->LOGON_TIME, sizeof(SESSION->LOGON_TIME));
+    
+}
+
+void ADB_del_null_session(struct SESSION_N_TAG *SESSION_N, struct SESSION_TAG *SESSION)
+{
+    SESSION->SESSION_ID = SESSION_N->SESSION_ID;
+    MEMCPY_DN(SESSION->STATUS, SESSION_N->STATUS, sizeof(SESSION->STATUS));
+    MEMCPY_DN(SESSION->USERNAME, SESSION_N->USERNAME, sizeof(SESSION->USERNAME));
+    MEMCPY_DN(SESSION->OSUSER, SESSION_N->OSUSER, sizeof(SESSION->OSUSER));
+    MEMCPY_DN(SESSION->MACHNIE, SESSION_N->MACHNIE, sizeof(SESSION->MACHNIE));
+    MEMCPY_DN(SESSION->PROGRAM, SESSION_N->PROGRAM, sizeof(SESSION->PROGRAM));
+    MEMCPY_DN(SESSION->TYPE, SESSION_N->TYPE, sizeof(SESSION->TYPE));
+    MEMCPY_DN(SESSION->LOGON_TIME, SESSION_N->LOGON_TIME, sizeof(SESSION->LOGON_TIME));
+    
+}
+

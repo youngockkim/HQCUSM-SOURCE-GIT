@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Message>
+    <Text Key="0">
+        <L>Loading option ...</L>
+        <L>옵션을 로딩 중입니다...</L>
+        <L>Lade Optionen ...</L>
+    </Text>
+    <Text Key="1">
+        <L>Loading resource ...</L>
+        <L>리소스를 로딩 중입니다...</L>
+        <L>Lade Resource ....</L>
+    </Text>
+    <Text Key="2">
+        <L>Loading message bus ...</L>
+        <L>메시지 버스를 로딩 중입니다...</L>
+        <L>Lade Resource ...</L>
+    </Text>
+    <Text Key="3">
+        <L>You must restart this program to apply this option. Do you want to restart the program?</L>
+        <L>이 옵션을 적용하기 위해서는 프로그램을 새로 시작하여야 합니다. 새로 시작하시겠습니까?</L>
+        <L>Sie muessen die Anwendung neu starten um die Aenderungen zu uebernehmen. Wollen Sie die Anwendung neu starten?</L>
+    </Text>
+    <Text Key="4">
+        <L>Do you want to exit the program?</L>
+        <L>프로그램을 종료하시겠습니까?</L>
+        <L>Wollen Sie das Programm verlassen?</L>
+    </Text>
+    <Text Key="5">
+        <L>Do you want to restart the program?</L>
+        <L>프로그램을 다시 시작하시겠습니까?</L>
+        <L>Wollen Sie das Programm neu starten?</L>
+    </Text>
+    <Text Key="6">
+        <L>The client currently uses old version system. Version check now will upgrade to new version</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받겠습니다.</L>
+        <L>Es gibt eine neuere Client-Version auf die upgedatet wird.</L>
+    </Text>
+    <Text Key="7">
+        <L>Auto logout time has passed. Program will now exit.</L>
+        <L>Auto logout 시간이 초과되었습니다. 프로그램이 자동 종료됩니다.</L>
+        <L>Die maximale Auto-Logout-Time ist verstrichen. Das Programm muss beendet werden...</L>
+    </Text>
+    <Text Key="8">
+        <L>An error occurred while reading language XML file</L>
+        <L>Language XML File을 읽는 동안 에러가 발생했습니다.</L>
+        <L>Waehrend des Lesens des Language-XML-File ist ein Fehler aufgetreten.</L>
+    </Text>
+    <Text Key="9">
+        <L>The client currently uses old version system. Do you wish to upgrade to new version?</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받으시겠습니까?</L>
+        <L>Es gibt eine aktuellerre Version des Client. Moechten Sie auf diese updaten</L>
+    </Text>
+    <Text Key="10">
+        <L>Do you wish to continue?</L>
+        <L>계속 하시겠습니까?.</L>
+        <L>Moechen Sie fortfahren?</L>
+    </Text>
+    <Text Key="11">
+        <L>Do you wish to download the latest version?</L>
+        <L>최신 버전을 받으시겠습니까?</L>
+        <L>Moechten Sie die neueste Version downloaden?</L>
+    </Text>
+    <Text Key="12">
+        <L>A new ALARM MESSAGE has arrived.</L>
+        <L>알람 메시지가 도착했습니다!!!</L>
+        <L>Eine neue ALARM MESSAGE ist eingetroffen.</L>
+    </Text>
+    <Text Key="13">
+        <L>Do you want to log off?</L>
+        <L>로그오프 하시겠습니까?</L>
+        <L>Moechten Sie sich abmelden?</L>
+    </Text>
+    <Text Key="14">
+        <L>You must restart this program to initialize the menu. Do you want to restart the program?</L>
+        <L>메뉴를 초기화 하려면 프로그램을 다시 시작해야 합니다. 다시 시작 하시겠습니까?</L>
+        <L>Sie mussen dieses Programm neu starten, um das Menu zu initialisieren. Wollen Sie das Programm neu starten?</L>
+    </Text>
+    <Text Key="15">
+        <L>Excel Export is completed.</L>
+        <L>엑셀파일 출력이 완료되었습니다.</L>
+        <L>Excel Export is completed.</L>
+    </Text>
+    <Text Key="16">
+        <L>Sending data.</L>
+        <L>데이터 전송중입니다.</L>
+        <L>Sending data.</L>
+    </Text>
+    <Text Key="17">
+        <L>Printing is completed.</L>
+        <L>프린트가 완료되었습니다.</L>
+        <L>Printing is completed.</L>
+    </Text>
+    <Text Key="18">
+        <L>Can't print.</L>
+        <L>프린트 할 수 없습니다.</L>
+        <L>Can't print.</L>
+    </Text>
+    <Text Key="51">
+        <L>Waiting for reply ...</L>
+        <L>응답을 기다리고 있습니다 ...</L>
+        <L>Warte auf eine Rueckmeldung ...</L>
+    </Text>
+    <Text Key="52">
+        <L>Successfully completed.</L>
+        <L>작업을 성공적으로 수행하였습니다.</L>
+        <L>Erfolgreich abeschlossen.</L>
+    </Text>
+    <Text Key="53">
+        <L>Are you sure you want to delete the data?</L>
+        <L>데이타를 지우시겠습니까?</L>
+        <L>Wollen Sie die Daten wirklich loeschen?</L>
+    </Text>
+    <Text Key="54">
+        <L>This command will DELETE related data from database. Are you sure you want to execute the command?</L>
+        <L>이 명령을 수행하면 이와 관련된 여러 데이타가 데이타베이스에서 삭제됩니다. 그래도 지우시겠습니까?</L>
+        <L>Dieses Kommando wird zugeordnete Daten aus der Datenbank loeschen. Wollen Sie das Kommando ausfuehren?</L>
+    </Text>
+    <Text Key="55">
+        <L>The application must be restarted to apply new favorite.</L>
+        <L>새로운 즐겨찾기를 적용하기 위해서는 다시 시작해야 합니다.</L>
+        <L>Das Programm muss neu gestartet werden um die Aenderungen bei den Favoriten zu uebernehmen.</L>
+    </Text>
+    <Text Key="56">
+        <L>PM is scheduled successfully. But some Item Cannot be Scheduled because Schedule Exist or PM already executed. Please Schedule those items Non Periodically.</L>
+        <L>PM 계획이 정상적으로 수립되었습니다. 그런 이미 정의되었거나 PM이 수행되어 SCHEDULE에서 제외된 날이 있으니 이런 날에 대해서는 비주기적으로 SCHEDULE하여 주십시요. </L>
+        <L>Ein PM wurde erfolgreich geplant, jedoch konnt einige Items nicht geplant werden da bereits ein Zeitplan existiert oder ausgefuehrt wird. Bitte planen Sie diese Items nichtperiodisch.</L>
+    </Text>
+    <Text Key="57">
+        <L>Some days are not available for schedule because schedule already exist or PM already executed on that day. Do you wish to continue except those days?</L>
+        <L>이미 정의되었거나 PM이 수행되어 SCHEDULE이 불가능한 날이 있습니다. 이를 제외하고 Schedule을 계속 진행하시겠습니까?</L>
+        <L>Einige Tage sind nicht verfuegbar, da Sie bereits verwendet werden, oder ein PM wurde bereits ausgefuehrt. Moechten Sie ohne diese Tag fortfahren?</L>
+    </Text>
+    <Text Key="58">
+        <L>The Lot violates the queue time limitation. Will you proceed with ignoring the alarm?</L>
+        <L>이 Lot은 Queue Time 설정시간이 지났습니다. 알람을 무시하고 계속 진행하시겠습니까?</L>
+        <L>Moechten Sie die Queue-Time-Limitation ignorieren und fortfahren?</L>
+    </Text>
+    <Text Key="59">
+        <L>This command will UPDATE related data of the chart. Are you sure you want to execute the command?</L>
+        <L>이 명령을 수행하면 차트의 이와 관련된 여러 데이타가 업데이트됩니다. 그래도 계속하시겠습니까?</L>
+        <L>Dieses Kommando wird dem Chart zugeordnete Daten UPDATEN. Wollen Sie das Kommando ausfuehren?s</L>
+    </Text>
+
+    <Text Key="60">
+        <L>Can't open screen because exceeded maximum GDI resource, Close don't use screen.</L>
+        <L>할당할 수 있는 최대 GDI 리소스를 초과하여 새로운 화면을 열수 없습니다. 사용하지 않는 화면을 닫아주십시오.</L>
+        <L>Der Bildschirm konnte aufgrund eines GDI Fehlers nicht geoeffnet werden. Schliessen Sie den Bildschirm und verwenden Sie ihn nicht mehr.</L>
+    </Text>
+
+    <Text Key="61">
+        <L>An error occurs during the conversion to Excel. Please check if the supportive number of columns is converted to Excel.</L>
+        <L>Excel 변환 중 에러가 발생 하였습니다. Excel에서 지원할 수 없는 칼럼수를 변환 하였는지 확인해 주십시오.</L>
+        <L>Waehrend der Umwandlung zu Excel ist ein Fehler aufgetreten. Bitte ueberpruefen Sie, ob die unterstuetzende Anzahl der Spalten zu Exel konvertiert wurde.</L>
+    </Text>
+
+    <Text Key="62">
+        <L>Validation result is no problem!.</L>
+        <L>검증 결과 모두 정상입니다.</L>
+        <L>Ergebnis der Validierung wird kein Problem.</L>
+    </Text>
+
+    <Text Key="63">
+        <L>Operation has been canceled by the user.</L>
+        <L>작업이 사용자에 의해 취소되었습니다.</L>
+        <L>Operation wurde vom Benutzer abgebrochen.</L>
+    </Text>
+    <Text Key="64">
+        <L>Are you sure you want to update null data?</L>
+        <L>데이타를 Null로 업데이트 하시겠습니까?</L>
+        <L>Wollen Sie die Daten wirklich loeschen?</L>
+    </Text>
+    <Text Key="65">
+        <L>Please enter a value which is greater than 0.</L>
+        <L>0보다 큰 값을 입력해 주세요.</L>
+        <L>Bitte geben Sie einen Wert groesser 0 ein.</L>
+    </Text>
+    <Text Key="66">
+        <L>Numeric data is required in this field. Please enter numeric data.</L>
+        <L>이 필드는 숫자를 입력해야 하는 필드입니다.</L>
+        <L>Numerische Daten sind notwendig.</L>
+    </Text>
+    <Text Key="67">
+        <L>Invalid password. Please enter correct password.</L>
+        <L>입력된 Password가 다릅니다. 다시 입력하여 주세요.</L>
+        <L>Ungueltiges Passwort. Geben Sie das korrekte Passwort ein.</L>
+    </Text>
+    <Text Key="68">
+        <L>Input value exceeds limit value. Try another value.</L>
+        <L>입력한 값이 한계값을 넘었습니다. 다른 수를 입력해 주세요.</L>
+        <L>Der eingegebene Werte ueberschreitet das erlaubte Maximum.</L>
+    </Text>
+    <Text Key="69">
+        <L>Failed to load resource.  Check if resource file exists.</L>
+        <L>리소스를 로딩하는 도중 문제가 발생하였습니다. 리소스 화일이 존재하는지 확인하십시요!</L>
+        <L>Die Resource konnte nicht geladen werden.  Ueberpruefen Sie ob das Resourcen-File existiert.</L>
+    </Text>
+    <Text Key="70">
+        <L>Upgrade program does not exist. Please reinstall client.</L>
+        <L>UPGRADE PROGRAM을 찾을 수 없습니다. CLIENT를 다시 SETUP 하세요.</L>
+        <L>Das Upgrade-Programm existiert nicht. Installieren Sie den Client neu.</L>
+    </Text>
+    <Text Key="71">
+        <L>Please, select at least one item.</L>
+        <L>최소한 1개 이상의 아이템을 선택해 주세요.</L>
+        <L>Bitte wahelen Sie zumindest ein Item aus.</L>
+    </Text>
+    <Text Key="72">
+        <L>Only Float value is allowed. Please correct the value.</L>
+        <L>실수형의 값만 허용됩니다. 값을 수정해 주세요.</L>
+        <L>Nur Fliesskommawerte sind erlaubt.</L>
+    </Text>
+    <Text Key="73">
+        <L>Only Fixedpoint numeric value is allowed. Please correct the value</L>
+        <L>정수형의 값만 허용됩니다. 값을 수정해 주세요.</L>
+        <L>Nur Fixepoint numerische Werte sind erlaubt.</L>
+    </Text>
+    <Text Key="101">
+        <L>Message time out error!</L>
+        <L>서버에서 응답이 없습니다!</L>
+        <L>Die Message Timeout wurde ueberschritten!</L>
+    </Text>
+    <Text Key="102">
+        <L>Unknown error!</L>
+        <L>알수 없는 오류가 발생했습니다.</L>
+        <L>Unbekannter Error!</L>
+    </Text>
+    <Text Key="103">
+        <L>An error has occurred.</L>
+        <L>메시지 에러가 발생했습니다. </L>
+        <L>Ein Error ist aufgetreten.</L>
+    </Text>
+    <Text Key="104">
+        <L>Failed to initialize message bus. Please check if message bus is installed correctly.</L>
+        <L>메시지 버스를 초기화에 실패 하였습니다. 메시지 버스가 제대로 설치 되었는지 확인하십시요!</L>
+        <L>Der Message Bus konnte nicht initialisiert werden. Ueberpruefen Sie ob der Message Bus korrekt installiert wurde.</L>
+    </Text>
+    <Text Key="105">
+        <L>You are a certified user. But you have no authority to access MES functions.</L>
+        <L>귀하는 등록된 사용자이나 MES의 function을 사용할수 있는 권한이 없습니다.</L>
+        <L>Sie sind ein gepruefter User, jedoch fehlt Ihnen die Autorisierung um MES-Funktionen zu verwenden.</L>
+    </Text>
+    <Text Key="106">
+        <L>You have no privilege to use this function.</L>
+        <L>Function을 사용할 권한이 없습니다.</L>
+        <L>Ihnen Fehlen die notwendigen Rechte um diese Funktion zu verwenden.</L>
+    </Text>
+    <Text Key="107">
+        <L>No data entered. Please enter the desired data.</L>
+        <L>데이타가 입력되지 않았습니다. 필요한 데이타를 입력해 주십시요.</L>
+        <L>Es wurden keine Daten eingegeben. Bitte geben Sie Daten ein.</L>
+    </Text>
+    <Text Key="108">
+        <L>Required field. Please enter a value.</L>
+        <L>이 필드는 입력이 필요한 필드입니다. 데이타를 입력해 주십시요.</L>
+        <L>Dies ist ein notwendiges Eingabefeld. Bitte geben Sie Daten ein.</L>
+    </Text>
+    <Text Key="109">
+        <L>No item was selected. Please select item.</L>
+        <L>Item이 선택되지 않았습니다. Item을 선택해 주십시요.</L>
+        <L>Es wurde kein Element ausgewaehlt. Bitte waehlen Sie ein Element aus.</L>
+    </Text>
+    <Text Key="110">
+        <L>Invalid data format. Please input valid data format.</L>
+        <L>DATA 형식이 올바르지 않습니다. 다시 입력해 주세요.</L>
+        <L>Ungueltiges Datenformat. Bitte geben Sie gueltige Daten ein.</L>
+    </Text>
+    <Text Key="111">
+        <L>The data is duplicated.</L>
+        <L>데이타가 다른 데이타와 중복됩니다.</L>
+        <L>Diese Daten sind doppelt vorhanden.</L>
+    </Text>
+    <Text Key="112">
+        <L>The data is not valid.</L>
+        <L>데이타가 유효하지 않습니다.</L>
+        <L>The data is not valid.</L>
+    </Text>
+    <Text Key="113">
+        <L>Label ID or Label Command does not exist.</L>
+        <L>Label ID 또는 Label Command가 존재하지 않습니다. </L>
+        <L>Label ID or Label Command does not exist.</L>
+    </Text>
+    <Text Key="114">
+        <L>Do you want to run a batch inspect? </L>
+        <L>일괄 검수를 실행하시겠습니까?</L>
+        <L>Do you want to run a batch inspect?</L>
+    </Text>
+    <Text Key="115">
+        <L>Do you want to run a batch reject?</L>
+        <L>일괄 반송을 실행하시겠습니까?</L>
+        <L>Do you want to run a batch reject?</L>
+    </Text>
+    <Text Key="116">
+        <L>Can not find inventory out material.</L>
+        <L>불출 대상 자재를 찾을 수 없습니다.</L>
+        <L>Can not find inventory out material.</L>
+    </Text>
+    <Text Key="117">
+        <L>Auto Generation Rule ID dose not exist.</L>
+        <L>자동 생성 룰 ID가 존재하지 않습니다.</L>
+        <L>Auto Generation Rule ID dose not exist.</L>
+    </Text>
+    <Text Key="118">
+        <L>Material does not exist in list.</L>
+        <L>자재가 목록에 존재하지 않습니다.</L>
+        <L>Material does not exist in list.</L>
+    </Text>
+    <Text Key="119">
+        <L>Invalid Screen ID. The following characters are not allowed. : </L>
+        <L>스크린 ID가 유효하지 않습니다. 다음 문자는 사용할 수 없습니다. : </L>
+        <L>Invalid Screen ID. The following characters are not allowed. : </L>
+    </Text>
+    <Text Key="120">
+        <L>This lot has different work order.</L>
+        <L>이 Lot의 작업지시가 일치하지 않습니다.</L>
+        <L>This lot has different work order.</L>
+    </Text>
+    <Text Key="121">
+        <L>New password does not match with confirm password</L>
+        <L>새로운 암호가 확인 암호와 동일하지 않습니다.</L>
+        <L>New password does not match with confirm password</L>
+    </Text>
+    <Text Key="313">
+        <L>Cannot find screen ID. Please check flexible screen relation or default screen ID.</L>
+        <L>Screen ID를 찾을 수 없습니다. Flexible screen relation이나 Default screen ID를 확인 해 주십시요.</L>
+        <L>Cannot find screen ID. Please check flexible screen relation or default screen ID.</L>
+    </Text>
+    <Text Key="314">
+        <L>Failed to scan the screen macro.</L>
+        <L>Screen의 매크로 탐색에 실패하였습니다.</L>
+        <L>Makrobildschirm wurde nicht gescannt.</L>
+    </Text>
+    <Text Key="361">
+        <L>A fatal error occurred during opening a file.</L>
+        <L>파일을 읽는 도중 에러가 발생했습니다.</L>
+        <L>A fatal error occurred during opening a file.</L>
+    </Text>
+</Message>

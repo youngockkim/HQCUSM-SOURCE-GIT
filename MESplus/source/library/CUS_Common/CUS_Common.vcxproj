@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{83E09371-69A2-4A07-ACC4-2A93793EF50E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CUS_HQCUSM\CWIP_tabber_inspection_cell.c" />
+    <ClCompile Include="CBAS_send_mail.c" />
+    <ClCompile Include="CBAS_view_large_data_list.c" />
+    <ClCompile Include="CBAS_View_Query_Result.c" />
+    <ClCompile Include="CBAS_view_shift_list.c" />
+    <ClCompile Include="CCOM_common_function.c" />
+    <ClCompile Include="CEDC_update_inspection_data.c" />
+    <ClCompile Include="CEDC_update_main_defect_code.c" />
+    <ClCompile Include="CEDC_update_matrix_defect_alarm.c" />
+    <ClCompile Include="CEIS_common_function.c" />
+    <ClCompile Include="CINF_download_mm101_material_lot.c" />
+    <ClCompile Include="CINF_download_mm102_vendor_master.c" />
+    <ClCompile Include="CINF_download_mm102_vendor_master_gerp.c" />
+    <ClCompile Include="CINF_download_mm103_cell_move.c" />
+    <ClCompile Include="CINF_download_mm104_stock_transfer.c" />
+    <ClCompile Include="CINF_download_mm104_stock_transfer_gerp.c" />
+    <ClCompile Include="CINF_download_mm105_cell_grbatch.c" />
+    <ClCompile Include="CINF_download_pp101_material_master.c" />
+    <ClCompile Include="CINF_download_pp101_material_master_gerp.c" />
+    <ClCompile Include="CINF_download_pp102_module_location.c" />
+    <ClCompile Include="CINF_download_pp103_bom_function.c" />
+    <ClCompile Include="CINF_download_pp104_production_order.c" />
+    <ClCompile Include="CINF_download_pp105_power_range.c" />
+    <ClCompile Include="CINF_download_pp105_power_range_gerp.c" />
+    <ClCompile Include="CINF_download_pp107_production_routing.c" />
+    <ClCompile Include="CINF_download_pp107_production_routing_gerp.c" />
+    <ClCompile Include="CINF_download_pp108_production_bom.c" />
+    <ClCompile Include="CINF_download_pp109_production_rework_Gerp.c" />
+    <ClCompile Include="CINF_download_pp110_costcenter_master.c" />
+    <ClCompile Include="CINF_download_pp115_additional_master.c" />
+    <ClCompile Include="CINF_download_qm101_cell_block.c" />
+    <ClCompile Include="CINF_download_qm103_oqc_confirm_gerp.c" />
+    <ClCompile Include="CINF_download_qm106_oqc_request_gerp.c" />
+    <ClCompile Include="CINF_download_sd201_article_master.c" />
+    <ClCompile Include="CINF_download_sd201_article_master_gerp.c" />
+    <ClCompile Include="CINF_download_sd202_packing_master.c" />
+    <ClCompile Include="CINF_download_sd202_packing_master_gerp.c" />
+    <ClCompile Include="CINF_download_sd204_packinginfo_send.c" />
+    <ClCompile Include="CINF_download_sd204_packinginfo_send_gerp.c" />
+    <ClCompile Include="CINF_download_sd205_terminate_info.c" />
+    <ClCompile Include="CINF_upload_erp_function.c" />
+    <ClCompile Include="CINF_upload_erp_function_gerp.c" />
+    <ClCompile Include="CPOP_update_label_print_history.c" />
+    <ClCompile Include="CPOP_view_label_print_history.c" />
+    <ClCompile Include="CSUM_batchprocess_data_maint.c" />
+    <ClCompile Include="CSUM_batchprocess_main_function.c" />
+    <ClCompile Include="CSUM_batchprocess_main_function_e1.c" />
+    <ClCompile Include="CSUM_batchprocess_main_function_e23.c" />
+    <ClCompile Include="CSUM_batchprocess_main_function_gerp.c" />
+    <ClCompile Include="CSUM_batchprocess_pmpp_check.c" />
+    <ClCompile Include="CSUM_batchprocess_resource_cus_status_function.c" />
+    <ClCompile Include="CSUM_batchprocess_resource_function.c" />
+    <ClCompile Include="CSUM_batchprocess_resource_function_e1.c" />
+    <ClCompile Include="CSUM_batchprocess_resource_function_e2.c" />
+    <ClCompile Include="CSUM_batchprocess_resource_status_function.c" />
+    <ClCompile Include="CSUM_batchprocess_spc_function.c" />
+    <ClCompile Include="CSUM_batchprocess_summary_function.c" />
+    <ClCompile Include="CSUM_batchprocess_summary_lossrate.c" />
+    <ClCompile Include="CSUM_batchprocess_summary_resource.c" />
+    <ClCompile Include="CSUM_batchprocess_tool_use_check.c" />
+    <ClCompile Include="CSUM_resummary_function.c" />
+    <ClCompile Include="CUSCommonAddService.c" />
+    <ClCompile Include="CSUM_batchprocess_summary_shiftchange.c" />
+    <ClCompile Include="CWIP_cleaving_end_lot.c" />
+    <ClCompile Include="CWIP_cleaving_start_lot.c" />
+    <ClCompile Include="CWIP_create_lot.c" />
+    <ClCompile Include="CWIP_end_lot.c" />
+    <ClCompile Include="CWIP_layup_end_lot.c" />
+    <ClCompile Include="CWIP_layup_start_lot.c" />
+    <ClCompile Include="CWIP_split_copy_lot.c" />
+    <ClCompile Include="CWIP_start_lot.c" />
+    <ClCompile Include="CWIP_tabber_end_lot.c" />
+    <ClCompile Include="CWIP_tabber_start_lot.c" />
+    <ClCompile Include="CWIP_trimming_end_lot.c" />
+    <ClCompile Include="CWIP_view_lot_list.c" />
+    <ClCompile Include="CWIP_view_lot_list_terminate.c" />
+    <ClCompile Include="CWIP_view_multi_lot_list.c" />
+    <ClCompile Include="CINF_download_le107_inventory_by_module_grade_info.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_common.h" />
+    <ClInclude Include="CUS_common_service.h" />
+    <ClInclude Include="CUS_defines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="URAS_resource_event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URAS_summary_temp_carrier.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URAS_summary_temp_res.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URAS_update_carrier.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URAS_view_carrier.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URASAddService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="URAS_summary_temp_port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="URAS_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="URAS_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+  </ItemGroup>
+</Project>

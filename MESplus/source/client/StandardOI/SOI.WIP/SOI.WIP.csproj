@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{187F0FCB-2FD8-4BE3-94A7-2820D94732D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOI.WIP</RootNamespace>
+    <AssemblyName>SOI.WIP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_Http</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SOI.WIP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="Infragistics2.Excel.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListBar.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListView.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerH101">
+      <HintPath>..\Components\SOI.MsgHandlerH101.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerHTTP">
+      <HintPath>..\Components\SOI.MsgHandlerHTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.OIFrx">
+      <HintPath>..\Components\SOI.OIFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmWIPCreateLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPCreateLot.Designer.cs">
+      <DependentUpon>frmWIPCreateLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPConvertInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPConvertInventory.Designer.cs">
+      <DependentUpon>frmWIPConvertInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPCreateLotBySN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPCreateLotBySN.Designer.cs">
+      <DependentUpon>frmWIPCreateLotBySN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPEndLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPEndLot.Designer.cs">
+      <DependentUpon>frmWIPEndLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPEndLotBySN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPEndLotBySN.Designer.cs">
+      <DependentUpon>frmWIPEndLotBySN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPHoldLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPHoldLot.Designer.cs">
+      <DependentUpon>frmWIPHoldLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPInputInvMatPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPInputInvMatPopup.Designer.cs">
+      <DependentUpon>frmWIPInputInvMatPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPInputShipData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPInputShipData.Designer.cs">
+      <DependentUpon>frmWIPInputShipData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPLossLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPLossLot.Designer.cs">
+      <DependentUpon>frmWIPLossLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPMergeLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPMergeLot.Designer.cs">
+      <DependentUpon>frmWIPMergeLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPPrintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPPrintLabel.Designer.cs">
+      <DependentUpon>frmWIPPrintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPReleaseLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPReleaseLot.Designer.cs">
+      <DependentUpon>frmWIPReleaseLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPRepairEndLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPRepairEndLot.Designer.cs">
+      <DependentUpon>frmWIPRepairEndLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPRepairLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPRepairLot.Designer.cs">
+      <DependentUpon>frmWIPRepairLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPShipLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPShipLot.Designer.cs">
+      <DependentUpon>frmWIPShipLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPSplitLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPSplitLot.Designer.cs">
+      <DependentUpon>frmWIPSplitLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPStartLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPStartLot.Designer.cs">
+      <DependentUpon>frmWIPStartLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewLotHistory.Designer.cs">
+      <DependentUpon>frmWIPViewLotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewLotHistoryPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewLotHistoryPopup.Designer.cs">
+      <DependentUpon>frmWIPViewLotHistoryPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewLotList.Designer.cs">
+      <DependentUpon>frmWIPViewLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewLotStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewLotStatus.Designer.cs">
+      <DependentUpon>frmWIPViewLotStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewLotStatusPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewLotStatusPopup.Designer.cs">
+      <DependentUpon>frmWIPViewLotStatusPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewOrderLotListPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewOrderLotListPopup.Designer.cs">
+      <DependentUpon>frmWIPViewOrderLotListPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByMonthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByMonthly.Designer.cs">
+      <DependentUpon>frmWIPViewProductivityByMonthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByOrder.Designer.cs">
+      <DependentUpon>frmWIPViewProductivityByOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewProductivityByPeriod.Designer.cs">
+      <DependentUpon>frmWIPViewProductivityByPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewShipLotTemplatePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewShipLotTemplatePopup.Designer.cs">
+      <DependentUpon>frmWIPViewShipLotTemplatePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWIPViewWorkOrderPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWIPViewWorkOrderPopup.Designer.cs">
+      <DependentUpon>frmWIPViewWorkOrderPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmWIPCreateLot.resx">
+      <DependentUpon>frmWIPCreateLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPConvertInventory.resx">
+      <DependentUpon>frmWIPConvertInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPCreateLotBySN.resx">
+      <DependentUpon>frmWIPCreateLotBySN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPEndLot.resx">
+      <DependentUpon>frmWIPEndLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPEndLotBySN.resx">
+      <DependentUpon>frmWIPEndLotBySN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPHoldLot.resx">
+      <DependentUpon>frmWIPHoldLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPInputInvMatPopup.resx">
+      <DependentUpon>frmWIPInputInvMatPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPInputShipData.resx">
+      <DependentUpon>frmWIPInputShipData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPLossLot.resx">
+      <DependentUpon>frmWIPLossLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPMergeLot.resx">
+      <DependentUpon>frmWIPMergeLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPPrintLabel.resx">
+      <DependentUpon>frmWIPPrintLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPReleaseLot.resx">
+      <DependentUpon>frmWIPReleaseLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPRepairEndLot.resx">
+      <DependentUpon>frmWIPRepairEndLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPRepairLot.resx">
+      <DependentUpon>frmWIPRepairLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPShipLot.resx">
+      <DependentUpon>frmWIPShipLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPSplitLot.resx">
+      <DependentUpon>frmWIPSplitLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPStartLot.resx">
+      <DependentUpon>frmWIPStartLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewLotHistory.resx">
+      <DependentUpon>frmWIPViewLotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewLotHistoryPopup.resx">
+      <DependentUpon>frmWIPViewLotHistoryPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewLotList.resx">
+      <DependentUpon>frmWIPViewLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewLotStatus.resx">
+      <DependentUpon>frmWIPViewLotStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewLotStatusPopup.resx">
+      <DependentUpon>frmWIPViewLotStatusPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewOrderLotListPopup.resx">
+      <DependentUpon>frmWIPViewOrderLotListPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewProductivityByMonthly.resx">
+      <DependentUpon>frmWIPViewProductivityByMonthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewProductivityByOrder.resx">
+      <DependentUpon>frmWIPViewProductivityByOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewProductivityByPeriod.resx">
+      <DependentUpon>frmWIPViewProductivityByPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewShipLotTemplatePopup.resx">
+      <DependentUpon>frmWIPViewShipLotTemplatePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWIPViewWorkOrderPopup.resx">
+      <DependentUpon>frmWIPViewWorkOrderPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

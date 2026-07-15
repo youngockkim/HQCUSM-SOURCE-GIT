@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_11g_64|Win32">
+      <Configuration>Debug_11g_64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_11g_64|x64">
+      <Configuration>Debug_11g_64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9484D1E9-269E-4A9F-8ECF-373FBE197C86}</ProjectGuid>
+    <RootNamespace>Miracom_INVCore</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug_11g_64|x64'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\03_Project\MESplusV5\Server\inc;C:\03_Project\MESplusV5\Server\inc\dbinc;C:\03_Project\MESplusV5\Server\inc\h101;C:\app\patrick\product\11.2.0\dbhome_1\OCI\include;C:\app\patrick\product\11.2.0\dbhome_1\precomp\public;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\app\patrick\product\11.2.0\dbhome_1\precomp\LIB;C:\app\patrick\product\11.2.0\dbhome_1\oci\lib;c:\03_Project\MESplusV5.2_for_backend\Server\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ORA_HOME)\OCI\include;$(ORA_HOME)\precomp\public;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ORA_HOME)\precomp\lib;$(ORA_HOME)\precomp\lib\msvc;$(LibraryPath)</LibraryPath>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_11g_64|x64'">.lib</TargetExt>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug_11g_64|x64'">$(ORA_HOME)\OCI\include;$(ORA_HOME)\precomp\public;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug_11g_64|x64'">$(ORA_HOME)\precomp\lib;$(ORA_HOME)\precomp\lib\msvc;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RMS;_RTD;_SPC;_TST;_WIP;_CRR;_TOOL;_SPM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RMS;_RTD;_SPC;_TST;_WIP;_CRR;_TOOL;_SPM;_USE_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_LIB;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RMS;_RTD;_SPC;_TST;_WIP;_CRR;_TOOL;_SPM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_LIB;_ALM;_BOM;_EDC;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RMS;_RTD;_SPC;_TST;_WIP;_CRR;_TOOL;_SPM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_11g_64|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_USE_STATIC_LIB;_ALM;_BOM;_EDC;_EIS;_FMB;_INV;_ORD;_POP;_QCM;_RAS;_RCP;_RMS;_RTD;_SPC;_TAP;_TST;_WIP;_CRR;_TOOL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="TIVCore_adapt_lot_multi.c" />
+    <ClCompile Include="TIVCore_assgin_material_to_resource.c" />
+    <ClCompile Include="TIVCore_multi_merge_lot.c" />
+    <ClCompile Include="TIVCore_ship_lot.c" />
+    <ClCompile Include="TIVCore_ship_lot_multi.c" />
+    <ClCompile Include="TIVCore_update_ship_factory.c" />
+    <ClCompile Include="TIVCore_view_inv_lot_list_ext.c" />
+    <ClCompile Include="TIVCore_view_lot_ext.c" />
+    <ClCompile Include="TIVCore_view_ship_factory.c" />
+    <ClCompile Include="TIVCore_view_ship_factory_list.c" />
+    <ClCompile Include="TIVCore_view_trs_assigned_lot.c" />
+    <ClCompile Include="TIVCore_adapt_lot.c" />
+    <ClCompile Include="TIVCore_change_cmf.c" />
+    <ClCompile Include="TIVCore_common_function.c" />
+    <ClCompile Include="TIVCore_consume_Lot.c" />
+    <ClCompile Include="TIVCore_consume_lot_multi.c" />
+    <ClCompile Include="TIVCore_cv_Lot.c" />
+    <ClCompile Include="TIVCore_deconsume_Lot.c" />
+    <ClCompile Include="TIVCore_defect_lot.c" />
+    <ClCompile Include="TIVCore_hold_lot.c" />
+    <ClCompile Include="TIVCore_inspection_lot.c" />
+    <ClCompile Include="TIVCore_create_material_lot.c" />
+    <ClCompile Include="TIVCore_loss_lot.c" />
+    <ClCompile Include="TIVCore_multi_release_lot.c" />
+    <ClCompile Include="TIVCore_multi_split_lot.c" />
+    <ClCompile Include="TIVCore_split_lot.c" />
+    <ClCompile Include="TIVCore_transfer_confirm.c" />
+    <ClCompile Include="TIVCore_transfer_lot.c" />
+    <ClCompile Include="TIVCore_transfer_lot_multi.c" />
+    <ClCompile Include="TIVCore_merge_lot.c" />
+    <ClCompile Include="TIVCore_multi_hold_lot.c" />
+    <ClCompile Include="TIVCore_release_lot.c" />
+    <ClCompile Include="TIVCore_transfer_request.c" />
+    <ClCompile Include="TIVCore_update_inv_material.c" />
+    <ClCompile Include="TIVCore_update_inv_operation.c" />
+    <ClCompile Include="TIVCore_update_location.c" />
+    <ClCompile Include="TIVCoreAddService.c" />
+    <ClCompile Include="TIVCore_IQC_lot.c" />
+    <ClCompile Include="TIVCore_view_inv_material.c" />
+    <ClCompile Include="TIVCore_view_inv_material_list.c" />
+    <ClCompile Include="TIVCore_view_inv_operation.c" />
+    <ClCompile Include="TIVCore_view_inv_operation_list.c" />
+    <ClCompile Include="TIVCore_view_lot.c" />
+    <ClCompile Include="TIVCore_view_lot_data.c" />
+    <ClCompile Include="TIVCore_view_lot_history.c" />
+    <ClCompile Include="TIVCore_view_lot_history_list.c" />
+    <ClCompile Include="TIVCore_view_lot_history_N.c" />
+    <ClCompile Include="TIVCore_view_lot_list.c" />
+    <ClCompile Include="TIVCore_view_lot_list_detail.c" />
+    <ClCompile Include="TIVCore_view_lot_New.c" />
+    <ClCompile Include="TIVCore_view_material.c" />
+    <ClCompile Include="TIVCore_view_material_inout_list.c" />
+    <ClCompile Include="TIVCore_view_material_list_by_bomset.c" />
+    <ClCompile Include="TIVCore_view_material_list.c" />
+    <ClCompile Include="TIVCore_view_material_version_list.c" />
+    <ClCompile Include="TIVCore_view_oper.c" />
+    <ClCompile Include="TIVCore_view_oper_list.c" />
+    <ClCompile Include="TIVCore_view_spare_part_list.c" />
+    <ClCompile Include="TIVCore_view_transfer.c" />
+    <ClCompile Include="TIVCore_view_transfer_detail.c" />
+    <ClCompile Include="TIVCore_view_transfer_detail_list.c" />
+    <ClCompile Include="TIVCore_view_transfer_history.c" />
+    <ClCompile Include="TIVCore_view_transfer_list.c" />
+    <ClCompile Include="TIVCore_generate_lot_id.c" />
+    <ClCompile Include="TIVCore_assign_lot_list_to_trs.c" />
+    <ClCompile Include="TIVCore_update_material_list_for_trs.c" />
+    <ClCompile Include="TIVCore_view_material_list_for_trs.c" />
+    <ClCompile Include="TIVCore_inspection_lot_multi.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TIVCore_common.h" />
+    <ClInclude Include="TIVCore_defines.h" />
+    <ClInclude Include="TIVCore_services.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

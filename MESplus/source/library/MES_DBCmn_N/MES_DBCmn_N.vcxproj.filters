@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="_Script">
+      <UniqueIdentifier>{76b18c52-f0b5-428d-8e42-03dda98f47c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="TSDB_mtstdevmbr.pc">
+      <Filter>Source Files</Filter>
+    </PC_File_Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TSDB_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TSDB_mtstdevmbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TSDB_mtstdevmbr_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TSDB_common_n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBScript\Create_Sample_Table_Script.sql">
+      <Filter>_Script</Filter>
+    </None>
+    <None Include="AddLib_Sample.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AddLib.bat">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

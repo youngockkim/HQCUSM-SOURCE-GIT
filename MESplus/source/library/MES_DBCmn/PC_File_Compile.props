@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(PC_File_CompileBeforeTargets)' == '' and '$(PC_File_CompileAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <PC_File_CompileBeforeTargets>Midl</PC_File_CompileBeforeTargets>
+    <PC_File_CompileAfterTargets>CustomBuild</PC_File_CompileAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PC_File_CompileDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(PC_File_CompileDependsOn)</PC_File_CompileDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PC_File_Compile>
+      <CommandLineTemplate>AddLib %(Filename) $(OutDir) $(ProjectName) $(VCInstallDir) $(PlatformName)</CommandLineTemplate>
+      <Outputs>$(OutDir)%(Filename).c</Outputs>
+      <ExecutionDescription>Executing tool... [ %(Filename).pc ]</ExecutionDescription>
+      <ShowOnlyRuleProperties>false</ShowOnlyRuleProperties>
+    </PC_File_Compile>
+  </ItemDefinitionGroup>
+</Project>

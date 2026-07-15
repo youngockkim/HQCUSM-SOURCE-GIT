@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C217A0E9-0FBD-4F2F-B570-221603A4D268}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.RASCore</RootNamespace>
+    <AssemblyName>Miracom.RASCore</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Miracom.RASCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>TRACE;_ALM, _BOM, _EDC, _INV, _ORD, _POP, _QCM, _RAS, _RCP, _RMS, _RTD, _SPC, _UTL, _CRR, _TOOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Miracom.RASCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\VisualStudio10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.BASCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.BASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmResourceTranMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResourceTranMain.Designer.cs">
+      <DependentUpon>frmResourceTranMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierHistoryByLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierLotList.designer.cs">
+      <DependentUpon>frmRASViewCarrierLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierSlotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierSlotHistory.Designer.cs">
+      <DependentUpon>frmRASViewCarrierSlotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCarrierStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewEventByGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewLotbyResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewLotByResourceGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewPMScheduleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewPMSchedule_Actor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewPMSchedule_Planner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewPortHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceByGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceByMFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceByMFO.Designer.cs">
+      <DependentUpon>frmRASViewResourceByMFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceDownHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceLabor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewResourceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCheckResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewCheckResult.Designer.cs">
+      <DependentUpon>frmRASViewCheckResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewSubResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewToolDefectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewToolHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewToolList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewToolListbyOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmRASViewToolListbyRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modEnums.cs" />
+    <Compile Include="modGlobalVariables.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupToolTypeRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupToolTypeRelation.Designer.cs">
+      <DependentUpon>frmRASSetupToolTypeRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupAttachEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierEvent.Designer.cs">
+      <DependentUpon>frmRASSetupCarrierEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierGroup.Designer.cs">
+      <DependentUpon>frmRASSetupCarrierGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierGroupRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCarrierGroupRelation.Designer.cs">
+      <DependentUpon>frmRASSetupCarrierGroupRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupPMComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupPMSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupPMSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupPort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResourceLabor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResourceMFORelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResourceMFORelation.Designer.cs">
+      <DependentUpon>frmRASSetupResourceMFORelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCheckTypeDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCheckTypeDef.Designer.cs">
+      <DependentUpon>frmRASSetupCheckTypeDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupSubResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupToolEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupToolEventRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupToolType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResourceGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupResourceGroupRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupCheckQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmRASSetupAttachQueryToCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranCarrierEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranCarrierEvent.Designer.cs">
+      <DependentUpon>frmRASTranCarrierEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeAccessModeState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeAccessModeState.Designer.cs">
+      <DependentUpon>frmRASTranChangeAccessModeState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeAssociationState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeAssociationState.Designer.cs">
+      <DependentUpon>frmRASTranChangeAssociationState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeTransferState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeTransferState.Designer.cs">
+      <DependentUpon>frmRASTranChangeTransferState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranMakeCheckResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASDeleteResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASDeleteSubResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranAttachCarrierToLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranAttachLotToCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranAssignSublotToCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranCarrierChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranCarrierChange.Designer.cs">
+      <DependentUpon>frmRASTranCarrierChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangePortStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranCleanCarrier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranDeleteToolHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranMultiEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranMultiEvent.Designer.cs">
+      <DependentUpon>frmRASTranMultiEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeReservationState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranChangeReservationState.Designer.cs">
+      <DependentUpon>frmRASTranChangeReservationState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranSubEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranToolEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmRASTranTroubleResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmResourceTranMain.resx">
+      <DependentUpon>frmResourceTranMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCarrierHistory.resx">
+      <DependentUpon>frmRASViewCarrierHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCarrierHistoryByLot.resx">
+      <DependentUpon>frmRASViewCarrierHistoryByLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCarrierLotList.resx">
+      <DependentUpon>frmRASViewCarrierLotList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCarrierSlotHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASViewCarrierSlotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCarrierStatus.resx">
+      <DependentUpon>frmRASViewCarrierStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewEventByGroup.resx">
+      <DependentUpon>frmRASViewEventByGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewLotbyResource.resx">
+      <DependentUpon>frmRASViewLotbyResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewLotByResourceGroup.resx">
+      <DependentUpon>frmRASViewLotByResourceGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewPMScheduleDetail.resx">
+      <DependentUpon>frmRASViewPMScheduleDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewPMSchedule_Actor.resx">
+      <DependentUpon>frmRASViewPMSchedule_Actor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewPMSchedule_Planner.resx">
+      <DependentUpon>frmRASViewPMSchedule_Planner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewPortHistory.resx">
+      <DependentUpon>frmRASViewPortHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceByGroup.resx">
+      <DependentUpon>frmRASViewResourceByGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceByMFO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASViewResourceByMFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceDownHistory.resx">
+      <DependentUpon>frmRASViewResourceDownHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceHistory.resx">
+      <DependentUpon>frmRASViewResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceLabor.resx">
+      <DependentUpon>frmRASViewResourceLabor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewResourceStatus.resx">
+      <DependentUpon>frmRASViewResourceStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewCheckResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASViewCheckResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewSubResourceHistory.resx">
+      <DependentUpon>frmRASViewSubResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewTool.resx">
+      <DependentUpon>frmRASViewTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewToolDefectList.resx">
+      <DependentUpon>frmRASViewToolDefectList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewToolHistory.resx">
+      <DependentUpon>frmRASViewToolHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewToolList.resx">
+      <DependentUpon>frmRASViewToolList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewToolListbyOper.resx">
+      <DependentUpon>frmRASViewToolListbyOper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmRASViewToolListbyRes.resx">
+      <DependentUpon>frmRASViewToolListbyRes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupToolTypeRelation.resx">
+      <DependentUpon>frmRASSetupToolTypeRelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupAttachEvent.resx">
+      <DependentUpon>frmRASSetupAttachEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCarrier.resx">
+      <DependentUpon>frmRASSetupCarrier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCarrierEvent.resx">
+      <DependentUpon>frmRASSetupCarrierEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCarrierGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupCarrierGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCarrierGroupRelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupCarrierGroupRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupEvent.resx">
+      <DependentUpon>frmRASSetupEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupPMComment.resx">
+      <DependentUpon>frmRASSetupPMComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupPMSchedule.resx">
+      <DependentUpon>frmRASSetupPMSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupPMSecurity.resx">
+      <DependentUpon>frmRASSetupPMSecurity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupPort.resx">
+      <DependentUpon>frmRASSetupPort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupResource.resx">
+      <DependentUpon>frmRASSetupResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupResourceLabor.resx">
+      <DependentUpon>frmRASSetupResourceLabor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupResourceMFORelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupResourceMFORelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCheckTypeDef.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupCheckTypeDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupSubResource.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupSubResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupTool.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupToolEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupToolEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupToolEventRelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupToolEventRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupToolType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASSetupToolType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupResourceGroup.resx">
+      <DependentUpon>frmRASSetupResourceGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupResourceGroupRelation.resx">
+      <DependentUpon>frmRASSetupResourceGroupRelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupCheckQuery.resx">
+      <DependentUpon>frmRASSetupCheckQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmRASSetupAttachQueryToCheck.resx">
+      <DependentUpon>frmRASSetupAttachQueryToCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranCarrierEvent.resx">
+      <DependentUpon>frmRASTranCarrierEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranChangeAccessModeState.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranChangeAccessModeState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranChangeAssociationState.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranChangeAssociationState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranChangeTransferState.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranChangeTransferState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranMakeCheckResult.resx">
+      <DependentUpon>frmRASTranMakeCheckResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASDeleteResourceHistory.resx">
+      <DependentUpon>frmRASDeleteResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASDeleteSubResourceHistory.resx">
+      <DependentUpon>frmRASDeleteSubResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranAttachCarrierToLot.resx">
+      <DependentUpon>frmRASTranAttachCarrierToLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranAttachLotToCarrier.resx">
+      <DependentUpon>frmRASTranAttachLotToCarrier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranAssignSublotToCarrier.resx">
+      <DependentUpon>frmRASTranAssignSublotToCarrier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranCarrierChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranCarrierChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranChangePortStatus.resx">
+      <DependentUpon>frmRASTranChangePortStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranCleanCarrier.resx">
+      <DependentUpon>frmRASTranCleanCarrier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranDeleteToolHistory.resx">
+      <DependentUpon>frmRASTranDeleteToolHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranEvent.resx">
+      <DependentUpon>frmRASTranEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranMultiEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranMultiEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranChangeReservationState.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranChangeReservationState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranSubEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranSubEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranToolEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranToolEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmRASTranTroubleResource.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRASTranTroubleResource.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

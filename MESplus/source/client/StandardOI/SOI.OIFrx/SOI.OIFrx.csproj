@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF5B28FC-D445-44CF-B0F9-A5051566840A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOI.OIFrx</RootNamespace>
+    <AssemblyName>SOI.OIFrx</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_H101</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Http|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Http\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_Http</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SOI.OIFrx.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Http|AnyCPU'">
+    <OutputPath>bin\Release_Http\</OutputPath>
+    <DefineConstants>_Http</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataMatrix.net">
+      <HintPath>..\Components\DataMatrix.net.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Excel, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3514.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3514\Bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="FTPClient">
+      <HintPath>..\Components\FTPClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinChart.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListBar.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinListView.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Excel.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics3.Win.UltraWinGrid.ExcelExport.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Excel">
+      <HintPath>..\Components\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Miracom.TRSConvertor">
+      <HintPath>..\Components\Miracom.TRSConvertor.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.CliFrx">
+      <HintPath>..\Components\SOI.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerH101">
+      <HintPath>..\Components\SOI.MsgHandlerH101.dll</HintPath>
+    </Reference>
+    <Reference Include="SOI.MsgHandlerHTTP">
+      <HintPath>..\Components\SOI.MsgHandlerHTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsControlNameSort.cs" />
+    <Compile Include="clsExcelComponent.cs" />
+    <Compile Include="clsFlexibleScreenInputValue.cs" />
+    <Compile Include="clsMESPlusCommonFunction.cs" />
+    <Compile Include="clsMESPlusGlobalConstant.cs" />
+    <Compile Include="clsMESPlusGlobalEnum.cs" />
+    <Compile Include="clsMESPlusGlobalOption.cs" />
+    <Compile Include="clsMESPlusGlobalStruct.cs" />
+    <Compile Include="clsMESPlusGlobalVariable.cs" />
+    <Compile Include="clsPrinter.cs" />
+    <Compile Include="clsPublishMsgTunes.cs" />
+    <Compile Include="clsReturnMessageString.cs" />
+    <Compile Include="iFormEventFunction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm01.Designer.cs">
+      <DependentUpon>SOIBaseForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm02.Designer.cs">
+      <DependentUpon>SOIBaseForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm03.Designer.cs">
+      <DependentUpon>SOIBaseForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm04.Designer.cs">
+      <DependentUpon>SOIBaseForm04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm11.Designer.cs">
+      <DependentUpon>SOIBaseForm11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIBaseForm12.Designer.cs">
+      <DependentUpon>SOIBaseForm12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIDefaultBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIBaseForm\SOIDefaultBackgroundForm.Designer.cs">
+      <DependentUpon>SOIDefaultBackgroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButton.designer.cs">
+      <DependentUpon>SOIButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonExportExcel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonExportExcel.Designer.cs">
+      <DependentUpon>SOIButtonExportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImage.Designer.cs">
+      <DependentUpon>SOIButtonImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImageViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImageViewer.Designer.cs">
+      <DependentUpon>SOIButtonImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImportExcel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonImportExcel.Designer.cs">
+      <DependentUpon>SOIButtonImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPDFView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPDFView.Designer.cs">
+      <DependentUpon>SOIButtonPDFView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPrintOption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIButtonPrintOption.Designer.cs">
+      <DependentUpon>SOIButtonPrintOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIChart.Designer.cs">
+      <DependentUpon>SOIChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBox.Designer.cs">
+      <DependentUpon>SOICheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBoxOnOff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICheckBoxOnOff.Designer.cs">
+      <DependentUpon>SOICheckBoxOnOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeView.Designer.cs">
+      <DependentUpon>SOICodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewDescription.Designer.cs">
+      <DependentUpon>SOICodeViewDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewMultiSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOICodeViewMultiSelect.Designer.cs">
+      <DependentUpon>SOICodeViewMultiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIComboBox.designer.cs">
+      <DependentUpon>SOIComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIContextMenu.Designer.cs">
+      <DependentUpon>SOIContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTime.Designer.cs">
+      <DependentUpon>SOIDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTimeComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIDateTimeComboBox.Designer.cs">
+      <DependentUpon>SOIDateTimeComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIFlexibleScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIFlexibleScreen.Designer.cs">
+      <DependentUpon>SOIFlexibleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIGrid.Designer.cs">
+      <DependentUpon>SOIGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIGroupBox.designer.cs">
+      <DependentUpon>SOIGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOILabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOILabel.designer.cs">
+      <DependentUpon>SOILabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIListBox.Designer.cs">
+      <DependentUpon>SOIListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPanel.Designer.cs">
+      <DependentUpon>SOIPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPasswordBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPasswordBox.designer.cs">
+      <DependentUpon>SOIPasswordBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIPictureBox.Designer.cs">
+      <DependentUpon>SOIPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIRadioButton.Designer.cs">
+      <DependentUpon>SOIRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOISplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOISplitContainer.Designer.cs">
+      <DependentUpon>SOISplitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOISpread.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOISpread.Designer.cs">
+      <DependentUpon>SOISpread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITabControl.Designer.cs">
+      <DependentUpon>SOITabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITableLayoutPanel.Designer.cs">
+      <DependentUpon>SOITableLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBox.Designer.cs">
+      <DependentUpon>SOITextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxNumber.Designer.cs">
+      <DependentUpon>SOITextBoxNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITextBoxValue.Designer.cs">
+      <DependentUpon>SOITextBoxValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOITreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOITreeView.Designer.cs">
+      <DependentUpon>SOITreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIControls\SOIUnderline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOIControls\SOIUnderline.Designer.cs">
+      <DependentUpon>SOIUnderline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIModel\ErrorModel.cs" />
+    <Compile Include="SOIModel\PrintOptionModel.cs" />
+    <Compile Include="SOIModuleAPI.cs" />
+    <Compile Include="SOIPopup\frmCodeViewMultiSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewMultiSelectPopup.Designer.cs">
+      <DependentUpon>frmCodeViewMultiSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmCodeViewPopup.Designer.cs">
+      <DependentUpon>frmCodeViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmImageViewerPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmImageViewerPopup.Designer.cs">
+      <DependentUpon>frmImageViewerPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmKeyPad.Designer.cs">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmModalessPopupBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmModalessPopupBase.Designer.cs">
+      <DependentUpon>frmModalessPopupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmPopupBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmPopupBase.designer.cs">
+      <DependentUpon>frmPopupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmPrintOptionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmPrintOptionPopup.Designer.cs">
+      <DependentUpon>frmPrintOptionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmStandardOperationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmStandardOperationView.Designer.cs">
+      <DependentUpon>frmStandardOperationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIPopup\frmStdOperSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOIPopup\frmStdOperSelectPopup.Designer.cs">
+      <DependentUpon>frmStdOperSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOIThemes\clsDarkColors.cs" />
+    <Compile Include="SOIThemes\clsLightColors.cs" />
+    <Compile Include="SOIThemes\clsThemeColors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm01.resx">
+      <DependentUpon>SOIBaseForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm02.resx">
+      <DependentUpon>SOIBaseForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm03.resx">
+      <DependentUpon>SOIBaseForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm04.resx">
+      <DependentUpon>SOIBaseForm04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm11.resx">
+      <DependentUpon>SOIBaseForm11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIBaseForm12.resx">
+      <DependentUpon>SOIBaseForm12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIBaseForm\SOIDefaultBackgroundForm.resx">
+      <DependentUpon>SOIDefaultBackgroundForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButton.resx">
+      <DependentUpon>SOIButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonExportExcel.resx">
+      <DependentUpon>SOIButtonExportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImage.resx">
+      <DependentUpon>SOIButtonImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImageViewer.resx">
+      <DependentUpon>SOIButtonImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonImportExcel.resx">
+      <DependentUpon>SOIButtonImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonPDFView.resx">
+      <DependentUpon>SOIButtonPDFView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIButtonPrintOption.resx">
+      <DependentUpon>SOIButtonPrintOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIChart.resx">
+      <DependentUpon>SOIChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICheckBox.resx">
+      <DependentUpon>SOICheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICheckBoxOnOff.resx">
+      <DependentUpon>SOICheckBoxOnOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeView.resx">
+      <DependentUpon>SOICodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeViewDescription.resx">
+      <DependentUpon>SOICodeViewDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOICodeViewMultiSelect.resx">
+      <DependentUpon>SOICodeViewMultiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIComboBox.resx">
+      <DependentUpon>SOIComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIContextMenu.resx">
+      <DependentUpon>SOIContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIDateTime.resx">
+      <DependentUpon>SOIDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIDateTimeComboBox.resx">
+      <DependentUpon>SOIDateTimeComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIFlexibleScreen.resx">
+      <DependentUpon>SOIFlexibleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIGrid.resx">
+      <DependentUpon>SOIGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIGroupBox.resx">
+      <DependentUpon>SOIGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOILabel.resx">
+      <DependentUpon>SOILabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIListBox.resx">
+      <DependentUpon>SOIListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPanel.resx">
+      <DependentUpon>SOIPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPasswordBox.resx">
+      <DependentUpon>SOIPasswordBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIPictureBox.resx">
+      <DependentUpon>SOIPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIRadioButton.resx">
+      <DependentUpon>SOIRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOISplitContainer.resx">
+      <DependentUpon>SOISplitContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOISpread.resx">
+      <DependentUpon>SOISpread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITabControl.resx">
+      <DependentUpon>SOITabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITableLayoutPanel.resx">
+      <DependentUpon>SOITableLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBox.resx">
+      <DependentUpon>SOITextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBoxNumber.resx">
+      <DependentUpon>SOITextBoxNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITextBoxValue.resx">
+      <DependentUpon>SOITextBoxValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOITreeView.resx">
+      <DependentUpon>SOITreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIControls\SOIUnderline.resx">
+      <DependentUpon>SOIUnderline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmCodeViewMultiSelectPopup.resx">
+      <DependentUpon>frmCodeViewMultiSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmCodeViewPopup.resx">
+      <DependentUpon>frmCodeViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmImageViewerPopup.resx">
+      <DependentUpon>frmImageViewerPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmKeyPad.resx">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmModalessPopupBase.resx">
+      <DependentUpon>frmModalessPopupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmPopupBase.resx">
+      <DependentUpon>frmPopupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmPrintOptionPopup.resx">
+      <DependentUpon>frmPrintOptionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmStandardOperationView.resx">
+      <DependentUpon>frmStandardOperationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOIPopup\frmStdOperSelectPopup.resx">
+      <DependentUpon>frmStdOperSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_Main_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light_Main_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpImage_DarkGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoImage_DarkGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favoriteOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favoriteOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotHold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotInventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotRepair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotRework.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotTransit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rework.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusProc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusWait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CodeViewButtonImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainImage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

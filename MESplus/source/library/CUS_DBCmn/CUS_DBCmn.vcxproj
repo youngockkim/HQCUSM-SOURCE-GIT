@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31ED2AA0-B74F-4B39-B010-CA4811DE4C50}</ProjectGuid>
+    <RootNamespace>MES_DBCmn</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>CUS_DBCmn</ProjectName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="PC_File_Compile.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">*.obj;*.c;*.lib;*.pdb;*.tlog</ExtensionsToDeleteOnClean>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">*.obj;*.c;*.lib;*.pdb;*.tlog</ExtensionsToDeleteOnClean>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">*.obj;*.c;*.lib;*.pdb;*.tlog</ExtensionsToDeleteOnClean>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Release|x64'">*.obj;*.c;*.lib;*.pdb;*.tlog</ExtensionsToDeleteOnClean>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\app\client\User\product\12.2.0\client_1\precomp\public;D:\app\client\User\product\12.2.0\client_1\OCI\public;D:\app\client\User\product\12.2.0\client_1\OCI\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\app\client\User\product\12.2.0\client_1\precomp\LIB;D:\app\client\User\product\12.2.0\client_1\precomp\LIB\msvc;D:\app\client\User\product\12.2.0\client_1\OCI\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CDB_calmctvhis.h" />
+    <ClInclude Include="CDB_calmctvhis_n.h" />
+    <ClInclude Include="CDB_camsadtitm.h" />
+    <ClInclude Include="CDB_camsadtitm_n.h" />
+    <ClInclude Include="CDB_camsadtpln.h" />
+    <ClInclude Include="CDB_camsadtpln_n.h" />
+    <ClInclude Include="CDB_camsadtrst.h" />
+    <ClInclude Include="CDB_camsadtrst_n.h" />
+    <ClInclude Include="CDB_cams_join.h" />
+    <ClInclude Include="CDB_cams_join_n.h" />
+    <ClInclude Include="CDB_cclvcrrbat.h" />
+    <ClInclude Include="CDB_cclvcrrbat_n.h" />
+    <ClInclude Include="CDB_cedcbufdat.h" />
+    <ClInclude Include="CDB_cedcbufdat_n.h" />
+    <ClInclude Include="CDB_cedcbufhis.h" />
+    <ClInclude Include="CDB_cedcbufhis_n.h" />
+    <ClInclude Include="CDB_cjcmitmdef.h" />
+    <ClInclude Include="CDB_cjcmitmdef_n.h" />
+    <ClInclude Include="CDB_cjcmitmhis.h" />
+    <ClInclude Include="CDB_cjcmitmhis_n.h" />
+    <ClInclude Include="CDB_cjcmjobitm.h" />
+    <ClInclude Include="CDB_cjcmjobitm_n.h" />
+    <ClInclude Include="CDB_cjcmjobsts.h" />
+    <ClInclude Include="CDB_cjcmjobsts_n.h" />
+    <ClInclude Include="CDB_cjcm_join.h" />
+    <ClInclude Include="CDB_cjcm_join_n.h" />
+    <ClInclude Include="CDB_cmmsanacon.h" />
+    <ClInclude Include="CDB_cmmsanacon_n.h" />
+    <ClInclude Include="CDB_cmmsanadat.h" />
+    <ClInclude Include="CDB_cmmsanadat_n.h" />
+    <ClInclude Include="CDB_cmmsanafle.h" />
+    <ClInclude Include="CDB_cmmsanafle_n.h" />
+    <ClInclude Include="CDB_cmmsanaitm.h" />
+    <ClInclude Include="CDB_cmmsanaitm_n.h" />
+    <ClInclude Include="CDB_cmmsanapln.h" />
+    <ClInclude Include="CDB_cmmsanapln_n.h" />
+    <ClInclude Include="CDB_cmmsanarst.h" />
+    <ClInclude Include="CDB_cmmsanarst_n.h" />
+    <ClInclude Include="CDB_cmmsanausr_n.h" />
+    <ClInclude Include="CDB_cmmsanaval.h" />
+    <ClInclude Include="CDB_cmmsanaval_n.h" />
+    <ClInclude Include="CDB_cmmscaleqp.h" />
+    <ClInclude Include="CDB_cmmscaleqp_n.h" />
+    <ClInclude Include="CDB_cmmscalfle.h" />
+    <ClInclude Include="CDB_cmmscalfle_n.h" />
+    <ClInclude Include="CDB_cmmscalpln.h" />
+    <ClInclude Include="CDB_cmmscalpln_n.h" />
+    <ClInclude Include="CDB_cmmscalrst.h" />
+    <ClInclude Include="CDB_cmmscalrst_n.h" />
+    <ClInclude Include="CDB_cmmseqpdef.h" />
+    <ClInclude Include="CDB_cmmseqpdef_n.h" />
+    <ClInclude Include="CDB_cmmseqpfle.h" />
+    <ClInclude Include="CDB_cmmseqpfle_n.h" />
+    <ClInclude Include="CDB_cmmseqphis.h" />
+    <ClInclude Include="CDB_cmmseqphis_n.h" />
+    <ClInclude Include="CDB_cmmseqpitm.h" />
+    <ClInclude Include="CDB_cmmseqpitm_n.h" />
+    <ClInclude Include="CDB_cmmsinsdef.h" />
+    <ClInclude Include="CDB_cmmsinsdef_n.h" />
+    <ClInclude Include="CDB_cmmsitmdef.h" />
+    <ClInclude Include="CDB_cmmsitmdef_n.h" />
+    <ClInclude Include="CDB_cmmsitmhis.h" />
+    <ClInclude Include="CDB_cmmsitmhis_n.h" />
+    <ClInclude Include="CDB_cmmssamdef.h" />
+    <ClInclude Include="CDB_cmmssamdef_n.h" />
+    <ClInclude Include="CDB_cmmssamhis.h" />
+    <ClInclude Include="CDB_cmmssamhis_n.h" />
+    <ClInclude Include="CDB_cmmsusrdef.h" />
+    <ClInclude Include="CDB_cmmsusrdef_n.h" />
+    <ClInclude Include="CDB_cmms_join.h" />
+    <ClInclude Include="CDB_cmms_join_n.h" />
+    <ClInclude Include="CDB_cmmyeares.h" />
+    <ClInclude Include="CDB_cmmyeares_n.h" />
+    <ClInclude Include="CDB_cpsmmntsts.h" />
+    <ClInclude Include="CDB_cpsmmntsts_n.h" />
+    <ClInclude Include="CDB_crasclnpln.h" />
+    <ClInclude Include="CDB_crasclnpln_n.h" />
+    <ClInclude Include="CDB_crascrrhis.h" />
+    <ClInclude Include="CDB_crascrrhis_n.h" />
+    <ClInclude Include="CDB_crasdshift.h" />
+    <ClInclude Include="CDB_crasdshift_n.h" />
+    <ClInclude Include="CDB_crasdwntim.h" />
+    <ClInclude Include="CDB_crasdwntim_n.h" />
+    <ClInclude Include="CDB_crashurgap.h" />
+    <ClInclude Include="CDB_crashurgap_n.h" />
+    <ClInclude Include="CDB_craslgvdat.h" />
+    <ClInclude Include="CDB_craslgvdat_n.h" />
+    <ClInclude Include="CDB_crasmatrpt.h" />
+    <ClInclude Include="CDB_crasmatrpt_n.h" />
+    <ClInclude Include="CDB_crasprcdat_alert.h" />
+    <ClInclude Include="CDB_crasprcdat_mostup.h" />
+    <ClInclude Include="CDB_crasprcdat_mostup_n.h" />
+    <ClInclude Include="CDB_crasresbps.h" />
+    <ClInclude Include="CDB_crasresbps_n.h" />
+    <ClInclude Include="CDB_crasresdef.h" />
+    <ClInclude Include="CDB_crasresdef_n.h" />
+    <ClInclude Include="CDB_crassrsdef.h" />
+    <ClInclude Include="CDB_crassrsdef_n.h" />
+    <ClInclude Include="CDB_crastbrcln.h" />
+    <ClInclude Include="CDB_crastbrcln_n.h" />
+    <ClInclude Include="CDB_crastbrjgr.h" />
+    <ClInclude Include="CDB_crastbrjgr_n.h" />
+    <ClInclude Include="CDB_crastqusts.h" />
+    <ClInclude Include="CDB_crastqusts_n.h" />
+    <ClInclude Include="CDB_craswrklog.h" />
+    <ClInclude Include="CDB_craswrklog_n.h" />
+    <ClInclude Include="CDB_crasxlinkr.h" />
+    <ClInclude Include="CDB_crasxlinkr_n.h" />
+    <ClInclude Include="CDB_crtd_join.h" />
+    <ClInclude Include="CDB_crtd_join_n.h" />
+    <ClInclude Include="CDB_ctmpbatsts.h" />
+    <ClInclude Include="CDB_ctmpbatsts_n.h" />
+    <ClInclude Include="CDB_cwipabnlog.h" />
+    <ClInclude Include="CDB_cwipabnlog_n.h" />
+    <ClInclude Include="CDB_cwipacmhis.h" />
+    <ClInclude Include="CDB_cwipacmhis_n.h" />
+    <ClInclude Include="CDB_cwipcelmgz.h" />
+    <ClInclude Include="CDB_cwipcelmgz_n.h" />
+    <ClInclude Include="CDB_cwipclvsts.h" />
+    <ClInclude Include="CDB_cwipclvsts_n.h" />
+    <ClInclude Include="CDB_cwipctwhis.h" />
+    <ClInclude Include="CDB_cwipctwhis_n.h" />
+    <ClInclude Include="CDB_cwipctwpft.h" />
+    <ClInclude Include="CDB_cwipctwpft_n.h" />
+    <ClInclude Include="CDB_cwipdayinv.h" />
+    <ClInclude Include="CDB_cwipdayinv_n.h" />
+    <ClInclude Include="CDB_cwipfqcdwn.h" />
+    <ClInclude Include="CDB_cwipfqcdwn_n.h" />
+    <ClInclude Include="CDB_cwiphafhis.h" />
+    <ClInclude Include="CDB_cwiphafhis_n.h" />
+    <ClInclude Include="CDB_cwiphurfqc.h" />
+    <ClInclude Include="CDB_cwiphurfqc_n.h" />
+    <ClInclude Include="CDB_cwipjbslos.h" />
+    <ClInclude Include="CDB_cwipjbslos_n.h" />
+    <ClInclude Include="CDB_cwiplampts.h" />
+    <ClInclude Include="CDB_cwiplampts_n.h" />
+    <ClInclude Include="CDB_cwiplamrcp.h" />
+    <ClInclude Include="CDB_cwiplamrcp_n.h" />
+    <ClInclude Include="CDB_cwiplostab.h" />
+    <ClInclude Include="CDB_cwiplostab_n.h" />
+    <ClInclude Include="CDB_cwiplotext.h" />
+    <ClInclude Include="CDB_cwiplotext_n.h" />
+    <ClInclude Include="CDB_cwiplotimg.h" />
+    <ClInclude Include="CDB_cwiplotimg_n.h" />
+    <ClInclude Include="CDB_cwiplotovh.h" />
+    <ClInclude Include="CDB_cwiplotovh_n.h" />
+    <ClInclude Include="CDB_cwiplotovr.h" />
+    <ClInclude Include="CDB_cwiplotovr_n.h" />
+    <ClInclude Include="CDB_cwiplotrps.h" />
+    <ClInclude Include="CDB_cwiplotrps_n.h" />
+    <ClInclude Include="CDB_cwiplotrwk.h" />
+    <ClInclude Include="CDB_cwiplotrwk_n.h" />
+    <ClInclude Include="CDB_cwipmatter.h" />
+    <ClInclude Include="CDB_cwipmatter_n.h" />
+    <ClInclude Include="CDB_cwipmatval.h" />
+    <ClInclude Include="CDB_cwipmatval_n.h" />
+    <ClInclude Include="CDB_cwipmixlos.h" />
+    <ClInclude Include="CDB_cwipmixlos_n.h" />
+    <ClInclude Include="CDB_cwipoqchis.h" />
+    <ClInclude Include="CDB_cwipoqchis_n.h" />
+    <ClInclude Include="CDB_cwipoqcsts.h" />
+    <ClInclude Include="CDB_cwipoqcsts_n.h" />
+    <ClInclude Include="CDB_cwippaklog.h" />
+    <ClInclude Include="CDB_cwippaklog_n.h" />
+    <ClInclude Include="CDB_cwippakreg.h" />
+    <ClInclude Include="CDB_cwippakreg_n.h" />
+    <ClInclude Include="CDB_cwippmphis.h" />
+    <ClInclude Include="CDB_cwippmphis_n.h" />
+    <ClInclude Include="CDB_cwipptsrpt.h" />
+    <ClInclude Include="CDB_cwipptsrpt_n.h" />
+    <ClInclude Include="CDB_cwiprepoit.h" />
+    <ClInclude Include="CDB_cwiprepoit_n.h" />
+    <ClInclude Include="CDB_cwipreqdtl.h" />
+    <ClInclude Include="CDB_cwipreqdtl_n.h" />
+    <ClInclude Include="CDB_cwipreqmst.h" />
+    <ClInclude Include="CDB_cwipreqmst_n.h" />
+    <ClInclude Include="CDB_cwiprpkhis.h" />
+    <ClInclude Include="CDB_cwiprpkhis_n.h" />
+    <ClInclude Include="CDB_cwiprwkdat.h" />
+    <ClInclude Include="CDB_cwiprwkdat_n.h" />
+    <ClInclude Include="CDB_cwipsilhis.h" />
+    <ClInclude Include="CDB_cwipsilhis_n.h" />
+    <ClInclude Include="CDB_cwipsilmng.h" />
+    <ClInclude Include="CDB_cwipsilmng_n.h" />
+    <ClInclude Include="CDB_cwipsualos.h" />
+    <ClInclude Include="CDB_cwipsualos_n.h" />
+    <ClInclude Include="CDB_cwiptabsts.h" />
+    <ClInclude Include="CDB_cwiptabsts_n.h" />
+    <ClInclude Include="CDB_cwiptcktim.h" />
+    <ClInclude Include="CDB_cwiptcktim_n.h" />
+    <ClInclude Include="CDB_cwiptrpsts.h" />
+    <ClInclude Include="CDB_cwiptrpsts_n.h" />
+    <ClInclude Include="CDB_cwiptryext.h" />
+    <ClInclude Include="CDB_cwiptryext_n.h" />
+    <ClInclude Include="CDB_cwiptryhis.h" />
+    <ClInclude Include="CDB_cwiptryhis_n.h" />
+    <ClInclude Include="CDB_cwiptrysts.h" />
+    <ClInclude Include="CDB_cwiptrysts_n.h" />
+    <ClInclude Include="CDB_cwiptryush.h" />
+    <ClInclude Include="CDB_cwiptryush_n.h" />
+    <ClInclude Include="CDB_cwiptsclos.h" />
+    <ClInclude Include="CDB_cwiptsclos_n.h" />
+    <ClInclude Include="CDB_cwipusrlog.h" />
+    <ClInclude Include="CDB_cwipusrlog_n.h" />
+    <ClInclude Include="CDB_ialmctvdat.h" />
+    <ClInclude Include="CDB_ialmctvdat_n.h" />
+    <ClInclude Include="CDB_ibakmatglo.h" />
+    <ClInclude Include="CDB_ibakmatglo_n.h" />
+    <ClInclude Include="CDB_ibakpakmst_gerp.h" />
+    <ClInclude Include="CDB_ibakpakmst_gerp_n.h" />
+    <ClInclude Include="CDB_ibakrwkdat.h" />
+    <ClInclude Include="CDB_ibakrwkdat_n.h" />
+    <ClInclude Include="CDB_ibakserdat.h" />
+    <ClInclude Include="CDB_ibakserdat_n.h" />
+    <ClInclude Include="CDB_ibakterinf.h" />
+    <ClInclude Include="CDB_ibakterinf_n.h" />
+    <ClInclude Include="CDB_ierpwipcfm.h" />
+    <ClInclude Include="CDB_ierpwipcfm_n.h" />
+    <ClInclude Include="CDB_iqcmfshdat.h" />
+    <ClInclude Include="CDB_iqcmfshdat_n.h" />
+    <ClInclude Include="CDB_iqcmsamdat.h" />
+    <ClInclude Include="CDB_iqcmsamdat_n.h" />
+    <ClInclude Include="CDB_iqcmserdat.h" />
+    <ClInclude Include="CDB_iqcmserdat_n.h" />
+    <ClInclude Include="CDB_iwipmatglo.h" />
+    <ClInclude Include="CDB_iwipmatglo_n.h" />
+    <ClInclude Include="CDB_iwippakmst_gerp.h" />
+    <ClInclude Include="CDB_iwippakmst_gerp_n.h" />
+    <ClInclude Include="CDB_iwiprwkdat.h" />
+    <ClInclude Include="CDB_iwiprwkdat_n.h" />
+    <ClInclude Include="CDB_iwipterinf.h" />
+    <ClInclude Include="CDB_iwipterinf_n.h" />
+    <ClInclude Include="CDB_mraspotdef.h" />
+    <ClInclude Include="CDB_mraspotdef_n.h" />
+    <ClInclude Include="CDB_mrasresdef.h" />
+    <ClInclude Include="CDB_mrasresdef_n.h" />
+    <ClInclude Include="CDB_mwipmatdef.h" />
+    <ClInclude Include="CDB_mwipmatdef_n.h" />
+    <ClInclude Include="CDB_mwipmatflw.h" />
+    <ClInclude Include="CDB_mwipmatflw_n.h" />
+    <ClInclude Include="CDB_rsumhorcel.h" />
+    <ClInclude Include="CDB_rsumhorcel_n.h" />
+    <ClInclude Include="CDB_crasavgtim.h" />
+    <ClInclude Include="CDB_crasavgtim_n.h" />
+    <ClInclude Include="CDB_craslotmov.h" />
+    <ClInclude Include="CDB_craslotmov_n.h" />
+    <ClInclude Include="CDB_calmtlghis.h" />
+    <ClInclude Include="CDB_calmtlghis_n.h" />
+    <ClInclude Include="CDB_cedcinsdat.h" />
+    <ClInclude Include="CDB_cedcinsdat_n.h" />
+    <ClInclude Include="CDB_cedclotdat.h" />
+    <ClInclude Include="CDB_cedclotdat_n.h" />
+    <ClInclude Include="CDB_cedclotfqc.h" />
+    <ClInclude Include="CDB_cedclotfqc_n.h" />
+    <ClInclude Include="CDB_cedclotrlh.h" />
+    <ClInclude Include="CDB_cedclotrlh_n.h" />
+    <ClInclude Include="CDB_cedclotrlt.h" />
+    <ClInclude Include="CDB_cedclotrlt_n.h" />
+    <ClInclude Include="CDB_ceismsglog.h" />
+    <ClInclude Include="CDB_ceismsglog_n.h" />
+    <ClInclude Include="CDB_cinvcelrcv.h" />
+    <ClInclude Include="CDB_cinvcelrcv_n.h" />
+    <ClInclude Include="CDB_cinvlothis.h" />
+    <ClInclude Include="CDB_cinvlothis_n.h" />
+    <ClInclude Include="CDB_cinvlotsts.h" />
+    <ClInclude Include="CDB_cinvlotsts_n.h" />
+    <ClInclude Include="CDB_cmdmetbdat.h" />
+    <ClInclude Include="CDB_cmdmetbdat_n.h" />
+    <ClInclude Include="CDB_cmdmetgdat.h" />
+    <ClInclude Include="CDB_cmdmetgdat_n.h" />
+    <ClInclude Include="CDB_cmdmrefdat.h" />
+    <ClInclude Include="CDB_cmdmrefdat_n.h" />
+    <ClInclude Include="CDB_cmdmxlkdat.h" />
+    <ClInclude Include="CDB_cmdmxlkdat_n.h" />
+    <ClInclude Include="CDB_common.h" />
+    <ClInclude Include="cdb_common_n.h" />
+    <ClInclude Include="CDB_crasresmat.h" />
+    <ClInclude Include="CDB_crasresmat_n.h" />
+    <ClInclude Include="CDB_crastolhis.h" />
+    <ClInclude Include="CDB_crastolhis_n.h" />
+    <ClInclude Include="CDB_crastolsts.h" />
+    <ClInclude Include="CDB_crastolsts_n.h" />
+    <ClInclude Include="CDB_craswrktim.h" />
+    <ClInclude Include="CDB_craswrktim_n.h" />
+    <ClInclude Include="CDB_crcpprahis.h" />
+    <ClInclude Include="CDB_crcpprahis_n.h" />
+    <ClInclude Include="CDB_crcpverhis.h" />
+    <ClInclude Include="CDB_crcpverhis_n.h" />
+    <ClInclude Include="CDB_ctmplotpak.h" />
+    <ClInclude Include="CDB_ctmplotpak_n.h" />
+    <ClInclude Include="CDB_ctmptcktim.h" />
+    <ClInclude Include="CDB_ctmptcktim_n.h" />
+    <ClInclude Include="CDB_cwipcellos.h" />
+    <ClInclude Include="CDB_cwipcellos_n.h" />
+    <ClInclude Include="CDB_cwipcelpak.h" />
+    <ClInclude Include="CDB_cwipcelpak_n.h" />
+    <ClInclude Include="CDB_cwipclvlos.h" />
+    <ClInclude Include="CDB_cwipclvlos_n.h" />
+    <ClInclude Include="CDB_cwipfmihis.h" />
+    <ClInclude Include="CDB_cwipfmihis_n.h" />
+    <ClInclude Include="CDB_cwiplotmat.h" />
+    <ClInclude Include="CDB_cwiplotmat_n.h" />
+    <ClInclude Include="CDB_cwiplotpak.h" />
+    <ClInclude Include="CDB_cwiplotpak_n.h" />
+    <ClInclude Include="CDB_cwiplotstr.h" />
+    <ClInclude Include="CDB_cwiplotstr_n.h" />
+    <ClInclude Include="CDB_cwiplottrc.h" />
+    <ClInclude Include="CDB_cwiplottrc_n.h" />
+    <ClInclude Include="CDB_cwippakhis.h" />
+    <ClInclude Include="CDB_cwippakhis_n.h" />
+    <ClInclude Include="CDB_cwipptrchk.h" />
+    <ClInclude Include="CDB_cwipptrchk_n.h" />
+    <ClInclude Include="CDB_cwipstrcel.h" />
+    <ClInclude Include="CDB_cwipstrcel_n.h" />
+    <ClInclude Include="CDB_cwipwrkday.h" />
+    <ClInclude Include="CDB_cwipwrkday_n.h" />
+    <ClInclude Include="CDB_ibakartdef.h" />
+    <ClInclude Include="CDB_ibakartdef_n.h" />
+    <ClInclude Include="CDB_ibakblkdat.h" />
+    <ClInclude Include="CDB_ibakblkdat_n.h" />
+    <ClInclude Include="CDB_ibakbomdat.h" />
+    <ClInclude Include="CDB_ibakbomdat_n.h" />
+    <ClInclude Include="CDB_ibakcelblk.h" />
+    <ClInclude Include="CDB_ibakcelblk_n.h" />
+    <ClInclude Include="CDB_ibakcelgrb.h" />
+    <ClInclude Include="CDB_ibakcelgrb_n.h" />
+    <ClInclude Include="CDB_ibakcelhui.h" />
+    <ClInclude Include="CDB_ibakcelhui_n.h" />
+    <ClInclude Include="CDB_ibakclvcfm.h" />
+    <ClInclude Include="CDB_ibakclvcfm_n.h" />
+    <ClInclude Include="CDB_ibakcstdef.h" />
+    <ClInclude Include="CDB_ibakcstdef_n.h" />
+    <ClInclude Include="CDB_ibakfclmov.h" />
+    <ClInclude Include="CDB_ibakfclmov_n.h" />
+    <ClInclude Include="CDB_ibakhclmov.h" />
+    <ClInclude Include="CDB_ibakhclmov_n.h" />
+    <ClInclude Include="CDB_ibakmatdef.h" />
+    <ClInclude Include="CDB_ibakmatdef_n.h" />
+    <ClInclude Include="CDB_ibakmatlot.h" />
+    <ClInclude Include="CDB_ibakmatlot_n.h" />
+    <ClInclude Include="CDB_ibakmodloc.h" />
+    <ClInclude Include="CDB_ibakmodloc_n.h" />
+    <ClInclude Include="CDB_ibakoprcfm.h" />
+    <ClInclude Include="CDB_ibakoprcfm_n.h" />
+    <ClInclude Include="CDB_ibakordbom.h" />
+    <ClInclude Include="CDB_ibakordbom_n.h" />
+    <ClInclude Include="CDB_ibakorddat.h" />
+    <ClInclude Include="CDB_ibakorddat_n.h" />
+    <ClInclude Include="CDB_ibakordrte.h" />
+    <ClInclude Include="CDB_ibakordrte_n.h" />
+    <ClInclude Include="CDB_ibakpakdat.h" />
+    <ClInclude Include="CDB_ibakpakdat_n.h" />
+    <ClInclude Include="CDB_ibakpakmst.h" />
+    <ClInclude Include="CDB_ibakpakmst_n.h" />
+    <ClInclude Include="CDB_ibakpwrdat.h" />
+    <ClInclude Include="CDB_ibakpwrdat_n.h" />
+    <ClInclude Include="CDB_ibakstktrs.h" />
+    <ClInclude Include="CDB_ibakstktrs_n.h" />
+    <ClInclude Include="CDB_ibakvdrmst.h" />
+    <ClInclude Include="CDB_ibakvdrmst_n.h" />
+    <ClInclude Include="CDB_ibasartdef.h" />
+    <ClInclude Include="CDB_ibasartdef_n.h" />
+    <ClInclude Include="CDB_ibasbomdat.h" />
+    <ClInclude Include="CDB_ibascstdef.h" />
+    <ClInclude Include="CDB_ibascstdef_n.h" />
+    <ClInclude Include="CDB_ibasmodloc.h" />
+    <ClInclude Include="CDB_ibasmodloc_n.h" />
+    <ClInclude Include="CDB_ibasbomdat_n.h" />
+    <ClInclude Include="CDB_ibaspwrdat.h" />
+    <ClInclude Include="CDB_ibaspwrdat_n.h" />
+    <ClInclude Include="CDB_ibasvdrmst.h" />
+    <ClInclude Include="CDB_ibasvdrmst_n.h" />
+    <ClInclude Include="CDB_ierpclvcfm.h" />
+    <ClInclude Include="CDB_ierpclvcfm_n.h" />
+    <ClInclude Include="CDB_ierpfclmov.h" />
+    <ClInclude Include="CDB_ierpfclmov_n.h" />
+    <ClInclude Include="CDB_ierphclmov.h" />
+    <ClInclude Include="CDB_ierphclmov_n.h" />
+    <ClInclude Include="CDB_ierpoprcfm.h" />
+    <ClInclude Include="CDB_ierpoprcfm_n.h" />
+    <ClInclude Include="CDB_ierppakdat.h" />
+    <ClInclude Include="CDB_ierppakdat_n.h" />
+    <ClInclude Include="CDB_iinvmatlot.h" />
+    <ClInclude Include="CDB_iinvmatlot_n.h" />
+    <ClInclude Include="CDB_iinvstktrs.h" />
+    <ClInclude Include="CDB_iinvstktrs_n.h" />
+    <ClInclude Include="CDB_iqcmblkdat.h" />
+    <ClInclude Include="CDB_iqcmblkdat_n.h" />
+    <ClInclude Include="CDB_iqcmcelblk.h" />
+    <ClInclude Include="CDB_iqcmcelblk_n.h" />
+    <ClInclude Include="CDB_iwipcelgrb.h" />
+    <ClInclude Include="CDB_iwipcelgrb_n.h" />
+    <ClInclude Include="CDB_iwipcelhui.h" />
+    <ClInclude Include="CDB_iwipcelhui_n.h" />
+    <ClInclude Include="CDB_iwipmatdef.h" />
+    <ClInclude Include="CDB_iwipmatdef_n.h" />
+    <ClInclude Include="CDB_iwipordbom.h" />
+    <ClInclude Include="CDB_iwipordbom_n.h" />
+    <ClInclude Include="CDB_iwiporddat.h" />
+    <ClInclude Include="CDB_iwiporddat_n.h" />
+    <ClInclude Include="CDB_iwipordrte.h" />
+    <ClInclude Include="CDB_iwipordrte_n.h" />
+    <ClInclude Include="CDB_iwippakifo.h" />
+    <ClInclude Include="CDB_iwippakifo_n.h" />
+    <ClInclude Include="CDB_iwippakmst.h" />
+    <ClInclude Include="CDB_iwippakmst_n.h" />
+    <ClInclude Include="CDB_mgcmlagdat.h" />
+    <ClInclude Include="CDB_mgcmlagdat_n.h" />
+    <ClInclude Include="CDB_mwipelthis.h" />
+    <ClInclude Include="CDB_mwipelthis_n.h" />
+    <ClInclude Include="CDB_rsumwiplos.h" />
+    <ClInclude Include="CDB_rsumwiplos_n.h" />
+    <ClInclude Include="CDB_rsumwipmov.h" />
+    <ClInclude Include="CDB_rsumwipmov_n.h" />
+    <ClInclude Include="CDB_rsumwipeoh.h" />
+    <ClInclude Include="CDB_rsumwipeoh_n.h" />
+    <ClInclude Include="CDB_mwipeltsts.h" />
+    <ClInclude Include="CDB_mwipeltsts_n.h" />
+    <ClInclude Include="CDB_cwipordsts.h" />
+    <ClInclude Include="CDB_cwipordsts_n.h" />
+    <ClInclude Include="CDB_cwipordbom.h" />
+    <ClInclude Include="CDB_cwipordbom_n.h" />
+    <ClInclude Include="CDB_cwipordrte.h" />
+    <ClInclude Include="CDB_cwipordrte_n.h" />
+    <ClInclude Include="CDB_mwiplotsts.h" />
+    <ClInclude Include="CDB_mwiplotsts_n.h" />
+    <ClInclude Include="CDB_mwiplothis.h" />
+    <ClInclude Include="CDB_mwiplothis_n.h" />
+    <ClInclude Include="CDB_mgcmtbldat.h" />
+    <ClInclude Include="CDB_mgcmtbldat_n.h" />
+    <ClInclude Include="CDB_ibakpakifo.h" />
+    <ClInclude Include="CDB_ibakpakifo_n.h" />
+    <ClInclude Include="CDB_rsumhormov.h" />
+    <ClInclude Include="CDB_rsumhormov_n.h" />
+    <ClInclude Include="CDB_rsumhorlos.h" />
+    <ClInclude Include="CDB_rsumhorlos_n.h" />
+    <ClInclude Include="CDB_crasresmah.h" />
+    <ClInclude Include="CDB_crasresmah_n.h" />
+    <ClInclude Include="CDB_cwiplotrep.h" />
+    <ClInclude Include="CDB_cwiplotrep_n.h" />
+    <ClInclude Include="CDB_cwiplotreh.h" />
+    <ClInclude Include="CDB_cwiplotreh_n.h" />
+    <ClInclude Include="CDB_mtmplothis.h" />
+    <ClInclude Include="CDB_mtmplothis_n.h" />
+    <ClInclude Include="CDB_rsumresdwh.h" />
+    <ClInclude Include="CDB_rsumresdwh_n.h" />
+    <ClInclude Include="CDB_cpoplblhis.h" />
+    <ClInclude Include="CDB_cpoplblhis_n.h" />
+    <ClInclude Include="CDB_mwiplotcmb.h" />
+    <ClInclude Include="CDB_mwiplotcmb_n.h" />
+    <ClInclude Include="CDB_cwipcellam.h" />
+    <ClInclude Include="CDB_cwipcellam_n.h" />
+    <ClInclude Include="CDB_rsumhoreqp.h" />
+    <ClInclude Include="CDB_rsumhoreqp_n.h" />
+    <ClInclude Include="CDB_rsumresdwn.h" />
+    <ClInclude Include="CDB_rsumresdwn_n.h" />
+    <ClInclude Include="CDB_rsumhorclv.h" />
+    <ClInclude Include="CDB_rsumhorclv_n.h" />
+    <ClInclude Include="CDB_rsumhorwrk.h" />
+    <ClInclude Include="CDB_rsumhorwrk_n.h" />
+    <ClInclude Include="CDB_cedcfqcrmk.h" />
+    <ClInclude Include="CDB_cedcfqcrmk_n.h" />
+    <ClInclude Include="CDB_ctmpspcdat.h" />
+    <ClInclude Include="CDB_ctmpspcdat_n.h" />
+    <ClInclude Include="CDB_mrcppraver.h" />
+    <ClInclude Include="CDB_mrcppraver_n.h" />
+    <ClInclude Include="CDB_crasrcphis.h" />
+    <ClInclude Include="CDB_crasrcphis_n.h" />
+    <ClInclude Include="CDB_craslotpat.h" />
+    <ClInclude Include="CDB_craslotpat_n.h" />
+    <ClInclude Include="CDB_crasprcdat.h" />
+    <ClInclude Include="CDB_crasprcdat_n.h" />
+    <ClInclude Include="CDB_crastolrst.h" />
+    <ClInclude Include="CDB_crastolrst_n.h" />
+    <ClInclude Include="CDB_cedclotaoi.h" />
+    <ClInclude Include="CDB_cedclotaoi_n.h" />
+    <ClInclude Include="CDB_cedclotsua.h" />
+    <ClInclude Include="CDB_cedclotsua_n.h" />
+    <ClInclude Include="CDB_cedcsuadat.h" />
+    <ClInclude Include="CDB_cedcsuadat_n.h" />
+    <ClInclude Include="CDB_cfacplnday.h" />
+    <ClInclude Include="CDB_cfacplnday_n.h" />
+    <ClInclude Include="CDB_calmfmbntc.h" />
+    <ClInclude Include="CDB_calmfmbntc_n.h" />
+    <ClInclude Include="CDB_calmfmbhis.h" />
+    <ClInclude Include="CDB_calmfmbhis_n.h" />
+    <ClInclude Include="CDB_cwipctmhis.h" />
+    <ClInclude Include="CDB_cwipctmhis_n.h" />
+    <ClInclude Include="CDB_crasclvhor.h" />
+    <ClInclude Include="CDB_crasclvhor_n.h" />
+    <ClInclude Include="CDB_crasclvlos.h" />
+    <ClInclude Include="CDB_crasclvlos_n.h" />
+    <ClInclude Include="CDB_cwipgrtavg.h" />
+    <ClInclude Include="CDB_cwipgrtavg_n.h" />
+    <ClInclude Include="CDB_cwiptrphis.h" />
+    <ClInclude Include="CDB_cwiptrphis_n.h" />
+    <ClInclude Include="CDB_cwiplotram.h" />
+    <ClInclude Include="CDB_cwiplotram_n.h" />
+    <ClInclude Include="CDB_cresordsts.h" />
+    <ClInclude Include="CDB_cresordsts_n.h" />
+    <ClInclude Include="CDB_cresordhis.h" />
+    <ClInclude Include="CDB_cresordhis_n.h" />
+    <ClInclude Include="CDB_cclvmagchk.h" />
+    <ClInclude Include="CDB_cclvmagchk_n.h" />
+    <ClInclude Include="CDB_cgcmtbldat.h" />
+    <ClInclude Include="CDB_cgcmtbldat_n.h" />
+    <ClInclude Include="CDB_cwipstrred.h" />
+    <ClInclude Include="CDB_cwipstrred_n.h" />
+    <ClInclude Include="CDB_cinvsapsts.h" />
+    <ClInclude Include="CDB_cinvsapsts_n.h" />
+    <ClInclude Include="CDB_iinvsapsts.h" />
+    <ClInclude Include="CDB_iinvsapsts_n.h" />
+    <ClInclude Include="CDB_vrsumwiplosmst.h" />
+    <ClInclude Include="CDB_vrsumwiplosmst_n.h" />
+    <ClInclude Include="CDB_cwipctmtrc.h" />
+    <ClInclude Include="CDB_cwipctmtrc_n.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="CDB_calmctvhis.pc" />
+    <PC_File_Compile Include="CDB_camsadtitm.pc" />
+    <PC_File_Compile Include="CDB_camsadtpln.pc" />
+    <PC_File_Compile Include="CDB_camsadtrst.pc" />
+    <PC_File_Compile Include="CDB_cams_join.pc" />
+    <PC_File_Compile Include="CDB_cclvcrrbat.pc" />
+    <PC_File_Compile Include="CDB_cedcbufdat.pc" />
+    <PC_File_Compile Include="CDB_cedcbufhis.pc" />
+    <PC_File_Compile Include="CDB_cjcmitmdef.pc" />
+    <PC_File_Compile Include="CDB_cjcmitmhis.pc" />
+    <PC_File_Compile Include="CDB_cjcmjobitm.pc" />
+    <PC_File_Compile Include="CDB_cjcmjobsts.pc" />
+    <PC_File_Compile Include="CDB_cjcm_join.pc" />
+    <PC_File_Compile Include="CDB_cmmsanacon.pc" />
+    <PC_File_Compile Include="CDB_cmmsanadat.pc" />
+    <PC_File_Compile Include="CDB_cmmsanafle.pc" />
+    <PC_File_Compile Include="CDB_cmmsanaitm.pc" />
+    <PC_File_Compile Include="CDB_cmmsanapln.pc" />
+    <PC_File_Compile Include="CDB_cmmsanarst.pc" />
+    <PC_File_Compile Include="CDB_cmmsanausr.pc" />
+    <PC_File_Compile Include="CDB_cmmsanaval.pc" />
+    <PC_File_Compile Include="CDB_cmmscaleqp.pc" />
+    <PC_File_Compile Include="CDB_cmmscalfle.pc" />
+    <PC_File_Compile Include="CDB_cmmscalpln.pc" />
+    <PC_File_Compile Include="CDB_cmmscalrst.pc" />
+    <PC_File_Compile Include="CDB_cmmseqpdef.pc" />
+    <PC_File_Compile Include="CDB_cmmseqpfle.pc" />
+    <PC_File_Compile Include="CDB_cmmseqphis.pc" />
+    <PC_File_Compile Include="CDB_cmmseqpitm.pc" />
+    <PC_File_Compile Include="CDB_cmmsinsdef.pc" />
+    <PC_File_Compile Include="CDB_cmmsitmdef.pc" />
+    <PC_File_Compile Include="CDB_cmmsitmhis.pc" />
+    <PC_File_Compile Include="CDB_cmmssamdef.pc" />
+    <PC_File_Compile Include="CDB_cmmssamhis.pc" />
+    <PC_File_Compile Include="CDB_cmmsusrdef.pc" />
+    <PC_File_Compile Include="CDB_cmms_join.pc" />
+    <PC_File_Compile Include="CDB_cmmyeares.pc" />
+    <PC_File_Compile Include="CDB_cpsmmntsts.pc" />
+    <PC_File_Compile Include="CDB_crasclnpln.pc" />
+    <PC_File_Compile Include="CDB_crascrrhis.pc" />
+    <PC_File_Compile Include="CDB_crasdshift.pc" />
+    <PC_File_Compile Include="CDB_crasdwntim.pc" />
+    <PC_File_Compile Include="CDB_crashurgap.pc" />
+    <PC_File_Compile Include="CDB_craslgvdat.pc" />
+    <PC_File_Compile Include="CDB_crasmatrpt.pc" />
+    <PC_File_Compile Include="CDB_crasprcdat_alert.pc" />
+    <PC_File_Compile Include="CDB_crasprcdat_mostup.pc" />
+    <PC_File_Compile Include="CDB_crasresbps.pc" />
+    <PC_File_Compile Include="CDB_crasresdef.pc" />
+    <PC_File_Compile Include="CDB_crassfthis.pc" />
+    <PC_File_Compile Include="CDB_crassrsdef.pc" />
+    <PC_File_Compile Include="CDB_crastbrcln.pc" />
+    <PC_File_Compile Include="CDB_crastbrjgr.pc" />
+    <PC_File_Compile Include="CDB_crastqusts.pc" />
+    <PC_File_Compile Include="CDB_craswrklog.pc" />
+    <PC_File_Compile Include="CDB_crasxlinkr.pc" />
+    <PC_File_Compile Include="CDB_crtd_join.pc" />
+    <PC_File_Compile Include="CDB_ctmpbatsts.pc" />
+    <PC_File_Compile Include="CDB_cwipabnlog.pc" />
+    <PC_File_Compile Include="CDB_cwipacmhis.pc" />
+    <PC_File_Compile Include="CDB_cwipcelmgz.pc" />
+    <PC_File_Compile Include="CDB_cwipclvsts.pc" />
+    <PC_File_Compile Include="CDB_cwipctwhis.pc" />
+    <PC_File_Compile Include="CDB_cwipctwpft.pc" />
+    <PC_File_Compile Include="CDB_cwipdayinv.pc" />
+    <PC_File_Compile Include="CDB_cwipfqcdwn.pc" />
+    <PC_File_Compile Include="CDB_cwiphafhis.pc" />
+    <PC_File_Compile Include="CDB_cwiphurfqc.pc" />
+    <PC_File_Compile Include="CDB_cwipjbslos.pc" />
+    <PC_File_Compile Include="CDB_cwiplampts.pc" />
+    <PC_File_Compile Include="CDB_cwiplamrcp.pc" />
+    <PC_File_Compile Include="CDB_cwiplostab.pc" />
+    <PC_File_Compile Include="CDB_cwiplotext.pc" />
+    <PC_File_Compile Include="CDB_cwiplotimg.pc" />
+    <PC_File_Compile Include="CDB_cwiplotovh.pc" />
+    <PC_File_Compile Include="CDB_cwiplotovr.pc" />
+    <PC_File_Compile Include="CDB_cwiplotrps.pc" />
+    <PC_File_Compile Include="CDB_cwiplotrwk.pc" />
+    <PC_File_Compile Include="CDB_cwipmatter.pc" />
+    <PC_File_Compile Include="CDB_cwipmatval.pc" />
+    <PC_File_Compile Include="CDB_cwipmixlos.pc" />
+    <PC_File_Compile Include="CDB_cwipoqchis.pc" />
+    <PC_File_Compile Include="CDB_cwipoqcsts.pc" />
+    <PC_File_Compile Include="CDB_cwippaklog.pc" />
+    <PC_File_Compile Include="CDB_cwippakreg.pc" />
+    <PC_File_Compile Include="CDB_cwippmphis.pc" />
+    <PC_File_Compile Include="CDB_cwipptsrpt.pc" />
+    <PC_File_Compile Include="CDB_cwiprepoit.pc" />
+    <PC_File_Compile Include="CDB_cwipreqdtl.pc" />
+    <PC_File_Compile Include="CDB_cwipreqmst.pc" />
+    <PC_File_Compile Include="CDB_cwiprpkhis.pc" />
+    <PC_File_Compile Include="CDB_cwiprwkdat.pc" />
+    <PC_File_Compile Include="CDB_cwipsilhis.pc" />
+    <PC_File_Compile Include="CDB_cwipsilmng.pc" />
+    <PC_File_Compile Include="CDB_cwipsualos.pc" />
+    <PC_File_Compile Include="CDB_cwiptabsts.pc" />
+    <PC_File_Compile Include="CDB_cwiptcktim.pc" />
+    <PC_File_Compile Include="CDB_cwiptrpsts.pc" />
+    <PC_File_Compile Include="CDB_cwiptryext.pc" />
+    <PC_File_Compile Include="CDB_cwiptryhis.pc" />
+    <PC_File_Compile Include="CDB_cwiptrysts.pc" />
+    <PC_File_Compile Include="CDB_cwiptryush.pc" />
+    <PC_File_Compile Include="CDB_cwiptsclos.pc" />
+    <PC_File_Compile Include="CDB_cwipusrlog.pc" />
+    <PC_File_Compile Include="CDB_ialmctvdat.pc" />
+    <PC_File_Compile Include="CDB_ibakmatglo.pc" />
+    <PC_File_Compile Include="CDB_ibakpakmst_gerp.pc" />
+    <PC_File_Compile Include="CDB_ibakrwkdat.pc" />
+    <PC_File_Compile Include="CDB_ibakserdat.pc" />
+    <PC_File_Compile Include="CDB_ibakterinf.pc" />
+    <PC_File_Compile Include="CDB_ierpwipcfm.pc" />
+    <PC_File_Compile Include="CDB_iqcmfshdat.pc" />
+    <PC_File_Compile Include="CDB_iqcmsamdat.pc" />
+    <PC_File_Compile Include="CDB_iqcmserdat.pc" />
+    <PC_File_Compile Include="CDB_iwipmatglo.pc" />
+    <PC_File_Compile Include="CDB_iwippakmst_gerp.pc" />
+    <PC_File_Compile Include="CDB_iwiprwkdat.pc" />
+    <PC_File_Compile Include="CDB_iwipterinf.pc" />
+    <PC_File_Compile Include="CDB_mraspotdef.pc" />
+    <PC_File_Compile Include="CDB_mrasresdef.pc" />
+    <PC_File_Compile Include="CDB_mwipmatdef.pc" />
+    <PC_File_Compile Include="CDB_mwipmatflw.pc" />
+    <PC_File_Compile Include="CDB_rsumhorcel.pc" />
+    <PC_File_Compile Include="CDB_crasavgtim.pc" />
+    <PC_File_Compile Include="CDB_craslotmov.pc" />
+    <PC_File_Compile Include="CDB_calmtlghis.pc" />
+    <PC_File_Compile Include="CDB_cedcinsdat.pc" />
+    <PC_File_Compile Include="CDB_cedclotdat.pc" />
+    <PC_File_Compile Include="CDB_cedclotfqc.pc" />
+    <PC_File_Compile Include="CDB_cedclotrlh.pc" />
+    <PC_File_Compile Include="CDB_cedclotrlt.pc" />
+    <PC_File_Compile Include="CDB_ceismsglog.pc" />
+    <PC_File_Compile Include="CDB_cinvcelrcv.pc" />
+    <PC_File_Compile Include="CDB_cinvlothis.pc" />
+    <PC_File_Compile Include="CDB_cinvlotsts.pc" />
+    <PC_File_Compile Include="CDB_cmdmetbdat.pc" />
+    <PC_File_Compile Include="CDB_cmdmetgdat.pc" />
+    <PC_File_Compile Include="CDB_cmdmrefdat.pc" />
+    <PC_File_Compile Include="CDB_cmdmxlkdat.pc" />
+    <PC_File_Compile Include="CDB_crasresmat.pc" />
+    <PC_File_Compile Include="CDB_crastolhis.pc" />
+    <PC_File_Compile Include="CDB_crastolsts.pc" />
+    <PC_File_Compile Include="CDB_craswrktim.pc" />
+    <PC_File_Compile Include="CDB_crcpprahis.pc" />
+    <PC_File_Compile Include="CDB_crcpverhis.pc" />
+    <PC_File_Compile Include="CDB_ctmplotpak.pc" />
+    <PC_File_Compile Include="CDB_ctmptcktim.pc" />
+    <PC_File_Compile Include="CDB_cwipcellos.pc" />
+    <PC_File_Compile Include="CDB_cwipcelpak.pc" />
+    <PC_File_Compile Include="CDB_cwipclvlos.pc" />
+    <PC_File_Compile Include="CDB_cwipfmihis.pc" />
+    <PC_File_Compile Include="CDB_cwiplotmat.pc" />
+    <PC_File_Compile Include="CDB_cwiplotpak.pc" />
+    <PC_File_Compile Include="CDB_cwiplotstr.pc" />
+    <PC_File_Compile Include="CDB_cwiplottrc.pc" />
+    <PC_File_Compile Include="CDB_cwipordbom.pc" />
+    <PC_File_Compile Include="CDB_cwipordrte.pc" />
+    <PC_File_Compile Include="CDB_cwippakhis.pc" />
+    <PC_File_Compile Include="CDB_cwipptrchk.pc" />
+    <PC_File_Compile Include="CDB_cwipstrcel.pc" />
+    <PC_File_Compile Include="CDB_cwipwrkday.pc" />
+    <PC_File_Compile Include="CDB_ibakartdef.pc" />
+    <PC_File_Compile Include="CDB_ibakblkdat.pc" />
+    <PC_File_Compile Include="CDB_ibakbomdat.pc" />
+    <PC_File_Compile Include="CDB_ibakcelblk.pc" />
+    <PC_File_Compile Include="CDB_ibakcelgrb.pc" />
+    <PC_File_Compile Include="CDB_ibakcelhui.pc" />
+    <PC_File_Compile Include="CDB_ibakclvcfm.pc" />
+    <PC_File_Compile Include="CDB_ibakcstdef.pc" />
+    <PC_File_Compile Include="CDB_ibakfclmov.pc" />
+    <PC_File_Compile Include="CDB_ibakhclmov.pc" />
+    <PC_File_Compile Include="CDB_ibakmatdef.pc" />
+    <PC_File_Compile Include="CDB_ibakmatlot.pc" />
+    <PC_File_Compile Include="CDB_ibakmodloc.pc" />
+    <PC_File_Compile Include="CDB_ibakoprcfm.pc" />
+    <PC_File_Compile Include="CDB_ibakordbom.pc" />
+    <PC_File_Compile Include="CDB_ibakorddat.pc" />
+    <PC_File_Compile Include="CDB_ibakordrte.pc" />
+    <PC_File_Compile Include="CDB_ibakpakdat.pc" />
+    <PC_File_Compile Include="CDB_ibakpakmst.pc" />
+    <PC_File_Compile Include="CDB_ibakpwrdat.pc" />
+    <PC_File_Compile Include="CDB_ibakstktrs.pc" />
+    <PC_File_Compile Include="CDB_ibakvdrmst.pc" />
+    <PC_File_Compile Include="CDB_ibasartdef.pc" />
+    <PC_File_Compile Include="CDB_ibasbomdat.pc" />
+    <PC_File_Compile Include="CDB_ibascstdef.pc" />
+    <PC_File_Compile Include="CDB_ibasmodloc.pc" />
+    <PC_File_Compile Include="CDB_ibaspwrdat.pc" />
+    <PC_File_Compile Include="CDB_ibasvdrmst.pc" />
+    <PC_File_Compile Include="CDB_ierpclvcfm.pc" />
+    <PC_File_Compile Include="CDB_ierpfclmov.pc" />
+    <PC_File_Compile Include="CDB_ierphclmov.pc" />
+    <PC_File_Compile Include="CDB_ierpoprcfm.pc" />
+    <PC_File_Compile Include="CDB_ierppakdat.pc" />
+    <PC_File_Compile Include="CDB_iinvmatlot.pc" />
+    <PC_File_Compile Include="CDB_iinvstktrs.pc" />
+    <PC_File_Compile Include="CDB_iqcmblkdat.pc" />
+    <PC_File_Compile Include="CDB_iqcmcelblk.pc" />
+    <PC_File_Compile Include="CDB_iwipcelgrb.pc" />
+    <PC_File_Compile Include="CDB_iwipcelhui.pc" />
+    <PC_File_Compile Include="CDB_iwipmatdef.pc" />
+    <PC_File_Compile Include="CDB_iwipordbom.pc" />
+    <PC_File_Compile Include="CDB_iwiporddat.pc" />
+    <PC_File_Compile Include="CDB_iwipordrte.pc" />
+    <PC_File_Compile Include="CDB_iwippakifo.pc" />
+    <PC_File_Compile Include="CDB_iwippakmst.pc" />
+    <PC_File_Compile Include="CDB_mgcmlagdat.pc" />
+    <PC_File_Compile Include="CDB_mwipelthis.pc" />
+    <PC_File_Compile Include="CDB_rsumwiplos.pc" />
+    <PC_File_Compile Include="CDB_rsumwipmov.pc" />
+    <PC_File_Compile Include="CDB_rsumwipeoh.pc" />
+    <PC_File_Compile Include="CDB_mwipeltsts.pc" />
+    <PC_File_Compile Include="CDB_cwipordsts.pc" />
+    <PC_File_Compile Include="CDB_mwiplotsts.pc" />
+    <PC_File_Compile Include="CDB_mwiplothis.pc" />
+    <PC_File_Compile Include="CDB_mgcmtbldat.pc" />
+    <PC_File_Compile Include="CDB_ibakpakifo.pc" />
+    <PC_File_Compile Include="CDB_rsumhormov.pc" />
+    <PC_File_Compile Include="CDB_rsumhorlos.pc" />
+    <PC_File_Compile Include="CDB_crasresmah.pc" />
+    <PC_File_Compile Include="CDB_cwiplotrep.pc" />
+    <PC_File_Compile Include="CDB_cwiplotreh.pc" />
+    <PC_File_Compile Include="CDB_mtmplothis.pc" />
+    <PC_File_Compile Include="CDB_rsumresdwh.pc" />
+    <PC_File_Compile Include="CDB_cpoplblhis.pc" />
+    <PC_File_Compile Include="CDB_mwiplotcmb.pc" />
+    <PC_File_Compile Include="CDB_cwipcellam.pc" />
+    <PC_File_Compile Include="CDB_rsumhoreqp.pc" />
+    <PC_File_Compile Include="CDB_rsumresdwn.pc" />
+    <PC_File_Compile Include="CDB_rsumhorclv.pc" />
+    <PC_File_Compile Include="CDB_rsumhorwrk.pc" />
+    <PC_File_Compile Include="CDB_cedcfqcrmk.pc" />
+    <PC_File_Compile Include="CDB_ctmpspcdat.pc" />
+    <PC_File_Compile Include="CDB_mrcppraver.pc" />
+    <PC_File_Compile Include="CDB_crasrcphis.pc" />
+    <PC_File_Compile Include="CDB_craslotpat.pc" />
+    <PC_File_Compile Include="CDB_crasprcdat.pc" />
+    <PC_File_Compile Include="CDB_crastolrst.pc" />
+    <PC_File_Compile Include="CDB_cedclotaoi.pc" />
+    <PC_File_Compile Include="CDB_cedclotsua.pc" />
+    <PC_File_Compile Include="CDB_cedcsuadat.pc" />
+    <PC_File_Compile Include="CDB_cfacplnday.pc" />
+    <PC_File_Compile Include="CDB_calmfmbntc.pc" />
+    <PC_File_Compile Include="CDB_calmfmbhis.pc" />
+    <PC_File_Compile Include="CDB_cwipctmhis.pc" />
+    <PC_File_Compile Include="CDB_crasclvhor.pc" />
+    <PC_File_Compile Include="CDB_crasclvlos.pc" />
+    <PC_File_Compile Include="CDB_cwipgrtavg.pc" />
+    <PC_File_Compile Include="CDB_cwiptrphis.pc" />
+    <PC_File_Compile Include="CDB_cwiplotram.pc" />
+    <PC_File_Compile Include="CDB_cresordsts.pc" />
+    <PC_File_Compile Include="CDB_cresordhis.pc" />
+    <PC_File_Compile Include="CDB_cclvmagchk.pc" />
+    <PC_File_Compile Include="CDB_cgcmtbldat.pc" />
+    <PC_File_Compile Include="CDB_cwipstrred.pc" />
+    <PC_File_Compile Include="CDB_cinvsapsts.pc" />
+    <PC_File_Compile Include="CDB_iinvsapsts.pc" />
+    <PC_File_Compile Include="CDB_vrsumwiplosmst.pc" />
+    <PC_File_Compile Include="CDB_cwipctmtrc.pc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddLib.bat" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="PC_File_Compile.targets" />
+  </ImportGroup>
+</Project>
